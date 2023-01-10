@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Termékfrissítések' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Termékfrissítések<BR><SPAN CLASS='selectSoftwareTitle'>Szoftver kijelölése</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Termékfrissítések' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Termékfrissítések<BR><SPAN CLASS='selectSoftwareTitle'>Szoftver kijelölése</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>A számítógépen lévõ Windows rendszerhez az alábbi frissítések érhetõk el. A frissítések telepítéséhez kattintson a kívánt frissítések melletti jelölõnégyzetekre, majd a <STRONG>Letöltés</STRONG> gombra. Frissítések eltávolításához vagy újratelepítéséhez kattintson <B>A telepített frissítések megjelenítése</B> gombra. A lista kibõvül a telepített frissítésekkel.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Itt találhatja a &quot;Már telepítve&quot; jelzésû frissítéseket. Frissítések újratelepítéséhez kattintson a megfelelõ program mellett található jelölõnégyzetre, majd a <STRONG>Letöltés</STRONG> gombra. Ha valamelyik frissítés mellett Eltávolítás gomb található, erre kattintva eltávolíthatja a frissítést. A telepített frissítések listájának elrejtéséhez kattintson <b>A telepített frissítések elrejtése</b> gombra.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Alapértelmezés szerint megjelenik az összes frissítés, ami az Ön által használt Windows rendszerhez készült. Ha csak bizonyos frissítések érdeklik, kijelölheti ezen a lapon, hogy milyen frissítések jelenjenek meg. A listán csak a kijelölt tételek fognak megjelenni. Ha szeretne egy tételt levenni a listáról, törölje az elem jelölését. Ha esetleg késõbb újból fel kívánja venni az elemet a listájára, térjen vissza a listájához és jelölje ki újra az elemet. A módosítások mentéséhez kattintson a <B>Frissítés</B> gombra.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>A telepített frissítések megjelenítése</A><BR></SPAN></TD>")

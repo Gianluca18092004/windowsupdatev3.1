@@ -5,15 +5,15 @@
 <title>Windows Update</title>
 <STYLE type="text/css">
 BODY {
-	font-family:"ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N";
+	font-family:"E½lE½r E½oE½SE½VE½bE½N";
 	font-size:9pt;
 }
 .def {
-	font-family:"ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N";
+	font-family:"E½lE½r E½oE½SE½VE½bE½N";
 	font-size:9pt;
 }
 .big {
-	font-family:"ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N";
+	font-family:"E½lE½r E½oE½SE½VE½bE½N";
 	font-size:20pt;
 	font-weight:bold;
 	color:#00319C;
@@ -27,7 +27,7 @@ BODY {
 	BORDER-TOP: #9fcfff Solid 2px;
 	COLOR: #ffffff;
 	CURSOR: Hand;
-	FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+	FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 	FONT-SIZE: 10pt;
 	FONT-WEIGHT: bold;
 	TEXT-ALIGN: center;
@@ -41,7 +41,7 @@ BODY {
 	BORDER-TOP: #c0c0c0 Solid 2px;
 	COLOR: #ffffff;
 	CURSOR: Hand;
-	FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+	FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 	FONT-SIZE: 10pt;
 	FONT-WEIGHT: bold;
 	TEXT-ALIGN: center;
@@ -50,7 +50,7 @@ BODY {
 .headline {
 	background-color:#330099;
 	line-height:16px;
-	font-family:ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+	font-family:E½lE½r E½oE½SE½VE½bE½N;
 	font-size:9pt;
 	color:white;
 	font-weight:bold;
@@ -82,14 +82,14 @@ Dim bCUSucceeded, bSomeCUItemsSucceeded
 Dim bSomeNonCURollupFailed, bSomeNonCURollUpSucceeded
 Dim arrErrorLookup
 arrErrorLookup = Array( _
- Array( "-2147467260" , "ï¿½Xï¿½Vï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2147023673" , "ï¿½Xï¿½Vï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2147467259" , "ï¿½sï¿½ï¿½ï¿½ÈƒGï¿½ï¿½ï¿½[ï¿½Ì‚ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2147024637" , "ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½æ‚¤ï¿½Æ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Cï¿½oï¿½ÍAï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Ìƒfï¿½oï¿½Cï¿½Xï¿½É‘Î‚ï¿½ï¿½ÄŒï¿½ï¿½Ý‚Ìƒhï¿½ï¿½ï¿½Cï¿½oï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½Ø‚Å‚Í‚È‚ï¿½ï¿½Æ”ï¿½ï¿½è‚³ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2147024894" , "ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2146762485" , "ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ü‚ï¿½ï¿½Íƒfï¿½Wï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2146762748" , "ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ü‚ï¿½ï¿½Íƒfï¿½Wï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"), _
- Array( "-2147024784" , "ï¿½ó‚«—Ìˆï¿½Ì‚È‚ï¿½ï¿½Rï¿½ï¿½ï¿½sï¿½ï¿½ï¿½[ï¿½^ï¿½Ìƒfï¿½Bï¿½Xï¿½Nï¿½ï¿½ 1 ï¿½ÂˆÈã‚ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßAï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B") _
+ Array( "-2147467260" , "E½XE½VE½E½E½LE½E½E½E½E½ZE½E½E½E½E½ê‚½E½E½E½ßƒCE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2147023673" , "E½XE½VE½E½E½LE½E½E½E½E½ZE½E½E½E½E½ê‚½E½E½E½ßƒCE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2147467259" , "E½sE½E½E½ÈƒGE½E½E½[E½Ì‚ï¿½E½ßƒCE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2147024637" , "E½_E½EE½E½E½E½E½[E½hE½E½E½æ‚¤E½Æ‚ï¿½E½Ä‚ï¿½E½E½hE½E½E½CE½oE½ÍAE½E½E½gE½E½E½ÌƒfE½oE½CE½XE½É‘Î‚ï¿½E½ÄŒï¿½E½Ý‚ÌƒhE½E½E½CE½oE½E½E½E½E½KE½Ø‚Å‚Í‚È‚ï¿½E½Æ”ï¿½E½è‚³E½E½Ü‚ï¿½E½E½E½B"), _
+ Array( "-2147024894" , "E½tE½@E½CE½E½E½E½E½E½E½Â‚ï¿½E½E½È‚ï¿½E½E½E½E½E½E½E½ßƒCE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2146762485" , "E½tE½@E½CE½E½E½Éï¿½E½E½E½E½E½È‚ï¿½E½E½E½E½E½AE½Ü‚ï¿½E½ÍƒfE½WE½^E½E½E½E½E½E½E½E½E½ME½E½E½E½E½E½È‚ï¿½E½E½E½E½E½E½E½ßƒCE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2146762748" , "E½tE½@E½CE½E½E½Éï¿½E½E½E½E½E½È‚ï¿½E½E½E½E½E½AE½Ü‚ï¿½E½ÍƒfE½WE½^E½E½E½E½E½E½E½E½E½ME½E½E½E½E½E½È‚ï¿½E½E½E½E½E½E½E½ßƒCE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"), _
+ Array( "-2147024784" , "E½ó‚«—Ìˆï¿½Ì‚È‚ï¿½E½RE½E½E½sE½E½E½[E½^E½ÌƒfE½BE½XE½NE½E½ 1 E½ÂˆÈã‚ E½E½E½E½E½E½E½ßAE½CE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B") _
  )
 If LCase(parent.GblPSuccessSync) = "psuccess" Then
 	document.cookie = "page=nothing; path=/"
@@ -105,7 +105,7 @@ Function GetFriendlyText(errno)
 On Error Resume Next
 Dim i
 	If CLng(errno) = 0 Then
- GetFriendlyText = "ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ÉŽï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßAï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B"
+ GetFriendlyText = "E½_E½EE½E½E½E½E½[E½hE½ÉŽï¿½E½sE½E½E½E½E½E½E½ßAE½CE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B"
  Exit Function
 	ElseIf(CLng(errno) < 0) Then
  For i = 0 to UBound(arrErrorLookup)
@@ -115,7 +115,7 @@ Dim i
  End If
  Next
  End If
-	GetFriendlyText = "ï¿½sï¿½ï¿½ï¿½ÈƒGï¿½ï¿½ï¿½[ï¿½Ì‚ï¿½ï¿½ßƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½B" + " (" + CStr(CLng(errno)) + ")"
+	GetFriendlyText = "E½sE½E½E½ÈƒGE½E½E½[E½Ì‚ï¿½E½ßƒCE½E½E½XE½gE½[E½E½E½Å‚ï¿½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½B" + " (" + CStr(CLng(errno)) + ")"
 End Function
 Function DetermineStatus(arrItemStatus)
 	Dim nIndex, nIndexSucceeded, nIndexFailed
@@ -195,7 +195,7 @@ Sub DisplayInstalledComponents()
 	Dim i
 	Dim arrItemAttribs
 	If (bCuRollupSelected And bCUSucceeded) Then
- document.write("<B>ï¿½dï¿½vï¿½ÈXï¿½Vï¿½pï¿½bï¿½Pï¿½[ï¿½W</B><br>")
+ document.write("<B>E½dE½vE½ÈXE½VE½pE½bE½PE½[E½W</B><br>")
 	End If
 	If bSomeNonCURollUpSucceeded Then
  For i = 0 To UBound(arrSucceededComps)
@@ -208,9 +208,9 @@ Sub DisplayFailedComponents()
 	Dim i
 	Dim arrItemAttribs
 	If (bCuRollupSelected And (Not bCUSucceeded)) Then
- document.write("<B>ï¿½dï¿½vï¿½ÈXï¿½Vï¿½pï¿½bï¿½Pï¿½[ï¿½W</B><br>")
+ document.write("<B>E½dE½vE½ÈXE½VE½pE½bE½PE½[E½W</B><br>")
  If bSomeCUItemsSucceeded Then
- document.write("ï¿½ê•”ï¿½ÌƒRï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½Íï¿½ï¿½ï¿½ÉƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚½ï¿½ßAï¿½Ä“xï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½Í‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ßƒJï¿½^ï¿½ï¿½ï¿½Oï¿½É–ß‚ï¿½ÆAï¿½dï¿½vï¿½ÈXï¿½Vï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ÌƒTï¿½Cï¿½Yï¿½Íï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½Ü‚ï¿½ï¿½B<br><br>")
+ document.write("E½ê•”ï¿½ÌƒRE½E½E½|E½[E½lE½E½E½gE½Íï¿½E½E½ÉƒCE½E½E½XE½gE½[E½E½E½E½E½E½Ä‚ï¿½E½é‚½E½ßAE½Ä“xE½_E½EE½E½E½E½E½[E½hE½E½E½E½KE½vE½Í‚ï¿½E½E½Ü‚ï¿½E½E½BE½E½E½Ì‚ï¿½E½ßƒJE½^E½E½E½OE½É–ß‚ï¿½ÆAE½dE½vE½ÈXE½VE½pE½bE½PE½[E½WE½ÌƒTE½CE½YE½Íï¿½E½E½E½E½E½È‚ï¿½Ü‚ï¿½E½B<br><br>")
  End If
 	End If
 	If bSomeNonCURollupFailed Then
@@ -251,13 +251,13 @@ End Sub
 <BODY BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=20 TOPMARGIN=10>
 <TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
  <TR>
-	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ì‘Iï¿½ï¿½"></TD>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="E½\E½tE½gE½EE½FE½AE½Ì‘IE½E½"></TD>
 	<TD>&nbsp;</TD>
 	<TD VALIGN=bottom ROWSPAN=2>
- <SPAN CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x2>ï¿½ï¿½ï¿½iï¿½ÌXï¿½V</ID></SPAN><br>
+ <SPAN CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x2>E½E½E½iE½ÌXE½V</ID></SPAN><br>
  <SPAN CLASS=big>
 <SCRIPT language="VBScript">
-	document.write("ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½")
+	document.write("E½_E½EE½E½E½E½E½[E½hE½E½E½E½")
 </SCRIPT>
  </SPAN>
 	</TD>
@@ -266,20 +266,20 @@ End Sub
 <SCRIPT language="VBScript">
 If (0 = m_nStatus) OR (1 = m_nStatus) Then
 	If (bSomeNonCURollupFailed) OR (Not bCUSucceeded) Then
- document.write("<P class=headline>ï¿½Xï¿½Vï¿½ÍƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½</P>")
- document.write("<P ID=""InstalledFailedComp"" CLASS=""def"">ï¿½ï¿½ï¿½ÌXï¿½Vï¿½ÍƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½ï¿½Bï¿½Ä“xï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½É‚ÍA<B>[ï¿½ß‚ï¿½]</B> ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B</P>")
+ document.write("<P class=headline>E½XE½VE½ÍƒCE½E½E½XE½gE½[E½E½E½E½E½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½</P>")
+ document.write("<P ID=""InstalledFailedComp"" CLASS=""def"">E½E½E½ÌXE½VE½ÍƒCE½E½E½XE½gE½[E½E½E½E½E½E½Ü‚ï¿½E½E½Å‚ï¿½E½E½E½BE½Ä“xE½E½E½sE½E½E½E½É‚ÍA<B>[E½ß‚ï¿½]</B> E½{E½^E½E½E½E½E½NE½E½E½bE½NE½E½E½Ä‚ï¿½E½E½E½E½E½E½E½B</P>")
  DisplayFailedComponents()
 	End If
 End If
 If (0 = m_nStatus) OR (2 = m_nStatus) Then
-	document.write("<P class=headline>ï¿½Xï¿½Vï¿½ÍƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½</P>")
-	document.write("<P ID=""InstalledComp"" CLASS=""def"">ï¿½ï¿½ï¿½ÌXï¿½Vï¿½ÍAï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ÌƒRï¿½ï¿½ï¿½sï¿½ï¿½ï¿½[ï¿½^ï¿½Éï¿½ï¿½ï¿½ÉƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B</P>")
+	document.write("<P class=headline>E½XE½VE½ÍƒCE½E½E½XE½gE½[E½E½E½E½E½E½Ü‚ï¿½E½E½</P>")
+	document.write("<P ID=""InstalledComp"" CLASS=""def"">E½E½E½ÌXE½VE½ÍAE½E½E½gE½E½E½ÌƒRE½E½E½sE½E½E½[E½^E½Éï¿½E½E½ÉƒCE½E½E½XE½gE½[E½E½E½E½E½E½Ü‚ï¿½E½E½E½B</P>")
 	DisplayInstalledComponents()
 End If
 </SCRIPT>
 <BR>
 <IMG ID=ix2 OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" STYLE="cursor: hand" class=flippable SRC="images/button-arrow-back.jpg" ALT=""><SPAN id=button1 LANGUAGE="VBScript" OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" CLASS="ButtonB" STYLE="WIDTH: 126px; HEIGHT: 17px; BORDER-LEFT: none; padding-bottom: 1px;">
-<A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>ï¿½ß‚ï¿½</ID></A><BR></SPAN>
+<A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>E½ß‚ï¿½</ID></A><BR></SPAN>
 <BR>
  <P>
 <BR><BR><CENTER>

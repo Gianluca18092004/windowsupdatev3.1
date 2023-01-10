@@ -151,7 +151,7 @@ Dim VarDownload_Time
  VarDownload_Time = VarDownload_Time + arrCurSelection(VarLoop_Counter,2)
 	Next
 	If (VarDownload_Time = 0) AND (VarDownload_Size = 0) Then
- totalscell.InnerText = "δѡ�����"
+ totalscell.InnerText = "δѡ�����?
 	Else
  totalscell.InnerText = "�ܼƴ�С: " & VarDownload_Size & " KB" & FuncMakeDownloadTimeString(VarDownload_Time)
 	End if

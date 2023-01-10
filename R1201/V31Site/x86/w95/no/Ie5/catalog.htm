@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktoppdateringer' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktoppdateringer<BR><SPAN CLASS='selectSoftwareTitle'>Velg programvare</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktoppdateringer' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktoppdateringer<BR><SPAN CLASS='selectSoftwareTitle'>Velg programvare</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Følgende oppdateringer er tilgjengelige for Windows-systemet. Hvis du vil installere noen oppdateringer, krysser du av i boksen ved siden av de du ønsker, og klikker deretter <STRONG>Last ned</STRONG>. Hvis du vil avinstallere eller installere oppdateringer på nytt, klikker du <B>Vis installerte oppdateringer</B>. Listen vil dermed også inneholde de oppdateringene du allerede har installert.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Se etter oppdateringer merket &quot;Allerede installert&quot; nedenfor. Hvis du vil installere oppdateringer på nytt, krysser du av i boksen ved siden av de du ønsker, og klikker deretter <STRONG>Last ned</STRONG>. Hvis det vises en avinstalleringsknapp ved siden av en oppdatering, kan du klikke den hvis du vil avinstallere oppdateringen. Hvis du vil skjule oppdateringer du allerede har installert, klikker du <b>Skjul installerte oppdateringer</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Som standard vil alle oppdateringene for Windows-systemet vises. På denne siden kan du angi hvilke oppdateringer du vil vise. Avmerkede elementer vil vises. Hvis du vil fjerne et element fra listen, fjerner du avmerkingen ved det elementet. Hvis du vil legge til det igjen en gang i fremtiden, kan du gå tilbake til denne listen og merke av for elementet på nytt. Hvis du vil lagre endringene, klikker du <B>Oppdater</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Vis installerte oppdateringer</A><BR></SPAN></TD>")

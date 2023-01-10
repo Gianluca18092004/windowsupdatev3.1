@@ -152,7 +152,7 @@ A {
  width: 1px;
  padding-top: 4px;
  padding-bottom: 4px;
- background-image: url('Images/blue-fade-rtl.jpg');
+ background-image: url('images/blue-fade-rtl.jpg');
  background-position:top left;
  padding-left:	36px;
  background-repeat: repeat-y;
@@ -401,7 +401,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD VALIGN='TOP'><IMG ID=ix1 ALT='עדכוני מוצרים' HEIGHT='40' class=flippable SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD VALIGN='BOTTOM' CLASS='blueFont75'>עדכוני מוצרים<BR><SPAN CLASS='selectSoftwareTitle'>בחר תוכנה</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD VALIGN='TOP'><IMG ID=ix1 ALT='עדכוני מוצרים' HEIGHT='40' class=flippable SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD VALIGN='BOTTOM' CLASS='blueFont75'>עדכוני מוצרים<BR><SPAN CLASS='selectSoftwareTitle'>בחר תוכנה</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>העדכונים הבאים זמינים עבור מערכת Windows שברשותך. כדי להתקין עדכונים, בחר בתיבות הסימון לצד העדכונים הרצויים לך ולאחר מכן לחץ על לחצן <STRONG>הורד</STRONG>. אם ברצונך להסיר התקנה או להתקין עדכונים מחדש, לחץ על <B>הצג עדכונים מותקנים</B>. הרשימה תורחב ותכלול עדכונים שכבר התקנת.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>חפש להלן עדכונים המסווגים כעדכונים אשר &quot;הותקנו כבר&quot;. אם ברצונך להתקין עדכונים מחדש, בחר בתיבות הסימון לצד העדכונים הרצויים לך ולאחר מכן לחץ על לחצן <STRONG>הורד</STRONG>. אם מופיע לחצן הסר לצד פריט עדכון, באפשרותך ללחוץ עליו כדי להסיר את העדכון. כדי להסתיר עדכונים שכבר התקנת, לחץ על <b>הסתר עדכונים מותקנים</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>כברירת מחדל, מוצגים כל העדכונים עבור מערכת Windows שברשותך. אם ברצונך לבצע התאמה אישית של רשימת העדכונים המוצגים, באפשרותך לעשות זאת בדף זה. הפריטים המסומנים יוצגו. כדי להסיר פריט מהרשימה, נא בטל את סימונו. אם תרצה בעתיד להוסיף פריט זה לרשימה, תוכל לחזור לרשימה זו ולסמן את הפריט מחדש. כדי לשמור את השינויים שלך, לחץ על <B>עדכן</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>הצג עדכונים מותקנים</A><BR></SPAN></TD>")

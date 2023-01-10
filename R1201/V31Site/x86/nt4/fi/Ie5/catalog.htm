@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Tuotepäivitykset' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Tuotepäivitykset<BR><SPAN CLASS='selectSoftwareTitle'>Valitse sovellus</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Tuotepäivitykset' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Tuotepäivitykset<BR><SPAN CLASS='selectSoftwareTitle'>Valitse sovellus</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Windows-järjestelmääsi on saatavilla seuraavat päivitykset. Päivitykset asennetaan valitsemalla niiden vieressä olevat ruudut ja napsauttamalla <STRONG>Lataa</STRONG>-painiketta. Jos haluat päivittää jo ladattuja osia tai poistaa asennettuja osia, valitse<B> Näytä asennetut päivitykset</B>. Luetteloon lisätään myös jo asentamasi osat.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Luettelossa on nyt myös osia, jotka on merkitty sanalla &quot;Asennettu&quot;. Ne voidaan asentaa uudelleen valitsemalla niiden vieressä olevat valintaruudut ja napsauttamalla <STRONG>Lataa</STRONG>-painiketta. Jos osan vieressä on Poista asennus -painike, osan voi poistaa napsauttamalla tätä painiketta. Voit poistaa asennetut osat luettelosta napsauttamalla <b>Piilota asennetut osat</b> -painiketta.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Tavallisesti kaikki Windowsiin sopivat päivitykset ovat esillä. Tällä sivulla voit mukauttaa esillä olevia kohteita. Merkityt kohteet näytetään. Voit poistaa kohteen luettelosta poistamalla sen valinnan. Jos myöhemmin haluat palauttaa kohteen luetteloon, palaa tälle sivulle ja valitse kohde. Muutokset tallentuvat kun valitset <B>Päivitä</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Näytä asennetut osat</A><BR></SPAN></TD>")

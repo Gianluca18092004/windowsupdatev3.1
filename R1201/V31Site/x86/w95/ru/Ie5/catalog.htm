@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Обновление приложений' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Обновление приложений<BR><SPAN CLASS='selectSoftwareTitle'>Выбор программного обеспечения</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Обновление приложений' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Обновление приложений<BR><SPAN CLASS='selectSoftwareTitle'>Выбор программного обеспечения</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Для вашей конфигурации Windows имеются следующие обновления. Для установки обновлений установите флажки, соответствующие обновлениям, которые вам необходимы, затем нажмите кнопку <STRONG>Загрузить</STRONG>. Если требуется удалить или переустановить обновления, выберите команду <B> Показать установленное</B>. Список будет дополнен уже установленными обновлениями.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Установите флажок внизу для обновлений, помеченных как &quot;Уже установленные&quot;. Если требуется переустановить обновления, установите флажки рядом с соответствующими обновлениями, затем нажмите кнопку <STRONG>Загрузить</STRONG>. Если рядом с обновлением появляется кнопка <STRONG>Удалить</STRONG>, его можно удалить, нажав эту кнопку. Скрыть установленные обновления можно выбрав команду <b>Скрыть установленное</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>По умолчанию отображаются все обновления для вашей системы Windows. При желании отображение обновлений по выбору можно настроить на данной странице. Компоненты, отмеченные флажком, будут отображаться. Чтобы удалить компонент из списка, снимите его флажок. Если в будущем потребуется восстановить отображение данного компонента, вернитесь к этому списку и установите соответствующий флажок. Чтобы сохранить изменения, нажмите кнопку <B>Обновить</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Показать установленное</A><BR></SPAN></TD>")

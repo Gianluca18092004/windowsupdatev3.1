@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Posodobitve izdelkov' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Posodobitve izdelkov<BR><SPAN CLASS='selectSoftwareTitle'>Izbiranje programske opreme</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Posodobitve izdelkov' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Posodobitve izdelkov<BR><SPAN CLASS='selectSoftwareTitle'>Izbiranje programske opreme</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Za vaš sistem Windows so na voljo te posodobitve. Èe jih želite namestiti, potrdite polja poleg želenih elementov, nato pa kliknite gumb <STRONG>Prenos</STRONG>. Èe želite odstraniti posodobitve ali jih ponovno namestiti, kliknite <B>Prikaži namešèene posodobitve</B>. Seznam bo zajel tudi posodobitve, ki ste jih že namestili.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Poglejte, katere posodobitve so oznaèene z »Že namešèeno«. Èe jih želite ponovno namestiti, potrdite polja poleg želenih posodobitev in kliknite gumb <STRONG>Prenos</STRONG>. Èe je poleg posodobitve prikazan tudi gumb »Odstrani«, lahko odstranite posodobitev s pritiskom nanj. Èe ne želite prikaza že namešèenih posodobitev, kliknite <b>Skrij namešèene posodobitve</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>V privzetem pogledu so prikazane vse posodobitve za sistem Windows. Èe želite prilagoditi prikaz posodobitev, to lahko naredite na tej strani. Prikazani bodo elementi, ki so oznaèeni. Èe želite element odstraniti s seznama, ga odznaèite. Èe boste kdaj želeli ta element dodati nazaj na seznam, se lahko vrnete na ta seznam in element ponovno oznaèite. Èe želite shraniti spremembe, kliknite <B>Posodobi</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Prikaži namešèene posodobitve</A><BR></SPAN></TD>")

@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizace produktù' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizace produktù<BR><SPAN CLASS='selectSoftwareTitle'>Vybrat software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizace produktù' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizace produktù<BR><SPAN CLASS='selectSoftwareTitle'>Vybrat software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Pro operaèní systém Windows jsou dostupné následující aktualizace. Chcete-li je instalovat, zaškrtnìte políèka vedle poadovanıch aktualizací a klepnìte na tlaèítko <STRONG>Stáhnout</STRONG>. Pokud chcete aktualizace odinstalovat nebo znovu instalovat, klepnìte na tlaèítko <B>Zobrazit nainstalované aktualizace</B>. Seznam se rozšíøí o ji nainstalované aktualizace.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Vyhledejte níe aktualizace oznaèené Ji nainstalováno. Chcete-li znovu instalovat nìkteré aktualizace, zaškrtnìte políèka vedle poadovanıch aktualizací a klepnìte na tlaèítko <STRONG>Stáhnout</STRONG>. Pokud je vedle urèité aktualizace zobrazeno tlaèítko Odinstalovat, mùete na nì klepnout a aktualizaci tak odinstalovat. Chcete-li skrıt ji instalované aktualizace, klepnìte na tlaèítko <b>Skrıt nainstalované aktualizace</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Standardnì jsou zobrazeny všechny aktualizace, které jsou dostupné pro konfiguraci systému Windows ve vašem poèítaèi. Chcete-li, aby byly zobrazovány pouze nìkteré aktualizace, mùete zobrazení upravit na této stránce. Zobrazovány budou pouze poloky, které jsou zaškrtnuté. Poloku ze seznamu odeberete zrušením zaškrtnutí odpovídajícího políèka. Budete-li v budoucnosti chtít danou poloku vrátit zpìt do seznamu, vrate se do tohoto seznamu a poloku znovu zaškrtnìte. Zmìny uloíte klepnutím na tlaèítko <B>Aktualizovat</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Zobrazit nainstalované aktualizace</A><BR></SPAN></TD>")

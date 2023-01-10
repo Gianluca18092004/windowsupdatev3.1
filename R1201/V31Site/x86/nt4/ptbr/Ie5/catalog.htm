@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Atualizações do produto' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Atualizações do produto<BR><SPAN CLASS='selectSoftwareTitle'>Selecione o software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Atualizações do produto' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Atualizações do produto<BR><SPAN CLASS='selectSoftwareTitle'>Selecione o software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>As seguintes atualizações estão disponíveis para o seu sistema Windows. Para instalar as atualizações, marque as caixas de seleção ao lado das atualizações desejadas e clique no botão <STRONG>Download</STRONG>. Se desejar desinstalar ou reinstalar atualizações, clique em <B>Mostrar atualizações instaladas</B>. A lista será expandida para incluir atualizações que você já instalou.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Verifique na lista abaixo a existência de atualizações com o rótulo &quot;Já instalada.&quot; Se desejar reinstalar atualizações, marque as caixas de seleção ao lado das atualizações desejadas e clique no botão <STRONG>Download</STRONG>. Se for exibido um botão 'Desinstalar' ao lado da atualização, você poderá clicar nele para desinstalar a atualização. Para ocultar atualizações que você já instalou, clique em <b>Ocultar atualizações instaladas</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Por padrão, todas as atualizações para o seu sistema Windows são mostradas. Se desejar personalizar quais atualizações deseja ver, poderá fazê-lo nesta página. Os itens marcados serão mostrados. Para remover um item da listam desmarque-o. Se, no futuro, desejar adicionar esse item de volta à lista, você poderá retornar a esta lista e marcar o item novamente. Para salvar suas alterações, clique em <B>Atualizar</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Mostrar atualizações instaladas</A><BR></SPAN></TD>")

@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktuppdateringar' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktuppdateringar<BR><SPAN CLASS='selectSoftwareTitle'>Välj programvara</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktuppdateringar' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktuppdateringar<BR><SPAN CLASS='selectSoftwareTitle'>Välj programvara</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Följande uppdateringar finns tillgängliga för Windows-systemet. Du installerar uppdateringarna genom att markera kryssrutorna bredvid de uppdateringar du vill göra och sedan klicka på knappen <STRONG>Hämta</STRONG>. Om du vill avinstallera eller installera om uppdateringar klickar du på <B>Visa installerade uppdateringar</B>. Listan kommer då att visa de uppdateringar som du redan har gjort.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Sök nedan efter uppdateringar med beteckningen &quot;Redan installerad&quot;. Om du vill installera om uppdateringar markerar du kryssrutan bredvid de uppdateringar du vill göra och klickar sedan på knappen <STRONG>Hämta</STRONG>. Om knappen Avinstallera visas bredvid en uppdatering kan du klicka på den om du vill avinstallera uppdateringen. Du döljer uppdateringar som du redan har installerat genom att klicka på <b>Dölj installerade uppdateringar</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Som standard visas alla uppdateringar för Windows. Om du vill anpassa visningen av uppdateringar kan du göra detta på den här sidan. De objekt som markerats visas. Om du vill ta bort ett objekt från listan avmarkerar du det. Om du i framtiden vill lägga till objektet i listan går du tillbaka till listan och markerar objektet. För att spara ändringarna klickar du på <B>Uppdatera</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Visa installerade uppdateringar</A><BR></SPAN></TD>")

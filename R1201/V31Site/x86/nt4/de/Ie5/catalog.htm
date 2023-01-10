@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktupdates' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktupdates<BR><SPAN CLASS='selectSoftwareTitle'>Software auswählen</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Produktupdates' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Produktupdates<BR><SPAN CLASS='selectSoftwareTitle'>Software auswählen</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Folgende Updates sind für Ihr Windows-System verfügbar. Aktivieren Sie das Kontrollkästchen neben dem gewünschten Update und klicken Sie dann auf die Schaltfläche <STRONG>Download</STRONG>, um die Updates zu installieren. Wenn Sie Updates deinstallieren oder erneut installieren möchten, klicken Sie auf <B>Installierte Updates anzeigen</B>. Daraufhin wird eine Liste der Updates angezeigt, die Sie bereits installiert haben.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Überprüfen Sie die unten stehende Liste nach Updates mit dem Hinweis &quot;Bereits installiert.&quot; Um Updates erneut zu installieren, aktivieren Sie das Kontrollkästchen neben dem gewünschten Kontrollkästchen und klicken Sie dann auf die Schaltfläche <STRONG>Download</STRONG>. Falls neben einem Update die Schaltfläche Deinstallation angezeigt wird, klicken Sie zur Deinstallation des Updates darauf. Klicken Sie auf <b>Installierte Updates ausblenden</b>, wenn die bereits installierten Updates nicht mehr angezeigt werden sollen.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Standardmäßig werden alle Updates für Ihr Windows-System angezeigt. Sie können die Anzeige der Updates auf dieser Seite anpassen. Ausgewählte Objekte werden angezeigt. Deaktivieren Sie die Objekte, um diese von der Liste zu entfernen. Wenn Sie dieses Objekt später erneut hinzufügen möchten, kehren Sie zu dieser Liste zurück und aktivieren Sie es erneut. Klicken Sie auf <B>Update</B>, um die Änderungen zu speichern.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Installierte Updates anzeigen</A><BR></SPAN></TD>")

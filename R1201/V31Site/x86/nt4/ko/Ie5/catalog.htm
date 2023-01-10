@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='제품 업데이트' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>제품 업데이트<BR><SPAN CLASS='selectSoftwareTitle'>소프트웨어 선택</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='제품 업데이트' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>제품 업데이트<BR><SPAN CLASS='selectSoftwareTitle'>소프트웨어 선택</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Windows 시스템에 사용 가능한 업데이트는 다음과 같습니다. 업데이트를 설치하려면 업데이트하고자 하는 항목의 확인란을 선택한 다음, <STRONG>다운로드</STRONG>를 누르십시오. 업데이트를 제거하거나 다시 설치하려면 <B>설치된 업데이트 보기</B>를 누르십시오. 이미 설치된 업데이트의 목록을 볼 수 있습니다.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>아래에서 &quot;설치되어 있음&quot;으로 표시된 업데이트를 확인하십시오. 업데이트를 다시 설치하려면 업데이트하고자 하는 항목의 확인란을 선택한 다음, <STRONG>다운로드</STRONG>를 누르십시오. 제거 단추가 표시되면 제거 단추를 클릭하여 업데이트를 제거할 수 있습니다. 이미 설치된 업데이트를 숨기려면 <b>설치된 업데이트 숨기기</b>를 누르십시오.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>기본적으로 Windows 시스템의 모든 업데이트는 표시되어 있습니다. 이 페이지에서는 보고자 하는 업데이트를 사용자 정의할 수 있습니다. 선택된 항목만 볼 수 있으므로 목록에서 항목을 제거하려면 선택을 취소하십시오. 나중에 목록에 다시 이 항목을 추가하려면 목록으로 돌아가 이 항목을 다시 선택하면 됩니다. 변경 사항을 저장하려면 <B>업데이트</B>를 누르십시오.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>설치된 업데이트 보기</A><BR></SPAN></TD>")

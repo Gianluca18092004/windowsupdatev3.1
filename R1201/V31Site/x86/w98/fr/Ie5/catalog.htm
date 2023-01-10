@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Mises à jour de produits' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Mises à jour de produits<BR><SPAN CLASS='selectSoftwareTitle'>Sélectionner un logiciel</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Mises à jour de produits' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Mises à jour de produits<BR><SPAN CLASS='selectSoftwareTitle'>Sélectionner un logiciel</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Les mises à jour suivantes sont disponibles pour votre système d'exploitation Windows. Pour installer des mises à jour, cochez les cases des mises à jour de votre choix, puis cliquez sur le bouton <STRONG>Télécharger</STRONG>. Si vous voulez désinstaller ou réinstaller des mises à jour, cliquez sur<B> Afficher les mises à jour installées</B>. La liste affichera alors également les mises à jour déjà installées.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Vérifiez ci-dessous les mises à jour indiquées comme étant &quot;Déjà installées.&quot; Si vous voulez réinstaller des mises à jour, cochez les cases en regard de ces mises à jour, puis cliquez sur le bouton <STRONG>Télécharger</STRONG>. Si un bouton Désinstaller apparaît près d'une mise à jour, vous pouvez cliquer dessus pour la désinstaller. Pour masquer les mises à jour déjà installées, cliquez sur <b>Masquer les mises à jour déjà installées</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Par défaut, toutes les mises à jour destinées à votre système d'exploitation Windows sont affichées. Si vous voulez personnaliser l'affichage des mises à jour, vous pouvez procéder depuis cette page. Les articles dont la case a été cochée seront affichés. Pour supprimer un article depuis la liste, désélectionnez la case correspondante. Si, plus tard, vous souhaitez à nouveau ajouter cet article à la liste, vous pouvez cocher à nouveau la case correspondante à partir de cette même liste. Pour enregistrer les modifications apportées, cliquez sur <B>Mise à jour</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Afficher les mises à jour installées</A><BR></SPAN></TD>")

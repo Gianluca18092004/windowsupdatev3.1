@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -226,7 +226,7 @@ Sub Window_Onload
  parent.parent.Frames("frmToolbar").HideWaitDialog()
 	Call UpdateNavigationMenu()
 	If bResetPersonalizedCUSettings Then
- MsgBox "��ǰӦ������Ҫ���µĸ��������Ѿ������á���Ҫ�������ǻ���ʾ�������Ҫ��װ�ض��ĸ��³����뵥������ʾ�������³��򡱡�", vbOKOnly ,"Windows Update"
+ MsgBox "��ǰӦ������Ҫ���µĸ��������Ѿ������á���Ҫ�������ǻ���ʾ�������Ҫ��װ�ض��ĸ��³����뵥������ʾ�������³��򡱡�?, vbOKOnly ,"Windows Update"
 	End If
 End Sub
 Function ExclusivePUID ()
@@ -400,8 +400,8 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='��Ʒ����' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>��Ʒ����<BR><SPAN CLASS='selectSoftwareTitle'>ѡ������</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
-	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>���¸��³������������ Windows ϵͳ��Ҫ��װ���³�����ѡ����������Աߵĸ�ѡ��Ȼ�󵥻���<STRONG>����</STRONG>����ť�����Ҫж�ػ����°�װ���³����뵥������ʾ�Ѱ�װ�ĸ��¡���չ�����б��н��������Ѿ���װ�˵ĸ��¡�</SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>������±��Ϊ���Ѱ�װ���ĸ��¡�Ҫ���°�װ���³�����ѡ����������Աߵĸ�ѡ��Ȼ�󵥻���<STRONG>����</STRONG>����ť����������������Ա߳��֡�ж�ء���ť�����Ե����ð�ť��ж�ظ��¡������������Ѱ�װ�ĸ��¡��������Ѱ�װ�ĸ��³���</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Ĭ������£�����ʾ���п��������� Windows ϵͳ�ĸ��³���Ҳ�����ڴ�ҳ�Զ�����Щ���³����ǿɼ��ģ���Щ�ǲ��ɼ��ġ�ѡ�е���Ŀ������ʾ��Ҫ����Ŀ���б���ɾ�������������Ŀ�Աߵĸ�ѡ��ǡ�����Ժ�Ҫ������Ŀ���ӵ��б��У��뷵�ظ��б�������ѡ�и���Ŀ��Ҫ���������ĸ��ģ��뵥�������¡���</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='��Ʒ����' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>��Ʒ����<BR><SPAN CLASS='selectSoftwareTitle'>ѡ������</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>���¸��³������������?Windows ϵͳ��Ҫ��װ���³�����ѡ����������Աߵĸ�ѡ��Ȼ�󵥻���?STRONG>����</STRONG>����ť�����Ҫж�ػ����°�װ���³����뵥������ʾ�Ѱ�װ�ĸ��¡���չ�����б��н��������Ѿ���װ�˵ĸ��¡�?/SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>������±��Ϊ���Ѱ�װ���ĸ��¡�Ҫ���°�װ���³�����ѡ����������Աߵĸ�ѡ��Ȼ�󵥻���?STRONG>����</STRONG>����ť����������������Ա߳��֡�ж�ء���ť�����Ե����ð�ť��ж�ظ��¡������������Ѱ�װ�ĸ��¡��������Ѱ�װ�ĸ��³���?/SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Ĭ������£�����ʾ���п���������?Windows ϵͳ�ĸ��³���Ҳ�����ڴ�ҳ�Զ�����Щ���³����ǿɼ��ģ���Щ�ǲ��ɼ��ġ�ѡ�е���Ŀ������ʾ��Ҫ����Ŀ���б���ɾ�������������Ŀ�Աߵĸ�ѡ��ǡ�����Ժ�Ҫ������Ŀ���ӵ��б��У��뷵�ظ��б�������ѡ�и���Ŀ��Ҫ���������ĸ��ģ��뵥�������¡���?/SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>��ʾ�Ѱ�װ�ĸ���</A><BR></SPAN></TD>")
 	Elseif ObjFrame_Reference.g_bShowAll = True Then
@@ -518,7 +518,7 @@ Function CreateCriticalUpdateSectionHTML(nCurIndex)
 	nextSectionIndex = CreateCURollUpItem(nCurIndex)
 	If m_szExclusiveCUHTML <> "" Then
  If bCURollupComponent And bCUExclusiveNotInstalledComponent Then
- WriteHTML("<Div ID='ShowAllDesc' class=font80normal>�������ṩ����Ҫ���±��뵥����װ�������������κ���Ŀһ��װ����ˣ���Щ��Ҫ����û�а����ڡ���Ҫ�������������С�</Div>")
+ WriteHTML("<Div ID='ShowAllDesc' class=font80normal>�������ṩ����Ҫ���±��뵥����װ�������������κ���Ŀһ��װ����ˣ���Щ��Ҫ����û�а����ڡ���Ҫ�������������С�?/Div>")
  End If
  WriteHTML(m_szExclusiveCUHTML)
  WriteHTML("<P ID='HIDE_FOR_PERSONALIZATION' class=font80normal></P>")
@@ -552,7 +552,7 @@ Sub CreateCUTitle(nCurIndex)
 	Else
  szDisplay_Status = "DISPLAY: block;"
 	End If
-	WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & m_arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Ŀǰ��û�п��õĴ�����¡�</SPAN>")
+	WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & m_arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Ŀǰ��û�п��õĴ�����¡�?/SPAN>")
 	WriteHTML("<SPAN ALIGN='LEFT' ID='PersonalizeDesc' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='DISPLAY: none'><IMG SRC='images/ts.gif' ALT='' HEIGHT=6px><br><SPAN ID='PersonalizeCUMessage'>�ⲿ��Ŀ¼�޷����и��˻�����Ҫ�������ǻ���ʾ��</SPAN></SPAN>")
 End Sub
 Function CreateCURollUpItem(nCurIndex)
@@ -1039,7 +1039,7 @@ Sub CreateSection(arrCatalog, nCurIndex)
  If (arrCatalog(nCurIndex,0)) = m_DeviceDriversSection Then
  WriteHTML("<Div class=font80normal style='margin-top:5;" & szDriverBlurbStatus & "'>Windows Update ��⵽���ļ�����ϰ�װ������������Ӳ���豸��Windows Update �д��豸�������������ĸ��°汾��������ʹ����Ӳ������ Microsoft Windows ��ʹ�á�</DIV>")
  End If
- WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Ŀǰ��û�п��õĴ�����¡�<br>&nbsp;</SPAN>")
+ WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Ŀǰ��û�п��õĴ�����¡�?br>&nbsp;</SPAN>")
 	ElseIf IsSubSection(arrCatalog(nCurIndex,3)) Then
  If HasComponents(arrCatalog, nCurIndex, 3) Then
  szDisplay_Status = "DISPLAY: block;"
@@ -1320,7 +1320,7 @@ Dim VarDownload_Time
  VarDownload_Time = VarDownload_Time + arrSelectedItems(VarLoop_Counter,5)
 	Next
 	If (VarDownload_Time = 0) AND (VarDownload_Size = 0) Then
- ObjFrame_Catalog_Top.TdTotals1.InnerText = "δѡ�����"
+ ObjFrame_Catalog_Top.TdTotals1.InnerText = "δѡ�����?
 	Else
  ObjFrame_Catalog_Top.Document.All("TdTotals1").InnerHTML = "�ܼƴ�С: <span dir=ltr>" & CLng(VarDownload_Size) & " KB</span>" & FuncMakeDownloadTimeString(VarDownload_Time)
 	End if
@@ -1386,7 +1386,7 @@ Function ConfirmSelection(VarPosition)
 	Dim iRet
 	Dim szInstallExclusive_Text
 	If IsStatusScary(m_arrCatalog(VarPosition, 3)) Then
- szInstallExclusive_Text = patternReplace("����Ҫ���ص���Ϊ����������Ϣ�ͽ��в��Զ��ַ��� Beta ��������Microsoft ���ṩ�й� Beta ��Ʒ�ļ���֧�֡������������ھ�������Ԥ�����������Եĸ߼��û����������ȷ���Լ��Ƿ�����������Ա��Microsoft ��������Ҫ���ظ����������ѡ���˰�װ��������Microsoft ��������Ҫ���䰲װ����Ҫ�ļ���������ϵͳ�ϡ�%2ֻ�ܵ������� %1��������ȷ�������ز�Ʒ����Ŀ¼������ %1����������ɰ�װ�Ժ󷵻� Windows Update �������������������ȡ������������ %1 �����ز�Ʒ����Ŀ¼��", "%1", m_arrCatalog(VarPosition,1))
+ szInstallExclusive_Text = patternReplace("����Ҫ���ص���Ϊ����������Ϣ�ͽ��в��Զ��ַ��� Beta ��������Microsoft ���ṩ�й� Beta ��Ʒ�ļ���֧�֡������������ھ�������Ԥ�����������Եĸ߼��û����������ȷ���Լ��Ƿ�����������Ա��Microsoft ��������Ҫ���ظ����������ѡ���˰�װ��������Microsoft ��������Ҫ���䰲װ����Ҫ�ļ���������ϵͳ�ϡ�%2ֻ�ܵ������� %1��������ȷ�������ز�Ʒ����Ŀ¼������ %1����������ɰ�װ�Ժ󷵻�?Windows Update �������������������ȡ������������?%1 �����ز�Ʒ����Ŀ¼��", "%1", m_arrCatalog(VarPosition,1))
  szInstallExclusive_Text = patternReplace(szInstallExclusive_Text, "%2", ("<BR><BR>"))
  ConfirmSelection = TRUE
  iRet = parent.parent.Frames(0).WuMsgBox(szInstallExclusive_Text, 3 ,"Windows Update","350px","400px")
@@ -1395,7 +1395,7 @@ Function ConfirmSelection(VarPosition)
  Exit Function
  End If
 	Else
- szInstallExclusive_Text = patternReplace("ֻ�ܵ������� %1��������ȷ�������ز�Ʒ����Ŀ¼������ %1����������ɰ�װ�Ժ󷵻� Windows Update �������������������ȡ������������ %1 �����ز�Ʒ����Ŀ¼��", "%1", m_arrCatalog(VarPosition,1))
+ szInstallExclusive_Text = patternReplace("ֻ�ܵ������� %1��������ȷ�������ز�Ʒ����Ŀ¼������ %1����������ɰ�װ�Ժ󷵻�?Windows Update �������������������ȡ������������?%1 �����ز�Ʒ����Ŀ¼��", "%1", m_arrCatalog(VarPosition,1))
  szInstallExclusive_Text = patternReplace(szInstallExclusive_Text, "%2", ("<BR><BR>"))
  ConfirmSelection = TRUE
  iRet = parent.parent.Frames(0).WuMsgBox(szInstallExclusive_Text, 3 ,"Windows Update","350px","400px")
@@ -1429,7 +1429,7 @@ Sub DoPreview(VarPosition,PUID)
 End Sub
 Function ConfirmPreviewSelection(VarPosition)
 	Dim szInstallPreview_Text
-	szInstallPreview_Text = patternReplace("��Ҫ���ص���Ŀ %1 ��һ��Ԥ�������Ԥ�������δ����ȫ����ԣ�ֻ���߼��û��Լ������������δ������������Աʹ�á��������ȷ���Լ��Ƿ��������������Microsoft ��������Ҫ���ظ������Microsoft ���ṩԤ������ļ���֧�֡�%2���Ҫ��װ %1����ѡ��ȷ������%2������밲װ %1����ѡ��ȡ������", "%1", m_arrCatalog(VarPosition,1))
+	szInstallPreview_Text = patternReplace("��Ҫ���ص���Ŀ %1 ��һ��Ԥ�������Ԥ�������δ����ȫ����ԣ�ֻ���߼��û��Լ������������δ������������Աʹ�á��������ȷ���Լ��Ƿ��������������Microsoft ��������Ҫ���ظ������Microsoft ���ṩԤ������ļ���֧�֡�?2���Ҫ���?%1����ѡ��ȷ������%2������밲�?%1����ѡ��ȡ������", "%1", m_arrCatalog(VarPosition,1))
 	szInstallPreview_Text = patternReplace(szInstallPreview_Text, "%2", ("<BR><BR>"))
 	ConfirmPreviewSelection = TRUE
 	Dim iRet

@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Updates op producten' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Updates op producten<BR><SPAN CLASS='selectSoftwareTitle'>Software selecteren</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Updates op producten' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Updates op producten<BR><SPAN CLASS='selectSoftwareTitle'>Software selecteren</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>De volgende updates zijn beschikbaar voor uw Windows-systeem. Als u updates wilt installeren, schakelt u het selectievakje in naast de gewenste update en klikt u op de knop <STRONG>Volgende</STRONG>. Als u een update opnieuw wilt installeren of wilt verwijderen, klikt u op <B>Geïnstalleerde updates weergeven</B>. In de lijst worden vervolgens ook updates weergegeven die u al hebt geïnstalleerd.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Zoek hier beneden naar updates met de markering Reeds geïnstalleerd. Als u updates opnieuw wilt installeren, selecteert u het selectievakje naast de gewenste updates en klikt u op de knop <STRONG>Volgende</STRONG>. Als naast een update de knop Verwijderen wordt weergegeven, kunt u op die knop klikken om de update te verwijderen. Als u eerder geïnstalleerde updates wilt verbergen, klikt u op <b>Geïnstalleerde updates verbergen</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Standaard worden alle updates voor uw Windows-systeem weergegeven. Als u de weergave van de updates wilt wijzigen, kunt u dat op deze pagina doen. De geselecteerde items worden weergegeven. Als u een item van de lijst wilt verwijderen, maakt u de selectie ongedaan. Als u dit item later weer wilt toevoegen aan de lijst, kunt u naar deze lijst teruggaan en het item opnieuw selecteren. Als u de wijzigingen wilt opslaan klikt u op <B>Bijwerken</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Geïnstalleerde updates weergeven</A><BR></SPAN></TD>")

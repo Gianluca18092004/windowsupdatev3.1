@@ -36,7 +36,7 @@ Sub ShowSelections()
 	Dim arrItemAttribs
 	If objFrameEngine.g_bCuRollupSelected Then
  strDownloadInfo = objFrameEngine.g_CURollupSize & " KB/" & FuncMakeDownloadTimeString(objFrameEngine.g_CURollupTime)
- document.write("<tr><td height=25 valign=top><input style='margin-left: -3px;' type=checkbox ID='CheckBox_CURollup' Language=VBScript checked onClick='CUDLCheckBoxEvent(Window.Event.srcElement)'><b>ï¿½dï¿½vï¿½ÈXï¿½Vï¿½pï¿½bï¿½Pï¿½[ï¿½W</b>&nbsp;&nbsp;<span class='downloadInfo'>" & strDownloadInfo & "</span></td></tr>")
+ document.write("<tr><td height=25 valign=top><input style='margin-left: -3px;' type=checkbox ID='CheckBox_CURollup' Language=VBScript checked onClick='CUDLCheckBoxEvent(Window.Event.srcElement)'><b>E½dE½vE½ÈXE½VE½pE½bE½PE½[E½W</b>&nbsp;&nbsp;<span class='downloadInfo'>" & strDownloadInfo & "</span></td></tr>")
  For i = 0 To UBound(arrCurSelection)
  If objFrameEngine.MatchingCURollupPUID(arrCurSelection(i,0)) Then
  Else
@@ -119,24 +119,24 @@ Function FuncMakeDownloadTimeString(nDownloadTime)
 	Dim intHours
 	Dim VarMinutes
 	If nDownloadTime <= 60 Then
- VarMinutes = "< 1 ï¿½ï¿½"
+ VarMinutes = "< 1 E½E½"
 	ElseIf nDownloadTime >= 3600 Then
  intHours = Int(nDownloadTime / 3600)
  If (nDownloadTime/60) Mod 60 = 0 Then
  VarMinutes = ""
  Else
- VarMinutes = (Int(nDownloadTime/60) - (intHours * 60)) & " ï¿½ï¿½ "
+ VarMinutes = (Int(nDownloadTime/60) - (intHours * 60)) & " E½E½ "
  End If
  Select Case intHours
  Case 0:
  VarHours = ""
  Case Else:
- VarHours = intHours & " ï¿½ï¿½ï¿½ï¿½ "
+ VarHours = intHours & " E½E½E½E½ "
  End Select
 	Else
- VarMinutes = Int(nDownloadTime/60) & " ï¿½ï¿½ "
+ VarMinutes = Int(nDownloadTime/60) & " E½E½ "
 	End If
-	FuncMakeDownloadTimeString = " ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½: " & VarHours & VarMinutes
+	FuncMakeDownloadTimeString = " E½_E½EE½E½E½E½E½[E½hE½E½E½vE½E½E½E½: " & VarHours & VarMinutes
 End Function
 Function FuncCalculate_Totals()
 Dim VarLoop_Counter
@@ -151,9 +151,9 @@ Dim VarDownload_Time
  VarDownload_Time = VarDownload_Time + arrCurSelection(VarLoop_Counter,2)
 	Next
 	If (VarDownload_Time = 0) AND (VarDownload_Size = 0) Then
- totalscell.InnerText = "ï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½"
+ totalscell.InnerText = "E½RE½E½E½|E½[E½lE½E½E½gE½E½E½IE½E½E½E½E½E½Ä‚ï¿½E½Ü‚ï¿½E½E½"
 	Else
- totalscell.InnerText = "ï¿½ï¿½ï¿½vï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½h ï¿½Tï¿½Cï¿½Y: " & VarDownload_Size & " KB" & FuncMakeDownloadTimeString(VarDownload_Time)
+ totalscell.InnerText = "E½E½E½vE½_E½EE½E½E½E½E½[E½h E½TE½CE½Y: " & VarDownload_Size & " KB" & FuncMakeDownloadTimeString(VarDownload_Time)
 	End if
 End Function
 Dim arrSelectedItems
@@ -210,7 +210,7 @@ BORDER-RIGHT: #002f9f Solid 2px;
 BORDER-TOP: #9fcfff Solid 2px;
 COLOR: #ffffff;
 CURSOR: Hand;
-FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 FONT-SIZE: 10pt;
 FONT-WEIGHT: bold;
 TEXT-ALIGN: center;
@@ -224,7 +224,7 @@ BORDER-RIGHT: #5f5f5f Solid 2px;
 BORDER-TOP: #c0c0c0 Solid 2px;
 COLOR: #ffffff;
 CURSOR: Hand;
-FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 FONT-SIZE: 10pt;
 FONT-WEIGHT: bold;
 TEXT-ALIGN: center;
@@ -236,7 +236,7 @@ A.TextLink:link {
 A.TextLink:visited {
 }
 .BodyText {
-FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 FONT-SIZE: 9pt;
 }
 .downloadInfo {
@@ -248,28 +248,28 @@ font-size:smaller;
 <body ID=bod1 BACKGROUND="images/wm.jpg" BGCOLOR="#FFFFFF" LEFTMARGIN=0 CLASS="BodyText">
 <table border="0" cellPadding="1" cellSpacing="1" width="100%">
  <tr>
- <td rowSpan="2" width="70" valign="top"><IMG ID=ix1 SRC="images/big-hand.png" class=flippable ALT="ï¿½ï¿½ï¿½iï¿½ÌXï¿½V" WIDTH="64" HEIGHT="40"></td>
- <td id=td1 style="COLOR: #00319c;FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;FONT-SIZE: 9pt;FONT-WEIGHT: bold"><ID ID=x1>ï¿½ï¿½ï¿½iï¿½ÌXï¿½V</ID></td>
+ <td rowSpan="2" width="70" valign="top"><IMG ID=ix1 SRC="images/big-hand.png" class=flippable ALT="E½E½E½iE½ÌXE½V" WIDTH="64" HEIGHT="40"></td>
+ <td id=td1 style="COLOR: #00319c;FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;FONT-SIZE: 9pt;FONT-WEIGHT: bold"><ID ID=x1>E½E½E½iE½ÌXE½V</ID></td>
 	</tr>
  <tr>
- <td id=td2 style="COLOR: #00319c;FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;FONT-SIZE: 20pt;FONT-WEIGHT: bold"><ID ID=x2>ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½h ï¿½`ï¿½Fï¿½bï¿½Nï¿½ï¿½ï¿½Xï¿½g</ID></td>
+ <td id=td2 style="COLOR: #00319c;FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;FONT-SIZE: 20pt;FONT-WEIGHT: bold"><ID ID=x2>E½_E½EE½E½E½E½E½[E½h E½`E½FE½bE½NE½E½E½XE½g</ID></td>
  </tr>
 </table>
 <BR>
-<table id=tab1 border="0" cellPadding="1" cellSpacing="1" width="100%" style="FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N; FONT-SIZE: 9pt;">
+<table id=tab1 border="0" cellPadding="1" cellSpacing="1" width="100%" style="FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N; FONT-SIZE: 9pt;">
 	<tr>
- <td id=td3 style="COLOR:#002f9f; FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N; FONT-SIZE: 20pt; FONT-WEIGHT: bold; width=25px;" vAlign="top">1</td>
+ <td id=td3 style="COLOR:#002f9f; FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N; FONT-SIZE: 20pt; FONT-WEIGHT: bold; width=25px;" vAlign="top">1</td>
  <td id=td4 width="5"></td>
- <td id=td5 style="PADDING-TOP: 4px"><b style="PADDING-TOP: 6px"><ID ID=x3>ï¿½Iï¿½ï¿½ï¿½ÌŠmï¿½F</ID></b><br>
- <ID ID=x4>ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ‚¤ï¿½É‘Iï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ÍˆÈ‰ï¿½ï¿½Ì’Ê‚ï¿½Å‚ï¿½ï¿½B</ID>
- <ID ID=x5>ï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ÍAï¿½ï¿½ï¿½ÌƒRï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½Ìƒ`ï¿½Fï¿½bï¿½N ï¿½{ï¿½bï¿½Nï¿½Xï¿½ï¿½ï¿½Iï¿½tï¿½É‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B</ID></td>
+ <td id=td5 style="PADDING-TOP: 4px"><b style="PADDING-TOP: 6px"><ID ID=x3>E½IE½E½E½ÌŠmE½F</ID></b><br>
+ <ID ID=x4>E½CE½E½E½XE½gE½[E½E½E½E½E½E½æ‚¤E½É‘IE½E½E½E½E½ê‚½E½\E½tE½gE½EE½FE½AE½ÍˆÈ‰ï¿½E½Ì’Ê‚ï¿½Å‚ï¿½E½B</ID>
+ <ID ID=x5>E½RE½E½E½|E½[E½lE½E½E½gE½ÌƒCE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½E½E½É‚ÍAE½E½E½ÌƒRE½E½E½|E½[E½lE½E½E½gE½Ìƒ`E½FE½bE½N E½{E½bE½NE½XE½E½E½IE½tE½É‚ï¿½E½Ä‚ï¿½E½E½E½E½E½E½E½B</ID></td>
 	</tr>
 </table>
 <DIV id=dv1 STYLE="margin-left: 39px; padding-top: 10px;">
 <DIV id=dv2 STYLE="background-color: #00299C; margin-right: -20px; font-size: 1px;"><BR></DIV>
 <table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" CLASS="BodyText">
 	<tr>
- <tbody id=tb1 style="COLOR: #00319C;FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;FONT-SIZE: 9pt;FONT-WEIGHT: Normal">
+ <tbody id=tb1 style="COLOR: #00319C;FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;FONT-SIZE: 9pt;FONT-WEIGHT: Normal">
  <td height=20 id=totalscell><td>
  </tbody>
 	</tr>
@@ -311,13 +311,13 @@ font-size:smaller;
  <NOBR>
  <span ID=spanDownloadBtn OnClick='javascript: if ( this.children[0].className == "ButtonB") objFrameEngine.DownloadComponents(); '>
  <SPAN ID=spnx1 CLASS="ButtonB" STYLE="WIDTH: 120px; HEIGHT: 30px; BORDER-RIGHT: none; PADDING-TOP: 7px;">
- <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½Jï¿½n</ID></A>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>E½_E½EE½E½E½E½E½[E½hE½JE½n</ID></A>
  <BR></SPAN><IMG ID=ix2 CLASS=flippable OnClick="Call objFrameEngine.DownloadComponents()"
  STYLE="cursor: hand" SRC="images/button-arrow.gif" ALT="" style="vertical-align:top;"></NOBR><BR>
  </span>
  </td>
- <td><ID ID=x10>ï¿½ï¿½Lï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½h
- <br>ï¿½ï¿½ï¿½Aï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B</ID>
+ <td><ID ID=x10>E½E½LE½\E½tE½gE½EE½FE½AE½E½E½_E½EE½E½E½E½E½[E½h
+ <br>E½E½E½AE½CE½E½E½XE½gE½[E½E½E½E½E½Ü‚ï¿½E½B</ID>
  </td>
  </tr>
  <tr>
@@ -327,9 +327,9 @@ font-size:smaller;
  <td valign=top>
  <IMG ID=ix3 Class=flippable OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" STYLE="cursor: hand" SRC="images/button_back_large.gif" ALT="" style="vertical-align:top;"><SPAN id=spn2 LANGUAGE="VBScript" OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" CLASS="ButtonB"
  STYLE="WIDTH: 120px; HEIGHT: 30px; BORDER-LEFT: none; padding-top:7px; padding-bottom: 1px;">
- <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x11>ï¿½ß‚ï¿½</ID></A><BR></SPAN>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x11>E½ß‚ï¿½</ID></A><BR></SPAN>
  </td>
- <td><ID ID=x12>ï¿½ï¿½ï¿½pï¿½Å‚ï¿½ï¿½ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ê——ï¿½Ìƒyï¿½[ï¿½Wï¿½É–ß‚ï¿½Ü‚ï¿½ï¿½B</ID>
+ <td><ID ID=x12>E½E½E½pE½Å‚ï¿½E½E½\E½tE½gE½EE½FE½AE½ê——ï¿½ÌƒyE½[E½WE½É–ß‚ï¿½Ü‚ï¿½E½B</ID>
  </td>
  </tr>
  </table>

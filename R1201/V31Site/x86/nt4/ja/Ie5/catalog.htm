@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='製品の更新' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>製品の更新<BR><SPAN CLASS='selectSoftwareTitle'>ソフトウェアの選択</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='製品の更新' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>製品の更新<BR><SPAN CLASS='selectSoftwareTitle'>ソフトウェアの選択</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>お使いの Windows システムにインストールできるソフトウェアが以下に表示されています。インストールするには、希望のソフトウェアの横のチェック ボックスをオンにして [ダウンロード] をクリックします。すでにインストールされているソフトウェアをアンインストールまたは再インストールするには、[すべて表示] をクリックしてください。すでにインストールされているソフトウェアが表示されます。<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>ご利用いただけるすべてのソフトウェアが以下に表示されています。すでにインストールされたソフトウェアには、&quot;インストール済み&quot; と表示されています。再インストールするには、希望のアップデートの横のチェック ボックスをオンにして [ダウンロード] をクリックします。製品の横に [アンインストール] ボタンが表示された場合は、このボタンをクリックしてアンインストールします。[インストール済みソフトウェアの非表示] をクリックすると、すでにインストールされているソフトウェアは表示されなくなります。</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>既定では、お使いの Windows システムで利用可能な更新がすべて表示されます。このページで、必要な更新をカスタマイズできます。チェックした項目が表示されます。一覧から項目を削除するには、チェックをオフにします。将来、この項目を一覧に追加するときは、一覧に戻って項目を再度 チェックします。変更を保存するには、<B>[更新]</B> をクリックします。</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>すべて表示</A><BR></SPAN></TD>")

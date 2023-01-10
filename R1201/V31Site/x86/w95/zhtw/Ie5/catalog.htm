@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='產品更新' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>產品更新<BR><SPAN CLASS='selectSoftwareTitle'>選擇軟體</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='產品更新' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>產品更新<BR><SPAN CLASS='selectSoftwareTitle'>選擇軟體</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>下列是可以供您 Windows 系統使用的修正檔。要安裝，請選擇修正檔旁邊的核取方塊，然後按一下 [下載] 按鈕。若想解除安裝或重新安裝，請按一下 [顯示已更新組件]。清單會展開，顯示您已經安裝的修正檔。</SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>請檢查下列標示成 「已經安裝」的修正檔。若您想重新安裝，請選擇修正檔旁邊的核取方塊，然後按一下 [下載] 按鈕。若該元件旁 [解除安裝] 按鈕，則按一下可以解除安裝該修正檔。若要隱藏已經安裝的修正檔，請按一下 [隱藏已更新組件]。</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>依照預設，會顯示所有您系統適用的修正檔。如果您想自訂可以看到哪些修正檔，您可以在此網頁設定。會顯示被核選的項目。若要從您的清單移除項目，請取消其核取方塊內的記號。如果，以後您想新增此項目到清單，您可以返回此清單，然後重點選取。若要儲存您所做的變更，請按一下 [更新]。</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>顯示已更新組件</A><BR></SPAN></TD>")

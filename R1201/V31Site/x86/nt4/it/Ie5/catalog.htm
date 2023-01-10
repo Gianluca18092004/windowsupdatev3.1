@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aggiornamenti prodotti' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aggiornamenti prodotti<BR><SPAN CLASS='selectSoftwareTitle'>Seleziona software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aggiornamenti prodotti' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aggiornamenti prodotti<BR><SPAN CLASS='selectSoftwareTitle'>Seleziona software</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>I seguenti aggiornamenti sono disponibili per il sistema Windows in uso. Per installarli, selezionare le caselle di controllo relative agli aggiornamenti desiderati e fare clic sul pulsante <STRONG>Download</STRONG>. Se si desidera disinstallare o reinstallare gli aggiornamenti, scegliere <B>Mostra aggiornamenti installati</B>. L'elenco verrà espanso in modo da includere gli aggiornamenti già installati.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Verificare di seguito la presenza di aggiornamenti definiti come ""già installati"". Se si desidera reinstallare gli aggiornamenti, selezionare le caselle di controllo relative agli aggiornamenti desiderati e fare clic sul pulsante <STRONG>Download</STRONG>. Se accanto a un aggiornamento viene visualizzato un pulsante Disinstalla, è possibile disinstallare l'aggiornamento. Per nascondere gli aggiornamenti già installati, fare clic su <b>Nascondi aggiornamenti installati</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Per impostazione predefinita vengono visualizzati tutti gli aggiornamenti disponibili per il sistema Windows in uso. È tuttavia possibile personalizzare la pagina e scegliere quali visualizzare o meno. Tutti i componenti selezionati verranno visualizzati. Per rimuovere un elemento dall'elenco, è sufficiente deselezionarlo. Per aggiungerlo di nuovo all'elenco, sarà necessario riselezionarlo. Per salvare le modifiche, fare clic su <B>Aggiorna</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Mostra aggiornamenti installati</A><BR></SPAN></TD>")

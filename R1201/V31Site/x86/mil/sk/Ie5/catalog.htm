@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizácie produktov' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizácie produktov<BR><SPAN CLASS='selectSoftwareTitle'>Zvo¾te softvér</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizácie produktov' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizácie produktov<BR><SPAN CLASS='selectSoftwareTitle'>Zvo¾te softvér</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Nasledovné aktualizácie sú dostupné pre systém Windows. Ak chcete nainštalova aktualizácie, zaèiarknite políèka pri iadanıch aktualizáciách a potom kliknite na tlaèidlo <STRONG>Prevzia</STRONG>. Ak chcete aktualizácie odinštalova alebo preinštalova, kliknite na tlaèidlo <B>Zobrazi nainštalované aktualizácie</B>. Rozbalí sa zoznam s aktualizáciami, ktoré ste u nainštalovali.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Skontrolujte nišie, ktoré aktualizácie sú oznaèené ako &quot;U nainštalované.&quot; Ak chcete aktualizácie preinštalova, zaèiarknite políèka pri iadanıch aktualizáciách a potom kliknite na tlaèidlo <STRONG>Prevzia</STRONG>. Ak sa pri aktualizácii zobrazí tlaèidlo Odinštalova, môete naò kliknú a aktualizáciu odinštalova. Ak chcete skry aktualizácie, ktoré ste u nainštalovali, kliknite na tlaèidlo <b>Skry nainštalované aktualizácie</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Predvolené zobrazenie pre váš systém Windows zobrazuje všetky aktualizácie. Ak chcete špecifikova, ktoré aktualizácie sa majú zobrazi, môete tak urobi na tejto stránke. Zobrazia sa zaèiarknuté poloky. Poloku zo zoznamu odstránite zrušením jej zaèiarknutia. Ak by ste chceli poloku v budúcnosti do zoznamu znova prida, môete sa vráti na tento zoznam a danú poloku opätovne zaèiarknu. Ak chcete zmeny uloi, kliknite na tlaèidlo <B>Aktualizova</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Zobrazi nainštalované aktualizácie</A><BR></SPAN></TD>")

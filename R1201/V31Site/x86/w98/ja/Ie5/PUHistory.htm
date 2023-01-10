@@ -5,11 +5,11 @@
 <TITLE></TITLE>
 <STYLE type="text/css">
 BODY {
-	font-family:"ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N";
+	font-family:"E½lE½r E½oE½SE½VE½bE½N";
 	font-size:9pt;
 }
 .def {
-	font-family:"ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N";
+	font-family:"E½lE½r E½oE½SE½VE½bE½N";
 	font-size:9pt;
 }
 .ButtonB {
@@ -20,7 +20,7 @@ BODY {
 	BORDER-TOP: #9fcfff Solid 2px;
 	COLOR: #ffffff;
 	CURSOR: Hand;
-	FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+	FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 	FONT-SIZE: 10pt;
 	FONT-WEIGHT: bold;
 	TEXT-ALIGN: center;
@@ -33,7 +33,7 @@ BODY {
 	BORDER-TOP: #c0c0c0 Solid 2px;
 	COLOR: #ffffff;
 	CURSOR: Hand;
-	FONT-FAMILY: ï¿½lï¿½r ï¿½oï¿½Sï¿½Vï¿½bï¿½N;
+	FONT-FAMILY: E½lE½r E½oE½SE½VE½bE½N;
 	FONT-SIZE: 10pt;
 	FONT-WEIGHT: bold;
 	TEXT-ALIGN: center;
@@ -56,7 +56,7 @@ Sub DisplayEvents()
  Dim arrHistory
  arrHistory = ObjFrame_Reference.WUV3IS.GetInstallHistory()
 	if UBound(arrHistory) = -1 Then
- document.write("<SPAN STYLE='color:#00319C;'>ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½B</SPAN>")
+ document.write("<SPAN STYLE='color:#00319C;'>E½CE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½E½E½E½Ü‚ï¿½E½E½B</SPAN>")
 	Else
  document.write("<TABLE WIDTH=100% CLASS=def CELLPADDING=4 CELLSPACING=0 BORDER=0>")
  document.write("<TR><TD COLSPAN=3 BGCOLOR=white><IMG SRC='images/ts.gif' ALT='' HEIGHT=4></TD></TR>")
@@ -74,19 +74,19 @@ End Sub
 Function GetOperationType(nFlags)
 	If (nFlags AND 4096) <> 0 Then
  If (nFlags AND 1) <> 0 Then
- GetOperationType = "ï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Éï¿½ï¿½sï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½ÌƒCE½E½E½XE½gE½[E½E½E½Éï¿½E½sE½E½E½Ü‚ï¿½E½E½E½B"
  ElseIf (nFlags AND 2) <> 0 Then
- GetOperationType = "ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½CE½E½E½XE½gE½[E½E½E½E½E½JE½nE½E½E½Ü‚ï¿½E½E½E½B"
  Else
- GetOperationType = "ï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½ÌƒCE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½E½E½Ü‚ï¿½E½E½E½B"
  End If
 	ElseIf (nFlags AND 8192) <> 0 Then
  If (nFlags AND 1) <> 0 Then
- GetOperationType = "ï¿½ÌƒAï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Éï¿½ï¿½sï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½ÌƒAE½E½E½CE½E½E½XE½gE½[E½E½E½Éï¿½E½sE½E½E½Ü‚ï¿½E½E½E½B"
  ElseIf (nFlags AND 2) <> 0 Then
- GetOperationType = "ï¿½Aï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½AE½E½E½CE½E½E½XE½gE½[E½E½E½E½E½JE½nE½E½E½Ü‚ï¿½E½E½E½B"
  Else
- GetOperationType = "ï¿½ÌƒAï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B"
+ GetOperationType = "E½ÌƒAE½E½E½CE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½E½E½Ü‚ï¿½E½E½E½B"
  End If
 	End If
 End Function
@@ -95,11 +95,11 @@ End Function
 <BODY ID=bdy BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=0 TOPMARGIN=10>
 <TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
  <TR>
-	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ì‘Iï¿½ï¿½"></TD>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="E½\E½tE½gE½EE½FE½AE½Ì‘IE½E½"></TD>
 	<TD>&nbsp;</TD>
 	<TD VALIGN=bottom ROWSPAN=2>
- <SPAN id=sp1 CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x1>ï¿½ï¿½ï¿½iï¿½ÌXï¿½V</ID></SPAN><br>
- <SPAN id=sp2 CLASS=def STYLE="font-weight:bold;padding-bottom:30px;font-size:22pt;color:#00319C"><ID ID=x2>ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Ì—ï¿½ï¿½ï¿½</ID></SPAN></TD>
+ <SPAN id=sp1 CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x1>E½E½E½iE½ÌXE½V</ID></SPAN><br>
+ <SPAN id=sp2 CLASS=def STYLE="font-weight:bold;padding-bottom:30px;font-size:22pt;color:#00319C"><ID ID=x2>E½CE½E½E½XE½gE½[E½E½E½Ì—ï¿½E½E½</ID></SPAN></TD>
  </TR>
 </TABLE>
 <TABLE WIDTH=350 CELLSPACING=0 CELLPADDING=0 BORDER=0>
@@ -108,20 +108,20 @@ End Function
  <A target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates" STYLE="text-decoration: none; color: white;"><SPAN id=spnx1 LANGUAGE='VBScript'
  CLASS='ButtonB'
  STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
- <A STYLE="text-decoration: none; color: white;" target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates"><ID ID=x3>ï¿½ï¿½ï¿½iï¿½Jï¿½^ï¿½ï¿½ï¿½Oï¿½Ì•\ï¿½ï¿½</ID></A>
+ <A STYLE="text-decoration: none; color: white;" target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates"><ID ID=x3>E½E½E½iE½JE½^E½E½E½OE½Ì•\E½E½</ID></A>
  <BR></SPAN></A></TD>
 	<TD id=td3 WIDTH=175 ALIGN=left VALIGN=top>
  <SPAN id=spnx2 LANGUAGE='VBScript'
  CLASS='ButtonG'
  STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
- <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x4>ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½Ì—ï¿½ï¿½ï¿½</ID></A>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x4>E½CE½E½E½XE½gE½[E½E½E½Ì—ï¿½E½E½</ID></A>
  <BR></SPAN></TD></TR>
  <TR>
 	<TD id=td5 ALIGN=left VALIGN=top STYLE="color: black; font-size: 9pt;">
- <ID ID=x5>ï¿½ï¿½ï¿½pï¿½Â”\ï¿½Èƒ\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½<BR>ï¿½\ï¿½ï¿½</ID>
+ <ID ID=x5>E½E½E½pE½Â”\E½Èƒ\E½tE½gE½EE½FE½AE½E½<BR>E½\E½E½</ID>
 	</TD>
 	<TD id=td6 ALIGN=left VALIGN=top STYLE="color: black; font-size: 9pt;">
- <ID ID=x6>ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B</ID></TD>
+ <ID ID=x6>E½CE½E½E½XE½gE½[E½E½E½E½E½E½E½E½E½\E½E½E½E½E½E½Ä‚ï¿½E½Ü‚ï¿½E½B</ID></TD>
  </TR>
 </TABLE>
 <SCRIPT language="VBScript">

@@ -153,7 +153,7 @@ A {
  padding-top: 4px;
  padding-bottom: 4px;
  padding-right: 36px;
- background-image: url('Images/blue-fade.jpg');
+ background-image: url('images/blue-fade.jpg');
  background-position:top right;
  background-repeat: repeat-y;
  }
@@ -400,7 +400,7 @@ Sub ReGrock()
 End Sub
 Function FuncDisplay()
 	Dim i
-	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizacje produktów' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizacje produktów<BR><SPAN CLASS='selectSoftwareTitle'>Wybór oprogramowania</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Aktualizacje produktów' HEIGHT='40' SRC='images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Aktualizacje produktów<BR><SPAN CLASS='selectSoftwareTitle'>Wybór oprogramowania</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
 	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>Dla tego systemu Windows s¹ dostêpne nastêpuj¹ce aktualizacje. Aby zainstalowaæ aktualizacje, zaznacz pola wyboru obok ¿¹danych aktualizacji, a nastêpnie kliknij przycisk <STRONG>Pobierz</STRONG>. Je¿eli chcesz odinstalowaæ lub ponownie zainstalowaæ aktualizacje, kliknij przycisk <B>Poka¿ zainstalowane aktualizacje</B>. Lista zostanie poszerzona o aktualizacje, które zosta³y ju¿ zainstalowane.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>SprawdŸ poni¿ej, które aktualizacje maj¹ etykietê &quot;Ju¿ zainstalowane&quot;. Je¿eli chcesz ponownie zainstalowaæ aktualizacje, zaznacz pola wyboru obok ¿¹danych aktualizacji, a nastêpnie kliknij przycisk <STRONG>Pobierz</STRONG>. Je¿eli obok aktualizacji pojawi siê przycisk Odinstaluj, to mo¿na go klikn¹æ, aby odinstalowaæ aktualizacjê. Aby ukryæ aktualizacje, które s¹ ju¿ zainstalowane, kliknij opcjê <b>Ukryj zainstalowane aktualizacje</b>.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Domyœlnie s¹ pokazywane wszystkie aktualizacje dla tego systemu Windows. Jeœli chcesz dostosowaæ listê wyœwietlanych aktualizacji do swoich potrzeb, mo¿esz to zrobiæ na tej stronie. Bêd¹ wówczas pokazywane zaznaczone elementy. Aby usun¹æ element z listy, usuñ jego zaznaczenie. Jeœli w przysz³oœci zechcesz dodaæ ponownie ten element do listy, mo¿esz powróciæ do tej listy i ponownie zaznaczyæ element. Aby zapisaæ zmiany, kliknij przycisk <B>Aktualizuj</B>.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
 	If ObjFrame_Reference.g_bShowAll = False Then
  WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>Poka¿ zainstalowane aktualizacje</A><BR></SPAN></TD>")
