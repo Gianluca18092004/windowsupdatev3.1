@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<TITLE>Сведения о технической поддержке Майкрософт</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>СВЕДЕНИЯ О ТЕХНИЧЕСКОЙ ПОДДЕРЖКЕ</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>В случае затруднений с использованием веб-узла Windows Update, для получения справок можно использовать службу поддержки через сеть. Выберите один из перечисленных ниже вариантов.</id>
+<P>
+<id id=x6>После выбора одного из этих вариантов технической поддержки вы можете получить запрос на создание профиля "Online Profile". Этот профиль будет служить "билетом" для получения технической поддержки через Интернет от корпорации Майкрософт.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Поддержка обновлений программ</id></A></STRONG> <id id=x80>Ознакомьтесь с возможностями технической поддержки обновлений программ, доступных на веб-узле Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Поддержка драйверов устройств</id></A></STRONG> <id id=x800>Ознакомьтесь с возможностями технической поддержки драйверов устройств, доступных на веб-узле Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Часто задаваемые вопросы.</id></A></STRONG> <id id=x8>Если у вас возник вопрос об узле Windows Update, возможно, вам будет интересно ознакомиться со списком ответов на часто задаваемые вопросы.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Замеченные неполадки.</id></A></STRONG> <id id=x10>Возможно, вам будет интересно также ознакомиться со списком неполадок, замеченных на узле Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/ru/wiz143.asp"><id id=x11>Пишите нам.</id></A></STRONG> <id id=x12>Краткая обзорная форма, в которую вы можете записать свои замечания и предложения.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>"О программе Windows Update"</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Этот значок отображается в верхней части всех страниц данного узла. Щелкните его, чтобы ознакомиться с рекомендациями по использованию узла Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>ПОДЕРЖКА ОБНОВЛЕНИЙ ПРОГРАММ</id></DIV>
+Бесплатная <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">поддержка по электронной почте для узла Windows Update</SPAN></A> включает: помощь в навигации по веб-узлу, качество содержимого узла или сообщения об ошибках и помощь по основным процессам загрузки. Поддержку по другим вопросам, включая неполадки при установке программ, можно получить, воспользовавшись предложением по персональной или профессиональной технической поддержке на веб-узле <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. Для продуктов MSN ознакомьтесь со страницей <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. В некоторых случаях поддержка является платной, подробнее см. на указанных веб-узлах.
+<P>
+Для получения информации о технической поддержке за пределами США и Канады обратитесь в местное представительство корпорации Майкрософт. Список местных представительств можно найти на <a href="http://support.microsoft.com/directory/" target=_blank>веб-узле технической поддержки</a>, выбрав возможности технической поддержки в различных странах. Если в вашей стране нет представительств корпорации Майкрософт, свяжитесь с организацией, в которой вы приобрели продукт Майкрософт.
+<P>
+Условия и цены услуг технической поддержки корпорации Майкрософт могут изменяться без предварительного предупреждения.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Удаление обновлений программ<BR></DIV>
+Некоторые обновления можно удалить с помощью страницы &quot;Обновление приложений&quot; узла Windows Update
+<ol>
+<li>Перейдите на страницу &quot;Обновление приложений&quot;.
+<li>В случае появления диалогового окна с вопросом нажмите кнопку <B>Да</B>.
+<li>Нажмите кнопку <B>Показать установленные обновления</B> в верхней части появившейся страницы &quot;Обновление приложений&quot;.
+<li>Если обновление можно удалить, справа от его описания отобразится кнопка <B>Удалить</B>.
+<li>Нажмите кнопку <B>Удалить</B> рядом с описанием обновления, которое требуется удалить.
+</ol>
+Возможно, обновления, которые нельзя удалить со страницы &quot;Обновление приложений&quot;, невозможно удалить другими способами. Дополнительные сведения об удалении каждого обновления можно найти на соответствующей ему странице <b>Сначала прочтите это</b>.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>ПОДДЕРЖКА ДРАЙВЕРОВ УСТРОЙСТВ</id></DIV>
+Бесплатную техническую поддержку по установке и удалению драйверов, осуществляемую <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">службой поддержки узла Windows Update</SPAN></A>, можно получить по электронной почте. Если неполадка не связана с установкой или удалением драйверов, на веб-узле <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> можно ознакомиться с полным списком возможностей поддержки. В некоторых случаях поддержка является платной, подробнее см. на указанном веб-узле.
+<P>
+Для получения информации о технической поддержке за пределами США и Канады обратитесь в местное представительство корпорации Майкрософт. Список местных представительств можно найти на <a href="http://support.microsoft.com/directory/" target=_blank>веб-узле технической поддержки</a>, выбрав возможности технической поддержки в различных странах. Если в вашей стране нет представительств корпорации Майкрософт, свяжитесь с организацией, в которой вы приобрели продукт Майкрософт.
+<P>
+Условия и цены услуг технической поддержки корпорации Майкрософт могут изменяться без предварительного предупреждения.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Удаление обновленных драйверов устройств</DIV>
+<b>Внимание!</b> Чтобы удалить драйвер, установленный с веб-узла Windows Update, необходимо иметь возможность переустановить исходный драйвер, поставляемый с устройством. Удаление драйвера без его замены приведет к отказу устройства.
+<p>Использование диспетчера устройств для удаления обновленных драйверов устройств.
+<ol>
+<li>Щелкните правой кнопкой мыши значок <b>Мой компьютер</b> на рабочем столе компьютера.
+<li>Выберите в меню <b>Свойства</b>, затем щелкните вкладку <b>Диспетчер устройств</b>.
+<li>Щелкните название устройства, чтобы его выделить, затем нажмите кнопку <b>Свойства</b>.
+<li>Щелкните вкладку <b>Драйвер</b>, затем нажмите кнопку <b>Обновить драйвер</b>.
+<li>После запуска мастера обновления драйверов устройств выберите в диалоговом окне <b>Указать расположение драйвера</b>, и нажмите кнопку <b>Далее</b>.
+<li>Выберите <b>Вывести список всех известных драйверов для этого устройства, из которого я самостоятельно выберу подходящий</b>, затем нажмите кнопку <b>Далее</b>.
+<li>Щелкните <b>Установить с диска</b>, затем нажмите кнопку <b>Обзор</b>, чтобы найти файл .inf для устанавливаемого драйвера (при этом драйвер, установленный с узла Windows Update, будет удален и заменен исходным драйвером устройства).
+</ol>
+<b>Примечание.</b> При возвращении к узлу Windows Update, вам, возможно, будет вновь предложен для установки тот же самый драйвер. Не устанавливайте его. При возникновении вопросов или неполадок при удалении обновлений драйверов, установленных с узла Windows Update, используйте ссылки для обращения к специалистам службы технической поддержки.
+</p>
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Что такое Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update &#151 это сетевое расширение Windows, помогающее пользователям быть в курсе последних обновлений установленных на компьютере программ. Основной каталог Windows Update называется &quot;Обновление приложений&quot;. В нем содержатся обновления и дополнения продуктов, например, системные файлы, драйверы, сервисные пакеты и новые средства Windows. Вы также получите рекомендации, какие из этих дополнений могут пригодиться для вашего компьютера.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Что такое &quot;Обновление приложений&quot;?</id><BR></DIV>
+<id id=x36>Страница &quot;Обновление приложений&quot; - это каталог исправлений, обновлений и расширений для операционной системы Windows и многочисленных приложений для Windows. Можно просмотреть каталог, выбрать нужные компоненты, затем загрузить и установить их прямо с веб-узла.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Почему появляется сообщение о том, что элемент управления ActiveX на этой странице не является безопасным?</id><BR></DIV>
+<id id=x38>Это сообщение появляется, когда установлен &quot;высокий&quot; уровень безопасности обозревателя Internet Explorer. Для корректной работы Windows Update необходимо установить &quot;средний&quot; или более низкий уровень безопасности в группе &quot;Зона Интернета&quot;. Для этого щелкните меню <b>Сервис</b>, затем <b>Свойства обозревателя</b>. Выберите вкладку <b>Безопасность</b> и щелкните значок <b>Интернет</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Что такое элемент управления ActiveX?</id><BR></DIV>
+<id id=x41>Элементы управления ActiveX - это многократно используемые компоненты программного обеспечения, основанные на технологии ActiveX. Эти компоненты позволяют добавлять специальные функции, например, анимацию или всплывающие меню на веб-страницы, в приложения и средства разработки программ. Windows Update использует элементы управления ActiveX для проверки, какое программное обеспечение установлено на данном компьютере, чтобы предоставить полный список предлагаемых для загрузки обновлений и другого программного обеспечения.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Каково наилучшее разрешение экрана для просмотра узла Windows Update?</id><BR></DIV>
+<id id=x43>Веб-страницы узла Windows Update разработаны для просмотра с разрешением экрана 800 на 600 или более высоким. Чтобы установить такое разрешение, нажмите кнопку <B>Пуск</b>, выберите <B>Настройка</b>, затем щелкните <B>Панель управления</b>. Дважды щелкните значок <B>Экран</b> и щелкните вкладку <B>Настройка</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Передается ли в корпорацию Майкрософт информация о моем компьютере?
+</id><BR></DIV>
+<id id=x45>Нет. Каждый раз, когда вы попадаете в каталог обновления приложений, Windows Update выполняет контрольную проверку обновлений, необходимых для вашего конкретного компьютера. Эта проверка выполняется локально на вашем компьютере, чтобы обеспечить конфиденциальность и безопасность ваших данных. При этом никакая информация в корпорацию Майкрософт не передается.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Как передать отзывы и предложения разработчикам Windows Update?</id><BR></DIV>
+<id id=x47>Отзывы и предложения разработчикам Windows Update можно отправить, щелкнув <B>Пишите нам</B>, затем <B>Windows Update</B> на черной панели инструментов в верхней части каждой страницы.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Когда новый бюллетень безопасности появляется на веб-узле <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a>
+(узел на английском языке),
+доступен ли этот бюллетень на веб-узле Windows Update?</id><BR></DIV>
+<id id=x201>С момента публикации нового бюллетеня на веб-узле TechNet Security site до момента его появления на веб-узле Windows Update обычно проходит некоторое время. Это связано с тем, что новые элементы добавляются на узел Windows Update по утвержденному плану. Создатели узла Windows Update делают все возможное, чтобы важные обновления системы безопасности появлялись здесь как можно раньше, но новые элементы необходимо протестировать и убедиться, что пользователь получит на узле Windows Update обновление, предназначенное именно для его компьютера. Обычно обновления поддерживаемых продуктов появляются на веб-узле Windows Update с интервалом от нескольких дней до нескольких недель с момента их публикации на веб-узле TechNet. Пользователи, знающие, какая именно версия обновления подходит для их компьютеров и не желающие ждать, когда обновление появится на веб-узле Windows Update, могут загрузить обновление непосредственно с веб-страницы бюллетеня безопасности. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Какие операционные системы и программы поддерживаются на веб-узле Windows Update?</id><BR></DIV>
+<id id=x203>На веб- узле Windows Update имеются обновления системы безопасности для операционных систем Windows 98, Windows 98 Second Edition, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, сервера Internet Information Server 4.0 (IIS 4.0), служб Internet Information Services 5.0 (IIS 5.0) и веб-обозревателя Internet Explorer. При посещении веб-узла пользователь видит только те обновления, которые подходят для его компьютера. Веб-узел Windows Update не поддерживает некоторые серверные операционные системы и серверные программы. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Упоминалось, что подерживаются не все серверные продукты. Какие именно серверные продукты не поддерживаются?</id><BR></DIV>
+<id id=x205>Веб-узел Windows Update первоначально предназначался для пользователей домашних компьютеров с операционной системой Windows. Позднее на веб-узле Windows Update появились обновления для некоторых серверных продуктов (например, IIS), которые наиболее часто используются на домашних компьютерах. Однако на узле Windows Update не поддерживаются обновления системы безопасности для таких серверных продуктов как контроллеры доменов Windows, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server, и т.п. Пользователям этих продуктов рекомендуется ознакомиться с бюллетенями безопасности на веб-узле <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a>, чтобы получить сведения об узлах загрузки обновлений для этих серверных продуктов.
+(Узел на английском языке.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Всегда ли на узле Windows Update предлагались обновления системы безопасности и другие исправления для сервера Internet Information Server 4.0 (IIS 4.0) и служб Internet Information Services 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>Нет. 23 мая 2001 г. на узле Windows Update появился первый накопительный пакет обновлений для служб IIS 5.0. Хотя этот пакет не включал все обновления, выпущенные к этому времени для IIS, он содержал набор новейших исправлений, выпущенных с марта 2000 г. Обновления, выпущенные до марта 2000 г. можно найти на веб- странице <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet page for Windows Web services (IIS)</a>.
+(Узел на английском языке.)
+Когда будут выпущены новые исправления системы безопасности и другие ключевые обновления для IIS, этот пакет исправлений будет заменен на новый. Новый пакет будет содержать как вновь выпущенные обновления, так и все исправления и обновления из предыдущего пакета. Таким образом, независимо от того, как часто пользователь посещает веб-узел Windows Update, он всегда может получить здесь новейшие обновления для продуктов IIS.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Где можно получить информацию обо всех обновлениях системы безопасности?</id><BR></DIV>
+<id id=x209>Все бюллетени безопасности можно найти на веб-узле <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a>. Можно также подписаться на службу <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> (Служба оповещения о вопросах безопасности) и получать по электронной почте уведомления о выпущенных бюллетенях безопасности.
+(Веб-узлы на английском языке.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/rus/misc/cpyright.htm"><id id=x50>&copy; Корпорация Майкрософт (Microsoft Corp.), 2022. Все права защищены. Условия использования.</id></A><BR></CENTER>
+</BODY>
+</HTML>

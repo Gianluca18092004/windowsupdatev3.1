@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft 支援資訊</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 12pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 12pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 9pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>支援資訊</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>如果您在 Windows Update 網站發生問題，可以利用線上支援取得協助。請選擇下列其中一個選項。</id>
+<P>
+<id id=x6>當您選擇某些支援選項時，可能要求您建立 Microsoft 「線上設定檔」。您的「線上設定檔」將成為您從 Microsoft 接收網際網路型的支援的門票。</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>軟體修正檔支援：</id></A></STRONG> <id id=x80>檢視 Windows Update 上提供的軟體修正檔支援資訊。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>裝置驅動程式支援：</id></A></STRONG> <id id=x800>檢視 Windows Update 上提供的裝置驅動程式支援資訊。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>常見問題：</id></A></STRONG> <id id=x8>若您有 Windows Update 的問題，可先察看答案清單。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>已知問題：</id></A></STRONG> <id id=x10>您也可以複閱目前 Windows Update 網站上的已知問題清單。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/tw/wiz143.asp"><id id=x11>意見信箱：</id></A></STRONG> <id id=x12>請利用我們的快速調查表，提供您的意見與建議。</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>關於 Windows Update</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>此圖示會出現在本網站的所有網頁頂端。請按一下此圖示，學習如何善用 Windows Update 網站。</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>軟體修正檔支援</id></DIV>
+免費的 <A HREF="http://www.microsoft.com/taiwan/support/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update 網站電子郵件支援</SPAN></A>包括：網站瀏覽的協助、網站內容品質或錯誤訊息、及基本的下載協助。其他的協助，包括安裝及設定事項，均可透過 <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a> 的 Personal 及 Professional 支援。若為 MSN 產品，請造訪 <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>。某些情況下可能收費，詳細資訊請參考網站說明。
+<P>
+若要取得美加地區以外的支援資訊，請連絡當地分公司。若要取得最新清單，請瀏覽 <a href="http://support.microsoft.com/directory/" target=_blank>Support Online 網站</a>，並選取 [Worldwide Support] 選項。如果在您的國家沒有 Microsoft 分公司，請連絡取得該 Microsoft 產品的公司。
+<P>
+Microsoft 支援服務受限於 Microsoft 時下價格、條款及條件，得隨時變更，不另行通知。
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">如何解除安裝軟體修正檔？<BR></DIV>
+有些修正檔可使用 Windows Update 網站上的 [產品更新] 網頁，來解除安裝：
+<ol>
+<li>移至 [產品更新] 網頁。
+<li>如果出現提示訊息，請按一下 [是]。
+<li>出現 [產品更新] 網頁時，請按一下位於網頁上方的 [顯示已更新組件]。
+<li>如果可以解除安裝修正檔，則修正檔說明的右方會出現 [解除安裝] 按鈕。
+<li>按一下您想解除安裝的修正檔說明旁的 [解除安裝]。
+</ol>
+無法由 [產品更新] 解除安裝的修正檔，可能也無法以其他方法解除安裝。請參閱每個修正檔的 [請先閱讀] 頁，以取得額外的解除安裝資訊。
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>裝置驅動程式支援</id></DIV>
+免費的安裝/解除安裝可以透過電子郵件在 <A HREF="http://www.microsoft.com/taiwan/support/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update 網站支援</SPAN></A>上取得。有關驅動程式的安裝/解除安裝以外的問題，可從 <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> 找到完整的支援選項清單。在某些情況下，支援費用會不同，請查看網站，以取得詳細資訊。
+<P>
+若要取得美加地區以外的支援資訊，請連絡當地分公司。若要取得最新清單，請瀏覽 <a href="http://support.microsoft.com/directory/" target=_blank>Support Online 網站</a>，並選取 [Worldwide Support] 選項。如果在您的國家沒有 Microsoft 分公司，請連絡取得該 Microsoft 產品的公司。
+<P>
+Microsoft 支援服務受限於 Microsoft 時下價格、條款及條件，得隨時變更，不另行通知。
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">如何解除安裝裝置驅動程式修正檔？</DIV>
+Windows Update 不提供 Windows 95 或 Windows NT(R) 4.0 的驅動程式修正檔。請聯絡您的裝置製造商。
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>常見問題</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>什麼是 Windows Update？</id><BR></DIV>
+<id id=x32>Windows Update 是 Windows 的線上延伸，其設計目的是協助您將電腦保持在最新狀態。Windows Update 有一個中央類別，稱為產品更新，它包括新的產品增強元件，例如系統檔案、裝置驅動程式、Service Pack 和新的 Windows 功能。建議您針對特定電腦所需，來使用這些增強元件。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>什麼是產品更新？</id><BR></DIV>
+<id id=x36>[產品更新] 網頁是一個元件目錄，放置 Windows 修正檔和很多在 Windows 上執行程式的修正檔。選擇您想要的元件，以及從網頁下載和安裝到您的電腦。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>為什麼我收到有關「此網頁 ActiveX 控制項不安全」的訊息？</id><BR></DIV>
+<id id=x38>當您將 Internet Explorer 的安全性設定值設為高時將出現此訊息。若要讓 Windows Update 網站可以順利作業，您必須將瀏覽器變更為中或較低的安全性。若要如此，請按一下 [工具] 功能表，然後按一下 [網際網路選項]。選取 [安全性] 索引標籤，然後按一下 [網際網路]。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>什麼是 ActiveX 控制項？</id><BR></DIV>
+<id id=x41>ActiveX 控制項是結合 ActiveX 技術的可重覆使用軟體元件，這些元件可以用來新增如動畫或蹦現式功能表等特殊功能到網頁、桌面應用程式、軟體發展工具。Windows Update 使用 ActiveX 控制項來檢視您的電腦目前安裝了什麼軟體，以便提供您修正檔案以及其他可供您下載的軟體的正確清單。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>瀏覽 Windows Update 網站的最佳解析度是多少？</id><BR></DIV>
+<id id=x43>Windows Update 網站上的網頁是以 800 x 600 或更高的螢幕解析度來檢視。若要設定解析度，請按一下 [開始] 按鈕，指向 [設定]，然後按一下 [控制台]。再按兩下 [顯示器] 圖示，然後按一下 [設定] 索引標籤。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>有關我電腦的資訊會傳送到 Microsoft 嗎？
+</id><BR></DIV>
+<id id=x45>不。每次當您到我們的產品更新目錄時，Windows Update 會使用控制項檢查是否有適合您電腦的修正檔。此檢查是在您電腦上執行，以確保您資料的隱私權與安全性，且不會傳送任何資訊到 Microsoft。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>如何將我的意見寄回 Windows Update 團隊？</id><BR></DIV>
+<id id=x47>您可以按一下每個網頁上方的意見信箱，然後按 [Windows Update]，將您對此網站的意見寄回 Windows Update 團隊。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>如果 <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security 網站</a>上有新的安全性快報，
+(這是中文網站)。
+它也會出現在 Windows Update 上嗎？</id><BR></DIV>
+<id id=x201>安全性快報在 TechNet Security 站台上公佈的時間，和安全性修正檔在 Windows Update 上出現的時間，通常會有些差距。這是因為 Windows Update 會定期增加新的內容。雖然 Windows Update 致力於迅速發佈重要的安全性修正檔，但是新的內容也必須經過測試及驗證，以確保 Windows Update 為您提供的一定是您特定電腦所需的修正檔。通常，受支援產品的修正檔出現在 Windows Update 上的時間，會比它們在 TechNet 站台上發佈的時間晚幾天到幾個星期。如果您知道哪個特定版本的修正檔適用於您的電腦，又不想等待 Windows Update，則可以直接從安全性快報網頁下載修正檔。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Windows Update 支援哪些作業系統及程式？</id><BR></DIV>
+<id id=x203>Windows Update 提供的安全性修正檔可適用於 Windows 98、Windows 98 Second Edition、Windows Millennium Edition (Windows Me)、Windows NT 4.0、Windows 2000、Internet Information Server 4.0 (IIS 4.0)、Internet Information Services 5.0 (IIS 5.0) 及 Internet Explorer。然而，您只會看到適用於您特殊電腦的修正檔。Windows Update 不支援某些伺服器作業系統及伺服器型的程式。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>不支援哪些伺服器產品呢？</id><BR></DIV>
+<id id=x205>Windows Update 起初是一個為 Windows 用戶的家用電腦提供修正檔的網站。後來 Windows Update 逐漸擴充，提供的修正檔也涵蓋了一些家庭常用的伺服器產品 (像是 IIS)。然而，Windows Update 無法支援特定用於某些伺服器產品 (如 Windows 網域控制站、Microsoft Exchange Server、Microsoft SQL Server、Microsoft ISA Server 等) 的安全性修正檔。使用這些產品的用戶請查閱 <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security 網站</a>上的安全性快報，以取得有關下載這些產品的修正檔之位置的相關資訊。
+(這是英文網站)。
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Windows Update 是否持續提供 Internet Information Server 4.0 (IIS 4.0) 及 Internet Information Services 5.0 (IIS 5.0) 的安全性修正檔和其他修正檔？</id><BR></DIV>
+<id id=x207>否。Windows Update 在 2001 年 5 月 23 日首次提供一整套 IIS 5.0 的重大修正檔。此套件並未包括當時已發佈的所有 IIS 修正檔，但它提供了從 2000 年 3 月到目前為止的最新修正檔的組合。如需 2000 年 3 月之前所發佈的修正檔，請到 <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet page for Windows Web services (IIS)</a>。
+(這是英文網站)。
+如果建立了 IIS 的新安全性修正檔或其他重大修正檔，則此套件會由一組包括新的修正檔及先前套件之所有修正檔的套件所取代。這樣的話，無論您多久造訪一次 Windows Update，都可以取得 IIS 產品的最新修正檔。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>如何取得與安全性相關的所有修正檔的資訊？</id><BR></DIV>
+<id id=x209>您可以在 <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security 網站</a>檢視所有的安全性快報。您也可以訂閱 <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> 並收到有關最近發佈的安全性快報的電子郵件警示。
+(這些是英文網站。)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/taiwan/misc/cpyright.htm"><id id=x50>(C)2001 Microsoft Corporation. All rights reserved. Terms of Use.</id></A><BR></CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,195 @@
+<HTML>
+<HEAD>
+<TITLE>Informações sobre suporte da Microsoft</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Informações de suporte</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Se estiver tendo problemas com o site Windows Update, você pode usar o suporte on-line. Basta selecionar uma das opções listadas abaixo.</id>
+<P>
+<id id=x6>Quando você selecionar uma dessas opções de suporte, talvez seja solicitado a criar um <B>Perfil on-line</B> da Microsoft. O <B>Perfil on-line</B> lhe dará acesso ao suporte da Microsoft na Internet.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Suporte para atualizações de software:</id></A></STRONG> <id id=x80>consulte informações de suporte para as atualizações de software oferecidas no Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Suporte para drivers de dispositivo:</id></A></STRONG> <id id=x800>consulte informações de suporte para os drivers de dispositivo oferecidos no Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Perguntas freqüentes:</id></A></STRONG> <id id=x8>se você tiver alguma dúvida sobre o Windows Update, verifique primeiro a nossa lista de respostas.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Problemas conhecidos:</id></A></STRONG> <id id=x10>recomenda-se também examinar a lista de problemas conhecidos existentes no site Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/br/wiz143.asp"><id id=x11>Comentários:</id></A></STRONG> <id id=x12>nosso formulário de pesquisa rápida fornece um lugar para você inserir seus comentários e sugestões.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+<TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>SOBRE O WINDOWS UPDATE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+</TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Este ícone é exibido na parte superior de todas as páginas deste site. Clique nele para aprender a usar o site Windows Update da melhor maneira possível.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>SUPORTE PARA ATUALIZAÇÕES DE SOFTWARE</id></DIV>
+O <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">suporte gratuito por email para o Windows Update</SPAN></A>
+<span id="Instructions1">(Site em inglês.) </span>inclui: a ajuda para navegação pelo site, mensagens de erro ou informações sobre a qualidade do conteúdo do site e assistência para fazer download. Todos os outros tipos de ajuda, incluindo questões relativas à instalação e à configuração, estão disponíveis via suporte profissional ou pessoal no site <a href="http://www.microsoft.com/brasil/suporte/" target=_blank>http://support.microsoft.com/directory/</a>. Para os produtos MSN, visite o site <a href="http://www.msn.com.br/help/help0.asp" target=_blank>http://help.msn.com/</a>. Em alguns casos, será cobrada uma taxa. Verifique os sites para obter mais informações.
+<P>
+Para obter informações de suporte fora dos Estados Unidos e Canadá, contate a subsidiária Microsoft em seu país. Para obter a listagem mais recente, consulte o <a href="http://www.microsoft.com/brasil/suporte/" target=_blank>site de suporte on-line na Web</a> e selecione a opção referente ao suporte internacional. Se não houver uma subsidiária da Microsoft em seu país, contate o estabelecimento no qual você adquiriu o produto Microsoft.
+<P>
+Os serviços de suporte da Microsoft estão sujeitos aos preços, termos e condições em vigor, que estão sujeitos a alterações sem aviso prévio.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Como desinstalar atualizações de software?<BR></DIV>
+É possível desinstalar algumas atualizações através da página <B>Atualizações do produto</B> no site Windows Update:
+<ol>
+<li>Vá para a página <B>Atualizações do produto</B>.<li>Clique em <B>Sim</B> se uma mensagem for exibida.
+<li>Quando a página for exibida, clique em <B>Mostrar atualizações instaladas</B> na parte superior da página.
+<li>Se for possível desinstalar uma atualização, o botão <B>Desinstalar</B> será exibido à direita da descrição da atualização.
+<li>Clique em <b>Desinstalar</b> ao lado da descrição da atualização que você deseja desinstalar.
+</ol>
+Para as atualizações que não puderem ser desinstaladas a partir das <B>Atualizações do produto</B>, há outros métodos que podem ser usados. Para obter mais informações sobre desinstalação, consulte a página <b>Leia primeiro</b> referente a cada atualização.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>SUPORTE AO DRIVER DE DISPOSITIVO</id></DIV>
+Suporte gratuito de instalação e desinstalação está disponível por email no <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Suporte do Windows Update</SPAN></A>. Para obter informações sobre outros assuntos diferentes da instalação/desinstalação de drivers, uma lista completa de opções de suporte pode ser encontrada em <a href="http://www.microsoft.com/brasil/suporte/" target=_blank>http://www.microsoft.com/brasil/suporte/</a>. Em alguns casos, poderá ser cobrada uma taxa de suporte. Visite o site para obter detalhes.
+<P>
+Para obter informações de suporte fora dos Estados Unidos e Canadá, contate a subsidiária Microsoft em seu país. Para obter a lista mais recente, consulte o <a href="http://www.microsoft.com/brasil/suporte/" target=_blank>site de suporte on-line na Web</a> e selecione a opção para suporte internacional. Se não houver uma subsidiária da Microsoft em seu país, contate o estabelecimento no qual você adquiriu o produto Microsoft.
+<P>
+Os serviços de suporte da Microsoft estão sujeitos aos preços, termos e condições em vigor, que estão sujeitos a alterações sem aviso prévio.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Como desinstalar as atualizações de driver de dispositivo?</DIV>
+<b>Importante</b> Após desinstalar uma atualização de driver cujo download foi feito a partir do Windows Update, você deve reinstalar o driver original que acompanha o dispositivo. A remoção de um driver ou de uma atualização de driver sem a correspondente substituição interrompe o funcionamento do dispositivo de hardware.
+<p>Use o <b>Gerenciador de dispositivos</b> para remover as atualizações de driver de seu computador:
+<ol>
+<li>Clique com o botão direito no ícone <b>Meu computador</b> na área de trabalho de seu computador.
+<li>Clique em <b>Propriedades</b> e na guia <b>Gerenciador de dispositivos</b>.
+<li>Clique uma vez para selecionar o dispositivo de hardware e clique em <b>Propriedades</b>.
+<li>Clique na guia <b>Driver</b> e em <b>Atualizar driver</b>.
+<li>Quando o <b>Assistente de atualização de driver de dispositivo</b> for iniciado, selecione <b>Especificar o local do driver (avançado)</b> e clique em <b>Avançar</b>.
+<li>Selecione <b>Exibir uma lista de drivers conhecidos para este dispositivo, de modo que eu possa escolher um driver específico</b> e clique em <b>Avançar</b>.
+<li>Clique em <b>Com disco</b> e em <b>Procurar</b> para localizar o arquivo .inf do driver que você deseja instalar (isso removerá o driver do Windows Update e o substituirá pelo driver original do dispositivo de hardware).
+</ol>
+<b>Observação</b> Quando você retornar ao Windows Update, é possível que lhe seja oferecida a mesma atualização de driver novamente. Não a instale. Se você tiver dúvidas ou problemas ao desinstalar a atualização de driver do Windows Update, use os links de suporte para obter ajuda.
+</p>
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>PERGUNTAS FREQÜENTES</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>O que é Windows Update?</id><BR></DIV>
+<id id=x32>O Windows Update é a extensão on-line do Windows, desenvolvida para manter seu computador atualizado. O Windows Update possui um catálogo central chamado <B>Atualizações do produto</B> que inclui novos aprimoramentos do produto, como arquivos de sistema, drivers de dispositivo, service packs e novos recursos do Windows. Recomenda-se usar esses aprimoramentos com base nas necessidades específicas de seu computador.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>O que são as Atualizações do produto?</id><BR></DIV>
+<id id=x36>As <B>Atualizações do produto</B> compõem um catálogo de correções, atualizações e aprimoramentos do Windows e de muitos programas que funcionam com o Windows. Você pode navegar pelo catálogo, selecionar quantos componentes desejar, fazer o download e instalá-los diretamente da Web em seu computador.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Por que é exibida uma mensagem dizendo que um controle ActiveX nesta página não é seguro?</id><BR></DIV>
+<id id=x38>Essa mensagem é exibida quando suas configurações de segurança do Internet Explorer estão definidas como <b>Alto</b>. Para que o site Windows Update funcione adequadamente, você deve definir as opções de segurança de seu navegador como <b>Médio</b> ou <b>Baixo</b>. Para isso, clique no menu <b>Ferramentas</b> e, em seguida, clique em <b>Opções da Internet</b>. Selecione a guia <b>Segurança</b> e clique em <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>O que é um controle ActiveX?</id><BR></DIV>
+<id id=x41>Os controles ActiveX são componentes de software reutilizáveis que incorporam a tecnologia ActiveX. Esses componentes podem ser usados para adicionar funcionalidade especializada, como animações ou menus pop-up, em páginas da Web, aplicativos e ferramentas de desenvolvimento de software. O Windows Update usa controles ActiveX para verificar quais softwares estão instalados em seu computador e fornecer uma lista correta de atualizações e outros softwares que você pode instalar.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Qual é a melhor resolução para exibir o site Windows Update?</id><BR></DIV>
+<id id=x43>As páginas da Web no site Windows Update foram projetadas para serem exibidas em uma resolução de tela de 800 x 600 ou superior. Para definir essa resolução, clique no botão <B>Iniciar</b> aponte para <B>Configurações</b> e clique em <B>Painel de controle</b>. Clique duas vezes no ícone <B>Vídeo</b> e, em seguida, clique na guia <B>Configurações</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>As informações sobre o meu computador são transmitidas para a Microsoft?</id><BR></DIV>
+<id id=x45>Não. Cada vez que você vai para o catálogo <B>Atualizações do produto</B>, o Windows Update usa um controle para verificar a existência de atualizações específicas para o seu computador. Essa verificação é feita localmente para garantir a privacidade e a segurança de seus dados e não envia nenhuma informação à Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Como envio meus comentários para a equipe do Windows Update?</id><BR></DIV>
+<id id=x47>Você pode enviar comentário e sugestões sobre este site para a equipe do Windows Update, clicando em <B>Comentários</B> e em <B>Windows Update</B> na barra de ferramentas preta no alto de cada página.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Quando um novo boletim de segurança está disponível no site <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>,
+(site em inglês)
+também está disponível no Windows Update?</id><BR></DIV>
+<id id=x201>Em geral, há um atraso entre o dia em que um boletim de segurança é colocado no site TechNet Security e quando a atualização de segurança está disponível no Windows Update. Isso ocorre porque novos conteúdos são adicionados ao Windows Update conforme uma agenda. Embora seja feito o máximo de esforço para lançar importantes atualizações de segurança o mais rápido possível no Windows Update, o novo conteúdo deve ser testado e verificado para assegurar que o Windows Update ofereça a você somente atualizações necessárias ao seu computador. Geralmente, as atualizações para produtos com suporte aparecem no Windows Update em alguns dias ou semanas do dia em que foram anunciados no site TechNet. Se você sabe qual versão em particular de uma atualização se aplica ao seu computador e não quer esperar para obtê-la por meio do Windows Update, poderá fazer o download da atualização diretamente na página da Web do boletim de segurança. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Que sistemas operacionais e programas têm suporte no Windows Update?</id><BR></DIV>
+<id id=x203>O Windows Update oferece atualizações de segurança que se aplicam ao Windows 98, Windows 98 Segunda Edição, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0) e Internet Explorer. Entretanto, são exibidas apenas as atualizações que se aplicam ao seu computador. Alguns sistemas operacionais de servidor e programas baseados em servidores não possuem suporte no Windows Update. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Você menciona que alguns produtos de servidor não têm suporte. Que produtos de servidor são esses?</id><BR></DIV>
+<id id=x205>O Windows Update começou como um site que oferecia atualizações para clientes domésticos do Windows. Mais tarde, o Windows Update expandiu sua oferta de atualizações para cobrir alguns produtos de servidor (como IIS) que estavam sendo usados com freqüência em residências. Entretanto, as atualizações de segurança que são específicas para esses produtos de servidor, como controladores de domínio do Windows, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server e outros, não têm suporte no Windows Update. Os clientes que usam esses produtos devem consultar os boletins de segurança no site <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a> para obter informações sobre onde fazer o download das atualizações desses produtos.
+(Site em inglês.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>O Windows Update sempre forneceu correções de segurança e outras atualizações para o Internet Information Server 4.0 (IIS 4.0) e Internet Information Services 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>Não. Em 23 de maio de 2001, o Windows Update ofereceu o primeiro pacote acumulativo de atualizações críticas para o IIS 5.0. Embora esse pacote não incluísse todas as atualizações do IIS lançadas até então, ele fornecia um conjunto das correções mais recentes lançadas desde março de 2000. Para obter atualizações anteriores ao mês de março de 2000, visite a página da <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet para os serviços Web do Windows (IIS)</a>.
+(Site em inglês.)
+Quando novas correções de segurança e outras atualizações críticas para o IIS forem criadas, esse pacote será substituído por um novo pacote, que incluirá tanto as novas atualizações como todas as correções do pacote anterior. Desse modo, independentemente da freqüência com que visita o Windows Update, você sabe que sempre terá as atualizações mais recentes para os produtos IIS.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Onde posso obter informações sobre todas as atualizações relacionadas a segurança?</id><BR></DIV>
+<id id=x209>Você pode ler todos os boletins de segurança no site <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>. Você também pode assinar o <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> e receber avisos por email sobre os boletins de segurança recém-lançados.
+(Sites em inglês.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/brasil/misc/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Todos os direitos reservados. Termos de uso.</id></A><BR></CENTER>
+</BODY>
+</HTML>

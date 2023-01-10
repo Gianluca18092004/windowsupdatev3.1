@@ -1,0 +1,344 @@
+<html>
+<head>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<SCRIPT LANGUAGE="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<script language="VBScript">
+OPTION EXPLICIT
+Dim objFrameEngine
+Set objFrameEngine = parent.frames("FrmToolbar").document.frames(0)
+Dim m_strServerUrl2
+Dim L_ModemEstimate_Text
+m_strServerUrl2 = objFrameEngine.m_strServerUrl ' Re-declare so that printall can access the variable
+If LCase(Parent.GblConfirmSync) = "puconfirm" Then
+	document.cookie = "page=nothing; path=/"
+	Parent.Frames("FrmNavigator").FuncToggle_Lock(TRUE)
+	Set objFrameEngine = parent.frames("FrmToolbar").document.frames(0)
+End If
+Sub Window_onload()
+	Call FuncCalculate_Totals
+End Sub
+Function IsStatusHidden(nStatus)
+	IsStatusHidden = ((nStatus AND 1) <> 0)
+End Function
+Sub ShowSelections()
+	Dim i,j
+	Dim strFriendlyName, LCompSize, iDownloadTime, strDownLoadInfo, strComponentID
+	Dim LTotalSize, iTotalTime, nItemPUID
+	Dim arrCurSelection
+	arrCurSelection = objFrameEngine.GetInstallMetrics()
+	Dim arrItemAttribs
+	If objFrameEngine.g_bCuRollupSelected Then
+ strDownloadInfo = objFrameEngine.g_CURollupSize & " КБ/" & FuncMakeDownloadTimeString(objFrameEngine.g_CURollupTime)
+ document.write("<tr><td height=25 valign=top><input style='margin-left: -3px;' type=checkbox ID='CheckBox_CURollup' Language=VBScript checked onClick='CUDLCheckBoxEvent(Window.Event.srcElement)'><b>Пакет ключевых обновлений</b>&nbsp;&nbsp;<span class='downloadInfo'>" & strDownloadInfo & "</span></td></tr>")
+ For i = 0 To UBound(arrCurSelection)
+ If objFrameEngine.MatchingCURollupPUID(arrCurSelection(i,0)) Then
+ Else
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrCurSelection(i,0))
+ strFriendlyName = arrItemAttribs(1)
+ LCompSize = arrItemAttribs(4)
+ iDownloadTime = arrItemAttribs(5)
+ strDownloadInfo = LCompsize & " КБ/" & FuncMakeDownloadTimeString(iDownloadTime)
+ strComponentID = "CheckBox" & arrItemAttribs(0)
+ nItemPUID = arrItemAttribs(0)
+ If NOT IsStatusHidden(arrItemAttribs(3)) Then
+ Call ShowItem(strFriendlyName, strDownloadInfo,strComponentID,nItemPUID)
+ End If
+ End If
+ Next
+	Else
+ For i = 0 To UBound(arrCurSelection)
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrCurSelection(i,0))
+ strFriendlyName = arrItemAttribs(1)
+ LCompSize = arrItemAttribs(4)
+ iDownloadTime = arrItemAttribs(5)
+ strDownloadInfo = LCompsize & " КБ/" & FuncMakeDownloadTimeString(iDownloadTime)
+ strComponentID = "CheckBox" & arrItemAttribs(0)
+ nItemPUID = arrItemAttribs(0)
+ If NOT IsStatusHidden(arrItemAttribs(3)) Then
+ Call ShowItem(strFriendlyName, strDownloadInfo,strComponentID,nItemPUID)
+ End If
+ Next
+	End If
+End Sub
+Function ShowItem(txt,size,strCID,nItemPUID)
+	document.write("<tr><td height=25 valign=top><input style='margin-left: -3px;' type=checkbox ID='" & strCID & "' number='" & nItemPUID & "' Language=VBScript checked onClick='DLCheckBoxEvent(Window.Event.srcElement)'><b>" & txt & "</b>&nbsp;&nbsp;<span class='downloadInfo'>" & size & "</span></td></tr>")
+End Function
+Dim b_ItemsAreChecked
+Sub DLCheckBoxEvent(strCompID)
+	Dim n
+	Dim strId
+	Dim b_ItemsAreCheckedBefore
+	Dim i
+	Dim nItemPUID
+	strId = strCompID.ID
+	nItemPUID = strCompID.number
+ If Not strCompID.checked Then
+ Call objFrameEngine.ChangeItemState(nItemPUID,8)
+ Else
+ Call objFrameEngine.ChangeItemState(nItemPUID,4)
+ End if
+ Call FuncCalculate_Totals
+	Dim arrCurSelection
+	arrCurSelection = objFrameEngine.GetInstallMetrics()
+	b_ItemsAreChecked = (UBound(arrCurSelection) > -1)
+ If b_ItemsAreChecked Then
+ document.all.item("spanDownloadBtn").children(0).classname="ButtonB"
+ document.all("spanDownloadBtn").all.tags("img")(0).src = "images/button-arrow.gif"
+ Else
+ document.all.item("spanDownloadBtn").children(0).classname="ButtonG"
+ document.all("spanDownloadBtn").all.tags("img")(0).src = "images/button-arrow-gray.gif"
+ End if
+End Sub
+Sub CUDLCheckBoxEvent(objCURollupCheckbox)
+	Dim i, arrCurSelection, b_ItemsAreChecked
+	If objCURollupCheckbox.checked Then
+ Call objFrameEngine.SelectAllCURollupItems(True)
+	Else
+ Call objFrameEngine.SelectAllCURollupItems(False)
+	End If
+ Call FuncCalculate_Totals
+ arrCurSelection = objFrameEngine.GetInstallMetrics()
+	b_ItemsAreChecked = (UBound(arrCurSelection) > -1)
+ If b_ItemsAreChecked Then
+ document.all.item("spanDownloadBtn").children(0).classname="ButtonB"
+ document.all("spanDownloadBtn").all.tags("img")(0).src = "images/button-arrow.gif"
+ Else
+ document.all.item("spanDownloadBtn").children(0).classname="ButtonG"
+ document.all("spanDownloadBtn").all.tags("img")(0).src = "images/button-arrow-gray.gif"
+ End if
+End Sub
+Function FuncMakeDownloadTimeString(nDownloadTime)
+	Dim VarHours
+	Dim intHours
+	Dim VarMinutes
+	If nDownloadTime <= 60 Then
+ VarMinutes = "< 1 мин"
+	ElseIf nDownloadTime >= 3600 Then
+ intHours = Int(nDownloadTime / 3600)
+ If (nDownloadTime/60) Mod 60 = 0 Then
+ VarMinutes = ""
+ Else
+ VarMinutes = (Int(nDownloadTime/60) - (intHours * 60)) & " мин "
+ End If
+ Select Case intHours
+ Case 0:
+ VarHours = ""
+ Case Else:
+ VarHours = intHours & " ч "
+ End Select
+	Else
+ VarMinutes = Int(nDownloadTime/60) & " мин "
+	End If
+	FuncMakeDownloadTimeString = " Время загрузки: " & VarHours & VarMinutes
+End Function
+Function FuncCalculate_Totals()
+Dim VarLoop_Counter
+Dim VarDownload_Size
+Dim VarDownload_Time
+	VarDownload_Size = 0
+	VarDownload_Time = 0
+	Dim arrCurSelection
+	arrCurSelection = objFrameEngine.GetInstallMetrics()
+	For VarLoop_Counter = 0 to UBound(arrCurSelection)
+ VarDownload_Size = VarDownload_Size + arrCurSelection(VarLoop_Counter,1)
+ VarDownload_Time = VarDownload_Time + arrCurSelection(VarLoop_Counter,2)
+	Next
+	If (VarDownload_Time = 0) AND (VarDownload_Size = 0) Then
+ totalscell.InnerText = "Нет выбранных компонентов"
+	Else
+ totalscell.InnerText = "Полный объем: " & VarDownload_Size & " КБ" & FuncMakeDownloadTimeString(VarDownload_Time)
+	End if
+End Function
+Dim arrSelectedItems
+Sub PrintInstructions()
+	Dim ObjWindow
+	Dim arrCurSelection
+	arrCurSelection = objFrameEngine.GetInstallMetrics()
+	arrSelectedItems = objFrameEngine.WUV3IS.GetCatalog(objFrameEngine.m_lCatalogPUID, objFrameEngine.m_strServerUrl, 0, objFrameEngine.m_strBrowserLang, 2, 0)
+	If UBound(arrCurSelection) < 0 Then
+ Exit Sub
+	End If
+ On Error Resume Next
+On Error Resume Next
+	Dim objTest
+	objTest = objFrameEngine.WUV3IS.GetPrintAllPage()
+	Dim nCount
+	Dim strParam
+	For nCount = 0 to Ubound(arrSelectedItems)
+ if instr(arrSelectedItems(nCount,6), "DriverUninstall") <> 0 then
+ strParam = "?drivers"
+ End If
+	Next
+	If objTest = "" Then
+ Set ObjWindow = Window.Open("printall.htm" & strParam,"viewPrint","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+	Else
+ Set ObjWindow = Window.Open(objFrameEngine.WUV3IS.GetPrintAllPage() & strParam,"viewPrint","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+	End If
+	ObjWindow.focus()
+End Sub
+Sub GoBack(strURL)
+	window.parent.frames("HFrame").Location.href=strURL
+End Sub
+Sub Window_OnUnload
+	On Error Resume Next
+	parent.GblConfirmSync = ""
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	On Error Goto 0
+ If Instr(LCase(top.location.search), "&sec=criticalupdates")<>0 Then
+ document.cookie = "page=CUN; path=/"
+	Else
+ document.cookie = "page=ProductUpdates; path=/"
+ End If
+End Sub
+</script>
+<STYLE>
+<!--
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+Vertical-align: top;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+Vertical-align: top;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+.BodyText {
+FONT-FAMILY: Verdana, Arial;
+FONT-SIZE: 8pt;
+}
+.downloadInfo {
+font-size:меньше;
+}
+-->
+</STYLE>
+</head>
+<body ID=bod1 BACKGROUND="images/wm.jpg" BGCOLOR="#FFFFFF" LEFTMARGIN=0 CLASS="BodyText">
+<table border="0" cellPadding="1" cellSpacing="1" width="100%">
+ <tr>
+ <td rowSpan="2" width="70" valign="top"><IMG ID=ix1 SRC="images/big-hand.png" class=flippable ALT="Обновление приложений" WIDTH="64" HEIGHT="40"></td>
+ <td id=td1 style="COLOR: #00319c;FONT-FAMILY: Verdana, Arial;FONT-SIZE: 9pt;FONT-WEIGHT: bold"><ID ID=x1>Обновление приложений</ID></td>
+	</tr>
+ <tr>
+ <td id=td2 style="COLOR: #00319c;FONT-FAMILY: Verdana, Arial;FONT-SIZE: 20pt;FONT-WEIGHT: bold"><ID ID=x2>Список загрузки</ID></td>
+ </tr>
+</table>
+<BR>
+<table id=tab1 border="0" cellPadding="1" cellSpacing="1" width="100%" style="FONT-FAMILY: verdana,arial; FONT-SIZE: 8pt;">
+	<tr>
+ <td id=td3 style="COLOR:#002f9f; FONT-FAMILY: Verdana, Arial; FONT-SIZE: 20pt; FONT-WEIGHT: bold; width=25px;" vAlign="top">1</td>
+ <td id=td4 width="5"></td>
+ <td id=td5 style="PADDING-TOP: 4px"><b style="PADDING-TOP: 6px"><ID ID=x3>Подтверждение выбора</ID></b><br>
+ <ID ID=x4>Вы решили установить следующие программы.</ID>
+ <ID ID=x5>Можно отменить выбор любого компонента, сняв соответствующий флажок.</ID></td>
+	</tr>
+</table>
+<DIV id=dv1 STYLE="margin-left: 39px; padding-top: 10px;">
+<DIV id=dv2 STYLE="background-color: #00299C; margin-right: -20px; font-size: 1px;"><BR></DIV>
+<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" CLASS="BodyText">
+	<tr>
+ <tbody id=tb1 style="COLOR: #00319C;FONT-FAMILY: Verdana,Arial, Helvetica;FONT-SIZE: 8pt;FONT-WEIGHT: Normal">
+ <td height=20 id=totalscell><td>
+ </tbody>
+	</tr>
+</table>
+<DIV id=dv3 STYLE="background-color: #00299C; margin-right: -20px; font-size: 1px; margin-bottom: 11px;"><BR></DIV>
+<table id="chosen-software" cellpadding="0" cellspacing="0" CLASS="BodyText">
+	<script language="vbscript">
+	Call ShowSelections
+	</script>
+</table>
+</DIV>
+<!-- BENWIL bug 702658
+<table border="0" cellPadding="1" cellSpacing="1" width="100%" CLASS="BodyText">
+	<tr>
+ <td id=td7 style="COLOR:#002f9f; FONT-SIZE: 20pt; FONT-WEIGHT: bold; width=25px;" vAlign="top">2</td>
+ <td width="5"></td>
+ <td id=td8 style="PADDING-TOP: 4px"><p><strong><ID ID=x6>View
+ Instructions?</ID><br></strong><ID ID=x7>View a single, combined instruction page for all of the software you have chosen to install. You may want to print these instructions for later reference.</ID><BR>
+ <SPAN LANGUAGE='VBScript'
+ ID='spanViewInstructions'
+ OnClick='PrintInstructions()'
+ CLASS='ButtonB'
+ STYLE='WIDTH: 135px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x8>View Instructions</ID></A>
+ <BR></SPAN><BR><BR></td>
+	</tr>
+</table>
+-->
+<DIV id=dv4 STYLE="background-color: #00299C; margin-right: -20px; margin-bottom: 2px; font-size: 1px;"><BR></DIV>
+</DIV>
+<table border="0" cellPadding="1" cellSpacing="1" width="100%" CLASS="BodyText">
+	<tr>
+ <td id=td9 style="COLOR:#002f9f; FONT-SIZE: 20pt; FONT-WEIGHT: bold; width=25px;" vAlign="top">2</td>
+ <td width="5"></td>
+ <td>
+ <table WIDTH="400" BORDER="0" CELLSPACING="1" CELLPADDING="1" CLASS="BodyText">
+ <tr>
+ <td width="154">
+ <NOBR>
+ <span ID=spanDownloadBtn OnClick='javascript: if ( this.children[0].className == "ButtonB") objFrameEngine.DownloadComponents(); '>
+ <SPAN ID=spnx1 CLASS="ButtonB" STYLE="WIDTH: 120px; HEIGHT: 30px; BORDER-RIGHT: none; PADDING-TOP: 7px;">
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>Начало загрузки</ID></A>
+ <BR></SPAN><IMG ID=ix2 CLASS=flippable OnClick="Call objFrameEngine.DownloadComponents()"
+ STYLE="cursor: hand" SRC="images/button-arrow.gif" ALT="" style="vertical-align:top;"></NOBR><BR>
+ </span>
+ </td>
+ <td><ID ID=x10>Загрузка и установка программного обеспечения,
+ <br>перечисленного выше.</ID>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="2" height="13"> </td>
+ </tr>
+ <tr>
+ <td valign=top>
+ <IMG ID=ix3 Class=flippable OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" STYLE="cursor: hand" SRC="images/button_back_large.gif" ALT="" style="vertical-align:top;"><SPAN id=spn2 LANGUAGE="VBScript" OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" CLASS="ButtonB"
+ STYLE="WIDTH: 120px; HEIGHT: 30px; BORDER-LEFT: none; padding-top:7px; padding-bottom: 1px;">
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x11>Назад</ID></A><BR></SPAN>
+ </td>
+ <td><ID ID=x12>Возврат к полному списку имеющихся приложений.</ID>
+ </td>
+ </tr>
+ </table>
+ </td>
+	</tr>
+</table>
+<BR><BR><CENTER>
+<ID ID=x13><A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/rus/misc/cpyright.htm">(c) Корпорация Майкрософт (Microsoft Corp.), 2022. Все права защищены. Условия использования</A>.</ID>
+<P>
+</CENTER>
+</body>
+</html>

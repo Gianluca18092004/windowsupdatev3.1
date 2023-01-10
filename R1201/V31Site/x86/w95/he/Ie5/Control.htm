@@ -1,0 +1,131 @@
+<HTML DIR=RTL>
+<HEAD>
+<TITLE>אין אפשרות להציג את הדף</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1255">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 8.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Arial, Helvetica;
+FONT-SIZE: 8.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Arial, Helvetica;
+FONT-SIZE: 8.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>אין אפשרות לטעון את קטלוג המוצרים מאחר ש- Windows Update אינו תומך בשלב זה בשפת מערכת ההפעלה שלך."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>אירעה שגיאה בעת טעינת קטלוג המוצר. ייתכן שמצב זה נגרם על- ידי שגיאת רשת או קובץ פגום. נא עיין במאמר ב- Microsoft Knowledge Base (KB) Article <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a>לקבלת מידע נוסף וצעדים כדי לפתור בעיה זו.</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>אין אפשרות להציג את הדף</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>נסה שוב</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<B><A HREF="http://www.download.windowsupdate.com/msdownload/update/v3/static/critcomp/x86/w98/he/ie5/advpack.exe"><ID ID=x4>הורד את מתקין הרכיבים הקריטיים</ID></A></B>
+<P>
+<ID ID=x5>הגעת לעמוד זה בשל אחת מהסיבות הבאות:</ID>
+<OL>
+	<LI><ID ID=x6>עידכונים לפקד האתר Windows Update ו/או לארכיטקטורה עלולים לגרום להופעת הודעת שגיאה זו. לקבלת מידע נוסף, קרא את המאמר Microsoft Knowledge Base (KB) Article <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A>.</ID>
+	<LI><ID ID=x7>בחרת לא להוריד את פקדי התוכנה או שאירעה בעיה בהורדת הפקדים, ובמקרה זה חלק גדול מאתר Windows Update לא יהיה זמין לשימושך. אם ברצונך להוריד את הפקדים כעת, נא לחץ על הקישור <b>נסה שוב</b> לעיל.</ID>
+	<LI><ID ID=x8>אין לך הרשאות מנהל עבור מחשב זה. כדי להשתמש ב- Windows Update, עליך לפנות אל מנהל המערכת לשם עדכון התוכנה שלך.</ID>
+	<LI><ID ID=x9>ייתכן שיהיה עליך לנקות את מטמון הדפדפן שלך. לקבלת מידע נוסף, קרא את המאמר Microsoft KB Article <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a>.</ID>
+	<LI><ID ID=x10>ייתכן שיהיה עליך להסיר את ספרית Windows Update. לקבלת מידע נוסף, קרא את המאמר Microsoft KB Article <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a>.</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/info/cpyright.htm"><ID ID="cpyright">&עותק; 2002 Microsoft Corporation. כל הזכויות שמורות. תנאי השימוש.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

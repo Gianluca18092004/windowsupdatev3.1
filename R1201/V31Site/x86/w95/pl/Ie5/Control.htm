@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>Nie można wyświetlić strony.</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Nie można załadować Katalogu produktów, ponieważ witryna Windows Update nie obsługuje obecnie tego języka systemu operacyjnego."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Wystąpił błąd podczas ładowania Katalogu produktów. Przyczyną mógł być błąd sieci lub uszkodzony plik. Więcej informacji na temat rozwiązania tego problemu można uzyskać w artykule <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a> bazy wiedzy Microsoft Knowledge Base (KB).</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>Nie można wyświetlić strony.</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>Ponów próbę</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>To strona mogła być wyświetlona z jednego z kilku powodów:</ID>
+<OL>
+	<LI><ID ID=x6>Pojawienie się tego komunikatu o błędzie mogły spowodować aktualizacje formantu i/lub architektury witryny Windows Update. Aby uzyskać więcej informacji, zapoznaj się z artykułem <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A> w bazie wiedzy Microsoft Knowledge Base (KB).</ID>
+	<LI><ID ID=x7>Nie wybrano opcji pobrania formantów programowych lub wystąpił problem w trakcie pobierania tych formantów, dlatego większa część witryny Windows Update jest dla Ciebie niedostępna. Jeżeli chcesz pobrać te formanty teraz, kliknij łącze <b>Ponów próbę</b> znajdujące się powyżej.</ID>
+	<LI><ID ID=x8>Nie masz uprawnień administratora na tym komputerze. Aby użyć rozszerzenia Windows Update, skontaktuj się z administratorem tego systemu, aby zaktualizować oprogramowanie.</ID>
+	<LI><ID ID=x9>Może być konieczne wyczyszczenie pamięci podręcznej przeglądarki. Aby uzyskać więcej informacji, zapoznaj się z artykułem <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a> w bazie wiedzy Microsoft KB.</ID>
+	<LI><ID ID=x10>Może być konieczne usunięcie katalogu aktualizacji Windows Update. Aby uzyskać więcej informacji, zapoznaj się z artykułem <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a> w bazie wiedzy Microsoft KB.</ID>
+	<LI><ID ID=x11>Aktualizacje dla systemu Windows NT&reg; 4.0 Edycja serwera terminali nie są dostępne w witrynie Windows Update. Więcej informacji zawiera artykuł <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q323564&" target="_new">Q323564</a> w bazie wiedzy Microsoft Knowledge Base (KB).</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.eu.microsoft.com/poland/corp/corp.htm"><ID ID="cpyright">(c) 2022 Microsoft Corporation. Wszelkie prawa zastrzeżone. Warunki użytkowania.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

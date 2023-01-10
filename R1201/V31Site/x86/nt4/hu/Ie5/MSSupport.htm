@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+<TITLE>Tudnivalók a Microsoft terméktámogatásról</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Tudnivalók a terméktámogatásról</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Amennyiben problémákba ütközik a Windows Update webhely használata során, online tanácsadással állunk rendelkezésére. Válassza az alábbi lehetőségek közül a megfelelőt.</id>
+<P>
+<id id=x6>Ha valamelyik tanácsadási lehetőséggel élni kíván, Microsoft online profilt kell létrehoznia. Ez a profil teszi lehetővé, hogy igénybe vegye a Microsoft internet alapú tanácsadó szolgáltatását.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Szoftverfrissítésekkel kapcsolatos támogatás:</id></A></STRONG> <id id=x80>Itt találhat információkat a Windows Update webhelyen igénybe vehető szoftverfrissítésekről.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Eszközillesztőkkel kapcsolatos támogatás:</id></A></STRONG> <id id=x800>Itt találhatja meg a Windows Update webhelyen elérhető eszközillesztőkhöz tartozó telepítési útmutatókat és támogatási lehetőségeket.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#W98"><id id=x700>Támogatás a Windows 98 rendszerhez:</id></A></STRONG> <id id=x800>Itt találhatja meg a Windows 98 operációs rendszerrel kapcsolatos támogatási lehetőségeket.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Gyakran Ismételt Kérdések:</id></A></STRONG> <id id=x8>Ha kérdései vannak a Windows Update webhellyel kapcsolatban, tekintse át először a válaszok listáját.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Ismert problémák:</id></A></STRONG> <id id=x10>Tekintse át az ismert problémák Windows Update webhelyen fellelhető listáját is.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/hu/wiz143.asp"><id id=x11>Írjon nekünk:</id></A></STRONG> <id id=x12>Kérdőívünk kitöltésével gyorsan eljuttathatja hozzánk észrevételeit és javaslatait.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>A WINDOWS UPDATE BEMUTATÁSA</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Ez az ikon a webhely minden lapjának tetején megjelenik. Ha szeretné megtudni, hogyan használhatja ki legjobban a Windows Update szolgáltatásait, kattintson ide.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>SZOFTVERFRISSÍTÉSEKKEL KAPCSOLATOS TÁMOGATÁS</id></DIV>
+Ingyenes, <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">e-mailben nyújtott terméktámogatást vehet igénybe a Windows Update webhelyen</SPAN></A>. Ez a navigációval, a webhely tartalmának minőségével, a hibaüzenetekkel és a letöltéssel kapcsolatos segítségnyújtást foglalja magában. Ettől eltérő, például a telepítéssel kapcsolatos kérdések esetén testreszabott és szakember által nyújtott támogatás vehető igénybe a <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a> webhelyen. Az MSN termékeivel kapcsolatban a <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a> webhelyen tudhat meg többet. Egyes esetekben a támogatásért fizetni kell, erről a webhelyen olvashat részletesebben.
+<P>
+Ha nem az Egyesült Államokban vagy Kanadában él, a támogatási lehetőségekről érdeklődjön a Microsoft helyi képviseleténél. A legfrissebb információkért látogasson el a <a href="http://support.microsoft.com/directory/" target=_blank>Support Online webhelyre</a>, és válassza a Worldwide Support (Terméktámogatás világszerte) pontot. Ha lakóhelyén nincs Microsoft képviselet, lépjen kapcsolatba azzal a céggel, melytől a Microsoft terméket vásárolta.
+<P>
+A Microsoft támogatási szolgáltatásait a Microsoft aktuális árai, szerződéses feltételei és kikötései határozzák meg, melyek előzetes értesítés nélkül változhatnak.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">A szoftverfrissítések eltávolítása<BR></DIV>
+Egyes frissítések eltávolíthatók a Windows Update webhely Termékfrissítések lapjának segítségével:
+<ol>
+<li>Keresse fel a Termékfrissítések lapot.
+<li>Ha figyelmeztető üzenet jelenik meg, kattintson az <B>Igen</B> gombra.
+<li>A Termékfrissítések lap megjelenésekor kattintson a <b>Telepített frissítések megjelenítése</b> jelölőnégyzetre.
+ <li>Ha a frissítést el lehet távolítani, akkor a frissítés leírása mellett <B>Eltávolítás</B> feliratú gomb látható.
+<li>Kattintson az eltávolítani kívánt frissítés mellett látható <b>Eltávolítás</b> gombra.
+</ol>
+Azokat a frissítéseket, melyek a Termékfrissítések lap segítségével nem távolíthatók el, esetleg más módszerekkel el lehet távolítani. Az egyes frissítések eltávolításával kapcsolatos további tájékoztatást az <b>Először ezt olvassa el</b> című tájékoztatók tartalmazzák.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>ESZKÖZILLESZTŐK TÁMOGATÁSA</id></DIV>
+E-mailben ingyenes támogatást vehet igénybe a telepítéssel és eltávolítással kapcsolatban a <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update Site Support</SPAN></A> webhelyen. Ha kérdése nem a telepítéssel és eltávolítással kapcsolatos, tekintse meg a további támogatási lehetőségek listáját a <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> webhelyen. Egyes esetekben a támogatásért fizetni kell&nbsp;– erről a webhelyen olvashat részletesebben.
+<P>
+Ha nem az Egyesült Államokban vagy Kanadában él, a támogatási lehetőségekről érdeklődjön a Microsoft helyi képviseleténél. A legfrissebb információkért látogasson el a <a href="http://support.microsoft.com/directory/" target=_blank>Support Online webhelyre</a>, és válassza a Worldwide Support (Terméktámogatás világszerte) pontot. Ha lakóhelyén nincs Microsoft képviselet, lépjen kapcsolatba azzal a céggel, melytől a Microsoft terméket vásárolta.
+<P>
+A Microsoft támogatási szolgáltatásait a Microsoft aktuális árai, szerződéses feltételei és kikötései határozzák meg, melyek előzetes értesítés nélkül változhatnak.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Hogyan kell eltávolítani az eszközillesztők frissítését?</DIV>
+A Frissítő varázsló eltávolítása összetevővel az alábbi lépések végrehajtásával távolíthatja el az eszközillesztő-frissítéseket a számítógépről.<ol>
+<li>Kattintson a <b>Start</b> menüre, mutasson a <b>Programok</b>, a <b>Kellékek</b>, majd a <b>Rendszereszközök</b> pontra, végül pedig kattintson a <b>Rendszerinformáció</b> parancsra.<li>A Rendszerinformáció párbeszédpanelen kattintson az <b>Eszközök</b> menü <b>Frissítő varázsló eltávolítása</b> parancsára.</ol>
+<b>Fontos!</b> Amennyiben számítógépe nem rendelkezett illesztőprogrammal a hardverhez, mielőtt az új eszközillesztőt telepítette a Windows Update webhelyről, akkor a Frissítő varázsló eltávolítása lehetőség a Windows Update webhelyről letöltött eszköz-illesztőprogramot nem távolítja el (ha úgy távolítja el az adott illesztőprogramot vagy illesztőprogram-frissítést, hogy helyette nem telepít új eszközillesztőt, a hardvereszköz nem fog működni).
+<p>
+<DIV CLASS="SectionDiv"><A NAME="W98"><id id=x13>TÁMOGATÁS A WINDOWS 98 RENDSZERHEZ</id></DIV>
+<DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix2 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td1 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x14>TÁMOGATÁS A WINDOWS 98 RENDSZERHEZ</id></TD>
+ <TD id=td2 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix3 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+ <p>
+<A HREF="http://support.microsoft.com/directory/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"><id id=x16>Windows 98 online tanácsadás</id></SPAN></A><BR>
+<id id=x17>Kattintson ide, ha a Windows 98 rendszerrel kapcsolatos online technikai tanácsadást kívánja igénybe venni. Online névjegy szükséges.</id><BR><BR><BR>
+<id id=x18>Ha nem kívánja igénybe venni az online tanácsadást, az alábbi lehetőségek közül válassza ki az Önnek leginkább megfelelőt:</id>
+<UL>
+ <LI><I><id id=x19>Ha az Egyesült Államokban vagy Kanadában él,</i> és a Windows 98 rendszert nem a számítógéppel együtt vásárolta meg, hívja a (425) 635-7222 telefonszámot.</id><BR><BR>
+ <LI><I><id id=x20>Ha az Egyesült Államok és Kanada területén kívül él,</i> és a Windows 98 rendszert nem a számítógéppel együtt vásárolta meg,</id> <A CLASS="textlink" HREF="http://support.microsoft.com/directory/WW.asp" target=_blank><id id=x21>kattintson ide</id></A> <id id=x22>a helyi Microsoft képviselettel történő kapcsolatfelvételhez.</id><BR><BR>
+ <LI><I><id id=x23>Ha a Windows 98 rendszert a számítógépen előzetesen telepítve vagy a számítógéppel együtt vásárolta meg,</i> akkor a terméktámogatás biztosítása a számítógép gyártójának a feladata. Termékinformációért forduljon a számítógép gyártójához vagy a Microsoft termékek forgalmazójához.</id>
+</UL>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>GYAKRAN ISMÉTELT KÉRDÉSEK</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Mi a Windows Update?</id><BR></DIV>
+<id id=x32>A Windows Update a Windows internetes kiterjesztése, mellyel számítógépét naprakészen tarthatja. A Windows Update Termékfrissítések nevű központi katalógusa tartalmazza az új termékfejlesztéseket, például rendszerfájlokat, eszközillesztőket, szervizcsomagokat és a Windows új szolgáltatásait. Ezeknek a fejlesztéseknek a használatát az Ön által használt számítógép jellemzői alapján ajánljuk.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Mi a Termékfrissítések lap?</id><BR></DIV>
+<id id=x36>A Termékfrissítések lap a Windows javításait, frissítéseit és fejlesztéseit, valamint számos egyéb, a Windows rendszerrel használható programot tartalmazó katalógus. A katalógusban tallózhat, kijelölhet tetszés szerinti számú összetevőt, majd közvetlenül a webről a számítógépre töltheti le és telepítheti azokat.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Miért jelenik meg olyan üzenet, amely szerint az ActiveX vezérlő ezen a lapon nem biztonságos?</id><BR></DIV>
+<id id=x38>Ez az üzenet akkor jelenik meg, ha az Internet Explorer biztonsági szintje a Magas értékre van beállítva. A Windows Update webhely csak akkor működik megfelelően, ha Közepes vagy alacsonyabb szintűre módosítja a böngészőben az internetzóna biztonsági beállításait. Ehhez kattintson az <b>Eszközök</b> menü <b>Internet-beállítások</b> parancsára, kattintson az <b>Adatbiztonság</b> fülre, majd az <b>Internet</b> ikonra.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Mi az ActiveX vezérlő?</id><BR></DIV>
+<id id=x41>Az ActiveX vezérlők ActiveX technológiával készült újrafelhasználható szoftverösszetevők. Ezek az összetevők teszik lehetővé különleges funkciók, például animáció vagy felbukkanó menük hozzáadását a weblapokhoz, asztali alkalmazásokhoz és szoftverfejlesztő eszközökhöz. A Windows Update a számítógépen telepített szoftverek ellenőrzésére ActiveX vezérlőket használ, így pontos listát tud összeállítani a szükség szerint letölthető frissítésekről és egyéb szoftverekről.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Melyik a legmegfelelőbb képernyőfelbontás a Windows Update webhely megjelenítéséhez?</id><BR></DIV>
+<id id=x43>A Windows Update webhely lapjait 800 x 600-as vagy nagyobb felbontásban történő megjelenítésre tervezték. A megfelelő felbontás beállításához kattintson a <B>Start</b> gombra, mutasson a <B>Beállítások</b> pontra, majd kattintson a <B>Vezérlőpult</b> parancsra. Ezután kattintson duplán a <B>Képernyő</b> ikonra, végül kattintson a <B>Beállítások</b> fülre.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Kap a Microsoft adatokat a számítógépről?
+</id><BR></DIV>
+<id id=x45>Nem. A Termékfrissítések webhely felkeresésekor a Windows Update egy vezérlővel ellenőrzi az Ön számítógépéhez szükséges frissítéseket. Ez az ellenőrzés lokálisan, az Ön számítógépén történik az adatok bizalmasságának és védelmének biztosítása érdekében. A Microsoft ezen a módon nem kap semmilyen információt a számítógépről.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Hogyan lehet visszajelzést küldeni a Windows Update készítőinek?</id><BR></DIV>
+<id id=x47>Ha visszajelzést szeretne küldeni a Windows Update készítőinek, a lapok tetején található fekete eszköztáron kattintson az <B>Írjon nekünk</B>, majd a <B>Windows Update</B> pontra.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>A <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security webhelyen</a>
+(a webhely angol nyelvű)
+megjelenő közlemények a Windows Update webhelyen is megjelennek?</id><BR></DIV>
+<id id=x201>Gyakori a késés a TechNet Security webhelyen megjelenő közlemények és a hozzájuk kapcsolódó adatvédelmi frissítések Windows Update webhelyen való megjelenése között. Ennek oka az, hogy a Windows Update webhely tartalma egy előre meghatározott rend szerint frissül. A Windows Update készítői mindent megtesznek azért, hogy a fontos adatvédelmi javítások minél korábban elkészüljenek, az új tartalmakat azonban tesztelni és ellenőrizni kell annak biztosítása érdekében, hogy a Windows Update csak az adott számítógépnek megfelelő frissítéseket ajánlja fel. A támogatott termékek frissítései általában néhány naptól néhány hétig terjedő időszakon belül jelennek meg a Windows Update webhelyen attól az időponttól számítva, amikor azok be lettek jelentve a TechNet webhelyen. Ha tudja, hogy egy frissítés mely verziójára van szüksége, és nem akarja megvárni, amíg az elérhetővé válik a Windows Update webhelyen, közvetlenül is letöltheti a frissítést a Security bulletin webhelyről. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Milyen operációs rendszereket és termékeket támogat a Windows Update webhely?</id><BR></DIV>
+<id id=x203>A Windows Update webhely a Windows 98, Windows 98 második kiadás, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000 rendszerekhez, valamint az Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0) és az Internet Explorer programokhoz tartalmaz adatvédelmi frissítéseket. A webhely csak azokat a frissítéseket jeleníti meg, amelyek az adott számítógéphez készültek. Egyes kiszolgálói operációs rendszereket és kiszolgáló alapú programokat a Windows Update nem támogat.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Említik, hogy egyes kiszolgáló termékeket a webhely nem támogat. Melyek ezek?</id><BR></DIV>
+<id id=x205>A Windows Update webhely kezdetben az otthoni Windows-felhasználók számítógépeinek támogatására jött létre. Idővel egyes kiszolgálói termékek is bekerültek a támogatott termékek körébe, amelyek otthoni használata egyre gyakoribb (például az IIS), a Windows Update azonban nem tartalmaz frissítéseket az olyan kiszolgálói termékekhez, mint például a Windows tartományvezérlők, a Microsoft Exchange Server, a Microsoft SQL Server, a Microsoft ISA Server stb. Az e termékeket alkalmazó felhasználók a <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security webhelyen</a> található adatvédelmi közleményekből szerezhetnek információkat a termékekhez készült frissítések letöltésére vonatkozóan.
+(A webhely angol nyelvű.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>A Windows Update webhelyen mindig hozzáférhetőek voltak az Internet Information Server 4.0 (IIS 4.0) és Internet Information Services 5.0 (IIS 5.0) programokhoz készült adatvédelmi javítások és más frissítések?</id><BR></DIV>
+<id id=x207>Nem. A Windows Update elsőként 2001. május 23-án tette közzé az IIS 5.0-hoz készült fontos frissítéseket tartalmazó csomagot. A csomag nem tartalmazza az IIS-hez addig kiadott összes frissítést, azonban megtalálhatóak benne az újabb, 2000 márciusa óta kiadott frissítések. A 2000 márciusa előtt kiadott frissítések letöltéséhez látogassa meg a <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">Windows Web Services (IIS) lapot a TechNet webhelyen</a>.
+(A webhely angol nyelvű.)
+Ha az IIS-hez új adatvédelmi javítások vagy más fontos frissítések jelennek meg, a csomagot egy új váltja fel, amely az addig meglévőkön túl az új frissítéseket is tartalmazza. Így mindig biztos lehet abban, hogy a legújabb frissítéseket tölti le az IIS termékekhez attól függetlenül, hogy milyen gyakran látogatja meg a Windows Update webhelyet.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Hol juthatok információkhoz az adatvédelemmel kapcsolatos frissítésekről?</id><BR></DIV>
+<id id=x209>A <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security webhelyen</a> az összes adatvédelemmel kapcsolatos közleményt elolvashatja, ha pedig előfizet a <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new">Microsoft Security Notification Service</a> (Microsoft adatvédelmi értesítés) szolgáltatásra, e-mailben kap értesítéseket a megjelenő adatvédelmi közleményekről.
+(A webhelyek angol nyelvűek.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/hun/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Minden jog fenntartva. Felhasználási feltételek.</id></A><BR></CENTER>
+</BODY>
+</HTML>

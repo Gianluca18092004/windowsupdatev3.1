@@ -1,0 +1,131 @@
+<HTML DIR=RTL>
+<HEAD>
+<TITLE>لا يمكن عرض الصفحة</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1256">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 10pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 10pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 8.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Arabic Transparent, Verdana, Arial, Helvetica;
+FONT-SIZE: 8.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Arabic Transparent, Verdana, Arial, Helvetica;
+FONT-SIZE: 8.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>لا يمكن تحميل ''نشرة المنتج'' لأن لغة نظام التشغيل لديك ليست معتمدة حالياً من قبل Windows Update."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>حدث خطأ أثناء تحميل نشرة المنتج. قد يكون سبب ذلك هو خطأ على شبكة الاتصال أو ملفاً تالفاً. الرجاء مراجعة مقالة قاعدة المعلومات Microsoft Knowledge Base (KB) <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a> للحصول على المزيد من المعلومات والخطوات اللازمة لمعالجة هذا الأمر.</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>لا يمكن فتح الصفحة</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>إعادة المحاولة</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<B><A HREF="http://www.download.windowsupdate.com/msdownload/update/v3/static/critcomp/x86/w98/ar/ie5/advpack.exe"><ID ID=x4>تحميل مثبت المكونات الهامة</ID></A></B>
+<P>
+<ID ID=x5>لقد وصلت إلى هذه الصفحة لإحدى الأسباب التالية:</ID>
+<OL>
+	<LI><ID ID=x6>ربما أن التحديثات لعناصر التحكم و/أو بناء موقع Windows Update هي سبب ظهور رسالة الخطأ هذه. للمزيد من المعلومات، الرجاء قراءة مقالة قاعدة المعلومات Microsoft Knowledge Base (KB) <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A>.</ID>
+	<LI><ID ID=x7>إما أنك اخترت عدم تحميل عناصر تحكم البرنامج أو واجهتك مشكلة في تحميل عناصر التحكم، وفي كلتا الحالتين لن تتوفر لك معظم محتويات موقع Windows Update. إذا أردت تحميل عناصر التحكم الآن، الرجاء النقر فوق الارتباط <b>إعادة المحاولة</b> أعلاه.</ID>
+	<LI><ID ID=x8>ليست لديك امتيازات المسؤول لهذا الجهاز. لاستخدام Windows Update، يجب الاتصال بمسؤول النظام لديك لتحديث البرنامج.</ID>
+	<LI><ID ID=x9>قد تحتاج إلى مسح التخزين المؤقت للمستعرض لديك. للمزيد من المعلومات، الرجاء قراءة المقالة Microsoft KB <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a>.</ID>
+	<LI><ID ID=x10>قد تحتاج إلى إزالة الدليل Windows Update Directory. للمزيد من المعلومات، الرجاء قراءة المقالة Microsoft KB <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a>.</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/info/cpyright.htm"><ID ID="cpyright">(c) 2022 Microsoft Corporation. كافة الحقوق محفوظة. شروط الاستخدام.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

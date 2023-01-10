@@ -1,0 +1,518 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+<STYLE>
+.lDiv{width:140px;height:1px;background-color:#00319C;}
+.submenu{position:relative;padding-right:5px;cursor:hand;width:140px;background-color:white;}
+.bDiv{position:relative;padding-right:5px;cursor:hand;overflow:hidden;width:140px;background-color:white;border-top:#00319C 0px solid;border-right:#00319C 1px solid;border-bottom:#00319C 1px solid;letter-spacing:-1px;padding-bottom:5px}
+.bTxt{position:relative;top:-3px;font-family:verdana,arial,sans-serif;font-size:7.5pt;font-weight:bold;color:#00319C;}
+A:hover.other{color:#0088ff}
+A:link{color:#00319C}
+A:visited{color:#00319C}
+A{text-decoration:none}
+.subsectionLeftSide {
+	border-bottom:#00319c 1px solid;
+	width:30 px;
+	}
+.subsectionText {
+	font-family:verdana,arial,sans-serif;
+	font-size:7.5pt;
+	font-weight:bold;
+	color:#00319C;
+	cursor:hand;
+	height:20px;
+	background-color:#ffffff;
+	border-bottom:#00319c 1px solid;
+	}
+.subsectionText A:visited {
+	color:#00319c;
+	}
+.subsectionText A {
+	text-decoration:none;
+	}
+</STYLE>
+<SCRIPT language=javascript>
+var szHTML = "";
+function wrt(t) {
+ szHTML = szHTML.concat(t);
+}
+</SCRIPT>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Option Explicit
+Dim cSec,cSub,LastSec
+Dim ArrNav_Sections()
+Dim GblTimer
+Dim GblReady
+Dim delayedSubsectionSelected
+Dim bSubsectionsCreated
+delayedSubsectionSelected=""
+bSubsectionsCreated=FALSE
+GblReady = FALSE
+Set cSub = Nothing
+LastSec = ""
+Sub SecOn(e)
+	If GblReady = FALSE Then
+ Exit Sub
+	End If
+	Dim b, s
+	window.event.cancelBubble=True
+	If Parent.GblLock=True Then Exit Sub
+	Set s=window.event.srcElement
+	Set b=window.event.toElement
+	If Left(s.id, 1) <> "S" Then
+ Set s=s.ParentElement
+ If NOT (b Is Nothing) Then
+ If s.id = b.id Then
+ Exit Sub
+ End IF
+ End If
+	ElseIf NOT (b Is Nothing) Then
+ If (b.id = "btn" & s.id) OR (b.id = "gif" & s.id) Then
+ Exit Sub
+ End If
+	End If
+ If (IsObject(s) AND IsObject(cSec)) Then
+ If (Not(s is cSec)) Then
+ If (InStr(s.id, "btn") = 1) Then
+ Set b=document.all(s.id)
+ Else
+ Set b=document.all("btn" & s.id)
+ End If
+ If e = 1 Then
+ b.style.color="#0088ff"
+ Else
+ b.style.color="#00319C"
+ End If
+ End If
+ End if
+End Sub
+Sub SubOn(e)
+	If GblReady = FALSE Then
+ Exit Sub
+	End If
+	Dim t, ss, DoIt
+	window.event.cancelBubble=True
+	If Parent.GblLock=True Then Exit Sub
+	Set ss=window.event.srcElement
+	Set t=window.event.toElement
+	If Left(ss.id, 1) <> "S" Then
+ Set ss=ss.ParentElement
+ If NOT (t Is Nothing) Then
+ If ss.id = t.id Then
+ Exit Sub
+ End IF
+ End If
+	ElseIf NOT (t Is Nothing) Then
+ If t.id = "txt" & ss.id Then
+ Exit Sub
+ End If
+	End If
+	DoIt=False
+	If (cSub Is Nothing) Then
+ DoIt = True
+	Else
+ If (ss.id <> cSub.id) Then DoIt = True
+	End If
+	If DoIt Then
+ If (InStr(ss.id, "txt") = 1) Then
+ Set t=document.all(ss.id)
+ Else
+ Set t=document.all("txt" & ss.id)
+ End If
+ If(e = 1) Then
+ t.style.color="#0088ff"
+ Else
+ t.style.color="#00319C"
+ End If
+	End If
+End Sub
+Sub SwitchSecs(off,onn)
+	Dim b
+	if(NOT off Is Nothing) Then
+ off.style.background="#ffffff"
+ Set b=document.all("btn" & off.id)
+ b.style.color="#00319C"
+	End If
+	If IsObject(onn) Then
+ onn.style.background="#00319C"
+ Set b=document.all("btn" & onn.id)
+ b.style.color="#ffffff"
+	End If
+End Sub
+Sub ExpandSec(s)
+	Dim ss
+	set ss=document.all("div" & s.id)
+	If IsObject(ss) Then
+ ss.style.display=""
+ s.state="down"
+	End If
+End Sub
+Sub ContractSec(s)
+	Dim ss
+	If IsObject(s) Then
+ Set ss=document.all("div" & s.id)
+ if IsObject(ss) Then ss.style.display="none"
+ s.state="up"
+	End If
+End Sub
+Sub ChooseSec(s,synch)
+	If GblReady = FALSE Then
+ Exit Sub
+	End If
+	Dim Pos, shref, pSec, i
+	GblReady=FALSE
+	If Parent.GblLock=True Then Exit Sub
+	If Not(IsObject(s)) Then
+ Set s=window.event.srcElement
+ If (Left(s.id, 3) = "btn") OR (s.tagName="IMG") Then
+ Set s=s.ParentElement
+ End If
+ window.event.cancelBubble = True
+	End If
+If IsObject(cSec) Then
+ Set pSec = cSec
+	SwitchSecs cSec,s
+	if(s.state = "up") Then
+ if IsObject(cSec) AND (s.id <> cSec.id) Then ContractSec cSec
+ ExpandSec s
+ Set cSec=s
+	Else
+ if((s.id <> cSec.id) OR (synch = 0)) Then ContractSec s
+ SwitchSubs cSub,Nothing
+ Set cSub = Nothing
+	End If
+	Pos = CInt(Right(s.id,3))
+	parent.GblProductSync = ArrNav_Sections(0,Pos)
+	parent.GblSuccessSync = ArrNav_Sections(0,Pos)
+	parent.GblPSuccessSync = ArrNav_Sections(0,Pos)
+	parent.GblConfirmSync = ArrNav_Sections(0,Pos)
+	parent.GblSync = ArrNav_Sections(0,Pos)
+	If ArrNav_Sections(0,Pos) = "ProductUpdates" Then
+ shref = "engine.htm"
+ If InStr(parent.window.frames("FrmToolbar").document.frames(0).location.href,shref) = 0 Then
+ FuncToggle_Lock(True)
+ parent.frames("FrmToolbar").document.frames(0).location.replace(shref)
+ Exit Sub
+ End If
+ If NOT parent.bIsEngineReady Then
+ Exit Sub
+ End IF
+	End If
+	GblReady=TRUE
+	If(synch = 0) Then
+ if pSec.id <> s.id OR s.id <> "S001" Then
+ parent.window.frames("HFrame").location.href="HNav.htm?" & s.id
+ End If
+	End If
+End if
+End Sub
+Sub ShowPage(ss,synch)
+	Dim DoIt, Pos
+	If GblReady=FALSE Then Exit Sub
+	DoIt=False
+	If Parent.GblLock=True Then Exit Sub
+	If NOT IsObject(ss) Then
+ Set ss=window.event.srcElement
+ If Left(ss.id,3) = "txt" Then
+ Set ss = ss.parentElement
+ End If
+	End If
+	If left(ss.id,1) <> "S" Then Exit Sub
+	If Len(ss.id) > 4 Then
+ Pos = CInt(Right(ss.id,3))
+ DoIt = True
+	End If
+	If ((CSub is Nothing) AND (synch = 0)) Then
+ DoIt = True
+	Else
+ If((ss.id <> cSub.id) AND (synch = 0)) Then DoIt=True
+	End If
+	If DoIt Then
+ If (Instr(LCase(parent.Frames("FrmContent").location.href),"pumain.htm") = 0) Then
+ parent.window.frames("hframe").location.href="HNav.htm?S001U000"
+ Else
+ parent.window.frames("hframe").location.href="HNav.htm?" & ss.id
+ End If
+	End If
+End Sub
+Sub SwitchSubs(off,onn)
+	Dim t,g
+	If Not (off is Nothing) Then
+ Set t=document.all("txt" & off.id)
+ t.style.color="#00319C"
+ Set g=document.all("gif" & off.id)
+ g.style.visibility="hidden"
+ set cSub = Nothing
+	End If
+	If Not (onn is Nothing) Then
+ Set t=document.all("txt" & onn.id)
+ t.style.color="#0088ff"
+ set cSub = onn
+ Set g=document.all("gif" & onn.id)
+ g.style.visibility=""
+	End If
+End Sub
+Sub SynchTopic(cd)
+	Dim SecCode, Pos
+	If ((Len(cd) > 4) AND (bSubsectionsCreated=FALSE)) Then
+ delayedSubsectionSelected=cd
+ exit sub
+	End If
+	SecCode=Left(cd,4)
+ Pos = Mid(SecCode, 2, 3)
+ Parent.GblSync = ArrNav_Sections(0, Pos)
+	If((SecCode <> LastSec) AND (LastSec <> "")) Then ChooseSec document.all(SecCode),1
+	If(Len(cd) > 4) Then
+ SwitchSubs cSub,document.all(cd)
+	Else
+ SwitchSubs cSub,Nothing
+	End If
+	LastSec=SecCode
+End Sub
+Sub SynchIfNeeded()
+	bSubsectionsCreated=TRUE
+	If delayedSubsectionSelected <> "" Then
+ SynchTopic(delayedSubsectionSelected)
+ delayedSubsectionSelected=""
+	End If
+End Sub
+Sub DoSec(cd,msg,url,gif,Sec)
+	wrt "<DIV ID=" & cd & " CLASS=bDiv state='up' "
+	If (gif = "") Then wrt "STYLE='padding-left:16px;' "
+	wrt " onClick='javascript:ChooseSec(null,0)' onMouseover='javascript:SecOn(1)' onMouseout='javascript:SecOn(0)' gotoURL='" & url & "'>"
+	If(gif <> "") Then wrt "<IMG ALT='' ID=gif" & cd & " STYLE='position:relative;left:-3px;margin-bottom:3px;' SRC=" & gif & " ALIGN='left' HEIGHT=29 WIDTH=32>"
+	If(Instr(msg, "<")) Then wrt "<IMG SRC='images/ts.gif' ALT='' WIDTH=5 HEIGHT=5 BORDER=0><br>"
+	wrt "<A name='a" & cd & "'></A><A ID=btn" & cd & " CLASS=bTxt href='javascript:location.replace(""#a" & cd & """)'>" & msg & "</A></DIV>"
+End Sub
+Function MakeID(i)
+	Dim s
+	s = CStr(i)
+	While Len(s) < 3
+ s = "0" & s
+	Wend
+	MakeID=s
+End Function
+Sub DisplayPage()
+	Dim Sec,SubSec,nSubSec,nSS,BotLn,SecID,SubSecID
+	For Sec=0 TO Ubound(ArrNav_Sections, 2)
+ SecID="S" & MakeID(Sec)
+ DoSec SecID, ArrNav_Sections(3,Sec), ArrNav_Sections(2,Sec), ArrNav_Sections(4,Sec),Sec
+ wrt "<DIV id=div" & SecID & " style='DISPLAY:none'>"
+ If Sec=1 Then
+ wrt ""
+ End If
+ wrt "</DIV>"
+	Next
+	wrt "<SPAN STYLE='BORDER-BOTTOM:#00319c solid 1px;HEIGHT:40px;MARGIN-BOTTOM:9px;PADDING-LEFT:16px;PADDING-TOP:15px;WIDTH:140px;cursor:text;padding-bottom:5px;'><SPAN CLASS=bTxt STYLE='cursor:text;'><br>&nbsp;<br>ANDERE WEBSITES</SPAN></SPAN><br>"
+	Dim szUrl
+ szUrl = ""
+	If szUrl <> "" Then
+ wrt "<DIV CLASS=bTxt STYLE='PADDING-TOP:5px'><A HREF='" & szUrl & "' CLASS=Other STYLE='LEFT:-3px;POSITION:relative' TARGET='_blank'><IMG SRC='images/HS.png' ALT='HARDWARESUPPORT' HEIGHT=32 WIDTH=32 BORDER=0 ALIGN=left>&nbsp;HARDWARE<BR>&nbsp;SUPPORT</A></DIV>&nbsp;"
+	End If
+	wrt "<Table><TR><TD><DIV CLASS=bTxt><A HREF='http://www.microsoft.com/germany/windows/' CLASS=Other STYLE='LEFT:-3px;POSITION:relative' TARGET='_blank'><IMG SRC='images/WF.GIF' ALT='MICROSOFT WINDOWS-FAMILIE' VSPACE=0 HEIGHT=32 WIDTH=32 BORDER=0 ALIGN=left STYLE='border-bottom-width:23px; border-right-width: 5px;border-color:#ffffff'>MICROSOFT<BR>WINDOWS-<BR>FAMILIE</A></DIV></TD></TR>"
+	wrt "<TR><TD><DIV CLASS=bTxt><A HREF='http://office.microsoft.com/germany/ProductUpdates/default.aspx' CLASS=Other STYLE='LEFT:-3px;POSITION:relative' TARGET='_blank'><IMG SRC='images/offupdat.GIF' ALT='Link zu Microsoft Office-Update' VSPACE=0 HEIGHT=32 WIDTH=32 BORDER=0 ALIGN=left STYLE='border-bottom-width:23px; border-right-width: 5px;border-color:#ffffff'>MICROSOFT<BR>OFFICE-<BR>PRODUKT<BR>UPDATES</A></DIV></TD></TR>"
+	wrt "</Table>"
+End Sub
+Function FuncInitialize_Arrays()
+	Dim P
+	P=0
+	Redim ArrNav_Sections(5,P)
+	ArrNav_Sections(0,P) = "Home"
+	ArrNav_Sections(1,P) = "FrmContent"
+	ArrNav_Sections(2,P) = "Home.htm"
+	ArrNav_Sections(3,P) = "HOMEPAGE FÜR<BR>Windows Update"
+	ArrNav_Sections(4,P) = ""
+	P=P+1
+	Redim Preserve ArrNav_Sections(5,P)
+	ArrNav_Sections(0,P) = "ProductUpdates"
+	ArrNav_Sections(1,P) = "FrmContent"
+	ArrNav_Sections(2,P) = "PUMain.htm#Section0"
+	ArrNav_Sections(3,P) = "PRODUKT-<BR>UPDATES"
+	ArrNav_Sections(4,P) = "Images/pu.gif"
+	P=P+1
+	Redim Preserve ArrNav_Sections(5,P)
+	ArrNav_Sections(0,P) = "SupportInfo"
+	ArrNav_Sections(1,P) = "FrmContent"
+	ArrNav_Sections(2,P) = "MSSupport.htm"
+	ArrNav_Sections(3,P) = "SUPPORT-<BR>INFORMATIONEN"
+	ArrNav_Sections(4,P) = "Images/ms.gif"
+End Function
+Function GetMTSOemURL()
+	On Error Resume Next
+	Err.Clear
+	Dim s
+	s = ObjWuPdInfo.GetMTSOemURL()
+	If Err.Number <> 0 Then
+ Err.Clear
+ GetMTSOemURL = ""
+ Exit Function
+	End If
+	If s <> "" AND Instr(s, "http:") = 0 AND Instr(s, "ftp:") = 0 AND Instr(s, "gopher:") = 0 Then
+ s = "http://" & s
+	End If
+	GetMTSOemURL = s
+End Function
+Function FuncToggle_Lock(VarLock)
+	Dim objs, i, csr
+	If VarLock = TRUE Then
+ Parent.GblLock = TRUE
+ csr = "wait"
+	ElseIf VarLock = FALSE Then
+ Parent.GblLock = FALSE
+ GblReady=TRUE
+ csr = "hand"
+	End If
+	set objs = document.all.tags("A")
+	for i = 0 to objs.length - 1
+ objs(i).style.cursor = csr
+	next
+	set objs = document.all.tags("div")
+	for i = 0 to objs.length - 1
+ objs(i).style.cursor = csr
+	next
+	set objs = document.all.tags("td")
+	for i = 0 to objs.length - 1
+ objs(i).style.cursor = csr
+	next
+End Function
+Function GrayOut(onn)
+Dim itms,filt,bgc,bg,csr,i
+	If onn Then
+ Parent.GblLock=TRUE
+ filt="gray"
+ bgc="silver"
+ csr="default"
+	Else
+ Parent.GblLock=FALSE
+ filt=""
+ bgc="white"
+ csr="hand"
+	End If
+	Set itms=document.all.tags("div")
+	For i=0 TO itms.length - 1
+ If itms(i).className <> "lDiv" Then
+ If itms(i).id <> cSec.id Then
+ itms(i).style.backgroundColor=bgc
+ Else
+ If bgc = "white" Then
+ itms(i).style.backgroundColor="#00319C"
+ Else
+ itms(i).style.backgroundColor=bgc
+ End If
+ End If
+ End If
+ itms(i).style.cursor=csr
+	Next
+	Set itms=document.all.tags("a")
+	For i=0 TO itms.length - 1
+ If Right(itms(i).id,4) <> cSec.id Or Parent.GblLock Then
+ itms(i).style.color=filt
+ Else
+ itms(i).style.color=bgc
+ End If
+ itms(i).style.cursor=csr
+	Next
+	document.body.style.filter=filt
+	document.body.style.backgroundColor=bgc
+End Function
+Function GetSection(szPara)
+	Dim i1
+	GetSection=szPara
+	i1=InStr(szPara,"#")
+	If i1>0 Then
+ GetSection=Left(szPara,i1-1)
+ Exit Function
+	End If
+	i1=InStr(szPara,"&")
+	If i1>0 Then
+ GetSection=Left(szPara,i1-1)
+ Exit Function
+	End If
+End Function
+Sub Init()
+	If Func_Ready() = FALSE Then
+ Call Func_Wait()
+	Else
+ ClearTimeout(GblTimer)
+ Dim s,i,sz
+ sz=LCase(top.location.search)
+ i=InStr(sz,"page=")
+ If i>0 Then
+ sz=Right(sz,Len(sz)-(i+4))
+ sz=GetSection(sz)
+ For i=0 To Ubound(ArrNav_Sections,2)
+ If sz=LCase(ArrNav_Sections(0,i)) Then
+ s="S" & MakeID(i)
+ Exit For
+ End If
+ Next
+ End If
+ sz=LCase(location.search)
+ i=InStr(sz, "dontnav")
+ If i=0 Then
+ If s="" Then s="S000"
+ Set sz = document.all(s)
+ Set CSec = document.all("S000")
+ GblReady = TRUE
+ ChooseSec sz, 0
+ Else
+ Set CSec = document.all("S000")
+ End If
+	End If
+	GblReady = TRUE
+End Sub
+Sub Window_Onload()
+	If Func_Ready() = FALSE Then
+ Call Func_Wait()
+	Else
+ Init()
+	End If
+End Sub
+Function Func_Wait()
+	GblTimer = SetTimeout("Init()", 500, "VBScript")
+End Function
+Function Func_Ready()
+	On Error Resume Next
+	If parent.frames("FrmToolbar").document.readystate = "complete" Then
+ If Err.Number <> 0 Then
+ Err.Clear
+ If Instr(top.document.cookie, "nRetry=1") <> 0 Then
+ top.document.cookie = "nRetry=NOTHING;"
+ parent.location.replace "../pageload.htm"
+ Exit Function
+ Else
+ Call RetryLoad
+ Exit Function
+ End if
+ End if
+ Func_Ready = TRUE
+	Else
+ Func_Ready = FALSE
+	End If
+End Function
+Sub RetryLoad()
+ If Instr(top.document.cookie, "nRetry=1") = 0 Then
+ top.document.cookie = "nRetry=1"
+ ClearTimeout(GblTimer)
+ top.location.replace "../../../../../../default.htm"
+ End If
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY STYLE="cursor:default" BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN="0" TOPMARGIN="0">
+<SCRIPT LANGUAGE="VBScript">
+	FuncInitialize_Arrays()
+	DisplayPage
+ document.write(szHTML)
+</SCRIPT>
+</BODY>
+</HTML>

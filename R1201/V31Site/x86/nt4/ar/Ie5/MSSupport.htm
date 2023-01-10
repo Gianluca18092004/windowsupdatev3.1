@@ -1,0 +1,192 @@
+<HTML DIR=RTL>
+<HEAD>
+<TITLE>معلومات الدعم لـ Microsoft</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1256">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 10pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 10pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Arabic Transparent, Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 8.5pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-left: -15px;
+	padding-right: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Arabic Transparent, Verdana,Arial, Helvetica;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+.flippable	{
+ filter: fliph;
+ }
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=RIGHT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>معلومات الدعم</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>إذا كنت تعاني من مشاكل في موقع Windows Update على ويب، فإن الدعم الفوري متوفر للمساعدة. حدد فقط أحد الخيارات المذكورة في الأسفل.</id>
+<P>
+<id id=x6>عند تحديد أحد خيارات الدعم هذه، فقد يطلب منك إنشاء تشكيل جانبي فوري (Online Profile) لـ Microsoft. يلعب التشكيل الجانبي الفوري دور البطاقة لتلقي الدعم من Microsoft عبر إنترنت.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>دعم تحديث البرامج:</id></A></STRONG> <id id=x80>عرض معلومات الدعم لتحديثات البرامج المتوفرة في Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>دعم برامج تشغيل الأجهزة:</id></A></STRONG> <id id=x800>عرض معلومات الدعم لبرامج تشغيل الأجهزة المتوفرة في Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#W98"><id id=x700>دعم Windows 98:</id></A></STRONG> <id id=x800>تعرف على خيارات الدعم لنظام التشغيل Windows 98.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>أسئلة متداولة:</id></A></STRONG> <id id=x8>إذا كان لديك سؤال حول Windows Update، فقد ترغب في التدقيق أولاً في قائمة الأجوبة لدينا.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>مسائل معروفة:</id></A></STRONG> <id id=x10>قد ترغب أيضاً في مراجعة قائمة المسائل المعروفة الموجودة حالياً في موقع Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/wiz143.asp"><id id=x11>الكتابة إلينا:</id></A></STRONG> <id id=x12>عبارة عن نموذج لتعبئة معلومات عامة بسرعة حتى تتمكن من إدخال تعليقاتك واقتراحاتك.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>حول Windows Update</id></TD>
+ <TD id=td6 VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>يظهر هذا الرمز في أعلى كافة صفحات هذا الموقع. انقر فوق الرمز للتعرف على كيفية استخدام موقع Windows Update بالطريقة المثلى.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>دعم تحديث البرامج</id></DIV>
+يتضمّن <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">الدعم المجاني بواسطة البريد الإلكتروني لموقع Windows Update</SPAN></A>: مساعدة للتنقل في مواقع ويب، وجودة في محتوى الموقع، أو رسائل الخطأ، والمساعدة في عمليات التحميل الأساسي. وتتوفر كافة المساعدات الأخرى، بما في ذلك مسائل التثبيت والإعداد، عبر عروض الدعم الشخصية والمتخصصة في الموقع التالي: <a href="http://www.microsoft.com/middleeast/support/" target=_blank>http://support.microsoft.com/directory/&lrm;</a>. بالنسبة لمنتجات MSN، قم بزيارة الموقع <a href="http://help.msn.com/" target=_blank>http://help.msn.com/&lrm;</a>. وقد يتوجب في بعض الحالات دفع أجر مقابل الحصول على الدعم، لذا يرجى مراجعة المواقع للحصول على التفاصيل.
+<P>
+للحصول على الدعم الفني خارج الولايات المتحدة وكندا، اتصل بالفرع المحلي. للحصول على أحدث قائمة، يرجى مراجعة <a href="http://www.microsoft.com/middleeast/support/" target=_blank>موقع الدعم الفوري على ويب</a> وتحديد الخيار الخاص بالدعم العالمي. إذا لم يتواجد فرع محلي لـ Microsoft في بلدك، فيرجى الاتصال بالمؤسسة التي حصلت منها على منتج Microsoft.
+<P>
+إن خدمات دعم Microsoft قابلة للتغيير وفقاً للأسعار والشروط والأحكام المحددة من قبل Microsoft في وقت طلب الخدمة، وهي عرضة للتغيير بدون سابق إشعار.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">كيفية إلغاء تثبيت تحديثات البرامج<BR></DIV>
+يمكن إلغاء تثبيت بعض التحديثات باستخدام صفحة تحديثات المنتج الموجودة في موقع Windows Update:
+<ol>
+<li>انتقل إلى صفحة تحديثات المنتج.
+<li>تأكد من النقر فوق <B>نعم</B> في حال ظهور رسالة مطالبة.
+<li>عند ظهور صفحة تحديثات المنتج، انقر فوق <B>إظهار التحديثات المثبتة</B> في أعلى الصفحة.
+<li>إذا كان بالإمكان إلغاء تثبيت التحديث، يظهر زر <B>إلغاء التثبيت</B> إلى يسار وصف التحديث.
+<li>انقر فوق <b>إلغاء التثبيت</b> بجانب وصف التحديث الذي ترغب في إلغاء تثبيته.
+</ol>
+يمكن للتحديثات التي لا يمكن إلغاء تثبيتها من تحديثات المنتج أن تكون قابلة لإلغاء التثبيت باتباع أساليب أخرى. انظر صفحة <b>اقرأ هذا أولاً</b> لكل تحديث للحصول على معلومات إضافية حول إلغاء التثبيت.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>دعم برامج تشغيل الأجهزة</id></DIV>
+إن دعم التثبيت/إلغاء التثبيت المجاني متوفر بواسطة البريد الإلكتروني على <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">موقع دعم Windows Update</SPAN></A>. للمسائل التي لا تتعلق بتثبيت/إلغاء تثبيت لبرامج تشغيل الأجهزة، قد تجد سرداً كاملاً لخيارات الدعم في <a href="http://www.microsoft.com/middleeast/support/" target=_blank>http://support.microsoft.com/directory</a>. وقد يتوجب في بعض الحالات دفع أجر مقابل الحصول على الدعم، لذا يرجى مراجعة الموقع للحصول على التفاصيل.
+<P>
+للحصول على الدعم الفني خارج الولايات المتحدة وكندا، اتصل بالفرع المحلي. وللحصول على قائمة حديثة، يرجى مراجعة <a href="http://www.microsoft.com/middleeast/support/" target=_blank>موقع الدعم الفوري على ويب</a> وتحديد خيار الدعم العالمي. إذا لم يتواجد فرع محلي لـ Microsoft في بلدك، فيرجى الاتصال بالمؤسسة التي حصلت منها على منتج Microsoft.
+<P>
+إن خدمات دعم Microsoft قابلة للتغيير وفقاً للأسعار والشروط والأحكام المحددة من قبل Microsoft في وقت طلب الخدمة، وهي عرضة للتغيير بدون سابق إشعار.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">كيفية إلغاء تثبيت تحديثات برامج تشغيل الأجهزة</DIV>
+استخدم Update Wizard Uninstall لإزالة تحديثات برامج تشغيل الأجهزة من جهازك:
+<ol>
+<li>انقر فوق <b>ابدأ</b>، وأشر إلى <b>البرامج</b>، ثم إلى <b>البرامج الملحقة</b>، ثم إلى <b>أدوات النظام</b>، وانقر فوق <b>معلومات النظام</b>.
+<li>في معلومات النظام، انقر فوق القائمة <b>أدوات</b>، ثم فوق <b>Update Wizard Uninstall</b>.
+</ol>
+<b>هام</b> إذا لم يكن لدى الكمبيوتر برنامج تشغيل للجهاز قبل تثبيت برنامج تشغيل جديد من Windows Update، فإن Update Wizard Uninstall لن يقوم بإلغاء تثبيت برنامج التشغيل الذي تم تحميله من قِبَل Windows Update (إلغاء تثبيت برنامج تشغيل أو إلغاء تثبيت تحديث برنامج التشغيل دون استبداله سيتسبب في توقف عمل الجهاز).
+<p>
+<DIV CLASS="SectionDiv"><A NAME="W98"><id id=x13>دعم WINDOWS 98</id></DIV>
+<DIV STYLE="BACKGROUND-COLOR: #00319C;margin-left: -15px;"><IMG ID=ix2 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td1 NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x14>دعم WINDOWS 98</id></TD>
+ <TD id=td2 VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix3 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+ <p>
+<A HREF="http://www.microsoft.com/middleeast/support/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"><id id=x16>الدعم الفوري لـ Windows 98</id></SPAN></A><BR>
+<id id=x17>انقر هنا للحصول على الدعم الفني الفوري لـ Windows 98. التشكيل الجانبي الفوري مطلوب.</id><BR><BR><BR>
+<id id=x18>إذا لم تكن ترغب باستخدام الدعم الفوري، حدد في الأسفل الخيار الذي يناسبك أكثر:</id>
+<UL>
+ <LI><I><id id=x19>إذا كنت مقيماً في الولايات المتحدة الأميركية أو كندا</i> واشتريت نسخة Windows 98 بشكل منفصل عن الكمبيوتر، اتصل بالرقم &lrm;(425) 635-7222&lrm; للحصول على الدعم.</id><BR><BR>
+ <LI><I><id id=x20>إذا كنت خارج الولايات المتحدة الأميركية وكندا</i> واشتريت نسخة Windows 98 بشكل منفصل عن الكمبيوتر،</id> <A CLASS="textlink" HREF="http://support.microsoft.com/support/supportnet/internationalphonenumbers.asp" target=_blank><id id=x21>انقر هنا</id></A> <id id=x22>للاتصال بفرع Microsoft المحلي.</id><BR><BR>
+ <LI><I><id id=x23>إذا كان Windows 98 مثبتاً بشكل مسبق أو موزعاً مع الكمبيوتر الشخصي الخاص بك،</i> فإن مصنّع الكمبيوتر الشخصي مسؤول عن توفير دعم المنتج لك. يرجى الاتصال بمصنّع أو مصدر منتج Microsoft للحصول على معلومات الدعم.</id>
+</UL>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>أسئلة متداولة</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>ما هو Windows Update؟</id><BR></DIV>
+<id id=x32>إن Windows Update هو الملحق المباشر لـ Windows، والذي صمم لمساعدتك على المحافظة على الكمبيوتر محدّثاً. يحتوي Windows Update على نشرة مركزية تدعى تحديثات المنتج والتي تتضمن تحسينات جديدة للمنتج مثل ملفات النظام، وبرامج تشغيل الأجهزة، وحزم الخدمات، وميزات Windows الجديدة. ينصح بهذه التحسينات استناداً إلى ما هو ضروري لجهازك بشكل معين.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>ما هي تحديثات المنتج؟</id><BR></DIV>
+<id id=x36>تعتبر صفحة تحديثات المنتج نشرة من الإصلاحات، والتحديثات، والتحسينات لـ Windows ولعدة برامج تعمل ضمن Windows. يمكنك استعراض النشرة، وتحديد العدد الذي تريد من المكونات، ثم تحميل هذه المكونات وتثبيتها مباشرة من ويب إلى الكمبيوتر.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>لماذا أحصل على رسالة تفيد بوجود عنصر تحكم ActiveX غير آمن على هذه الصفحة؟</id><BR></DIV>
+<id id=x38>يتم عرض هذه الرسالة عندما يكون إعداد الأمان لـ Internet Explorer معيناً إلى العالي. لكي يعمل موقع Windows Update بشكل صحيح، يجب عليك تغيير إعدادات الأمان لمنطقة إنترنت في المستعرض إلى المتوسط أو المنخفض. للقيام بذلك، انقر فوق قائمة <b>أدوات</b>، ثم فوق <b>خيارات إنترنت</b>. حدد علامة التبويب <b>الأمان</b> ثم انقر فوق <b>إنترنت</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>ما هو عنصر تحكم ActiveX؟</id><BR></DIV>
+<id id=x41>تعتبر عناصر تحكم ActiveX مكونات برامج قابلة لإعادة الاستخدام تدمج تكنولوجيا ActiveX. يمكن استخدام هذه المكونات لإضافة وظائف متخصصة، مثل الحركة أو القوائم المنبثقة إلى صفحات ويب، وتطبيقات سطح المكتب، وأدوات تطوير البرامج. يستخدم Windows Update عناصر تحكم ActiveX للتحقق من البرامج المثبتة على الكمبيوتر لكي يزودك بالقائمة الصحيحة من التحديثات والبرامج الأخرى التي قد ترغب بتحميلها.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>ما هي أفضل دقة لعرض موقع Windows Update؟</id><BR></DIV>
+<id id=x43>تم تصميم صفحات موقع Windows Update ليتم عرضها بدقة شاشة 800*600 أو أكثر. لتعيين هذه الدقة، انقر فوق الزر <B>ابدأ</b>، وأشر إلى <B>إعدادات</b>، ثم انقر فوق <B>لوحة التحكم</b>. انقر نقراً مزدوجاً فوق الرمز <B>العرض</b>، ثم انقر فوق علامة التبويب <B>الإعدادات</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>هل يتم إرسال معلومات حول جهازي إلى Microsoft؟
+</id><BR></DIV>
+<id id=x45>لا. في كل مرة تنتقل بها إلى نشرة تحديثات المنتج، يستخدم Windows Update عنصر تحكم للتحقق من وجود تحديثات خاصة بجهازك. يتم إجراء هذا التحقق محلياً على جهازك لضمان خصوصية وأمان بياناتك، ولا يرسل أية معلومات إلى Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>كيف أرسل معلومات إلى فريق عمل Windows Update؟</id><BR></DIV>
+<id id=x47>يمكنك إرسال معلومات حول هذا الموقع إلى فريق عمل Windows Update بالنقر فوق <B>الكتابة إلينا</B>، ثم فوق <B>Windows Update</B> على شريط الأدوات الأسود الموجود في أعلى كل صفحة.</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/info/cpyright.htm"><id id=x50><span dir="ltr">(c) 2022 Microsoft Corporation</span>. كافة الحقوق محفوظة. شروط الاستخدام.</id></A><BR></CENTER>
+</BODY>
+</HTML>

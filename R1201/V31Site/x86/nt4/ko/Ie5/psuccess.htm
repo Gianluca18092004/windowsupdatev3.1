@@ -1,0 +1,289 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+<title>Windows Update</title>
+<STYLE type="text/css">
+BODY {
+	font-family:"굴림";
+	font-size:9pt;
+}
+.def {
+	font-family:"굴림";
+	font-size:9pt;
+}
+.big {
+	font-family:"굴림";
+	font-size:20pt;
+	font-weight:bold;
+	color:#00319C;
+	line-height:35px;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	Vertical-align: top;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	Vertical-align: top;
+}
+.headline {
+	background-color:#330099;
+	line-height:16px;
+	font-family:굴림;
+	font-size:9pt;
+	color:white;
+	font-weight:bold;
+	padding:2px;
+}
+A {
+color: #00319C;
+}
+P {
+margin-top:12px;
+margin-bottom:4px;
+}
+</STYLE>
+<SCRIPT language="VBScript">
+OPTION EXPLICIT
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim arrSucceededComps()
+Dim arrFailedComps()
+Dim arrCompErrors()
+Dim m_nStatus
+Dim bCuRollupSelected
+Dim bCUSucceeded, bSomeCUItemsSucceeded
+Dim bSomeNonCURollupFailed, bSomeNonCURollUpSucceeded
+Dim arrErrorLookup
+arrErrorLookup = Array( _
+ Array( "-2147467260" , "업데이트가 취소되어 설치을 완료할 수 없습니다."), _
+ Array( "-2147023673" , "업데이트가 취소되어 설치을 완료할 수 없습니다."), _
+ Array( "-2147467259" , "알 수 없는 오류가 발생하여 설치할 수 없습니다."), _
+ Array( "-2147024637" , "다운로드하려는 드라이버가 현재 사용중인 드라이버 보다 하드웨어에 적합하지 않습니다."), _
+ Array( "-2147024894" , "파일을 찾을 수 없어 설치할 수 없습니다."), _
+ Array( "-2146762485" , "파일에 서명이 되어있지 않거나 디지털 서명이 신뢰되어 있지 않아 설치할 수 없습니다."), _
+ Array( "-2146762748" , "파일에 서명이 되어있지 않거나 디지털 서명이 신뢰되어 있지 않아 설치할 수 없습니다."), _
+ Array( "-2147024784" , "컴퓨터의 디스크가 가득 차서 설치할 수 없습니다.") _
+ )
+If LCase(parent.GblPSuccessSync) = "psuccess" Then
+	document.cookie = "page=nothing; path=/"
+	Dim objFrameEngine
+	Set objFrameEngine = parent.frames("FrmToolbar").document.frames(0)
+	bCuRollupSelected = objFrameEngine.g_bCuRollupSelected
+	Call RetrieveInstallResults()
+End If
+Sub RetrieveInstallResults()
+	m_nStatus = DetermineStatus(objFrameEngine.g_arrInstallStatus)
+End Sub
+Function GetFriendlyText(errno)
+On Error Resume Next
+Dim i
+	If CLng(errno) = 0 Then
+ GetFriendlyText = "다운로드가 성공적으로 완료되지 않아 설치를 완료할 수 없습니다."
+ Exit Function
+	ElseIf(CLng(errno) < 0) Then
+ For i = 0 to UBound(arrErrorLookup)
+ If CLng(arrErrorLookup(i)(0)) = CLng(errno) Then
+ GetFriendlyText = arrErrorLookup(i)(1)
+ Exit Function
+ End If
+ Next
+ End If
+	GetFriendlyText = "알 수 없는 오류가 발생하여 설치할 수 없습니다." + " (" + CStr(CLng(errno)) + ")"
+End Function
+Function DetermineStatus(arrItemStatus)
+	Dim nIndex, nIndexSucceeded, nIndexFailed
+	nIndexSucceeded = 0
+	nIndexFailed = 0
+	Dim bSomeFailed, bSomeSucceeded
+	bSomeFailed = FALSE
+	bSomeSucceeded = FALSE
+	bSomeNonCURollupFailed = FALSE
+	bSomeNonCURollUpSucceeded = FALSE
+	If bCuRollupSelected Then
+ bCUSucceeded = TRUE
+ bSomeCUItemsSucceeded = FALSE
+ For nIndex = 0 to UBound(arrItemStatus)
+ If arrItemStatus(nIndex,1) = 2 Then
+ If objFrameEngine.MatchingCURollupPUID(arrItemStatus(nIndex,0)) Then
+ bCUSucceeded = FALSE
+ Else
+ ReDim Preserve arrFailedComps(nIndexFailed)
+ ReDim Preserve arrCompErrors(nIndexFailed)
+ arrCompErrors(nIndexFailed) = arrItemStatus(nIndex,2)
+ arrFailedComps(nIndexFailed) = arrItemStatus(nIndex,0)
+ bSomeNonCURollupFailed = TRUE
+ nIndexFailed = nIndexFailed + 1
+ End If
+ Else
+ If arrItemStatus(nIndex,1) = 3 Then
+ parent.g_bRebootRequired = TRUE
+ End If
+ If objFrameEngine.MatchingCURollupPUID(arrItemStatus(nIndex,0)) Then
+ bSomeCUItemsSucceeded = TRUE
+ Else
+ ReDim Preserve arrSucceededComps(nIndexSucceeded)
+ arrSucceededComps(nIndexSucceeded) = arrItemStatus(nIndex,0)
+ bSomeNonCURollUpSucceeded = TRUE
+ nIndexSucceeded = nIndexSucceeded + 1
+ End If
+ End If
+ Next
+ If ((bCUSucceeded = FALSE) Or (bSomeNonCURollupFailed = TRUE)) Then
+ bSomeFailed = TRUE
+ End If
+ If bCUSucceeded Or bSomeNonCURollUpSucceeded Then
+ bSomeSucceeded = TRUE
+ End If
+	Else
+ For nIndex = 0 to UBound(arrItemStatus)
+ If arrItemStatus(nIndex,1) = 2 Then
+ bSomeFailed = TRUE
+ ReDim Preserve arrFailedComps(nIndexFailed)
+ ReDim Preserve arrCompErrors(nIndexFailed)
+ arrCompErrors(nIndexFailed) = arrItemStatus(nIndex,2)
+ arrFailedComps(nIndexFailed) = arrItemStatus(nIndex,0)
+ bSomeNonCURollupFailed = TRUE
+ nIndexFailed = nIndexFailed + 1
+ Else
+ If arrItemStatus(nIndex,1) = 3 Then
+ parent.g_bRebootRequired = TRUE
+ End If
+ bSomeSucceeded = TRUE
+ ReDim Preserve arrSucceededComps(nIndexSucceeded)
+ arrSucceededComps(nIndexSucceeded) = arrItemStatus(nIndex,0)
+ bSomeNonCURollUpSucceeded = TRUE
+ nIndexSucceeded = nIndexSucceeded + 1
+ End If
+ Next
+	End If
+	If bSomeFailed and bSomeSucceeded Then
+ DetermineStatus = 0
+	ElseIf bSomeFailed Then
+ DetermineStatus = 1
+	ElseIf bSomeSucceeded Then
+ DetermineStatus = 2
+	End If
+End Function
+Sub DisplayInstalledComponents()
+	Dim i
+	Dim arrItemAttribs
+	If (bCuRollupSelected And bCUSucceeded) Then
+ document.write("<B>중요 업데이트 패키지</B><br>")
+	End If
+	If bSomeNonCURollUpSucceeded Then
+ For i = 0 To UBound(arrSucceededComps)
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrSucceededComps(i))
+ document.write("<B>" & arrItemAttribs(1) & "</B><br>")
+ Next
+ End If
+End Sub
+Sub DisplayFailedComponents()
+	Dim i
+	Dim arrItemAttribs
+	If (bCuRollupSelected And (Not bCUSucceeded)) Then
+ document.write("<B>중요 업데이트 패키지</B><br>")
+ If bSomeCUItemsSucceeded Then
+ document.write("성공적으로 설치된 일부 구성 요소들은 다시 다운로드할 필요가 없으므로 카달로그로 돌아가면 중요 업데이트 패키지가 더 작아집니다.<br><br>")
+ End If
+	End If
+	If bSomeNonCURollupFailed Then
+ For i = 0 To UBound(arrFailedComps)
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrFailedComps(i))
+ document.write("<B>" & arrItemAttribs(1) & "</B>")
+ document.write("<div style=position:relative;padding-left:20px;padding-right:20px;>" & GetFriendlyText(arrCompErrors(i)) & "</div>")
+ Next
+	End If
+End Sub
+Sub Window_Onload
+	If LCase(parent.GblPSuccessSync) = "psuccess" Then
+ If Parent.GblLock = TRUE Then
+ parent.frames("FrmNavigator").FuncToggle_Lock(FALSE)
+ Parent.GblLock = FALSE
+ End If
+	End If
+	objFrameEngine.WUV3IS.FinalizeInstall(1)
+End Sub
+Sub Window_OnUnLoad
+	On Error Resume Next
+	parent.GblPSuccessSync = ""
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	On Error Goto 0
+ If Instr(LCase(top.location.search), "&sec=criticalupdates")<>0 Then
+ document.cookie = "page=CUN; path=/"
+	Else
+ document.cookie = "page=ProductUpdates; path=/"
+ End If
+End Sub
+Sub GoBack(strURL)
+	window.parent.frames("HFrame").Location.href=strURL
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=20 TOPMARGIN=10>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="소프트웨어 선택"></TD>
+	<TD>&nbsp;</TD>
+	<TD VALIGN=bottom ROWSPAN=2>
+ <SPAN CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x2>제품 업데이트</ID></SPAN><br>
+ <SPAN CLASS=big>
+<SCRIPT language="VBScript">
+	document.write("다운로드 결과")
+</SCRIPT>
+ </SPAN>
+	</TD>
+ </TR>
+</TABLE>
+<SCRIPT language="VBScript">
+If (0 = m_nStatus) OR (1 = m_nStatus) Then
+	If (bSomeNonCURollupFailed) OR (Not bCUSucceeded) Then
+ document.write("<P class=headline>업데이트가 설치되지 않았습니다.</P>")
+ document.write("<P ID=""InstalledFailedComp"" CLASS=""def"">다음 업데이트가 설치되지 않았습니다. 다시 시도하려면 아래의 <B>뒤로</B>를 누르십시오.</P>")
+ DisplayFailedComponents()
+	End If
+End If
+If (0 = m_nStatus) OR (2 = m_nStatus) Then
+	document.write("<P class=headline>업데이트가 설치되었습니다.</P>")
+	document.write("<P ID=""InstalledComp"" CLASS=""def"">다음 업데이트가 사용자의 컴퓨터에 성공적으로 설치되었습니다.</P>")
+	DisplayInstalledComponents()
+End If
+</SCRIPT>
+<BR>
+<IMG ID=ix2 OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" STYLE="cursor: hand" class=flippable SRC="images/button-arrow-back.jpg" ALT=""><SPAN id=button1 LANGUAGE="VBScript" OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" CLASS="ButtonB" STYLE="WIDTH: 126px; HEIGHT: 17px; BORDER-LEFT: none; padding-bottom: 1px;">
+<A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>뒤로</ID></A><BR></SPAN>
+<BR>
+ <P>
+<BR><BR><CENTER>
+<A target="CopyRight" HREF="http://www.microsoft.com/korea/misc/cpyright.htm"><ID ID=x10>(c) 2022 Microsoft Corporation. All rights reserved. 사용권에 대한 고지 사항</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

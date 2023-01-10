@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+</HEAD>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim FrmNav
+document.cookie = "page=nothing; path=/"
+Set FrmNav = parent.frames("FrmNavigator")
+If FrmNav.Document.ReadyState = "complete" Then
+	FrmNav.FuncToggle_Lock(FALSE)
+End If
+Sub NavCatalog
+ If Parent.GblLock=True Then
+ Exit Sub
+	End if
+	FrmNav.ChooseSec FrmNav.document.All("S001"), 0
+End Sub
+Sub NavMemSvc
+ If Parent.GblLock=True Then
+ Exit Sub
+	End if
+	FrmNav.ChooseSec FrmNav.document.All("S002"), 0
+End Sub
+Sub AcceptLang
+	Window.Open("lang.htm")
+End Sub
+Sub IESupport
+	Window.Open("iever.htm")
+End Sub
+</SCRIPT>
+<style>
+<!--
+.smallblack {
+	font-family: verdana, arial, sans-serif;
+	font-size: 8pt;
+}
+.darkblue {
+	color: #00319C;
+}
+A:link {
+ color: #00319C;
+}
+.BodyText {
+ COLOR: black;
+ FONT-FAMILY: verdana, arial;
+ FONT-SIZE: 8pt;
+}
+-->
+</style>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR="WHITE" CLASS="BodyText">
+<script Language="VBScript">
+Function DisplayAbout(strUrl)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strUrl,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+</script>
+<!--************************************** TABLE FOR WIN98 SE and SP BLURBS ****************************************-->
+ <!-- referring to TABLE FOR WIN98 & WIN98SE BLURBS -->
+<!--***************************** Table for non-EN langs ***********************************-->
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%" CLASS="BodyText">
+ <TR>
+ <TD WIDTH="164">
+ <IMG ID=ix2 SRC="images/welcome.gif" WIDTH="164" ALT="" HEIGHT="96">
+ <TD VALIGN="bottom">
+ <DIV ID=d101 STYLE="COLOR: #2f60ff; FONT-FAMILY: verdana, arial; FONT-SIZE: 20pt; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px;">
+ <ID ID=x1><I>Bienvenue sur le site</ID><BR> <ID ID=x101a> Windows Update</I></ID>
+ </DIV>
+ </TD>
+ </TR>
+ <TR><TD COLSPAN="2" HEIGHT="1" BGCOLOR="#00319C"><IMG ID=ix104 SRC="images/ts.gif" ALT="" HEIGHT="1" WIDTH="100%"></TD></TR>
+ <TR>
+ <TD id=td1 VALIGN="TOP" WIDTH="164">
+ <DIV STYLE="padding-top: 5px; padding-bottom: 7px;">
+ &nbsp;</DIV>
+ <br>
+ <TD id=td3 VALIGN="TOP">
+ <DIV STYLE="padding-top: 5px;">
+ <ID ID=x90>Windows Update est l'extension en ligne de Windows qui vous aide à 
+	tirer le meilleur parti de votre ordinateur.</ID>
+ <ID ID=x100>Cliquez sur</ID> <A STYLE="color: darkblue;" href="javascript:void(0)" OnClick="javascript:DisplayAbout('about.htm')"><ID ID=x110>
+	À propos de Windows&nbsp;Update</ID></A> <ID ID=x120>pour en savoir plus.</ID><BR><BR>
+ </DIV>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavCatalog()"><ID ID=x1301>Mises à jour de produits</ID></a></STRONG><BR>
+ </SPAN>
+ <ID ID=x140>C'est à partir de cette page que vous pouvez télécharger et 
+	installer les dernières mises à jour pour votre ordinateur.</ID><BR><BR>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavMemSvc()"><ID ID=x150>INFORMATIONS SUR LE 
+	SUPPORT</ID></A></STRONG><BR>
+ </SPAN>
+ <ID ID=x160>Pour obtenir de l'aide sur l'utilisation de Windows Update, 
+	consultez les pages Forum aux questions et Problèmes identifiés, ou profitez 
+	d'autres options de support technique.</ID><BR><BR>
+<P>
+<!--
+<SPAN CLASS="darkblue">
+ <ID ID=x512><STRONG>Responsables d'entreprise informatique</STRONG></ID><BR>
+ </SPAN>
+<ID ID=511>À la recherche de téléchargements et/ou de mises à jour pour votre réseau professionnel ? Rendez-vous sans plus attendre sur le site</ID><ID ID=x513> Windows Update Corporate !</ID>
+-->
+<P>
+<P>
+<P>
+<!-- do not localize this text -->
+ <SPAN CLASS="darkblue">
+ <STRONG>Why does the Windows Update site appear in a different language?</STRONG><BR>
+ </SPAN>
+Find out <a href="javascript:AcceptLang()">how to use</a> Internet Explorer's 
+Accept Language feature to view Windows Update in your preferred language.
+<BR><BR>
+<P>
+<!-- end of English text -->
+ <SPAN CLASS="darkblue">
+ <ID ID=x503><STRONG>Pourquoi le site Windows Update s'affiche-t-il dans une 
+langue différente&nbsp;?</STRONG><BR></ID>
+ </SPAN>
+<ID ID=x504>Découvrez <a href="javascript:AcceptLang()">comment utiliser</a> la 
+fonction «&nbsp;Accepter la langue&nbsp;» de Microsoft Internet Explorer pour afficher 
+Windows Update dans la langue de votre choix.</ID>
+<BR><BR>
+<P>
+ <!-- refers to TABLE FOR W98 & W98SE BLURBS -->
+ <!-- refers to MIL section -->
+ <!-- refers to WHI section -->
+<BR><BR>
+<CENTER><A target=_blank HREF="http://www.microsoft.com/france/misc/cpyright.htm"><ID ID=x29>
+© 2022 Microsoft Corporation. Tous droits réservés. Conditions d'utilisation.</ID></A></CENTER><BR>
+</body>
+</html>

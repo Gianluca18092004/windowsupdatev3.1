@@ -1,0 +1,279 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<OBJECT CLASSID="clsid:CEBC955E-58AF-11D2-A30A-00A0C903492B" CODEBASE="../../../../../V31Controls/x86/nt4/ptbr/actsetup.cab#Version=5,4,5440,0" HEIGHT="0" ID="WUV3IS" TYPE="application/x-oleobject" WIDTH="0"></OBJECT>
+<SCRIPT LANGUAGE="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+Dim m_lCatalogPUID, m_lOS
+m_lOS = 0
+const m_strIdentUrl	= "http://windowsupdate.microsoft.com"
+dim m_strBrowserLang
+m_strBrowserLang	= parent.parent.g_strLocaleID
+Dim g_bShowAll
+Dim AbortFlag
+Dim bCUNCheckCalled
+Dim m_strServerUrl
+Dim g_strControlReason
+Dim g_bFirstPUVisit
+Dim g_bShowCUList
+Dim g_bCuRollupSelected, g_arrCURollupPUIDs, g_CURollupSize, g_CURollupTime
+g_bShowCUList = FALSE
+g_bFirstPUVisit = TRUE
+g_bShowAll = False
+AbortFlag=False
+bCUNCheckCalled=FALSE
+parent.parent.bIsEngineReady = FALSE
+WaitForControls(1)
+Sub WaitForControls(loops)
+	If fIsWUV3ISLoaded() = TRUE Then
+ parent.parent.bIsEngineReady = TRUE
+ m_strServerUrl = Wuv3is.GetContentUrl()
+ SetLocalizedStrings()
+ If Wuv3is.FixCompatRollbackKey() Then
+ parent.HideWaitDialog()
+ parent.WuMsgBox "O Windows Update corrigiu um problema causado pela desinstalação do Internet Explorer 5.<BR>O Windows Update não funcionará corretamente até o Internet Explorer ser fechado e reiniciado.<BR>O Windows Update fechará agora o seu navegador.",1, "Necessário reinicializar","240px","400px"
+ parent.parent.g_bRebootRequired = true
+ parent.parent.close()
+ End If
+ NavigateToCatalog()
+	Else
+ If (AbortFlag=True) Then
+ parent.parent.frames("HFrame").Location.href="HNav.htm?Control.htm?reason=" & g_strControlReason & "&FrmContent&&"
+ Else
+ If (loops < 600) Then
+ status = "Instalar controles para o Windows Update"
+ id = SetTimeout("WaitForControls (" & cstr(loops+1) & ")",300 )
+ Else
+ parent.parent.frames("HFrame").Location.href="HNav.htm?Control.htm&FrmContent&&"
+ End If
+ End If
+	End If
+End Sub
+Sub SetLocalizedStrings()
+	Dim ArrLocStrings
+	ArrLocStrings = Array( _
+	"Progresso do download:", _
+	"Tempo de download restante:", _
+	"Progresso da instalação:", _
+	"Cancelar", _
+	"%d KB/%d KB ", _
+	"%d seg", _
+	"%d min", _
+	"%d h %d min", _
+	"Microsoft Windows Update", _
+	"Você precisa reiniciar o Windows para que a instalação seja concluída.", _
+	"Deseja reiniciar agora?")
+	WUV3IS.SetStrings ArrLocStrings,0
+End Sub
+Function fIsWUV3ISLoaded()
+	on error resume next
+	fIsWUV3ISLoaded = FALSE
+	If (IsObject(WUV3IS)) Then
+ If (Err.Number <> 0) Then exit function
+ If (WUV3IS is Nothing) Then exit function
+ If (Err.Number <> 0) Then exit function
+ Dim arrCatalogList
+ arrCatalogList = WUV3IS.GetCatalog(0, m_strIdentUrl, 0, m_strBrowserLang, 0, 0)
+ If (Err.Number <> 0) Then
+ AbortFlag=True
+ If Err.Number = &h80070657 Then
+ g_strControlReason = "UnsupportedLang"
+ End If
+ Else
+ If IsEmpty(arrCatalogList(0, 0)) Then
+ AbortFlag=True
+ Else
+ fIsWUV3ISLoaded = TRUE
+ m_lCatalogPUID=arrCatalogList(0, 0)
+ End If
+ End If
+ WUV3IS.IsWinUpdDisabled
+ If (Err.Number <> 0) Then
+ AbortFlag = True
+ Else
+ fIsWUV3ISLoaded = True
+ End If
+	End If
+End function
+Sub NavigateToCatalog()
+	Parent.Parent.Frames("HFrame").Location.Href = "HNav.htm?S001U000"
+End Sub
+Sub SetCurCatalog(PUID)
+	m_lCatalogPUID = PUID
+End Sub
+Sub GetCatalogList(arrCatalogList)
+	On Error Resume Next
+	arrCatalogList = WUV3IS.GetCatalog(0, m_strIdentUrl, 0, m_strBrowserLang, 0, 0)
+	If Err.Number <> 0 Then
+ If Err.Number = &h80070657 Then
+ g_strControlReason = "UnsupportedLang"
+ End If
+ Err.Clear
+	End If
+End Sub
+Function RetrieveCatalog(arrCatalog, lFlags)
+	RetrieveCatalog=FALSE
+	On Error Resume Next
+	arrCatalog = WUV3IS.GetCatalog(m_lCatalogPUID, m_strIdentUrl, m_lOS, m_strBrowserLang, lFlags, 0)
+	If Err.Number=0 Then
+ RetrieveCatalog=TRUE
+	Else
+ RetrieveCatalog=FALSE
+ If Err.Number = &h80070657 Then
+ g_strControlReason = "UnsupportedLang"
+ End If
+ Err.Clear
+	End If
+End Function
+Sub RetrieveHistory(arrHistory)
+	On Error Resume Next
+	arrHistory = WUV3IS.GetInstallHistory(m_strBrowserLang)
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+End Sub
+Sub InstallSelectedItems()
+	On Error Resume Next
+	g_arrInstallStatus = WUV3IS.InstallSelectedItems(m_strIdentUrl, 0, "")
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+End Sub
+Function GetCatalogItem(lPUID)
+	On Error Resume Next
+	Dim arrItemAttribs
+	arrItemAttribs = WUV3IS.GetCatalogItem(lPUID)
+	If Err.Number <> 0 Then
+ If Err.Number = &h80070657 Then
+ g_strControlReason = "UnsupportedLang"
+ End If
+ Err.Clear
+	End If
+	GetCatalogItem = arrItemAttribs
+End Function
+Sub SelectItemForInstall(lPUID)
+	Call ChangeItemState(lPUID, 4)
+End Sub
+Sub UnselectItem(lPUID)
+	Call ChangeItemState(lPUID, 8)
+End Sub
+Sub SelectItemForRemoval(lPUID)
+	Call ChangeItemState(lPUID, CLng(64 OR 4))
+End Sub
+Function RemoveSelectedItems()
+	On Error Resume Next
+	RemoveSelectedItems = TRUE
+	Call WUV3IS.RemoveSelectedItems()
+	If Err.Number <> 0 Then
+ Err.Clear
+ RemoveSelectedItems = FALSE
+	End If
+End Function
+Sub ChangeItemState(lPUID, lFlag)
+	On Error Resume Next
+	Call WUV3IS.ChangeItemState(lPUID,lFlag)
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+End Sub
+Function GetEULA()
+	On Error Resume Next
+	Dim arrEULAs
+	arrEULAs = WUV3IS.GetEULA()
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	GetEULA = arrEULAs
+End Function
+Function GetInstallMetrics()
+	On Error Resume Next
+	Dim arrInstallMetrics
+	arrInstallMetrics = WUV3IS.GetInstallMetrics()
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	GetInstallMetrics = arrInstallMetrics
+End Function
+Dim g_arrInstallStatus
+ReDim g_arrInstallStatus(-1)
+Sub DownloadComponents()
+	if parent.parent.GblProgressSync = "progress" Then Exit Sub
+	Dim i, iDimCount
+	Dim bItemsChecked
+	Dim arrCurSelection
+	If UBound( GetEULA() ) > -1 Then
+ If NOT DisplayEULAs() then Exit Sub
+	End If
+	arrCurSelection = GetInstallMetrics()
+	bItemsChecked = (UBound(arrCurSelection) > -1)
+	If bItemsChecked Then
+ g_bFirstPUVisit = TRUE
+ parent.parent.GblProgressSync = "progress"
+ parent.parent.frames("FrmContent").location.replace("progress.htm")
+ Call SetTimeout("StartInstall()", 1000, "VBSCRIPT")
+	Else
+ parent.parent.frames("HFrame").location = "HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates"
+	End if
+End Sub
+Function StartInstall()
+	Call InstallSelectedItems()
+	parent.parent.GblProgressSync = ""
+	parent.parent.frames("HFrame").location.href = "HNav.htm?psuccess.htm&FrmContent&GblPSuccessSync&PSuccess"
+End Function
+Function DisplayEULAs()
+ DisplayEULAs = parent.showModalDialog("eula.htm", window, "dialogWidth:282pt; dialogHeight:340pt; center:yes")
+End Function
+Sub UnselectEULAgroup(arrEULAs, nIndex)
+	Do
+ Call ChangeItemState(arrEULAs(nIndex, 1),8)
+ nIndex = nIndex + 1
+	Loop While (arrEULAs(nIndex, 2) = "") AND (NOT (nIndex > UBound(arrEULAs)))
+End Sub
+Sub DeselectAllSelectedComponents()
+	Dim i, arrSelectedItems
+	Call RetrieveCatalog(arrSelectedItems, 2)
+	For i = 0 To UBound(arrSelectedItems)
+ UnselectItem(arrSelectedItems(i,0))
+	Next
+End Sub
+Function NumComponentsSelected()
+	Dim i, arrSelectedItems
+	NumComponentsSelected = -1
+	Call RetrieveCatalog(arrSelectedItems, 2)
+	NumComponentsSelected=(UBound(arrSelectedItems) + 1)
+End Function
+Sub ResizeArrCURollupPUIDs(iItems)
+	ReDim g_arrCURollupPUIDs(iItems)
+End Sub
+Function MatchingCURollupPUID(lPUID)
+	Dim i
+	For i = 0 to UBound(g_arrCURollupPUIDs)
+ If (g_arrCURollupPUIDs(i) = lPUID) Then
+ MatchingCURollupPUID = TRUE
+ Exit Function
+ End If
+	Next
+	MatchingCURollupPUID = FALSE
+End Function
+Sub SelectAllCURollupItems(bSelected)
+	Dim i, lState
+	If bSelected Then
+ lState = 4
+	Else
+ lState = 8
+	End If
+	For i = 0 to UBound(g_arrCURollupPUIDs)
+ Call ChangeItemState(g_arrCURollupPUIDs(i),lState)
+	Next
+	g_bCuRollupSelected = bSelected
+End Sub
+</SCRIPT>
+</body>
+</HTML>

@@ -1,0 +1,196 @@
+<HTML dir=RTL>
+<head>
+<META CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" L GEN TRUE COMMENT "RSACi North America Server" BY "inet@microsoft.com" ON "1997.06.30T14:48-0500" R (N 0 S 0 V 0 L 0))' HTTP-EQUIV="PICS-Label">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1255">
+<title>הדפסת הוראות</title>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 10px;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Arial;
+ FONT-SIZE: 8.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.hiddenDiv {
+	display:none;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Arial, Helvetica;
+	FONT-SIZE: 8.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Arial, Helvetica;
+	FONT-SIZE: 8.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.flippable {filter:fliph;}
+</STYLE>
+</head>
+<body BACKGROUND="../images/wm.jpg">
+<div style="TEXT-ALIGN: right" language="VBScript" OnClick="call Return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x2>חזרה אל עדכוני מוצרים</ID></a></div>
+<script language="VBScript">
+OPTION EXPLICIT
+Dim iReadThisPage, FullDoc, strReadThisList, strReadThisPath, arrReadThisList, strPath
+Dim bDrivers
+iReadThisPage = 0
+strReadThisList = "%READTHISLIST%"
+strPath = "%READTHISPATH%"
+arrReadThisList = Split(strReadThisList, ";")
+Sub window_onLoad
+	Dim dc
+	Dim nCount
+	dc = LCase(window.location)
+	nCount = instr(dc, "?")
+	dc = Right(dc, len(dc) - nCount)
+	if dc = "drivers" then
+ bDrivers = TRUE
+	end if
+	Dim TheDoc
+	TheDoc = GetNextPage()
+	if TheDoc <> "" then MyFrame.location.replace(TheDoc)
+	if bDrivers = TRUE then
+ document.all.item("DivDrivers").style.display = ""
+ dim docPath
+ dim strPath
+ dim nTemp
+ docPath = document.url
+ nTemp = InStr(lCase(document.url), "program")
+ if (nTemp = 0) then
+ strPath = Left(document.url, InStr(document.url, "printall.htm") -1)
+ document.all.item("PUImage").src = strPath & "images/product-icon.png"
+ end if
+	else
+ document.all.item("DivDrivers").style.display = "none"
+	end if
+End Sub
+Sub MyCallBack
+On Error Resume Next
+Dim TheNextPage
+ FixupImageURLs
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions1").innerHtml
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions2").innerHtml
+ TheNextPage = GetNextPage()
+ If TheNextPage <> "" Then
+ document.body.style.cursor = "wait"
+ MyFrame.location.replace(TheNextPage)
+ Else
+ if bDrivers = FALSE then
+ MyFrame.location.replace("about:blank")
+	end if
+ TheDocument.innerHtml = FullDoc
+ If navigator.userLanguage <> "en-us" Then
+ Dim collToHide, collIter, nLen
+ Set collToHide = document.all("UsOnly")
+ Err.Clear
+ nLen = collToHide.length
+ If Err.Number = 0 Then
+ For collIter = 0 to collToHide.length
+ collToHide(collIter).style.display="none"
+ Next
+ Else
+ collToHide.style.display="none"
+ End If
+ End If
+ document.body.style.cursor = "default"
+ End If
+End Sub
+Function GetNextPage
+ If iReadThisPage <= Ubound(arrReadThisList) Then
+ GetNextPage = strPath & arrReadThisList(iReadThisPage)
+ End if
+	iReadThisPage = iReadThisPage + 1
+End Function
+sub Return
+	window.close
+end sub
+Sub FixupImageURLs()
+On Error Resume Next
+ Dim AllImgTags
+ Set AllImgTags = MyFrame.document.all.tags("IMG")
+ Dim docPath
+ docPath = MyFrame.document.location.pathname
+ Dim i
+ For i = 0 to AllImgTags.length - 1
+ AllImgTags(i).src = strPath & left(arrReadThisList(iReadThisPage - 1),InstrRev(arrReadThisList(iReadThisPage - 1),"\")) & right(AllImgTags(i).src,Len(AllImgTags(i).src) - InStrRev(AllImgTags(i).src,"/"))
+ Next
+End Sub
+</script>
+<IMG align=right class=flippable alt="Product Updates" border=0 height=40 hspace =0 id=ix1 src="../product-icon.png" style ="MARGIN-LEFT: 12px" width=64 >
+<DIV CLASS="SmallTitle" STYLE="PADDING-TOP: 4px"><ID ID=x3>עדכוני מוצרים</ID><BR></DIV>
+<DIV CLASS="PageTitle"><ID ID=x4>הוראות
+לתוכנה</ID><BR></DIV>
+<ID ID=x5>דף זה מכיל הוראות עבור כל רכיבי התוכנה שבחרת. כדי להדפיס דף זה, בחר בפקודה <B>הדפסה</B> מתפריט <B>קובץ</B>.</ID>
+<BR>
+<BR>
+<BR>
+<BR>
+<span id="TheDocument"></span>
+<iframe id="MyFrame" src="" width=0 height=0></iframe>
+<DIV ID="DivDrivers">
+<SPAN CLASS="PageTitle" STYLE="PADDING-TOP: 4px"><ID ID=x7>עדכוני מנהלי התקנים</ID><BR></SPAN>
+<SPAN CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x8>אופן ההורדה וההתקנה של עדכוני מנהלי התקנים</id><BR></SPAN><br>
+<id id=x40>השתמש באשף הסרת עדכוני ההתקים כדי להסיר עדכוני מנהלי התקנים מהמחשב שלך:</id>
+ <ol>
+ <li id=x41>לחץ על <b>התחל</b>, הצבע על <b>כל התכניות</b>, הצבע על <b>עזרים</b>, הצבע על <b>כלי מערכת</b>, ואז לחץ על <b>מידע מערכת</b>.
+ <li id=x42>במידע מערכת, לחץ על תפריט<b>כלים</b>, ואז לחץ על <b>אשף מסיר עדכוני התקנים </b>.
+ </ol>
+ <id id=x43><b>חשוב</b> במחשב שלך לא היה מנהל התקן עבור התקן החומרה שלך כאשר התקנת מנהל התקן חדש מ- Windows Update, אשף מסיר עדכוני התקנים לא יסיר את מנהל ההתקן של Windows Update (הסרת מנהל התקנן או עדכון מנהל התקן בלי החלפתו יגרמו להפסקת הפעולה של ההתקן).</id>
+</DIV>
+<BR>
+<BR>
+<BR>
+<BR>
+<br>
+<div language="VBScript" style="TEXT-ALIGN: right" OnClick="call return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x6>חזרה אל עדכוני מוצרים</ID></a></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT LANGUAGE="VBScript">
+OPTION EXPLICIT
+If Not parent.g_bRebootRequired Then parent.Frames("frmToolbar").ShowWaitDialog()
+Dim g_bTopFrameReady ' set in catalogTop.htm
+Dim nWait
+Dim catalogURL
+g_bTopFrameReady = False
+nWait = 0
+SetCatalogURL()
+Sub SetCatalogURL()
+	Dim catalogBookmark
+	catalogBookmark=location.search
+	If catalogBookmark<>"" Then
+ catalogURL="catalog.htm#" & Right(catalogBookmark, len(catalogBookmark)-1)
+	Else
+ catalogURL="catalog.htm"
+	End if
+End Sub
+Sub Window_OnLoad()
+	If parent.g_bRebootRequired Then
+ location.replace("reboot.htm")
+	Else
+ FrmCatalogTop.location.replace("catalogTop.htm")
+ NavBottomFrame()
+	End if
+End Sub
+Function NavBottomFrame()
+	If g_bTopFrameReady = False Then
+ Call WaitForTop
+	Else
+ FrmCatalogMain.location.replace(catalogURL)
+	End if
+End Function
+Sub WaitForTop()
+	Dim objSetTimeout
+	objSetTimeout = SetTimeout("NavBottomFrame()","500","VBScript")
+	nWait = nWait + 1
+End Sub
+</SCRIPT>
+<TITLE></TITLE>
+</HEAD>
+<FRAMESET BORDER="0" FRAMEBORDER="YES" ROWS="70,*">
+	<FRAME TABINDEX=2 id=frmcatalogtop FRAMEBORDER="NO" NAME="FrmCatalogTop" NORESIZE="NORESIZE" SCROLLING="NO" SRC="blank.htm" TITLE="">
+	<FRAME TABINDEX=1 id=frmcatalogmain FRAMEBORDER="NO" NAME="FrmCatalogMain" NORESIZE="NORESIZE" SCROLLING="AUTO" SRC="blank.htm" TITLE="Microsoft Windows Update Content">
+</FRAMESET>
+</HTML>

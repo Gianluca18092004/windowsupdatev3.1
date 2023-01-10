@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<TITLE></TITLE>
+</HEAD>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim FrmNav
+document.cookie = "page=nothing; path=/"
+Set FrmNav = parent.frames("FrmNavigator")
+If FrmNav.Document.ReadyState = "complete" Then
+ FrmNav.FuncToggle_Lock(FALSE)
+End If
+Sub NavCatalog
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S001"), 0
+End Sub
+Sub NavMemSvc
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S002"), 0
+End Sub
+Sub AcceptLang
+ Window.Open("lang.htm")
+End Sub
+Sub IESupport
+ Window.Open("iever.htm")
+End Sub
+</SCRIPT>
+<style>
+<!--
+.smallblack {
+ font-family: 新細明體, 細明體, PMingLiU, MingLiU;
+ font-size: 9pt;
+}
+.darkblue {
+ color: #00319C;
+}
+A:link {
+ color: #00319C;
+}
+.BodyText {
+ COLOR: black;
+ FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU;
+ FONT-SIZE: 9pt;
+}
+-->
+</style>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR="WHITE" CLASS="BodyText">
+<script Language="VBScript">
+Function DisplayAbout(strUrl)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strUrl,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+</script>
+ <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%" CLASS="BodyText">
+ <TR>
+ <TD WIDTH="164">
+ <IMG ID=ix2 SRC="images/welcome.gif" WIDTH="164" ALT="" HEIGHT="96">
+ </TD>
+ <TD VALIGN="bottom">
+ <DIV ID=d1 STYLE="COLOR: #2f60ff; FONT-FAMILY: 新細明體, 細明體, PMingLiU, MingLiU; FONT-SIZE: 12pt; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px;">
+ <ID ID=x101>歡迎使用</ID><BR> <ID ID=x1a> Windows Update</ID>
+ </DIV>
+ </TD>
+ </TR>
+ <TR>
+ <TD COLSPAN="2" HEIGHT="1" BGCOLOR="#00319C"><IMG ID=ix4 SRC="Images/ts.gif" ALT="" HEIGHT="1" WIDTH="100%"></TD>
+ </TR>
+ <TR>
+ <TD id=td1 VALIGN="TOP" WIDTH="164">
+ <br>
+ </TD>
+ <TD id=td3 VALIGN="TOP">
+ <DIV STYLE="padding-top: 5px;">
+ </DIV>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavCatalog()"><ID ID=x13>產品更新</ID></a></STRONG><BR>
+ </SPAN>
+ <ID ID=x14>在此處為您的電腦下載並安裝最新的修正檔。</ID><BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavMemSvc()"><ID ID=x15>支援資訊</ID></A></STRONG><BR>
+ </SPAN>
+ <ID ID=x16>閱讀「常問的問題及已知問題」頁面，或利用其他支援選項，以使用 Windows Update 取得協助。</ID><BR><BR>
+ <P>
+ <!--
+ <SPAN CLASS="darkblue">
+ <ID ID=x510><STRONG>IT 主管</STRONG></ID><BR>
+ </SPAN>
+ <ID ID=511>您在尋找公司網路的可分配下載及/或修正檔嗎？立即察看</ID><ID ID=x511> <a href="http://corporate.windowsupdate.microsoft.com" target="_top">
+	Windows Update Corporate 網站</a>！</ID>
+ <P>
+ <P>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG>Why does the Windows Update site appear in a different language?</STRONG><BR>
+ </SPAN>
+ Find out <a href="javascript:AcceptLang()">how to use</a> Internet Explorer's 
+	Accept Language feature to view Windows Update in your preferred language.
+ <BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <ID ID=x500><STRONG>為何出現不同語言的 Windows Update 網站？</STRONG><BR></ID>
+ </SPAN>
+ <ID ID=x501><a href="javascript:AcceptLang()">找出如何使用</a> Internet Explorer 
+	的「接受語言」功能，以您偏好的語言檢視 Windows Update。</ID>
+ <BR><BR>
+ <P>
+ </TD>
+ </TR>
+ </table>
+<BR><BR>
+<CENTER><A target="CopyRight" HREF="http://www.microsoft.com/taiwan/misc/cpyright.htm"><ID ID=x29>
+(C)2022 Microsoft Corporation. All rights reserved. Terms of Use.</ID></A></CENTER><BR>
+</body>
+</html>

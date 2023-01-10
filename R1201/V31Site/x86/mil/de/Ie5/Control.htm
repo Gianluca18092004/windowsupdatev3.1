@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>Seite kann nicht angezeigt werden</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Der Produktkatalog kann nicht geladen werden, weil die Sprache Ihres Betriebssystems von Windows Update noch nicht unterst�tzt wird."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Beim Laden des Produktkatalogs ist ein Fehler aufgetreten. Dies wurde eventuell durch einen Netzwerkfehler oder eine besch�digte Datei verursacht. Weitere Informationen und Schritte zum L�sen des Problems erhalten Sie im Microsoft Knowledge Base (KB) Artikel. <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a></ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>Seite kann nicht angezeigt werden.</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>Erneut versuchen</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>Diese Webseite wurde aus einem der folgenden Gr�nde aufgerufen:</ID>
+<OL>
+	<LI><ID ID=x6>Aktualisierungen der Windows Update-Sitesteuerelemente und/oder der -architektur haben m�glicherweise diese Fehlermeldung verursacht. Weitere Informationen erhalten Sie im Knowledge Base-Artikel <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A>.</ID>
+	<LI><ID ID=x7>Sie haben die Softwaresteuerelemente nicht zum Downloaden ausgew�hlt, oder beim Downloaden ist ein Fehler aufgetreten, so dass ein Gro�teil der Windows Update-Site nicht verf�gbar ist. Klicken Sie auf <B>Erneut versuchen</B>, um die Steuerelemente zu downloaden.</ID>
+	<LI><ID ID=x8>Sie verf�gen auf diesem Computer nicht �ber Administratorrechte. Wenden Sie sich an den Systemadministrator zwecks Softwareaktualisierung, so dass Sie Windows Update verwenden k�nnen.</ID>
+	<LI><ID ID=x9>M�glicherweise m�ssen Sie den Browsercache leeren. Weitere Informationen erhalten Sie im Microsoft Knowledge Base-Artikel <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a>.</ID>
+	<LI><ID ID=x10>M�glicherweise m�ssen Sie das Windows Update-Verzeichnis entfernen. Weitere Informationen erhalten Sie im Microsoft Knowledge Base-Artikel <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a>.</ID>
+	<LI><ID ID=x11>Updates f�r Windows NT&reg; 4.0 Terminal Server Edition stehen auf den Windows Update-Webseiten nicht zur Verf�gung. Weitere Information finden Sie im Artikel <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q323564&" target="_new">Q323564</a> der Microsoft Knowledge Base (KB).</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/germany/misc/cpyright.htm"><ID ID="cpyright">&copy; 2022 Microsoft Corporation. Alle Rechte vorbehalten. Rechtliche Hinweise.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

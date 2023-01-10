@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+<STYLE type="text/css">
+BODY {
+	font-family:"verdana,arial,helvetica";
+	font-size:9pt;
+}
+.def {
+	font-family:"verdana,arial,helvetica";
+	font-size:8pt;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+A {
+color:#00319C;
+}
+</STYLE>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim ObjFrame_Reference
+Set ObjFrame_Reference = Parent.Frames("FrmToolbar").Document.Frames(0)
+Sub DisplayEvents()
+ Dim arrHistory
+ arrHistory = ObjFrame_Reference.WUV3IS.GetInstallHistory()
+	if UBound(arrHistory) = -1 Then
+ document.write("<SPAN STYLE='color:#00319C;'>Du har inte hämtat komponenter tidigare.</SPAN>")
+	Else
+ document.write("<TABLE WIDTH=100% CLASS=def CELLPADDING=4 CELLSPACING=0 BORDER=0>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=white><IMG SRC='images/ts.gif' ALT='' HEIGHT=4></TD></TR>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=#00319C><IMG SRC='images/ts.gif' ALT='' HEIGHT=1></TD></TR>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=white><IMG SRC='images/ts.gif' ALT='' HEIGHT=4></TD></TR>")
+ document.write("</TABLE>")
+	For i = 0 to UBound(arrHistory)
+ document.write("<TABLE WIDTH=100% CLASS=def CELLPADDING=4 CELLSPACING=0 BORDER=0>")
+ document.write("<tr><td NOWRAP><b>" & arrHistory(i,3) & "</b> - version " & arrHistory(i,4) & " - " & GetOperationType(arrHistory(i,5)) & "</td></tr>")
+ document.write("<tr><td NOWRAP>"& arrHistory(i,2) & " " & arrHistory(i,1) & " : " & arrHistory(i,0) & "</td></tr><br>")
+ document.write("</TABLE>")
+ Next
+	End If
+End Sub
+Function GetOperationType(nFlags)
+	If (nFlags AND 4096) <> 0 Then
+ If (nFlags AND 1) <> 0 Then
+ GetOperationType = "- installationen misslyckades."
+ ElseIf (nFlags AND 2) <> 0 Then
+ GetOperationType = "- installationen har påbörjats."
+ Else
+ GetOperationType = "installerades."
+ End If
+	ElseIf (nFlags AND 8192) <> 0 Then
+ If (nFlags AND 1) <> 0 Then
+ GetOperationType = "- avinstallationen misslyckades."
+ ElseIf (nFlags AND 2) <> 0 Then
+ GetOperationType = "- avinstallationen har påbörjats."
+ Else
+ GetOperationType = "har avinstallerats."
+ End If
+	End If
+End Function
+</SCRIPT>
+</HEAD>
+<BODY ID=bdy BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=0 TOPMARGIN=10>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="Välj programvara"></TD>
+	<TD>&nbsp;</TD>
+	<TD VALIGN=bottom ROWSPAN=2>
+ <SPAN id=sp1 CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x1>Produktuppdateringar</ID></SPAN><br>
+ <SPAN id=sp2 CLASS=def STYLE="font-weight:bold;padding-bottom:30px;font-size:22pt;color:#00319C"><ID ID=x2>Hämtade komponenter</ID></SPAN></TD>
+ </TR>
+</TABLE>
+<TABLE WIDTH=350 CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD id=td1 WIDTH=175 ALIGN=left VALIGN=top>
+ <A target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates" STYLE="text-decoration: none; color: white;"><SPAN id=spnx1 LANGUAGE='VBScript'
+ CLASS='ButtonB'
+ STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
+ <A STYLE="text-decoration: none; color: white;" target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates"><ID ID=x3>Visa produktkatalogen</ID></A>
+ <BR></SPAN></A></TD>
+	<TD id=td3 WIDTH=175 ALIGN=left VALIGN=top>
+ <SPAN id=spnx2 LANGUAGE='VBScript'
+ CLASS='ButtonG'
+ STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x4>Hämtade komponenter</ID></A>
+ <BR></SPAN></TD></TR>
+ <TR>
+	<TD id=td5 ALIGN=left VALIGN=top STYLE="color: black; font-size: 8pt;">
+ <ID ID=x5>Visa listan över tillgänglig<BR>programvara.</ID>
+	</TD>
+	<TD id=td6 ALIGN=left VALIGN=top STYLE="color: black; font-size: 8pt;">
+ <ID ID=x6>Du visar listan över hämtade komponenter.</ID></TD>
+ </TR>
+</TABLE>
+<SCRIPT language="VBScript">
+	DisplayEvents()
+</SCRIPT>
+<BR><BR><BR><BR>
+<CENTER>
+<A target="CopyRight" HREF="http://www.microsoft.com/sverige/misc/cpyright.htm"><ID ID=x7>(c) 2022 Microsoft Corporation. Med ensamrätt. Villkor för användning.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

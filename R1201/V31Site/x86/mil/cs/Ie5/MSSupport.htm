@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>Odborná pomoc společnosti Microsoft</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Odborná pomoc</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Pokud máte potíže se serverem systému Windows Update, můžete využít služeb odborné pomoci online. Stačí, když si vyberete jednu z níže uvedených možností.</id>
+<P>
+<id id=x6>Jestliže zvolíte některou z následujících možností odborné pomoci, budete pravděpodobně požádáni o vyplnění dotazníku Profil online společnosti Microsoft. Profil online umožňuje využívat odbornou pomoc společnosti Microsoft v síti Internet.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Odborná pomoc pro aktualizace softwaru:</id></A></STRONG> <id id=x80>Zde si můžete prohlédnout informace o možnostech odborné pomoci pro aktualizace softwaru poskytované systémem Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Odborná pomoc pro ovladače zařízení:</id></A></STRONG> <id id=x800>Zde si můžete prohlédnout možnosti odborné pomoci a pokyny k instalaci týkající se ovladačů zařízení poskytovaných v systému Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Časté otázky:</id></A></STRONG> <id id=x8>Odpovědi na otázky týkající se systému Windows Update pravděpodobně nejrychleji naleznete v našem seznamu častých otázek.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Známé problémy:</id></A></STRONG> <id id=x10>Pravděpodobně si budete chtít prohlédnout seznam známých problémů, které aktuálně existují na serveru systému Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://www.microsoft.com/cze/regwiz/"><id id=x11>Pište nám:</id></A></STRONG> <id id=x12>Vyplněním jednoduchého formuláře nám můžete sdělit své poznatky a návrhy.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>O SYSTÉMU WINDOWS UPDATE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Tato ikona se zobrazí na všech stránkách tohoto serveru. Klepnutím na tuto ikonu zobrazíte stránku s pokyny, jak nejlépe využívat server systému Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>ODBORNÁ POMOC PRO AKTUALIZACE SOFTWARU:</id></DIV>
+Bezplatná <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">podpora elektronickou poštou pro server Windows Update</SPAN></A> zahrnuje: nápovědu k navigaci na webovém serveru, zprávy o kvalitě obsahu serveru nebo chybové zprávy a základní nápovědu ke stahování. Veškerá další nápověda včetně otázek týkajících se instalace a nastavení je k dispozici v nabídce profesionální a odborné podpory na adrese <a href="http://support.microsoft.cz/" target=_blank>http://support.microsoft.com/directory/</a>. Informace o produktech MSN získáte na adrese: <a href="http://help.atlas.cz" target=_blank>http://help.msn.com/</a>. V některých případech mohou být za poskytnutí odborné pomoci účtovány poplatky. Podrobnosti naleznete na uvedené adrese.
+<P>
+Informace o odborné pomoci mimo území USA a Kanady vám poskytne místní zastoupení společnosti Microsoft. Aktuální seznam místních zastoupení naleznete na <a href="http://support.microsoft.cz/" target=_blank>webovém serveru odborné pomoci online</a> po klepnutí na odkaz v části Worldwide Support. Jestliže společnost Microsoft v zemi vašeho pobytu zastoupení nemá, obraťte se na organizaci, od které jste produkt společnosti Microsoft získali.
+<P>
+Služby odborné pomoci společnosti Microsoft se řídí aktuálními cenami, termíny a podmínkami, které mohou být změněny bez předchozího upozornění.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Jak lze odinstalovat aktualizace softwaru?<BR></DIV>
+Některé aktualizace můžete odinstalovat pomocí stránky Aktualizace produktů na serveru systému Windows Update.
+<ol>
+<li>Přejděte na stránku Aktualizace produktů.
+<li>Po zobrazení výzvy klepněte na tlačítko <B>Ano</B>.
+<li>Klepněte na tlačítko <b>Stáhnout</b> v horní části stránky.
+ <li>Pokud lze aktualizaci odinstalovat, zobrazí se vpravo od jejího popisu tlačítko <B>Odinstalovat</B>.
+<li>Klepněte na tlačítko <b>Odinstalovat</b> vedle popisu aktualizace, kterou chcete odinstalovat.
+</ol>
+Aktualizace, které nelze odinstalovat pomocí stránky Aktualizace produktů, lze pravděpodobně odinstalovat jiným způsobem. Další informace o odinstalování naleznete na stránce <b>Přečtěte si nejdříve</b> u jednotlivých aktualizací.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>ODBORNÁ POMOC PRO OVLADAČE ZAŘÍZENÍ</id></DIV>
+Bezplatná odborná pomoc pro instalaci a odinstalování je k dispozici prostřednictvím elektronické pošty na stránce <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">odborné pomoci pro server Windows Update</SPAN></A>. Jestliže máte jiné problémy, které se netýkají instalace a odinstalování ovladačů, naleznete úplný seznam možností odborné pomoci na adrese: <a href="http://support.microsoft.cz/" target=_blank>http://support.microsoft.com/directory</a>. Podrobnosti naleznete na uvedené adrese.
+<P>
+Informace o odborné pomoci mimo území USA a Kanady vám poskytne místní zastoupení společnosti Microsoft. Aktuální seznam místních zastoupení naleznete na <a href="http://support.microsoft.cz/" target=_blank>webovém serveru odborné pomoci online</a> po klepnutí na odkaz v části Worldwide Support. Jestliže společnost Microsoft v zemi vašeho pobytu zastoupení nemá, obraťte se na organizaci, od které jste produkt společnosti Microsoft získali.
+<P>
+Služby odborné pomoci společnosti Microsoft se řídí aktuálními cenami, termíny a podmínkami, které mohou být změněny bez předchozího upozornění.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Odinstalování aktualizací ovladačů zařízení</DIV>
+V aktualizaci Windows Update nejsou k dispozici aktualizace ovladačů pro systémy Windows 95 nebo Windows NT&reg; 4.0. Obraťte se na výrobce příslušného zařízení.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>ČASTÉ OTÁZKY</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Co je systém Windows Update?</id><BR></DIV>
+<id id=x32>Systém Windows Update je rozšíření online systému Windows, které bylo vytvořeno pro podporu uživatelů při udržování počítače v nejaktuálnějším stavu. Systém Windows Update obsahuje centrální katalog nazvaný Aktualizace produktů, který zahrnuje nová rozšíření produktů, například systémové soubory, ovladače zařízení, aktualizace Service Pack a nové funkce systému Windows. Tato rozšíření vám budou doporučena v závislosti na konfiguraci vašeho počítače.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Co je stránka Aktualizace produktů?</id><BR></DIV>
+<id id=x36>Stránka Aktualizace produktů je katalog oprav, aktualizací a rozšíření systému Windows a mnoha dalších programů pro systém Windows. V katalogu je možné vyhledat součásti, které pomohou zlepšit výkon počítače. Máte možnost katalog procházet, vybrat libovolné součásti a stáhnout a nainstalovat je do počítače přímo z webu.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Co znamená zpráva o tom, že ovládací prvek ActiveX na této stránce není bezpečný?</id><BR></DIV>
+<id id=x38>Tato zpráva se zobrazí v případě, že je úroveň zabezpečení v aplikaci Internet Explorer nastavena na hodnotu Vysoká. Aby mohl server systému Windows Update správně fungovat, je nutné nastavit zónu sítě Internet na hodnotu Střední nebo nižší. Chcete-li toto nastavení změnit, klepněte v nabídce <b>Nástroje</b> na příkaz <b>Možnosti sítě Internet</b>. Klepněte na kartu <b>Zabezpečení</b> a na ikonu <b>Síť Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Co jsou ovládací prvky ActiveX?</id><BR></DIV>
+<id id=x41>Ovládací prvky ActiveX jsou opakovaně použitelné softwarové součásti využívající technologii ActiveX. Pomocí těchto součástí lze přidávat speciální funkce (například animace nebo místní nabídky) na webové stránky, do aplikací a do nástrojů pro vývoj softwaru. Systém Windows Update pomocí ovládacích prvků ActiveX zjišťuje software nainstalovaný v počítači a zobrazuje odpovídající seznam aktualizací a dalších softwarových součástí, které můžete stáhnout.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Jaké rozlišení je pro zobrazení webových stránek systému Windows Update nejlepší?</id><BR></DIV>
+<id id=x43>Webové stránky na serveru systému Windows Update jsou určeny pro rozlišení obrazovky 800 x 600 pixelů nebo vyšší. Toto rozlišení nastavíte tak, že klepnete na tlačítko <B>Start</b>, přejdete na příkaz <B>Nastavení</b> a klepnete na položku <B>Ovládací panely</b>. Potom poklepejte na panel <B>Obrazovka</b> a klepněte na kartu <B>Nastavení</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Jsou informace o mém počítači přenášeny do společnosti Microsoft?
+</id><BR></DIV>
+<id id=x45>Nejsou. Při každém připojení ke katalogu Aktualizace produktů zjišťuje ovládací prvek systému Windows Update, které aktualizace jsou k dispozici pro váš počítač. Z důvodu ochrany soukromí a zabezpečení dat je tato kontrola prováděna místně ve vašem počítači a nejsou při ní odesílány žádné informace do společnosti Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Jakým způsobem mohu odeslat připomínky týkající se systému Windows Update?</id><BR></DIV>
+<id id=x47>Své připomínky k tomuto serveru systému Windows Update můžete odeslat po klepnutí na odkaz <B>Pište nám</B> a potom na položku <B>Windows Update</B> na černém panelu nástrojů v horní části každé stránky.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Jakmile je na <a href="http://www.microsoft.com/technet/security/" target="_new">webovém serveru Microsoft TechNet Security</a> k dispozici nový bulletin týkající se zabezpečení (Security Bulletin)
+(tento server obsahuje informace v angličtině),
+je dostupný také v systému Windows Update?</id><BR></DIV>
+<id id=x201>Mezi zveřejněním bulletinu na webových stránkách TechNet Security a zpřístupněním aktualizace pro problém se zabezpečením v systému Windows Update je obvykle časová prodleva. Příčinou je skutečnost, že nový obsah je do systému Windows Update přidáván podle naplánovaného časového rozvrhu. Přestože se v systému Windows Update ze všech sil snažíme publikovat důležité aktualizace v oblasti zabezpečení co nejrychleji, je nutné nový obsah vyzkoušet a ověřit, aby systém nabízel pouze aktualizace, které jsou potřeba pro určitý počítač. Obvykle se aktualizace pro podporované produkty objevují v systému Windows Update za několik dní až týdnů od jejich zveřejnění na webových stránkách programu TechNet. Pokud víte, kterou konkrétní verzi aktualizace potřebujete pro svůj počítač, a nechcete čekat, až bude k dispozici v systému Windows Update, můžete si ji stáhnout přímo z webové stránky bulletinu. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Které operační systémy a programy systém Windows Update podporuje?</id><BR></DIV>
+<id id=x203>Systém Windows Update nabízí aktualizace pro problémy se zabezpečením pro systémy Windows 98, Windows 98 Second Edition, Windows Millennium Edition (Windows Me), Windows NT 4.0 a Windows 2000, pro Internet Information Server 4.0 (IIS 4.0), pro internetovou informační službu 5.0 (IIS 5.0) a pro aplikaci Internet Explorer. Zobrazí se však pouze aktualizace platné pro určitý počítač. Některé serverové operační systémy a serverové programy systém Windows Update nepodporuje. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Které serverové produkty nejsou podporovány?</id><BR></DIV>
+<id id=x205>Systém Windows Update byl spuštěn jako webový server, který nabízel aktualizace pro domácí počítače zákazníků, jež používali systém Windows. Časem systém Windows Update rozšířil svou nabídku o aktualizace pro některé serverové produkty (jako je IIS), které se stále častěji používají doma. Aktualizace pro problémy se zabezpečením, které jsou specifické pro takové serverové produkty, jako například řadiče domén systému Windows, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server atd., systém Windows Update nepodporuje. Uživatelé těchto produktů najdou informace o tom, kde jsou k dispozici příslušné aktualizace, v bulletinech týkajících se zabezpečení (Security Bulletin) na <a href="http://www.microsoft.com/technet/security/" target="_new">webovém serveru Microsoft TechNet Security</a>.
+(Tento server obsahuje informace v angličtině.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Poskytoval systém Windows Update vždy opravy problémů se zabezpečením a jiné aktualizace pro server IIS 4.0 (Internet Information Server 4.0) a internetovou informační službu 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>Ne. 23. května 2001 nabídl systém Windows Update souhrnný balíček nejdůležitějších aktualizací pro IIS 5.0 poprvé. Balíček sice neobsahuje všechny vydané aktualizace IIS, poskytuje však kombinaci nejnovějších oprav vydaných od března 2000 až do dneška. Aktualizace vydané před březnem 2000 najdete na <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">stránce programu TechNet určené webovým službám systému Windows (IIS)</a>.
+(Tento server obsahuje informace v angličtině.)
+Jakmile budou vytvořeny nové opravy problémů se zabezpečením nebo jiné důležité aktualizace pro IIS, bude tento balíček nahrazen novým, který bude obsahovat nové aktualizace i všechny z předchozího balíčku. Tak bude systém Windows Update nabízet vždy nejnovější aktualizace pro produkty IIS, bez ohledu na to, kdy jej navštívíte.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Kde lze získat informace o všech aktualizacích týkajících se zabezpečení?</id><BR></DIV>
+<id id=x209>Jsou k dispozici v bulletinech týkajících se zabezpečení (Security Bulletin) na <a href="http://www.microsoft.com/technet/security/" target="_new">webovém serveru Microsoft TechNet Security</a>. Je možné se také přihlásit k odběru služby <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new">Microsoft Security Notification Service</a>, která zasílá upozornění e-mailem na bulletiny vydané v nedávné době.
+(Tyto servery obsahují informace v angličtině.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/cze/misc/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Všechna práva vyhrazena. Podrobnosti z právního hlediska pro Českou republiku.</id></A><BR></CENTER>
+</BODY>
+</HTML>

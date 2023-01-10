@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>
+ Windows Update
+</TITLE>
+</HEAD>
+<script LANGUAGE="VBScript">
+dim objWUV3IS
+dim arrEULAs
+dim nCurIndex, nCount, strURL
+Function CountIdenticalEULAs()
+	nCount = 0
+	do while nCurIndex + nCount <= UBound( arrEULAs )
+ if arrEULAs(nCurIndex,0) <> arrEULAs(nCurIndex+nCount,0) then
+ exit do
+ end if
+ nCount = nCount + 1
+	loop
+	CountIdenticalEULAs = nCount
+End Function
+Function DisplayEULA ()
+	if CountIdenticalEULAs() = 0 then
+ window.returnValue = true
+ onbeforeunload()
+ window.close()
+ exit Function
+	end if
+	DisplayComponentNames()
+ document.all("IFrmEULA").src= window.dialogArguments.m_strServerUrl & arrEULAs(nCurIndex,2)
+End Function
+Function DisplayComponentNames ()
+	dim puid, name, strHTML
+	strHTML = ""
+	dim i
+	for i = nCurIndex to nCurIndex + nCount - 1
+ puid = arrEULAs(i,1)
+ name = window.dialogArguments.GetCatalogItem(puid)(1)
+ strHTML = strHTML & name & "</br>"
+	next
+	ProductList.innerHTML = strHTML
+End Function
+Function onbeforeunload()
+	If NOT window.returnValue Then Exit Function
+	dim puid, i
+	for i = 0 to UBound( arrEULAs )
+ if NOT arrEULAs(i,3) then
+ puid = arrEULAs(i,1)
+ objWUV3IS.ChangeItemState puid, 8
+ end if
+	next
+End Function
+Function window_onload ()
+	window.returnValue = false
+	set objWUV3IS = window.dialogArguments.WUV3IS
+ arrEULAs = objWUV3IS.GetEULA()
+ redim preserve arrEULAs( UBound( arrEULAs), 3 )
+	nCurIndex = 0
+	DisplayEULA()
+	btn1.disabled="false"
+	btn2.disabled="false"
+ IFrmEULA.focus()
+End Function
+Function AcceptEULA ( flag )
+	dim i
+ for i = nCurIndex to nCurIndex + nCount - 1
+ arrEULAs(i,3) = flag
+	next
+ nCurIndex = nCurIndex + nCount
+ DisplayEULA()
+End Function
+</script>
+<BODY ID=bdy SCROLL=no style="BACKGROUND-COLOR: silver; FONT-FAMILY: arial; FONT-SIZE: 8pt; MARGIN: 6pt">
+<P><ID ID="idx1">Lesen Sie bitte den folgenden Lizenzvertrag. Drücken Sie die BILD-AB-TASTE,
+um den Rest des Vertrages anzuzeigen.</P>
+<iframe ID=IFrmEULA SRC="blank.htm" style="BACKGROUND-COLOR: silver; FONT-FAMILY: arial; FONT-SIZE: 8pt; HEIGHT:140pt; WIDTH:264pt">
+</iframe>
+<P><ID ID="idx2">Stimmen Sie allen Bedingungen des Lizenzvertrages
+zu? Falls nicht, wird die Installation beendet. Um die Installation fortsetzen zu können, müssen Sie den Bedingungen des
+Lizenzvertrages zustimmen.</P>
+<div ID=dvButtons style="position:relative">
+<div ID="ProductList" STYLE="border:solid 1px #000000;position:absolute;HEIGHT:55pt;OVERFLOW:auto;TOP:0;left:3pt;padding-left:3pt; WIDTH: 190pt"></div>
+<BUTTON DISABLED=true ID=btn1 ACCESSKEY="J" style="FONT-FAMILY: arial; FONT-SIZE:8pt;HEIGHT:19pt;LEFT:209pt;POSITION:absolute;TOP:0pt;WIDTH:58pt"
+	onclick="AcceptEULA(true)"><ID ID="idx3"><u>J</u>a</ID></BUTTON>&nbsp;
+<BUTTON DISABLED=true ID=btn2 ACCESSKEY="N" style="FONT-FAMILY: arial; FONT-SIZE:8pt;HEIGHT:19pt;LEFT:209pt;POSITION:absolute;TOP:25pt;WIDTH:58pt"
+	onclick="AcceptEULA(false)"><ID ID="idx4"><u>N</u>ein</ID></BUTTON>
+</div>
+</BODY>
+</HTML>

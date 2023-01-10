@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft ֧����Ϣ</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 16pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 16pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 9pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: ����, MS Song;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>֧����Ϣ</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>�����ʹ�� Windows Update Web վ��ʱ�������⣬��ͨ������֧�ֻ�ð�����ֻ��ѡ������ѡ��֮һ��</id>
+<P>
+<id id=x6>ѡ����Щ֧��ѡ��ʱ��ϵͳ���ܻ�Ҫ�������� Microsoft �����������ļ��������˸����������ļ��������ܽ��� Microsoft �ṩ�Ļ��� Internet ������֧�֡�</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>��������֧�֣�</id></A></STRONG> <id id=x80>�鿴 Windows Update �ṩ����������֧����Ϣ��</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>�豸��������֧�֣�</id></A></STRONG> <id id=x800>�鿴 Windows Update �ṩ���豸��������֧����Ϣ��</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#W98"><id id=x700>Windows 98 ֧�֣�</id></A></STRONG> <id id=x800>���ҹ��� Windows 98 ����ϵͳ��֧��ѡ�</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>�������⣺</id></A></STRONG> <id id=x8>������� Windows Update ��������⣬ͨ���������ǵ������б�������̵�ʱ���ڻ�ý��</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>��֪���⣺</id></A></STRONG> <id id=x10>Ҳ���Բ鿴 Windows Update վ���ϵ�ǰ��֪������б���</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/cn/wiz143.asp"><id id=x11>������</id></A></STRONG> <id id=x12>������д�����������������ͽ���������ǡ�</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='left' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>���� Windows Update</id></TD>
+ <TD id=td6 ALIGN='left' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>��ͼ������ڱ�վ�������ҳ���ϡ�������ͼ��ɲ鿴�������Ч��ʹ�� Windows Update վ�㡣</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>��������֧�֣�</id></DIV>
+��ѵ� <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update վ������ʼ�֧��</SPAN></A>������ �������վ�㡢վ�����������������Ϣ�ͻ���������ָ���������������簲װ���������⣩����ο� <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>���ṩ�ĸ��˺�רҵ��֧�֡����� MSN ��Ʒ������� <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>����Щ����£�����֧��Ҫ���ѣ���ϸ��Ϣ����ĸ�վ�㡣
+<P>
+�����й�����ļ���֧����Ϣ�����뵱�صķ�֧������ϵ���������µ��б��������<a href="http://support.microsoft.com/directory/" target=_blank>����֧������ Web վ��</a>������ȫ����֧��ѡ����������ڵĹ���(����)û�� Microsoft �ķ�֧�������������� Microsoft ��Ʒ�Ĺ�˾�������ϵ��
+<P>
+Microsoft ��֧�ַ����� Microsoft ��ʱ�ļ۸񡢷��ú;��������Ӱ�죬���ܷ����仯�����б仯ˡ������֪ͨ��
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">���ж���������£�<BR></DIV>
+����ʹ�� Windows Update վ��ġ���Ʒ���¡�ҳж��ĳЩ���³���
+<ol>
+<li>ת������Ʒ���¡�ҳ��
+<li>���������ʾ��Ϣ����һ���������ǡ���
+<li>���֡���Ʒ���¡�ҳʱ��������ҳ���˵ġ���ʾ�Ѱ�װ�ĸ��¡���
+<li>������³����ж�أ���ø��³���˵���Ҳ��С�ж�ء���ť��
+<li>������Ҫж�ظ��³���˵���Եġ�ж�ء���
+</ol>
+����ͨ����������ж�ء���Ʒ���¡��޷�ж�صĸ��³���Ҫ�˽�ÿ�����³�����ϸж����Ϣ����ο������Ķ������ݡ�ҳ��
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>�豸��������֧��</id></DIV>
+ͨ�� <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update վ��֧��</SPAN></A>�ϵĵ����ʼ����Ի����ѵİ�װ/ж��֧�֡����ڰ�װ/ж�����������֧�����⣬���Դ� <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> �����֧��ѡ��������б�����Щ����£�����֧��Ҫ���ѣ���ϸ��Ϣ����ĸ�վ�㡣
+<P>
+�����й�����ļ���֧����Ϣ�����뵱�صķ�֧������ϵ���������µ��б��������<a href="http://support.microsoft.com/directory/" target=_blank>����֧������ Web վ��</a>������ȫ����֧��ѡ����������ڵĹ���(����)û�� Microsoft �ķ�֧�������������� Microsoft ��Ʒ�Ĺ�˾�������ϵ��
+<P>
+Microsoft ��֧�ַ����� Microsoft ��ʱ�ļ۸񡢷��ú;��������Ӱ�죬���ܷ����仯�����б仯ˡ������֪ͨ��
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">���ж���豸�����������</DIV>
+ʹ�ø��³�����ж���ԴӼ������ɾ������������£�
+<ol>
+<li>��������ʼ��������ָ�򡰳��򡱡�������������ϵͳ���ߡ���Ȼ�󵥻���ϵͳ��Ϣ����
+<li>�ڡ�ϵͳ��Ϣ���У����������ߡ��˵���Ȼ�󵥻������³�����ж�ء���
+</ol>
+<b>Ҫ��</b> ����� Windows Update ��װ����������ǰ���ļ����û������Ӳ���豸�����������򡰸�����ж�ء�������ж�� Windows Update ��������ж���������������������£������滻���������򽫵���Ӳ���豸ֹͣ��������
+<p>
+<DIV CLASS="SectionDiv"><A NAME="W98"><id id=x13>WINDOWS 98 ֧��</id></DIV>
+<DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix2 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td1 ALIGN='left' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x14>WINDOWS 98 ֧��</id></TD>
+ <TD id=td2 ALIGN='left' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix3 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+ <p>
+<A HREF="http://support.microsoft.com/directory/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"><id id=x16>Windows 98 ����֧��</id></SPAN></A><BR>
+<id id=x17>�����˴��ɻ�� Windows 98 ����������֧�֡���Ҫ���������ļ���</id><BR><BR><BR>
+<id id=x18>���������ʹ������֧�֣��������ѡ���ʺ�����ѡ�</id>
+<UL>
+ <LI><I><id id=x19>��������й��û�</i>�ҵ�������������ģ������� Windows 98 �������벦�� (8621)64691188 Ѱ��֧�֡�</id><BR><BR>
+ <LI><I><id id=x20>��������й�������û�</i>�ҵ�������������ģ������� Windows 98 ��������</id> <A CLASS="textlink" HREF="http://support.microsoft.com/directory/WW.asp" target=_blank><id id=x21>�����˴�</id></A> <id id=x22>�뵱�ص� Microsoft ��֧������ϵ��</id><BR><BR>
+ <LI><I><id id=x23>������� Windows 98 ��Ԥװ������˼�����ַ��ģ�</i>���˼�����������̽������ṩ��Ʒ֧�֡��й�֧����Ϣ�����������̻� Microsoft ��Ʒ�ṩ����ϵ��</id>
+</UL>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>��������</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>ʲô�� Windows Update��</id><BR></DIV>
+<id id=x32>Windows Update �� Windows ��������չ���������ļ�����������¹��ܡ�Windows Update ����һ����Ϊ����Ʒ���¡���Ŀ¼������һЩ�µĲ�Ʒ��ǿ�������ϵͳ�ļ����豸��������Service Pack �Լ� Windows ���¹��ܡ����ǽ����������������Ҫ������Щ��ǿ����Ƽ�������</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>ʲô�ǲ�Ʒ���£�</id><BR></DIV>
+<id id=x36>����Ʒ���¡�ҳ��һ�������޲����򡢸����Լ���ǿ�����Ŀ¼����Щ�޲����򡢸��º���ǿ������� Windows �Լ��ڶ��� Windows ��ʹ�õĳ������Ŀ¼��ѡ���Լ���Ҫ�������Ȼ��ֱ�ӽ���� Web ���ز���װ�������ϡ�</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Ϊʲô�һ��յ�һ����Ϣָ����ҳ�� ActiveX �ؼ�����ȫ��</id><BR></DIV>
+<id id=x38>������ Internet Explorer ��ȫ����Ϊ���ߡ�ʱ����ʾ����Ϣ��Ϊ����ʹ�� Windows Update վ�㣬���뽫������� Internet ����İ�ȫ���ø���Ϊ���С��򡰵͡������岽�����£����������ߡ��˵�����Internet ѡ���ѡ�񡰰�ȫ��ѡ���Ȼ�󵥻���Internet����</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>ʲô�� ActiveX �ؼ���</id><BR></DIV>
+<id id=x41>ActiveX �ؼ��ǲ����� ActiveX �����Ŀ��ظ�ʹ�õ������������Щ����������� Web ҳ������Ӧ�ó�������������������������Ĺ��ܣ��綯���򵯳��˵���Windows Update ʹ�� ActiveX �ؼ�������ļ�����ϰ�װ����Щ�������Ա�Ϊ���ṩһ����������Ҫ���صĸ��³����������������ȷ�б���</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>�鿴 Windows Update վ�����ѷֱ�����ʲô��</id><BR></DIV>
+<id id=x43>Windows Update վ���ϵ� Web ҳ��Ϊ�� 800x600 ����ߵ���Ļ�ֱ����²鿴����Ƶġ�Ҫ������һ�ֱ��ʣ��뵥������ʼ����ť��ָ�����á���������������塱��˫������ʾ��ͼ�꣬Ȼ�󵥻������á�ѡ���</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>�й��ҵļ��������Ϣ�ᷢ�͸� Microsoft ��
+</id><BR></DIV>
+<id id=x45>���ᡣÿ�ν��롰��Ʒ���¡�Ŀ¼ʱ��Windows Update ������һ���ؼ������ר������������ĸ��³������ּ�鹤���������ı����Ͻ��еģ���ȷ�����ݵı����ԺͰ�ȫ�ԣ����Ҳ����� Microsoft �����κ���Ϣ��</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>���������ܰѷ���������͸� Windows Update �飿</id><BR></DIV>
+<id id=x47>ͨ������ÿҳ���˵ġ���������Ȼ�󵥻���Windows Update�����԰ѹ��ڴ�վ��ķ���������͸� Windows Update �顣<B></B><B></B></id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>���µİ�ȫ�Թ����� <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet ��ȫ����վ</a>�Ͽ���ʱ��
+(Ӣ��վ��)
+��Ҳ�� Windows Update �Ͽ�����</id><BR></DIV>
+<id id=x201>�Ӱ�ȫ�Թ��������� TechNet ��ȫ��վ�㵽��ȫ�Ը��¿����� Windows Update ֮����ʱ���ϳ������ڡ�������Ϊ������Ҫ���ƻ���ʱ������ӵ� Windows Update���� Windows Update ���Ǿ��췢����Ҫ�İ�ȫ�Ը��£�������Բ���֤��������ȷ�� Windows Update ���������ṩ��Ϊ�����ض����������ĸ��¡�һ������£�����֧�ֲ�Ʒ�ĸ����� TechNet վ��ͨ���Ժ�ļ��쵽�����ڣ����ǲŻ������ Windows Update �ϡ������֪��ĳ���ض��汾�ĸ������������ļ������������ȴ��Դ� Windows Update �ϻ�ȡ��������ԴӰ�ȫ�Թ�����վҳ����ֱ�����ظø��¡�</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Windows Update ֧����Щ����ϵͳ�ͳ���</id><BR></DIV>
+<id id=x203>Windows Update ���ṩ�İ�ȫ�Ը���Ӧ���� Windows 98��Windows 98 �ڶ��桢Windows Millennium Edition (Windows Me)��Windows NT 4.0��Windows 2000��Internet Information Server 4.0 (IIS 4.0)��Internet Information Services 5.0 (IIS 5.0) �� Internet Explorer��Ȼ������ֻ�ܿ���Ӧ����ָ��������ĸ��¡�Windows Update ��֧��ĳЩ����������ϵͳ�ͻ��ڷ������ĳ���</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>���ᵽ�Ĳ�֧��ĳЩ��������Ʒ����ô�����ײ�֧����Щ��������Ʒ��</id><BR></DIV>
+<id id=x205>Windows Update �����Ϊ�� Windows �����ߵļ��ü�����ṩ���³������վ������һ��ʱ��ķ�չ��Windows Update �Ѿ������ṩ���³���ķ�Χ��չ��ĳЩ��������Ʒ���� IIS������Щ��Ʒ�Ѿ����ڼ�ͥ���ռ���Ȼ����Windows Update �ϲ�֧����Щר�������� Windows ���������Microsoft Exchange Server��Microsoft SQL Server��Microsoft ISA Server �ȷ�������Ʒ�İ�ȫվ�㡣ʹ����Щ��Ʒ��������Ӧ�鿴λ�� <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet ��ȫ����վ</a>�İ�ȫ�Թ����Ի�ȡ���ڴӺδ�����������Щ��Ʒ�ĸ��µ���Ϣ��
+(Ӣ��վ��)��
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Windows Update һֱ�ṩ���� Internet Information Server 4.0 (IIS 4.0) �� Internet Information Services 5.0 (IIS 5.0) �İ�ȫ���޸�������������</id><BR></DIV>
+<id id=x207>2001 �� 5 �� 23 �� �� Windows Update ���״��ṩ���� IIS 5.0 ����Ҫ���µ��ۼ����ݰ��������ݰ��в���������ʱ�ѷ��������� IIS ���£����ṩ���� 2000 �� 3 �µ�ĿǰΪֹ�������������޸�����Ľ�ϡ����� 2000 �� 3 ����ǰ�����ĸ��£������ <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">Windows Web ����� TechNet ҳ (IIS)</a>��
+(Ӣ��վ��)
+����������µİ�ȫ���޸����������� IIS ����Ҫ���£����������ݰ�����������ݰ����������ݰ������µĸ��º�������ǰ���ݰ��е��޸�������������������ʱ���� Windows Update�����ܻ�ȡ���� IIS ��Ʒ�����¸��¡�</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>�Ӻδ���ȡ�밲ȫ����ص����и��µ���Ϣ��</id><BR></DIV>
+<id id=x209>������ <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet ��ȫ����վ</a>�鿴���а�ȫ�Թ��档 Ҳ����ͨ������<a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft ��ȫ��֪ͨ����</a>�Խ��չ�����������İ�ȫ�Թ���ĵ����ʼ���ʾ��
+(��Щ����Ӣ��վ�㡣)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/china/misc/cpyright.htm"><id id=x50>&copy; 2022 Microsoft Corporation. ��������Ȩ����ʹ����֪��</id></A><BR></CENTER>
+</BODY>
+</HTML>

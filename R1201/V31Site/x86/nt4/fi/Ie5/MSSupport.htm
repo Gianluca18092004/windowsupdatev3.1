@@ -1,0 +1,174 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoftin tuotetuki</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Tuotetuki</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Jos kohtaat ongelmia Windows Update <nobr>-Web-</nobr>sivustossa, ota yhteyttä online-tukeen. Valitse jokin alla luetelluista vaihtoehdoista.</id>
+<P>
+<id id=x6>Kun valitset tukivaihtoehdot, sinua pyydetään ehkä luomaan Microsoftin online-profiili. Online-profiilisi mahdollistaa Internet-pohjaisen tuen saamisen Microsoftilta.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Ohjelmapäivitystuki:</id></A></STRONG> <id id=x80>Täältä saat lisätietoja Windows Update <nobr>-sivustossa</nobr> saatavilla olevien ohjelmapäivitysten tuesta.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Laiteohjaintuki:</id></A></STRONG> <id id=x800>Täältä saat lisätietoja Windows Update <nobr>-sivustossa</nobr> saatavilla olevien laiteohjainten tuesta.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Usein kysytyt kysymykset:</id></A></STRONG> <id id=x8>Jos sinulla on Windows Update <nobr>-sivustoa</nobr> koskeva kysymys, tarkista ensin, onko siihen vastausta tässä luettelossa.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Tunnetut ongelmat:</id></A></STRONG> <id id=x10>Voit myös tarkistaa sivun, jossa luetellaan Windows Update <nobr>-sivuston</nobr> tunnetut ongelmat.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/fi/wiz143.asp"><id id=x11>Kirjoita meille:</id></A></STRONG> <id id=x12>Lyhyen kyselylomakkeemme avulla voit lähettää meille kommentteja ja ehdotuksia.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>TIETOJA WINDOWS UPDATESTA</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Tämä kuvake on kaikkien sivuston sivujen yläosassa. Sitä napsauttamalla saat näkyviin sivun, jossa kerrotaan, kuinka Windows Update <nobr>-</nobr>sivustoa voi parhaiten käyttää.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>OHJELMAPÄIVITYSTUKI</id></DIV>
+Windows Update <nobr>-</nobr>sivuston maksuton <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">sähköpostitse annettava tuki</SPAN></A> sisältää tietoja Web-sivustossa siirtymisestä, sivuston sisällön laadusta, virhesanomista ja lataamisen perusasioista. Muihin ongelmiin, esimerkiksi asennusongelmiin, saat apua osoitteesta <a href="http://www.microsoft.com/finland/support" target=_blank>http://support.microsoft.com/directory/</a>. Jos kyseessä on MSN-tuote, siirry osoitteeseen <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. Joissakin tapauksissa vastauksista veloitetaan tukipalkkio. Tarkista asia sivustosta.
+<P>
+Jos asut Pohjois-Amerikan ulkopuolella, saat tukitietoja paikalliselta Microsoftin tytäryhtiöltä. Saat uusimman luettelon tytäryhtiöistä siirtymällä <a href="http://www.microsoft.com/finland/support" target=_blank>Support Online</a> <nobr>-</nobr>Web-sivustoon ja valitsemalla Worldwide Support <nobr>-</nobr>vaihtoehdon. Jos maassasi ei ole Microsoftin tytäryhtiötä, ota yhteyttä yritykseen, josta hankit Microsoft-tuotteesi.<P>
+Microsoftin tukipalvelujen hinnat ja niiden käyttöä koskevat ehdot voivat muuttua ilman eri ilmoitusta.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Ohjelmapäivitysten asennuksen poistaminen<BR></DIV>
+Jotkin päivitykset voidaan poistaa Windows Update <nobr>-</nobr>sivuston Tuotepäivitykset-sivua käyttämällä seuraavasti:<ol>
+<li>Siirry Tuotepäivitykset-sivulle.<li>Vastaa <B>Kyllä</B> mahdollisen sanomaikkunan esittämään kysymykseen.<li>Kun Tuotepäivitykset-sivu tulee näkyviin, valitse sivun yläosassa oleva <B>Näytä asennetut osat</B> <nobr>-</nobr>painike.<li>Jos päivityksen asennus on mahdollista poistaa, päivityksen kuvauksen oikealla puolella on <B>Poista</B>-painike.<li>Napsauta sen päivityksen vieressä olevaa <b>Poista</b>-painiketta, jonka asennuksen haluat poistaa.</ol>
+Jos päivitystä ei voi poistaa Tuotepäivitykset-sivua käyttämällä, sen voi ehkä poistaa jollain muulla tavalla. Saat lisätietoja osan poistamisesta kyseisen osan <b>Lue tämä ensin</b> <nobr>-</nobr>sivulta.<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>LAITEOHJAINTUKI</id></DIV>
+Voit pyytää ilmaisia päivityksen asentamiseen tai asennuksen poistamiseen liittyviä ohjeita sähköpostitse <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update Site Support</SPAN></A> <nobr>-sivustosta</nobr>. Jos kyseessä on monimutkaisempi ongelma, tutustu tukivaihtoehtojen täydelliseen luetteloon osoitteessa <a href="http://www.microsoft.com/finland/support" target=_blank>http://support.microsoft.com/directory</a>. Joissakin tapauksissa vastauksista veloitetaan tukipalkkio. Tarkista asia sivustosta.
+<P>
+Jos asut Pohjois-Amerikan ulkopuolella, saat tukitietoja paikalliselta Microsoftin tytäryhtiöltä. Saat uusimman luettelon tytäryhtiöistä siirtymällä <a href="http://www.microsoft.com/finland/support" target=_blank>Support Online</a> <nobr>-</nobr>Web-sivustoon ja valitsemalla Worldwide Support <nobr>-</nobr>vaihtoehdon. Jos maassasi ei ole Microsoftin tytäryhtiötä, ota yhteyttä yritykseen, josta hankit Microsoft-tuotteesi.<P>
+Microsoftin tukipalvelujen hinnat ja niiden käyttöä koskevat ehdot voivat muuttua ilman eri ilmoitusta.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Laiteohjainpäivitysten asennuksen poistaminen</DIV>
+Windows Updatessa ei ole Windows 95:n tai Windows NT&reg; 4.0:n ohjainpäivityksiä. Ota yhteyttä laitteen valmistajaan.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>USEIN KYSYTYT KYSYMYKSET</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Mikä on Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update on Windowsin online-lisäosa, joka auttaa sinua pitämään tietokoneesi ajan tasalla. Windows Updatessa on keskeinen luettelo, jonka nimi on Tuotepäivitykset ja joka sisältää uusia tuotteen parannuksia, kuten järjestelmätiedostoja, laiteohjaimia, Service Packeja ja uusia Windows-toimintoja. Näitä parannuksia suositellaan sen mukaan, mitä kyseisessä tietokoneessa tarvitaan.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Mikä on Tuotepäivitykset?</id><BR></DIV>
+<id id=x36>Tuotepäivitykset-sivu on luettelo, jossa on korjauksia, päivityksiä ja parannuksia Windowsiin ja useisiin Windows-ohjelmiin. Voit selata luetteloa, valita niin monta osaa kuin haluat sekä ladata ja asentaa ne suoraan Webistä tietokoneeseen.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Miksi näyttöön tulee ilmoitus siitä, että tämän sivun ActiveX-komponentti ei ole turvallinen?</id><BR></DIV>
+<id id=x38>Tämä sanoma tulee näyttöön, kun Internet Explorerin suojausasetus on suuri. Jotta Windows Update <nobr>-</nobr>sivusto toimisi oikein, selaimen Internet-vyöhykkeen suojausasetuksen on oltava normaali tai pienempi. Voit tehdä tämän valitsemalla <b>Työkalut</b> ja valitsemalla <b>Internet-asetukset</b>. Valitse <b>Suojaus</b>-välilehti ja valitse <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Mikä on ActiveX-komponentti?</id><BR></DIV>
+<id id=x41>ActiveX-komponentit ovat uudelleenkäytettäviä ohjelmistokomponentteja, joissa käytetään ActiveX-tekniikkaa. Näitä komponentteja voidaan käyttää lisäämään eritystoimintoja, kuten animaatiota tai ponnahdusvalikoita, Web-sivuihin, työpöytäsovelluksiin ja ohjelmiston kehitystyökaluihin. Windows Update käyttää ActiveX-komponentteja tarkistamaan, mitä ohjelmistoa tietokoneeseen on asennettu, jotta sivusto voi antaa oikean päivitysluettelon ja luettelon muusta ladattavissa olevasta ohjelmistosta.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Mikä tarkkuus soveltuu parhaiten Windows Update <nobr>-</nobr>sivuston tarkastelemiseen?</id><BR></DIV>
+<id id=x43>Windows Update <nobr>-</nobr>sivuston Web-sivut on suunniteltu tarkasteltaviksi vähintään tarkkuudella 800 x 600. Voit määrittää tämän tarkkuuden napsauttamalla <B>Käynnistä</b>-painiketta, valitsemalla <B>Asetukset</b> ja valitsemalla sitten <B>Ohjauspaneeli</b>. Kaksoisnapsauta <B>Näyttö</b>-kuvaketta ja valitse <B>Asetukset</b>-välilehti.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Lähetetäänkö tietokoneeni tiedot Microsoftille?</id><BR></DIV>
+<id id=x45>Ei. Aina kun siirryt Tuotepäivitykset-luetteloon, Windows Update tarkistaa tietokoneeseesi liittyvät päivitykset komponentin avulla. Tämä tarkistus tapahtuu tietokoneessasi, mikä varmistaa yksityisyyden ja tietosuojan, eikä tietoja lähetetä Microsoftille.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Kuinka lähetän palautetta Windows Update <nobr>-</nobr>ryhmälle?</id><BR></DIV>
+<id id=x47>Voit lähettää palautetta tästä sivustosta Windows Update <nobr>-</nobr>ryhmälle napsauttamalla sivun yläosan mustalla työkalurivillä olevaa <B>Palaute</B>-painiketta ja valitsemalla <B>Windows Update</B>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Kun uusi suojaustiedote on saatavilla <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a> <nobr>-</nobr>sivustossa,
+(sivusto on englanninkielinen)
+onko se saatavilla myös Windows Updatessa?</id><BR></DIV>
+<id id=x201>Kestää usein hetken, ennen kuin TechNet Security <nobr>-</nobr>sivustoon lisätty suojaustiedote on saatavilla Windows Updatessa. Tämä johtuu siitä, että Windows Updateen lisätään sisältöä tietyin väliajoin. Windows Update pyrkii julkistamaan tärkeät suojauspäivitykset mahdollisimman nopeasti, mutta uusi sisältö pitää testata, jotta Windows Update tarjoaisi sinulle vain sellaisia päivityksiä, joita tietokoneesi tarvitsee. Tavallisesti tuettujen tuotteiden päivitykset tulevat Windows Updateen viimeistään muutaman viikon kuluttua siitä, kun niistä on kerrottu TechNet-sivustossa. Jos tiedät, mikä päivityksen versio sopii tietokoneeseesi etkä halua odottaa, kunnes päivitys tulee Windows Updateen, voit ladata päivityksen suoraan suojaustiedotteen Web-sivulta.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Mitä käyttöjärjestelmiä ja ohjelmia Windows Update tukee?</id><BR></DIV>
+<id id=x203>Windows Updatesta löytyy suojauspäivityksiä Windows 98:aan, Windows 98 Second Editioniin, Windows Millennium Editioniin (Windows Me), Windows NT 4.0:aan, Windows 2000:een, Internet Information Server 4.0:aan (IIS 4.0), Internet Information Services 5.0:aan (IIS 5.0) ja Internet Exploreriin. Sinulle kuitenkin näytetään vain ne päivitykset, jotka soveltuvat tietokoneeseesi. Windows Update ei tue tiettyjä palvelinkäyttöjärjestelmiä ja palvelinpohjaisia sovelluksia.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Joitakin palvelintuotteita ei kuulemma tueta. Mitkä tuotteet ovat tällaisia?</id><BR></DIV>
+<id id=x205>Windows Update oli alkujaan Web-sivusto, josta löytyi päivityksiä Windows-käyttäjien kotikoneisiin. Ajan myötä Windows Update on laajentanut päivitysvalikoimaa sisältämään joitakin usein kotona käytettyjä palvelintuotteita (esimerkiksi IIS). Suojauspäivityksiä, joita käytetään vain palvelintuotteiden (kuten Windows-toimialueiden ohjauskoneiden, Microsoft Exchange Serverin, Microsoft SQL Serverin, Microsoft ISA Serverin) kanssa, Windows Update ei kuitenkaan tue. Asiakkaat saavat tietoja näiden tuotteiden päivitysten lataamisesta <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet <nobr>-</nobr>Web-sivustosta</a>.
+(Sivusto on englanninkielinen.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Onko Windows Updatessa aina ollut suojauspäivityksiä ja muita päivityksiä Internet Information Server 4.0:aa (IIS 4.0) ja Internet Information Services 5.0:aa (IIS 5.0) varten?</id><BR></DIV>
+<id id=x207>Ei. Windows Updateen tuli ensimmäinen IIS 5.0:n tärkeiden päivitysten paketti 23.5.2001. Tämä paketti ei sisällä kaikkia IIS:ää varten julkistettuja päivityksiä vaan kokoelman uusimpia päivityksiä, jotka on julkistettu maaliskuun 2000 jälkeen. Ennen maaliskuuta 2000 julkistetut päivitykset löytyvät sivustosta <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet page for Windows Web services (IIS)</a>.
+(Sivusto on englanninkielinen.)
+Kun IIS:ää varten julkistetaan uusia suojauspäivityksiä tai muita tärkeitä päivityksiä, tämä paketti korvataan uudella paketilla, johon kuuluvat sekä uudet päivitykset että kaikki edellisessä paketissa olleet päivitykset. Näin tiedät aina saavasi uusimmat IIS-tuotteiden päivitykset, kun käyt Windows Updatessa.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Mistä saan tietoja suojauspäivityksistä?</id><BR></DIV>
+<id id=x209>Voit tarkastella kaikkia suojaustiedotteita <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security <nobr>-</nobr>Web-sivustossa</a>. Voit myös tilata <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> <nobr>-</nobr>palvelun, jolloin saat sähköpostitse ilmoituksen julkaistuista suojaustiedotteista.
+(Sivustot ovat englanninkielisiä.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/finland/misc/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Kaikki oikeudet pidätetään. Käyttöoikeustietoja.</id></A><BR></CENTER>
+</BODY>
+</HTML>

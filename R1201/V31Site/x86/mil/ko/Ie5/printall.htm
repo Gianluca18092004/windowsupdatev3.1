@@ -1,0 +1,189 @@
+<html>
+<head>
+<META CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" L GEN TRUE COMMENT "RSACi North America Server" BY "inet@microsoft.com" ON "1997.06.30T14:48-0500" R (N 0 S 0 V 0 L 0))' HTTP-EQUIV="PICS-Label">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+<title>설명서 인쇄</title>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 10px;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.hiddenDiv {
+	display:none;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+</STYLE>
+</head>
+<body BACKGROUND="../images/wm.jpg">
+<div style="TEXT-ALIGN: right" language="VBScript" OnClick="call Return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x2>제품 업데이트로 이동</ID></a></div>
+<script language="VBScript">
+OPTION EXPLICIT
+Dim iReadThisPage, FullDoc, strReadThisList, strReadThisPath, arrReadThisList, strPath
+Dim bDrivers
+iReadThisPage = 0
+strReadThisList = "%READTHISLIST%"
+strPath = "%READTHISPATH%"
+arrReadThisList = Split(strReadThisList, ";")
+Sub window_onLoad
+	Dim dc
+	Dim nCount
+	dc = LCase(window.location)
+	nCount = instr(dc, "?")
+	dc = Right(dc, len(dc) - nCount)
+	if dc = "drivers" then
+ bDrivers = TRUE
+	end if
+	Dim TheDoc
+	TheDoc = GetNextPage()
+	if TheDoc <> "" then MyFrame.location.replace(TheDoc)
+	if bDrivers = TRUE then
+ document.all.item("DivDrivers").style.display = ""
+ dim docPath
+ dim strPath
+ dim nTemp
+ docPath = document.url
+ nTemp = InStr(lCase(document.url), "program")
+ if (nTemp = 0) then
+ strPath = Left(document.url, InStr(document.url, "printall.htm") -1)
+ document.all.item("PUImage").src = strPath & "images/product-icon.png"
+ end if
+	else
+ document.all.item("DivDrivers").style.display = "none"
+	end if
+End Sub
+Sub MyCallBack
+On Error Resume Next
+Dim TheNextPage
+ FixupImageURLs
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions1").innerHtml
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions2").innerHtml
+ TheNextPage = GetNextPage()
+ If TheNextPage <> "" Then
+ document.body.style.cursor = "wait"
+ MyFrame.location.replace(TheNextPage)
+ Else
+ if bDrivers = FALSE then
+ MyFrame.location.replace("about:blank")
+	end if
+ TheDocument.innerHtml = FullDoc
+ If navigator.userLanguage <> "en-us" Then
+ Dim collToHide, collIter, nLen
+ Set collToHide = document.all("UsOnly")
+ Err.Clear
+ nLen = collToHide.length
+ If Err.Number = 0 Then
+ For collIter = 0 to collToHide.length
+ collToHide(collIter).style.display="none"
+ Next
+ Else
+ collToHide.style.display="none"
+ End If
+ End If
+ document.body.style.cursor = "default"
+ End If
+End Sub
+Function GetNextPage
+ If iReadThisPage <= Ubound(arrReadThisList) Then
+ GetNextPage = strPath & arrReadThisList(iReadThisPage)
+ End if
+	iReadThisPage = iReadThisPage + 1
+End Function
+sub Return
+	window.close
+end sub
+Sub FixupImageURLs()
+On Error Resume Next
+ Dim AllImgTags
+ Set AllImgTags = MyFrame.document.all.tags("IMG")
+ Dim docPath
+ docPath = MyFrame.document.location.pathname
+ Dim i
+ For i = 0 to AllImgTags.length - 1
+ AllImgTags(i).src = strPath & left(arrReadThisList(iReadThisPage - 1),InstrRev(arrReadThisList(iReadThisPage - 1),"\")) & right(AllImgTags(i).src,Len(AllImgTags(i).src) - InStrRev(AllImgTags(i).src,"/"))
+ Next
+End Sub
+</script>
+<IMG id=PUImage align=left alt="Product Updates" border=0 height=40 hspace =0 id=ix1 src="../product-icon.png" style ="MARGIN-RIGHT: 12px" width=64 >
+<DIV CLASS="SmallTitle" STYLE="PADDING-TOP: 4px"><ID ID=x3>제품 업데이트</ID><BR></DIV>
+<DIV CLASS="PageTitle"><ID ID=x4>소프트웨어 설명서</ID><BR></DIV>
+<ID ID=x5>이 페이지에는 선택한 소프트웨어에 대한 설명이 들어 있습니다. 이 페이지를 인쇄하려면 <B>파일</B> 메뉴에서 <B>인쇄</B>를 선택하십시오.</ID>
+<BR>
+<BR>
+<BR>
+<BR>
+<span id="TheDocument"></span>
+<iframe id="MyFrame" src="" width=0 height=0></iframe>
+<DIV ID="DivDrivers">
+<SPAN CLASS="PageTitle" STYLE="PADDING-TOP: 4px"><ID ID=x7>장치 드라이버 업데이트</ID><BR></SPAN>
+<SPAN CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x8>장치 드라이버 업데이트의 다운로드 및 설치 방법</id><BR></SPAN><br>
+<span CLASS="SmallTitle" STYLE="PADDING-TOP: 4px"><id id=x9>Windows Update는 Windows 95 또는 Windows NT&reg; 4.0.의 드라이버는 지원하지 않습니다. 장치 제조 업체에 문의하십시오.</id></span><br>
+</DIV>
+<BR>
+<BR>
+<BR>
+<BR>
+<br>
+<div language="VBScript" style="TEXT-ALIGN: right" OnClick="call return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x6>제품 업데이트로 이동</ID></a></div>
+</body>
+</html>

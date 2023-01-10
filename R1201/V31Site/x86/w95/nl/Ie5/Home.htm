@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+</HEAD>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim FrmNav
+document.cookie = "page=nothing; path=/"
+Set FrmNav = parent.frames("FrmNavigator")
+If FrmNav.Document.ReadyState = "complete" Then
+ FrmNav.FuncToggle_Lock(FALSE)
+End If
+Sub NavCatalog
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S001"), 0
+End Sub
+Sub NavMemSvc
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S002"), 0
+End Sub
+Sub AcceptLang
+ Window.Open("lang.htm")
+End Sub
+Sub IESupport
+ Window.Open("iever.htm")
+End Sub
+</SCRIPT>
+<style>
+<!--
+.smallblack {
+ font-family: Verdana, Arial, sans-serif;
+ font-size: 8pt;
+}
+.darkblue {
+ color: #00319C;
+}
+A:link {
+ color: #00319C;
+}
+.BodyText {
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+-->
+</style>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR="WHITE" CLASS="BodyText">
+<script Language="VBScript">
+Function DisplayAbout(strUrl)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strUrl,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+</script>
+ <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%" CLASS="BodyText">
+ <TR>
+ <TD WIDTH="164">
+ <IMG ID=ix2 SRC="images/welcome.gif" WIDTH="164" ALT="" HEIGHT="96">
+ </TD>
+ <TD VALIGN="bottom">
+ <DIV ID=d1 STYLE="COLOR: #2f60ff; FONT-FAMILY: Verdana, Arial; FONT-SIZE: 20pt; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px;">
+ <ID ID=x101><i>Welkom bij</ID><BR> <ID ID=x1a> Windows Update</i></ID>
+ </DIV>
+ </TD>
+ </TR>
+ <TR>
+ <TD COLSPAN="2" HEIGHT="1" BGCOLOR="#00319C"><IMG ID=ix4 SRC="Images/ts.gif" ALT="" HEIGHT="1" WIDTH="100%"></TD>
+ </TR>
+ <TR>
+ <TD id=td1 VALIGN="TOP" WIDTH="164">
+ <br>
+ </TD>
+ <TD id=td3 VALIGN="TOP">
+ <DIV STYLE="padding-top: 5px;">
+ </DIV>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavCatalog()"><ID ID=x13>Updates op producten</ID></a></STRONG><BR>
+ </SPAN>
+ <ID ID=x14>Vanaf deze pagina kunt u de nieuwste updates voor uw computer 
+	downloaden en installeren.</ID><BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavMemSvc()"><ID ID=x15>Ondersteuningsinformatie</ID></A></STRONG><BR>
+ </SPAN>
+ <ID ID=x16>Op deze pagina's vindt u antwoorden op veelgestelde vragen, 
+	beschrijvingen van bekende problemen en andere informatie over het gebruik 
+	van Windows Update.</ID><BR><BR>
+ <P>
+ <P>
+ <P>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG>Waarom wordt de Windows Update-website weergegeven in een andere taal?</STRONG><BR>
+ </SPAN>
+ Klik hier voor <a href="javascript:AcceptLang()">meer informatie over</a> de 
+	functie van Internet Explorer waarmee u Windows Update in de taal van uw 
+	voorkeur kunt weergeven.
+ <BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <ID ID=x500><strong>Waarom wordt de Windows Update-website weergegeven in een 
+	andere taal?</strong><br>
+</ID>
+ </SPAN>
+ <ID ID=x501>Klik hier voor <a href="javascript:AcceptLang()">meer informatie 
+	over </a>de functie van Internet Explorer waarmee u Windows Update in de 
+	taal van uw voorkeur kunt weergeven.</ID>
+ <BR><BR>
+ <P>
+ </TD>
+ </TR>
+ </table>
+<BR><BR>
+<CENTER><A target="CopyRight" HREF="http://www.microsoft.com/netherlands/info/copyrights/"><ID ID=x29>
+© 2022 Microsoft Corporation. Alle rechten voorbehouden. Juridische 
+kennisgevingen.</ID></A></CENTER><BR>
+</body>
+</html>

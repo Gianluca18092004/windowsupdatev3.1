@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<TITLE>�޷���ʾҳ</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 16pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: ����, MS Song;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: ����, MS Song;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: ����, MS Song;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Ŀǰ��Windows Update �в�֧�ָò���ϵͳ��ʹ�õ����ԣ���ˣ��޷����ز�Ʒ����Ŀ¼��"
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>�ڼ��ز�ƷĿ¼ʱ������һ��������������������������𻵵��ļ���ɵġ������ Microsoft Knowledge Base (KB) ���� <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a> �Ի�ø�����Ϣ�Լ����������Ĳ��衣</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>�޷���ʾҳ</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>����һ��</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>�������ҳ����������ԭ��֮һ:</ID>
+<OL>
+	<LI><ID ID=x6>Windows Update վ��ؼ���/��ṹ�ĸ��¿���������˴�����Ϣ���ֵ�ԭ���йظ�����Ϣ�������read Microsoft Knowledge Base (KB) ���� <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A>��</ID>
+	<LI><ID ID=x7>��ѡ�����������ؼ������ؿؼ�ʱ�������⣬ʹ Windows Update վ��Ĵ󲿷ֶ������á���������������ؿؼ����������浥��<B>����һ��</B>��</ID>
+	<LI><ID ID=x8>��û�б����Ĺ���ԱȨ�ޡ�Ҫʹ�� Windows Update��Ӧ����ϵͳ����Ա��ϵ�Ը���������</ID>
+	<LI><ID ID=x9>��������Ҫ����������������档�йظ�����Ϣ������� Microsoft KB ���� <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a>��</ID>
+	<LI><ID ID=x10>��������Ҫɾ�� Windows Update Ŀ¼���йظ�����Ϣ������� Microsoft KB ���� <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a>��</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/china/misc/cpyright.htm"><ID ID="cpyright">&copy; 2022 Microsoft Corporation����������Ȩ����ʹ�ù涨��</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,184 @@
+<HTML DIR=LTR>
+<HEAD>
+<TITLE>Microsoft Supportoplysninger</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "da" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Supportoplysninger</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Hvis du har problemer med webstedet Windows Update, er der hjælp at hente via onlinesupport. Du skal blot vælge en af mulighederne nedenfor.</id>
+<P>
+<id id=x6>Ved enkelte af mulighederne kan du blive bedt om at oprette en Microsoft-onlineprofil. Onlineprofilen fungerer som billet, når du modtager Internetbaseret support fra Microsoft.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Support til softwareopdateringer:</id></A></STRONG> <id id=x80>Få vist supportoplysninger om de softwareopdateringer, der tilbydes på Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Support til enhedsdrivere:</id></A></STRONG> <id id=x800>Få vist supportoplysninger om de enhedsdrivere, der tilbydes på Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Ofte stillede spørgsmål:</id></A></STRONG> <id id=x8>Hvis du har spørgsmål om Windows Update, kan du starte med at se på vores liste over svar.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Kendte problemer:</id></A></STRONG> <id id=x10>Du kan også se en liste over kendte problemer, der i øjeblikket findes på webstedet Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/da/wiz143.asp"><id id=x11>Skriv til os:</id></A></STRONG> <id id=x12>Du kan skrive kommentarer og forslag i undersøgelsesformularen.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>OM WINDOWS UPDATE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="? " BORDER="0"> <id id=x29>Dette ikon vises øverst på alle siderne til dette websted. Klik på ikonet for at få at vide, hvordan du bedst bruger webstedet Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>SUPPORT TIL SOFTWAREOPDATERINGER</id></DIV>
+Gratis <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">e-mail-support til webstedet Windows Update</SPAN></A> omfatter: Hjælp til navigation på webstedet, indholdskvalitet eller fejlmeddelelser på stedet og grundlæggende hjælp til overførsler. Al anden hjælp, herunder installation og opsætning, er tilgængelig via Personlig support til virksomheder og hjemmebrugere på <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. Besøg <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a> for at få yderligere oplysninger om MSN-produkter. I nogle tilfælde kan der forekomme et supportgebyr. Få flere oplysninger på webstedet.
+<P>
+Hvis du bor uden for USA og Canada, kan du få tekniske oplysninger ved at kontakte Microsoft Danmark. Den seneste liste kan du se på <a href="http://support.microsoft.com/directory/" target=_blank>webstedet med onlinesupport</a> ved at vælge indstillingen Worldwide Support. Hvis der ikke findes et Microsoft-datterselskab i dit land, kan du også kontakte det sted, hvor du har købt Microsoft-produktet.
+<P>
+Microsoft Teknisk support er underlagt Microsofts til enhver tid gældende priser, vilkår og betingelser, som kan ændres uden varsel.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Hvordan afinstalleres softwareopdateringer?<BR></DIV>
+Nogle opdateringer kan afinstalleres ved hjælp af siden Opdateringer på webstedet Windows Update:
+<ol>
+<li>Skift til siden Opdateringer.
+<li>Klik på <B>Ja</B>, hvis der vises en meddelelsesprompt.
+<li>Klik på knappen <B>Vis installerede opdateringer</B> øverst på siden, når siden Opdateringer vises.
+<li>Hvis en opdatering kan afinstalleres, vises knappen <B>Afinstaller</B> til højre for beskrivelsen af opdateringen.
+<li>Klik på <b>Afinstaller</b> ved siden af beskrivelsen af den opdatering, du vil afinstallere.
+</ol>
+Opdateringer, der ikke kan afinstalleres fra Opdateringer, kan afinstalleres ved hjælp af andre metoder. Se siden <b>Bør læses først</b> for hver opdatering for at få yderligere oplysninger om afinstallation.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>SUPPORT TIL ENHEDSDRIVERE</id></DIV>
+Gratis support til installation/afinstallation er tilgængelig via e-mail på webstedet <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Support til Windows Update</SPAN></A>. Hvis du har problemer udover installation/afinstallation af drivere, finder du en komplet liste over supportmuligheder på <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a>. I nogle tilfælde kan der forekomme et supportgebyr. Få flere oplysninger på webstedet.
+<P>
+Hvis du bor uden for USA og Canada, kan du få tekniske oplysninger ved at kontakte Microsoft Danmark. Den seneste liste kan du se på <a href="http://support.microsoft.com/directory/" target=_blank>webstedet med onlinesupport</a> ved at vælge indstillingen Worldwide Support. Hvis der ikke findes et Microsoft-datterselskab i dit land, kan du også kontakte det sted, hvor du har købt Microsoft-produktet.
+<P>
+Microsoft Teknisk support er underlagt Microsofts til enhver tid gældende priser, vilkår og betingelser, som kan ændres uden varsel.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Hvordan afinstallerer jeg opdateringer til enhedsdrivere?</DIV>
+Windows Update tilbyder ikke driveropdateringer til Windows 95 eller Windows NT&reg; 4.0. Kontakt enhedens producent.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>OFTE STILLEDE SPØRGSMÅL</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Hvad er Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update er onlineudvidelsen til Windows 98, som er udviklet for at holde computeren opdateret. Windows Update har et centralt katalog kaldet Opdateringer, der indeholder nye produktforbedringer, f.eks. systemfiler, enhedsdrivere, Service Packs og nye Windows-funktioner. Disse forbedringer anbefales ud fra det specifikke behov, du har på computeren.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Hvad er Opdateringer?</id><BR></DIV>
+<id id=x36>Siden Opdateringer er et katalog med programrettelser, opdateringer og forbedringer til Windows og mange programmer, der kører under Windows. Du kan gennemse kataloget, vælge så mange komponenter, du ønsker, og hente og installere dem direkte fra Internettet.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Hvorfor får jeg en meddelelse om, at et ActiveX-objekt på denne side ikke er sikkert?</id><BR></DIV>
+<id id=x38>Denne meddelelse vises, når sikkerhedsindstillingen i Internet Explorer er angivet til Høj. Webstedet for Windows Update fungerer først korrekt, når du har ændret browserens sikkerhedsindstillinger for Internetzonen til Mellem eller lavere. Dette gør du ved at klikke på menuen <b>Funktioner</b> og derefter klikke på <b>Internetindstillinger</b>. Vælg fanen <b>Sikkerhed</b>, og klik derefter på <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Hvad er et ActiveX-objekt?</id><BR></DIV>
+<id id=x41>ActiveX-objekter er genanvendelige softwarekomponenter, der indeholder ActiveX-teknologien. Disse komponenter kan bruges til at føje særlige funktioner, f.eks. animation eller genvejsmenuer, til websider, desktopprogrammer og værktøjer til programudvikling. Windows Update bruger ActiveX-objekter til at undersøge, hvilken type programmer der er installeret på computeren, så du kan få en komplet liste over opdateringer og andre programmer, du kan være interesseret i at hente.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Hvilken opløsning er bedst til visning af webstedet Windows Update?</id><BR></DIV>
+<id id=x43>Websiderne til webstedet Windows Update er udviklet til at blive vist med en skærmopløsning på 800 x 600 eller højere. Hvis du vil angive denne opløsning, skal du klikke på knappen <B>Start</b>, pege på <B>Indstillinger</b> og derefter klikke på <B>Kontrolpanel</b>. Dobbeltklik derefter på ikonet <B>Skærm</b>, og klik på fanen <B>Indstillinger</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Overføres oplysninger om min computer til Microsoft?
+</id><BR></DIV>
+<id id=x45>Nej. Hver gang du besøger kataloget Opdateringer, udføres en kontrol, der undersøger, om der er opdateringer til computeren. Denne kontrol udføres lokalt på computeren for at bevare hemmeligholdelsen og sikkerheden af dine data, og der sendes ingen oplysninger til Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Hvordan sender jeg feedback til Windows Update-teamet?</id><BR></DIV>
+<id id=x47>Du kan sende feedback om dette websted til Windows Update-teamet ved at klikke på <B>Skriv til os</B> og derefter klikke på <B>Windows Update</B> på den sorte værktøjslinje øverst på hver side.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Når en ny sikkerhedsbulletin er tilgængelig på webstedet <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>.
+(dette websted er på engelsk).
+er den så også tilgængelig i Windows Update?</id><BR></DIV>
+<id id=x201>Der er ofte en forsinkelse, fra sikkerhedsbulletinen udsendes på webstedet TechNet Security og til sikkerhedsopdateringen bliver tilgængelig i Windows Update. Det er, fordi indholdet føjes til Windows Update efter et skema. Da Windows Update gør alt for at udsende vigtige sikkerhedsopdateringer så hurtigt som muligt, skal nyt indhold afprøves og bekræftes for at sikre, at Windows Update kun tilbyder de opdateringer, du har brug for til computeren. Opdateringer til understøttede produkter vises typisk i Windows Update fra få dage til få uger efter, de annonceres på webstedet for TechNet. Hvis du ved, at en bestemt version af en opdatering gælder for din computer, og du ikke vil vente, indtil du kan hente den fra Windows Update, kan du hente opdateringen direkte på sikkerhedsbulletinens webside. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Hvilke operativsystemer og programmer understøttes af Windows Update?</id><BR></DIV>
+<id id=x203>Windows Update tilbyder sikkerhedsopdateringer, der gælder for Windows 98, Windows 98 Second Edition, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0) og Internet Explorer. Du får dog kun vist de opdateringer, der gælder for din computer. Visse serveroperativsystemer og serverbaserede programmer understøttes ikke af Windows Update. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Det nævnes, at visse serverprodukter ikke understøttes. Hvilke serverprodukter understøttes ikke?</id><BR></DIV>
+<id id=x205>Windows Update startede som et websted med opdateringer til Windows-kunders hjemme-pc'er. Windows Update er med tiden udvidet til at omfatte opdateringer, der dækker visse serverprodukter, f.eks. IIS, som nu bruges mere og mere i private hjem. Sikkerhedsopdateringer, der er beregnet til serverprodukter som Windows-domænecontrollere, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server osv., understøttes ikke i Windows Update. Kunder, som bruger disse produkter, kan se sikkerhedsbulletinen på webstedet <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security </a> for at få oplysninger om, hvor opdateringer til disse produkter kan hentes.
+Dette websted er på engelsk.
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Har Windows Update altid leveret sikkerhedsrettelser og andre opdateringer til Internet Information Server 4.0 (IIS 4.0) og Internet Information Services 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>Nej. Den 23. maj 2001 udgav Windows Update for første gang en samlet pakke med vigtige opdateringer til IIS 5.0. Da denne pakke ikke omfatter alle de IIS-opdateringer, der til dato er udsendt, får du en kombination af de seneste rettelser, der er udsendt mellem marts 2000 og nu. Opdateringer, der er udsendt inden marts 2000, finder du på <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet page for Windows Web services (IIS)</a>.
+Dette websted er på engelsk.
+Når der kommer nye sikkerhedsrettelser eller andre vigtige opdateringer til IIS, erstattes denne pakke med en ny pakke, som omfatter både nye opdateringer og alle opdateringerne i den forrige pakke. På denne måde ved du, uanset hvor ofte du besøger Windows Update, at du altid får de seneste opdateringer til IIS-produkterne.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Hvor kan jeg få oplysninger om alle sikkerhedsrelaterede oplysninger?</id><BR></DIV>
+<id id=x209>Du kan få vist alle sikkerhedsbulletiner på webstedet for <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>. Du kan også abonnere på <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new">Microsoft Security Notification Service</a> og modtage e-mail-meddelelser om de sikkerhedsbulletiner, der er udsendt for nylig.
+Disse websteder er på engelsk.
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/danmark/info/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Alle rettigheder forbeholdes. Vilkår for anvendelse.</id></A><BR></CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,311 @@
+<html>
+<BUILD Type=rc Number=1150.01 date=Sat 10/11/2003 >
+<head>
+<title>Windows Update</title>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style>
+BODY{
+font-family:verdana,arial,helvetica;
+font-size: 8pt;
+color: black;
+}
+.lnk{
+color:white;
+font-size:7pt;
+font-family:verdana,arial,helvetica;
+font-weight: bold;
+letter-spacing:0pt;
+text-decoration:none;
+cursor:hand;
+}
+.BLK{
+BACKGROUND-COLOR: #ffffff
+}
+.bar{
+font-size:7pt;
+font-family:verdana,arial,helvetica;
+color:black;
+background-color:black;
+cursor:default;
+}
+.PU{
+z-index:9;
+text-decoration:none;
+padding-top:12;
+padding-left:9;
+padding-bottom:0;
+position:absolute;
+top:0;
+background-color:black;
+}
+.mi	{
+z-index:9;
+margin-bottom:2;
+margin-top:3;
+padding-top:0;
+position:relative;
+top:-7
+}
+A.mw{
+z-index:9;
+color: white;
+font-size:7.5pt;
+font-family:verdana,arial,helvetica;
+font-weight:bold;
+text-decoration:none;
+padding:9;
+}
+A:hover.mw {color: #0088ff;}
+.tdRTL	{
+ padding-right:	20px;
+ }
+</style>
+<SCRIPT Language="JavaScript">
+if (top.g_bIsWinUpdate != true)
+{
+ top.location.replace("../../../../default.htm")
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+var nChunk, timer
+var GblReady = false;
+var szHTML = "";
+function W(txt){
+ szHTML = szHTML.concat(txt);
+}
+function HL(M){
+M.style.color="#0088ff"
+window.event.cancelBubble=true
+}
+function UnHL(M){
+M.style.color="#ffffff"
+window.event.cancelBubble=true
+}
+function doM(thisid, x){
+	if (GblReady == false)
+ return false;
+	var thisMenu=document.all(thisid)
+	if (thisMenu==AMenu){
+ hideM()
+ window.event.cancelBubble=true
+ return false
+	}
+	if(AMenu != null)AMenu.style.display="none"
+	var DocWidth=document.body.clientWidth
+	var PopupWidth=thisMenu.offsetWidth
+	if(x > 0) {
+ x = DocWidth - x
+	}
+	else {
+ var thisSpan=document.all("Span" + thisid)
+ x = thisSpan.offsetLeft - 9
+	}
+	if((x + PopupWidth) > DocWidth) {
+ x = DocWidth - PopupWidth
+	}
+	AMenu=thisMenu
+	thisMenu.style.left=x
+	thisMenu.style.top=thisMenu.vpos
+	thisMenu.style.clip="rect(0 0 0 0)"
+	thisMenu.style.display="block"
+	nChunk=25
+	showM()
+}
+function showM(){
+	if (GblReady == false)
+ return false;
+	AMenu.style.clip="rect(" + 5 + "% " + 100 + "% " + "100% 0)"
+	nChunk += 25
+	if(nChunk<=100){
+	showM()
+	}else{
+	return false;
+	}
+}
+function hideM(){
+	if (GblReady == false)
+ return false;
+if(AMenu.id != "HomeMenu") {
+	AMenu.style.display="none"
+	AMenu=HomeMenu
+	document.location.href = "#Dum"
+}
+window.event.cancelBubble=true
+}
+function keepM(){
+	window.event.cancelBubble=true
+}
+function WM(I,hght) {
+W("<SPAN ID=" + I + " class=PU onMouseover='keepM();' STYLE='width:1%;height:")
+if(hght==1){
+	W("18' vpos=40>")
+}else{
+	if(hght==2){
+ W("24' vpos=23>")
+	}else{
+ W("30' vpos=3>")
+	}
+}
+}
+function WI(URL,Title,endSpan,ti) {
+W("<p CLASS=mi><A CLASS=mw HREF=\"javascript:Spawn('" + URL + "')\" TABINDEX=" + ti + "><nobr>" + Title + "&nbsp;&nbsp;</nobr></A></p>")
+if(endSpan == 1)W("</SPAN>")
+}
+function WX(nam,txt,ti) {
+W("<A HREF='javascript:doM(\"" + nam + "\",0)' TABINDEX=" + ti + "><SPAN STYLE='font-size:" + "7pt" + ";' ID=Span" + nam + " CLASS=lnk onMouseOver='HL(this);' onMouseout='UnHL(this);'>")
+W(txt + "</SPAN></A>")
+W("<IMG ID=ix1 SRC='images/ts.gif' ALT='' HEIGHT=1 WIDTH=" + "30" + ">")
+}
+function Spawn(TheURL) {
+	var ObjWindow
+	window.cancelBubble=true
+	ObjWindow = window.open(TheURL,"Links","status=no,width=600,height=400,top=30px,left=30px,scrollbars=1,resizable=1,toolbar=yes,menubar=yes");
+	ObjWindow.focus
+}
+</script>
+</head>
+<body OnBeforeUnload="HideWaitDialog()" OnLoad="javascript:GblReady=true;" BGCOLOR="white" TOPMARGIN="0" LEFTMARGIN="0" BGCOLOR="#ffffff" LINK="#00319c" VLINK="#00319c" ALINK="#00319c">
+<a NAME="Dum">
+<table id=tab1 BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="BACKGROUND-COLOR: #000000;COLOR: #000000;CURSOR: Default;FONT-FAMILY: Verdana,Arial,Helvetica;FONT-SIZE: 7pt" WIDTH="100%">
+<tr>
+<td id=td1 ALIGN="LEFT" onMouseover="hideM();" CLASS="BLK" VALIGN="TOP" WIDTH="140"><IMG ID=ix2 ALT="Windows Update" BORDER="0" HEIGHT="59" SRC="Images/wupdate.png" WIDTH="493"></td>
+<td id=td3 ALIGN="LEFT" onMouseover="hideM();" CLASS="BLK" VALIGN="TOP" WIDTH="297">
+<iframe STYLE="position:absolute;top:0;left:290;" SRC="blank.htm" FRAMEBORDER="0" HEIGHT="18" WIDTH="75" TABINDEX="-1" NAME="IFrmProductUpdates" SCROLLING="NO"></iframe>
+</td>
+<td id=td8 ALIGN="RIGHT" onMouseover="hideM();" CLASS="BLK" VALIGN="MIDDLE" WIDTH="*">
+<IMG ID=ix7 ALT="Informazioni su Windows Update" BORDER="0" OnClick="JavaScript:DisplayAbout('about.htm')" SRC="Images/About.gif" WIDTH="15" HEIGHT="15" Style="margin:5;"></td>
+<td id=td9 ALIGN="LEFT" onMouseover="hideM();" CLASS="BLK" VALIGN="MIDDLE" WIDTH="35" STYLE="text-decoration:underline;color:#00319c;cursor:hand">
+<a HREF="JavaScript:DisplayAbout('about.htm')" TABINDEX="19"><nobr><ID ID=x2>informazioni su <br>Windows<br>Update</ID></nobr></a></td>
+<td id=td10 ALIGN="LEFT" CLASS="BLK" WIDTH="10"><IMG ID=ix8 SRC="images/ts.gif" ALT="" WIDTH="10"></td>
+</tr>
+</table>
+<table CLASS="bar" BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="BLACK" WIDTH="100%">
+<tr NOWRAP><td VALIGN="middle">
+<nobr><IMG ID=ix9 SRC="images/ts.gif" ALT="" HEIGHT="5" WIDTH="10" ALIGN="left">
+<script LANGUAGE="JavaScript">
+;
+;
+;
+;
+;
+; //can range from 5pt to 7pt without additional coding changes
+WX("SearchMenu","CERCA","1");
+WX("WriteMenu","SCRIVICI","3");
+WX("SupportMenu","SUPPORTO TECNICO","6");
+WX("WinNewsMenu","SITI&nbsp;WINDOWS","9");
+document.write(szHTML);
+szHTML="";
+</script>
+<script LANGUAGE="VBScript">
+Dim ObjWindow, ObjWaitWindow
+function DisplayAbout(strUrl)
+	On Error Resume Next
+	Set ObjWindow = window.open(strUrl,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+	ObjWindow.focus()
+end function
+Function ShowWaitDialog()
+ On Error Resume Next
+ if (InStr(TypeName(ObjWaitWindow),"HTMLWindow") = 0) AND (Parent.GblProductSync = "ProductUpdates") Then
+ Dim strFeatures
+ Dim nWinTop
+ nWinTop = (screen.availHeight/2) - 100
+ if nWinTop < 0 Then nWinTop = 0
+ Dim nWinLeft
+ nWinLeft = (screen.availWidth/2) - 300
+ if nWinLeft < 0 Then nWinLeft = 0
+ strFeatures = "width=600,height=200,top=" & nWinTop & ",left=" & nWinLeft & ",location=0,menubar=0,toolbar=0,resizable=0"
+ Set ObjWaitWindow = window.open("animDialog.htm","",strFeatures)
+	End If
+	ObjWaitWindow.focus()
+	Set ShowWaitDialog = ObjWaitWindow
+End Function
+Sub HideWaitDialog()
+ On Error Resume Next
+ If IsObject(ObjWaitWindow) Then ObjWaitWindow.Close()
+ Set ObjWaitWindow = Nothing
+End Sub
+</script>
+</nobr></td>
+<td VALIGN="top" ALIGN="RIGHT" ID="ToolbarPart2">
+<nobr>
+<IMG ID=ix10 height=0 width=0 src="images/GO_TO_MSN.COM-blue.gif" ALT="The Microsoft Network">
+<IMG ID=ix11 height=0 width=0 src="images/microsoft-nobar-blue.gif" ALT="Microsoft.">
+<a HREF="javascript:doM('MSNMenu', 200)" TABINDEX="11"><span ID="SpanMSNMenu" VALIGN="top">
+<IMG ALT="The Microsoft Network." id=msnstart SRC="images/GO_TO_MSN.COM.gif" onMouseover="javascript:msnstart.src='images/GO_TO_MSN.COM-blue.gif'" onMouseout="javascript:msnstart.src='images/GO_TO_MSN.COM.gif'" ALT="The Microsoft Network" VALIGN="top" BORDER="0" WIDTH="96" HEIGHT="18">
+</span></a>&nbsp;
+<a HREF="javascript:doM('MsftMenu', 180)" TABINDEX="15">
+<span ID="SpanMsftMenu">
+<img ALT="Microsoft." id=msnobar SRC="images/microsoft-nobar.gif" onMouseover="javascript:msnobar.src='images/microsoft-nobar-blue.gif'" onMouseout="javascript:msnobar.src='images/microsoft-nobar.gif'"ALT="Microsoft" VALIGN="middle" BORDER="0" WIDTH="88" HEIGHT="20">
+</span></a>
+</nobr></td>
+</tr>
+</table>
+<script LANGUAGE="javascript"><!--
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+W("<SPAN ID='HomeMenu' STYLE='display:none;position:absolute;top:0;'></SPAN>")
+WM("SearchMenu",1)
+WI("http://search.microsoft.com/italy/","Microsoft",1,"2")
+WM("WriteMenu",2)
+WI("http://register.microsoft.com/regwiz/it/wiz143.asp?FU=http://windowsupdate.microsoft.com/&CU=http://windowsupdate.microsoft.com/","Windows Update",0,"4")
+WI("http://register.microsoft.com/contactus/contactus.asp?LID=it","Microsoft",1,"5")
+WM("SupportMenu",2)
+WI("http://www.microsoft.com/italy/support/","Supporto tecnico di Windows Update",0,"7")
+WI("http://support.microsoft.com/directory/","Supporto tecnico dei prodotti Microsoft",1,"8")
+WM("WinNewsMenu",1)
+WI("http://www.microsoft.com/italy/windows/","Famiglia di prodotti Windows",1,"10")
+WM("MSNMenu",2)
+WI("http://www.msn.it","www.msn.com",0,"12")
+WI("http://www.hotmail.com","HotMail",1,"13")
+WM("MsftMenu",3)
+WI("http://www.microsoft.com/italy/","Home page",0,"16")
+WI("http://www.microsoft.com/italy/prodotti/","Prodotti Microsoft",0,"17")
+WI("http://register.microsoft.com/regwiz/forms/pic.asp?LID=it&","Centro informazioni personali",1,"18")
+W("<SPAN CLASS=PU STYLE='display:none'>&nbsp;</SPAN>")
+document.write(szHTML);
+var AMenu=HomeMenu;
+document.onmouseover=hideM;
+document.onclick=hideM;
+SearchMenu.style.display="none";
+SupportMenu.style.display="none";
+WinNewsMenu.style.display="none";
+MSNMenu.style.display="none";
+MsftMenu.style.display="none";
+WriteMenu.style.display="none";
+document.all("IFrmProductUpdates").style.visibility=""
+function WuMsgBox(message, buttons, title, height, width)
+{
+	var dlgArgs = new Array;
+	dlgArgs[0] = message;
+	dlgArgs[1] = buttons;
+	dlgArgs[2] = title;
+	dlgArgs[3] = document.defaultCharset;
+	return showModalDialog("dlgtemplate.htm",dlgArgs,"dialogHeight:" + height + ";dialogWidth:" + width + ";center:yes;status:no;help:no;");
+}
+--></script>
+<IMG SRC="images/icon2.gif" style="display:none;">
+</body>
+</html>

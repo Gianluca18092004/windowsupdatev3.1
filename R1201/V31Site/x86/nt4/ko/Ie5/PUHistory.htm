@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+<TITLE></TITLE>
+<STYLE type="text/css">
+BODY {
+	font-family:"굴림";
+	font-size:9pt;
+}
+.def {
+	font-family:"굴림";
+	font-size:9pt;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: 굴림;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+A {
+color:#00319C;
+}
+</STYLE>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim ObjFrame_Reference
+Set ObjFrame_Reference = Parent.Frames("FrmToolbar").Document.Frames(0)
+Sub DisplayEvents()
+ Dim arrHistory
+ arrHistory = ObjFrame_Reference.WUV3IS.GetInstallHistory()
+	if UBound(arrHistory) = -1 Then
+ document.write("<SPAN STYLE='color:#00319C;'>설치 내역이 없습니다.</SPAN>")
+	Else
+ document.write("<TABLE WIDTH=100% CLASS=def CELLPADDING=4 CELLSPACING=0 BORDER=0>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=white><IMG SRC='images/ts.gif' ALT='' HEIGHT=4></TD></TR>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=#00319C><IMG SRC='images/ts.gif' ALT='' HEIGHT=1></TD></TR>")
+ document.write("<TR><TD COLSPAN=3 BGCOLOR=white><IMG SRC='images/ts.gif' ALT='' HEIGHT=4></TD></TR>")
+ document.write("</TABLE>")
+	For i = 0 to UBound(arrHistory)
+ document.write("<TABLE WIDTH=100% CLASS=def CELLPADDING=4 CELLSPACING=0 BORDER=0>")
+ document.write("<tr><td NOWRAP><b>" & arrHistory(i,3) & "</b> - version " & arrHistory(i,4) & " - " & GetOperationType(arrHistory(i,5)) & "</td></tr>")
+ document.write("<tr><td NOWRAP>"& arrHistory(i,2) & " " & arrHistory(i,1) & " : " & arrHistory(i,0) & "</td></tr><br>")
+ document.write("</TABLE>")
+ Next
+	End If
+End Sub
+Function GetOperationType(nFlags)
+	If (nFlags AND 4096) <> 0 Then
+ If (nFlags AND 1) <> 0 Then
+ GetOperationType = "설치하는 데 실패했습니다."
+ ElseIf (nFlags AND 2) <> 0 Then
+ GetOperationType = "설치를 시작했습니다."
+ Else
+ GetOperationType = "이(가) 제대로 설치되었습니다."
+ End If
+	ElseIf (nFlags AND 8192) <> 0 Then
+ If (nFlags AND 1) <> 0 Then
+ GetOperationType = "제거하는데 실패했습니다."
+ ElseIf (nFlags AND 2) <> 0 Then
+ GetOperationType = "제거를 시작했습니다."
+ Else
+ GetOperationType = "이(가) 제대로 제거되지 않았습니다."
+ End If
+	End If
+End Function
+</SCRIPT>
+</HEAD>
+<BODY ID=bdy BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=0 TOPMARGIN=10>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="소프트웨어 선택"></TD>
+	<TD>&nbsp;</TD>
+	<TD VALIGN=bottom ROWSPAN=2>
+ <SPAN id=sp1 CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x1>제품 업데이트</ID></SPAN><br>
+ <SPAN id=sp2 CLASS=def STYLE="font-weight:bold;padding-bottom:30px;font-size:22pt;color:#00319C"><ID ID=x2>설치 내역</ID></SPAN></TD>
+ </TR>
+</TABLE>
+<TABLE WIDTH=350 CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD id=td1 WIDTH=175 ALIGN=LEFT VALIGN=top>
+ <A target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates" STYLE="text-decoration: none; color: white;"><SPAN id=spnx1 LANGUAGE='VBScript'
+ CLASS='ButtonB'
+ STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
+ <A STYLE="text-decoration: none; color: white;" target="HFrame" HREF="HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates"><ID ID=x3>제품 카탈로그 보기</ID></A>
+ <BR></SPAN></A></TD>
+	<TD id=td3 WIDTH=175 ALIGN=LEFT VALIGN=top>
+ <SPAN id=spnx2 LANGUAGE='VBScript'
+ CLASS='ButtonG'
+ STYLE='WIDTH: 170px; HEIGHT: 17px; MARGIN-TOP: 3px;'>
+ <A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x4>설치 내역</ID></A>
+ <BR></SPAN></TD></TR>
+ <TR>
+	<TD id=td5 ALIGN=LEFT VALIGN=top STYLE="color: black; font-size: 9pt;">
+ <ID ID=x5>사용 가능한<BR>소프트웨어 목록 확인</ID>
+	</TD>
+	<TD id=td6 ALIGN=LEFT VALIGN=top STYLE="color: black; font-size: 9pt;">
+ <ID ID=x6>지금까지 설치한 제품 확인</ID></TD>
+ </TR>
+</TABLE>
+<SCRIPT language="VBScript">
+	DisplayEvents()
+</SCRIPT>
+<BR><BR><BR><BR>
+<CENTER>
+<A target="CopyRight" HREF="http://www.microsoft.com/korea/misc/cpyright.htm"><ID ID=x7>(c) 2022 Microsoft Corporation. All rights reserved. 사용권에 대한 고지 사항</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>Não é possível exibir a página</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>O catálogo de produtos não pode ser carregado porque não há suporte do Windows Update para o idioma de seu sistema operacional."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Erro ao carregar o catálogo de produtos. Possíveis causas: erro de rede ou arquivo corrompido. Consulte o artigo <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a> no Microsoft Knowledge Base (KB) para obter mais informações a fim de resolver esse problema.</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>Não é possível exibir a página</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>Tente novamente</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>Você chegou a esta página por um dos seguintes motivos:</ID>
+<OL>
+	<LI><ID ID=x6>As atualizações dos controles e/ou arquitetura do site Windows Update podem ter causado a exibição dessa mensagem de erro. Para obter mais informações, leia o artigo <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A> do Microsoft Knowledge Base (KB).</ID>
+	<LI><ID ID=x7>Você optou por não fazer o download dos controles de software ou ocorreu um problema durante o download dos controles. Nesse caso, uma grande parte do site Windows Update não estará disponível para você. Se desejar fazer o download dos controles agora, clique no link <b>Tente novamente</b>, acima.</ID>
+	<LI><ID ID=x8>Você não tem privilégios administrativos para este computador. Para usar o Windows Update, contate o administrador do sistema para atualizar o software.</ID>
+	<LI><ID ID=x9>Talvez você não tenha limpado o cache do navegador. Para obter mais informações, leia o artigo <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a> do Microsoft KB.</ID>
+	<LI><ID ID=x10>Talvez você não tenha removido o diretório do Windows Update. Para obter mais informações, leia o artigo a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a> do Microsoft KB.</ID>
+	<LI><ID ID=x11>Atualizações para o Windows NT&reg; 4.0 Terminal Server Edition não estão disponíveis no site Windows Update. Para obter mais informações, leia o artigo da Microsoft Knowledge Base (KB) <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q323564&" target="_new">Q323564</a>.</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/brasil/misc/cpyright.htm"><ID ID="cpyright">(c) 2022 Microsoft Corporation. Todos os direitos reservados. Termos de uso.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

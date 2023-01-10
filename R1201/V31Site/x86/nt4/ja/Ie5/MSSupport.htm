@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft サポート情報</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: ＭＳ Ｐゴシック;
+ FONT-SIZE: 10pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: ＭＳ Ｐゴシック;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: ＭＳ Ｐゴシック;
+ FONT-SIZE: 10pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: ＭＳ Ｐゴシック;
+ FONT-SIZE: 10pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: ＭＳ Ｐゴシック;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 10pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: ＭＳ Ｐゴシック;
+FONT-SIZE: 10pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>サポート情報</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Windows Update Web サイトに問題がある場合は、オンライン サポートをご利用いただけます。次のオプションのいずれかを選択してください。</id>
+<P>
+<id id=x6>次のサポート オプションを選択する際に、Microsoft "オンライン プロファイル" の作成が要求される場合があります。オンライン プロファイルとは、Microsoft からインターネットでのサポートを受けるためのチケットにあたるものです。</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>ソフトウェアのアップデートに対するサポート :</id></A></STRONG> <id id=x80>Windows Update で提供されているソフトウェアのアップデートに関するサポート情報を参照できます。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>デバイス ドライバに対するサポート :</id></A></STRONG> <id id=x800>Windows Update で提供されているデバイス ドライバのサポート情報を参照できます。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>よく寄せられる質問:</id></A></STRONG> <id id=x8>Windows Update に関する質問がある場合は、まず質問への回答の一覧を確認してください。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>確認されている問題:</id></A></STRONG> <id id=x10>Windows Update サイトに現在用意されている、「確認されている問題」の一覧を参照することもできます。</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/ja/wiz143.asp"><id id=x11>フィードバック:</id></A></STRONG> <id id=x12>クイック調査のフォームを使ってコメントと提案をご記入ください。</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>Windows Update について</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>このアイコンは、このサイトの全ページで最上部に表示されます。アイコンをクリックすると、Windows Update サイトの最適な使用方法に関する説明が表示されます。</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>ソフトウェアのアップデートに対するサポート</id></DIV>
+<A HREF="http://www.microsoft.com/japan/support/wupd/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"></SPAN></A>ソフトウェアのアップデートに対するサポートについては、<a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a> で各種オンライン サポート サイトを参照してください。MSN 製品については、<a href="http://help.msn.co.jp/" target=_blank>http://help.msn.co.jp/</a> を参照してください。サポートの内容によっては、料金が必要になる可能性があります。詳細については、ページの内容を確認してください。
+<P>
+日本以外の地域にお住まいの場合は、お住まいの地域のサポート情報を参照してください。 最新の情報については、<a href="http://support.microsoft.com/directory/" target=_blank>サポート技術情報のサイト</a> を表示して、[Worldwide サポート情報] の中から地域を選択してください。お住まいの地域に Microsoft の支社がない場合は、Microsoft 製品を購入した販売元に連絡してください。
+<P>
+弊社によるサポート サービスの価格、およびサービスを受けるための条件は、予告なしに変更する可能性があります。
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">ソフトウェアのアップデートをアンインストールするには<BR></DIV>
+一部のアップデートは、Windows Update サイトの [製品の更新] ページを使ってアンインストールできます。
+<ol>
+<li>[製品の更新] ページに移動します。
+<li>メッセージが表示される場合は、[はい] をクリックします。
+<li>[製品の更新] ページが表示されたら、最上部の [すべて表示] ボタンをクリックします。
+ <li>アップデートをアンインストールできる場合は、 アップデートの説明の横に [アンインストール] ボタンが表示されます。
+<li>アンインストールするアップデートの説明の横に表示されている [アンインストール] をクリックします。
+</ol>
+[製品の更新] からアンインストールできないアップデートは、ほかの方法を使ってアンインストールできる可能性があります。アンインストールに関する補足情報については、各アップデートの [最初にお読みください] ページを参照してください。
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>デバイス ドライバのサポート</id></DIV>
+<A HREF="http://www.microsoft.com/japan/support/wupd/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"></SPAN></A>ドライバに対するサポートについては、<a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> でサポート オプションの一覧を参照してください。サポートの内容によっては、料金が必要になる可能性があります。詳細については、ページの内容を確認してください。
+<P>
+日本以外の地域にお住まいの場合は、お住まいの地域のサポート情報を参照してください。最新の情報については、<a href="http://support.microsoft.com/directory/" target=_blank>サポート技術情報のサイト</a> を表示して、[Worldwide サポート情報] を選択してください。お住まいの地域に Microsoft の支社がない場合は、Microsoft 製品を購入した販売元に連絡してください。
+<P>
+弊社によるサポート サービスの価格、およびサービスを受けるための条件は、予告なしに変更する可能性があります。
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">デバイス ドライバをアンインストールするには</DIV>
+<b>重要</b> Windows Update からダウンロードしたドライバのアップデートをアンインストールするには、デバイスに付属するオリジナルのドライバを再インストールできることが必要です。ドライバまたはドライバのアップデートを、オリジナルのドライバに置き換えずに削除すると、ハードウェア デバイスが停止します。
+<p>デバイス マネージャを使って、お使いのコンピュータからドライバのアップデートを削除できます。
+<ol>
+<li>デスクトップの [マイ コンピュータ] アイコンを右クリックします。
+<li>[プロパティ] をクリックし、[デバイス マネージャ] タブをクリックします。
+<li>ハードウェア デバイスを一度だけクリックして選択し、[プロパティ] をクリックします。
+<li>[ドライバ] タブをクリックし、[ドライバの更新] をクリックします。
+<li>[デバイス ドライバのアップグレード] ウィザードが開始します。[ドライバの場所を指定する (詳しい知識のある方向け)] を選択して、[次へ] をクリックします。
+<li>[このデバイスで認識済みのドライバの一覧を表示し、使用するドライバを選択する] を選択して、[次へ] をクリックします。
+<li>[ディスク使用] をクリックし、[参照] をクリックして、インストールするドライバ用の .inf ファイルの場所を指定します。この操作によって、Windows Update から入手したドライバは削除され、ハードウェア デバイスのオリジナルのドライバに置き換わります。
+</ol>
+<b>注意</b> Windows Update に戻ると、アンインストールしたのと同じドライバが利用可能と表示される可能性があります。このドライバは、インストールしないでください。Windows Update から入手したドライバのアップデートをアンインストールする手順について、質問または問題がある場合は、サポート情報のリンクを参照してサポートまでご連絡ください。
+</p>
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>よく寄せられる質問</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Windows Update とはどのようなものですか ?</id><BR></DIV>
+<id id=x32>Windows Update は Windows のオンライン版拡張機能で、お使いのコンピュータを常に最新の状態にするように設計されています。Windows Update には、"製品の更新" と呼ばれるカタログがあります。このカタログには、システム ファイル、デバイス ドライバ、サービス パック、Windows の新機能などの新しい製品拡張機能が含まれています。ここでは、これらの拡張機能の中で、お使いのコンピュータに必要なもののダウンロードをお勧めしています。なお、ハードウェア製造元によっては、お使いの環境により適したデバイス用のモジュールを提供している場合があります。事前にハードウェア製造元にご確認ください。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>[製品の更新] とはどのようなものですか?</id><BR></DIV>
+<id id=x36>[製品の更新] ページは、Windows および Windows 上で動作する多くのプログラムに対する修正プログラム、アップデート、および追加コンポーネントのカタログになっています。カタログを見て、好きなだけコンポーネントを選択し、そのコンポーネントを Web からコンピュータに直接ダウンロードおよびインストールすることができます。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>このページの ActiveX コントロールは安全ではないというメッセージが表示されるのはどうしてですか ?</id><BR></DIV>
+<id id=x38>Internet Explorer のセキュリティ レベルが [高] に設定されていると、このメッセージが表示されます。Windows Update サイトが適切に動作するには、ブラウザのセキュリティ レベルを [中] または [低] に設定する必要があります。セキュリティ レベルを設定するには、[ツール] メニューの [インターネット オプション] をクリックし、次に [セキュリティ] タブの [インターネット] をクリックします。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>ActiveX コントロールとはどのようなものですか?</id><BR></DIV>
+<id id=x41>ActiveX コントロールは、ActiveX 技術を取り入れた再利用可能なソフトウェア コンポーネントです。このコンポーネントは、アニメーションやポップアップ メニューなどの特殊な機能を Web サイト、デスクトップ アプリケーション、ソフトウェア開発ツールに追加するために使用されます。Windows Update では、ダウンロードできるアップデートおよびほかのソフトウェアの正確な一覧を表示するために、ActiveX コントロールを使用して、コンピュータにインストールされているソフトウェアを調べます。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Windows Update サイトを表示するのに最適な解像度はどれくらいですか?</id><BR></DIV>
+<id id=x43>Windows Update サイトの Web ページは、800 x 600 ピクセル以上で表示するように設計されています。解像度を設定するには、[スタート] メニューの [設定] をポイントし、次に [コントロール パネル] をクリックします。[画面] アイコンをダブルクリックし、[設定] タブをクリックします。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>コンピュータ内の情報が Microsoft に送信されるのですか?
+</id><BR></DIV>
+<id id=x45>いいえ。[製品の更新] カタログを表示するとき、Windows Update はお使いのコンピュータに必要なアップデートをチェックします。このチェックは、コンピュータ上でローカルに行われ、プライバシーとデータの安全を保証しています。 Microsoft へは、何の情報も送信されません。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Windows Update チームにフィードバックを送信するにはどうすればよいですか?</id><BR></DIV>
+<id id=x47>このサイトに関するフィードバックを Windows Update チームにお送りいただく場合は、各ページの一番上にある黒いツール バーの [フィードバック] をクリックし、[Windows Update] をクリックします。なお、お問い合わせについて、個別にお答えはしておりませんのでご了承下さい。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200><a href="http://www.microsoft.com/japan/technet/security/" target="_new">TechNet セキュリティ センター</a>
+&nbsp;
+に掲載されている修正プログラムは、Windows Update からも利用できるのでしょうか?</id><BR></DIV>
+<id id=x201>セキュリティ情報のページに修正プログラムが掲載されてから、その修正プログラムを Windows Update で利用できるようになるまでには、1 週間程度の期間をいただくことがよくあります。これは、Windows Update へのコンテンツの追加を、1 週間単位で行っているためです。Windows Update には、重要な修正プログラムをできるだけ早くリリースするように努めていますが、コンテンツを追加するには、それぞれのコンピュータに適した修正プログラムだけが Windows Update から間違いなく提供できることをテストする必要があります。通常は、サポート対象製品の修正プログラムが Windows Update に掲載されるまでに、セキュリティ情報のページでアナウンスされてから数日、または数週間かかります。お使いのコンピュータに使用できる修正プログラムのバージョンがわかっていて、Windows Update から入手できるようになるのを待てない場合は、セキュリティ情報の Web ページから修正プログラムを直接ダウンロードしてください。 </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Windows Update は、どのオペレーティング システムやプログラムをサポートしていますか?</id><BR></DIV>
+<id id=x203>Windows Update は、Windows 98、Windows 98 Second Edition、Windows Millennium Edition (以下、Windows Me)、Windows NT 4.0、Windows 2000、Internet Information Server 4.0 (以下、IIS 4.0)、Internet Information Services 5.0 (以下、IIS 5.0)、および Internet Explorer に使用できる修正プログラムを提供しています。ただし、表示される修正プログラムは、使用中のコンピュータに適用できるものだけです。オペレーティング システムのサーバー製品、およびサーバー製品用のプログラムは、Windows Update ではサポートしていません。 </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>サーバー製品にはサポートしていないものがあるとのことですが、どの製品ですか?</id><BR></DIV>
+<id id=x205>Windows Update は、ホーム コンピュータ用 Windows のユーザーを対象に、修正プログラムを提供するのが目的で始まりました。しかし時間の経過とともに、家庭でも使用されることの多い一部のサーバー製品 (IIS など) の修正プログラムも、Windows Update から提供するようになりました。Windows ドメイン コントローラ、Microsoft Exchange Server、Microsoft SQL Server、Microsoft ISA Server など、特定のサーバー製品に対する修正プログラムは、Windows Update では提供していません。これらの製品をご利用の方は、<a href="http://www.microsoft.com/japan/technet/security/" target="_new">TechNet セキュリティ センター</a>に掲載されているセキュリティ情報を参照して、各製品用の修正プログラムをダウンロードしてください。
+&nbsp;
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Windows Update では、Internet Information Server 4.0 (以下、IIS 4.0)、および Internet Information Services 5.0 (以下、IIS 5.0) 用の修正プログラムやその他のアップデートをすべて提供してきたのでしょうか?</id><BR></DIV>
+<id id=x207>いいえ。Windows Update では、2001 年 5 月 23 日に初めて、IIS 5.0 用の修正プログラムの累積的パッケージを提供しました。このパッケージには、2000 年 3 月からパッケージのリリース日までの修正プログラムが含まれていますが、IIS 用のすべての修正プログラムが含まれているわけではありません。2000 年 3 月以前にリリースされた修正プログラムについては、<a href="http://www.microsoft.com/japan/technet/iis/default.asp" target="_new">TechNet Online - IIS</a> を参照してください。
+&nbsp;
+IIS 用の修正プログラムまたは重要な更新が作成されると、このパッケージは新しいパッケージに置き換えられます。新しいパッケージには、新しく追加された修正プログラムと、それまでのパッケージに含まれていたすべての修正プログラムが含まれています。そのため、Windows Update をどのくらいの間隔で利用していても、Windows Update を利用した時点での最新の IIS 用修正プログラムを、いつでも入手できます。</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>すべてのセキュリティ問題の修正プログラムに関する情報はどこで入手できますか?</id><BR></DIV>
+<id id=x209>すべてのセキュリティ情報を参照するには、<a href="http://www.microsoft.com/japan/technet/security/" target="_new">TechNet セキュリティ センター</a>をご利用ください。また、<a href="http://www.microsoft.com/japan/technet/security/bulletin.asp" target="_new">マイクロソフト プロダクト セキュリティ警告サービス</a>に登録すると、最近リリースされたセキュリティに関する警告が電子メールで通知されます。
+&nbsp;
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/japan/info/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. All rights reserved. Terms of Use.</id></A><BR></CENTER>
+</BODY>
+</HTML>

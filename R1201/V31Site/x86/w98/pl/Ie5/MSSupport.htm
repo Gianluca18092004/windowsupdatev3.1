@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<TITLE>Informacje pomocy technicznej firmy Microsoft</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<DIV CLASS="PageTitle"><id id=x2>Informacje pomocy technicznej</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Jeżeli napotykasz problemy podczas pracy w witrynie Windows Update Web, możesz skorzystać z pomocy technicznej online. Wystarczy zaznaczyć jedną z opcji na liście poniżej.</id>
+<P>
+<id id=x6>Po zaznaczeniu niektórych z opcji pomocy technicznej może pojawić się prośba o utworzenie „Profilu online”. Twój „Profil online” będzie służyć jako bilet do internetowej pomocy technicznej firmy Microsoft.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Pomoc techniczna dla aktualizacji oprogramowania:</id></A></STRONG> <id id=x80>przegląd informacji pomocy technicznej na temat aktualizacji produktów, dostępnych w witrynie Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Pomoc techniczna dla sterowników urządzeń:</id></A></STRONG> <id id=x800>przegląd informacji pomocy technicznej na temat sterowników urządzeń, dostępnych w witrynie Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Często zadawane pytania:</id></A></STRONG> <id id=x8>lista odpowiedzi na często zadawane pytania dotyczące witryny Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Znane problemy:</id></A></STRONG> <id id=x10>lista znanych aktualnych problemów związanych z witryną Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/pl/wiz143.asp"><id id=x11>Napisz do nas:</id></A></STRONG> <id id=x12>nasz szybki formularz sondażowy do zamieszczenia komentarzy i sugestii.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>WINDOWS UPDATE - INFORMACJE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Ta ikona pojawia się u góry na wszystkich stronach tej witryny. Kliknij ją, aby dowiedzieć się, jak najlepiej korzystać z witryny Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>POMOC TECHNICZNA DLA AKTUALIZACJI OPROGRAMOWANIA</id></DIV>
+Bezpłatna <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">pomoc techniczna dotycząca witryny Windows Update jest dostępna za pomocą poczty e-mail.</SPAN></A> Można korzystać z niej w przypadku problemów z nawigacją w witrynie, zawartości o złej jakości lub pojawiania się komunikatów z informacją o błędach, jak również w celu uzyskania pomocy dotyczącej pobierania. Inne rodzaje pomocy technicznej, dotyczące na przykład procesu instalacji lub problemów z instalacją, są dostępne poprzez usługi pomocy indywidualnej (Personal Support) lub profesjonalnej (Professional Support) pod adresem <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. Pomoc związana z witryną MSN dostępna jest pod adresem <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. W niektórych wypadkach pobierana jest opłata za pomoc techniczną; szczegółowe informacje można znaleźć w witrynach.
+<P>
+Aby uzyskać informacje o pomocy technicznej poza Stanami Zjednoczonymi i Kanadą, należy skontaktować się z lokalnym oddziałem firmy Microsoft. Aby uzyskać aktualną listę, odwiedź witrynę sieci Web <a href="http://support.microsoft.com/directory/" target=_blank>Support Online</a> i wybierz opcję Worldwide Support. Jeśli na liście nie znajdziesz lokalnego oddziału firmy Microsoft w Twoim kraju, skontaktuj się z przedstawicielem, który dostarczył produkt firmy Microsoft.
+<P>
+Na usługi pomocy technicznej firma Microsoft ustala ceny, terminy oraz warunki, które mogą ulec zmianie bez powiadomienia.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">W jaki sposób mogę odinstalować aktualizacje oprogramowania?<br></DIV>
+Niektóre aktualizacje mogą być odinstalowane ze strony aktualizacji produktów, znajdującej się w witrynie Windows Update:
+<ol>
+<li>Przejdź do strony Aktualizacje produktów.
+<li>Jeśli pojawi się pytanie, kliknij przycisk <B>Tak</B>.
+<li>Po wyświetleniu strony Aktualizacje produktów kliknij przycisk <B>Pokaż zainstalowane aktualizacje</B> znajdujący się u góry strony.
+<li>Jeżeli aktualizacja może być odinstalowana, przycisk <B>Odinstaluj</B> pojawi się z prawej strony jej opisu.
+<li>Kliknij przycisk <b>Odinstaluj</b> umieszczony obok opisu aktualizacji, którą chcesz odinstalować.
+</ol>
+Aktualizacje, których nie można odinstalować ze strony aktualizacji produktów, mogą być odinstalowane w inny sposób. Aby uzyskać dodatkowe informacje związane z dezinstalacją, należy przejść do strony <b>Przeczytaj to najpierw</b>.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>POMOC TECHNICZNA DLA STEROWNIKÓW URZĄDZEŃ</id></DIV>
+Bezpłatna pomoc techniczna na temat instalowania/odinstalowywania jest dostępna za pomocą poczty e-mail w witrynie <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update Site Support</SPAN></A>. Pełna lista opcji pomocy technicznej dotyczących problemów innych niż instalowanie/odinstalowywania sterowników jest dostępna pod adresem <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a>. W niektórych wypadkach pobierana jest opłata za pomoc techniczną; szczegółowe informacje można znaleźć w witrynie.
+<P>
+Aby uzyskać informacje o pomocy technicznej poza Stanami Zjednoczonymi i Kanadą, należy skontaktować się z lokalnym oddziałem firmy Microsoft. Aby uzyskać aktualną listę, odwiedź witrynę sieci Web <a href="http://support.microsoft.com/directory/" target=_blank>Support Online</a> i wybierz opcję Worldwide Support. Jeśli na liście nie znajdziesz lokalnego oddziału firmy Microsoft w Twoim kraju, skontaktuj się z przedstawicielem, który dostarczył produkt firmy Microsoft.
+<P>
+Na usługi pomocy technicznej firma Microsoft ustala ceny, terminy oraz warunki, które mogą ulec zmianie bez powiadomienia.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">W jaki sposób mogę odinstalować aktualizacje sterowników urządzeń?</DIV>
+<b>Ważne</b> Aby przeprowadzić dezinstalację aktualizacji sterownika pobranego z witryny Windows Update, trzeba mieć możliwość ponownej instalacji oryginalnego sterownika dostarczonego z danym urządzeniem. Usunięcie sterownika lub aktualizacji sterownika bez zastąpienia go oryginalnym spowoduje zatrzymanie pracy tego urządzenia.
+<p>Aby usunąć aktualizacje sterowników z tego komputera, należy użyć Menedżera urządzeń:
+<ol>
+<li>Kliknij prawym przyciskiem myszy ikonę <b>Mój komputer</b> na pulpicie komputera.
+<li>Kliknij polecenie <b>Właściwości</b>, a następnie kartę <b>Menedżer urządzeń</b>.
+<li>Kliknij raz, aby wyróżnić urządzenie sprzętowe, a następnie kliknij przycisk <b>Właściwości</b>.
+<li>Kliknij kartę <b>Sterownik</b>, a następnie kliknij przycisk <b>Aktualizuj sterownik</b>.
+<li>Po uruchomieniu Kreatora uaktualnienia sterownika urządzenia, wybierz polecenie <b>Podaj lokalizację sterownika (Zawansowane)</b>, a następnie kliknij przycisk <b>Dalej</b>.
+<li>Zaznacz opcję <b>Wyświetl listę znanych sterowników tego urządzenia, tak aby użytkownik mógł wybrać odpowiedni sterownik</b>, a następnie kliknij przycisk <b>Dalej</b>.
+<li>Kliknij polecenie <b>Z dysku</b>, a następnie kliknij przycisk <b>Przeglądaj</b>, aby zlokalizować plik o rozszerzeniu inf dla sterownika, który został wybrany do zainstalowania (ta czynność spowoduje usunięcie sterownika pobranego z witryny Windows Update i zastąpienie go oryginalnym sterownikiem danego urządzenia).
+</ol>
+<b>Uwaga</b> Po powrocie do rozszerzenia Windows Update może się zdarzyć, że zostanie zaoferowana ponownie ta sama aktualizacja sterownika. Nie instaluj jej. Jeśli masz pytania lub problemy związane z procedurą dezinstalacji aktualizacji sterownika pobranej z witryny Windows Update, skorzystaj z dostarczonych łączy w celu skontaktowania się ze specjalistami pomocy technicznej.
+</p>
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>CZĘSTO ZADAWANE PYTANIA</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Czym jest Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update jest rozszerzeniem typu online systemu Windows, przeznaczonym do wspomagania pracy komputera. W witrynie Windows Update znajduje się centralny katalog o nazwie Aktualizacje produktów, zawierający nowe rozszerzenia produktów, takie jak pliki systemowe, sterowniki urządzeń, dodatki Service Pack i nowe funkcje systemu Windows. Rozszerzenia te są zalecane w zależności od potrzeb konkretnego komputera.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Czym jest katalog Aktualizacje produktów?</id><BR></DIV>
+<id id=x36>Jest to katalog poprawek, aktualizacji i ulepszeń systemu Windows oraz wielu programów pracujących z systemem Windows. Przeglądając katalog, można zaznaczyć dowolną liczbę składników, pobrać je prosto z sieci Web i zainstalować bezpośrednio z sieci na komputerze.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Dlaczego ukazuje się komunikat mówiący, że formant ActiveX na tej stronie nie jest bezpieczny?</id><BR></DIV>
+<id id=x38>Ten komunikat jest wyświetlany wtedy, kiedy poziom zabezpieczeń komputera jest ustawiony jako Wysoki. Aby witryna Windows Update działała poprawnie, musisz zmienić ustawienia zabezpieczeń przeglądarki na poziom Średni lub niższy. W tym celu kliknij menu <b>Narzędzia</b>, a następnie kliknij polecenie <b>Opcje internetowe</b>. Wybierz kartę <b>Zabezpieczenia</b> i kliknij opcję <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Czym jest formant ActiveX?</id><BR></DIV>
+<id id=x41>Formanty ActiveX to składniki programowe wielokrotnego użytku oparte na technologii ActiveX. Składniki te mogą być używane w celu dodawania określonych funkcji, takich jak animacje czy menu podręczne do stron sieci Web, aplikacji i pakietów narzędzi programistycznych. Witryna Windows Update używa formantów ActiveX w celu sprawdzenia, jakie oprogramowanie jest zainstalowane na komputerze, aby przedstawić właściwą listę aktualizacji i innych programów, które możesz pobrać.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>W jakiej rozdzielczości najlepiej przeglądać witrynę Windows Update?</id><BR></DIV>
+<id id=x43>Strony sieci Web w witrynie Windows Update zostały zaprojektowane do oglądania przy rozdzielczości ekranu 800 na 600 lub większej. Aby ustawić tę rozdzielczość, kliknij przycisk <B>Start</b>, wskaż polecenie <B>Ustawienia</b>, a następnie kliknij polecenie <B>Panel sterowania</b>. Kliknij dwukrotnie ikonę <B>Ekran</b>, a następnie kliknij kartę <B>Ustawienia</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Czy informacje o moim komputerze są przesyłane do firmy Microsoft?
+</id><BR></DIV>
+<id id=x45>Nie. Za każdym razem, kiedy przechodzisz do katalogu Aktualizacje produktów, witryna Windows Update posługuje się formantem, aby sprawdzić, jakie aktualizacje są potrzebne na Twoim komputerze. Sprawdzenie to odbywa się lokalnie na Twoim komputerze, aby zapewnić prywatność oraz bezpieczeństwo Twoich danych, i nie powoduje wysyłania żadnych informacji do firmy Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Jak mogę wysłać uwagi do zespołu Windows Update?</id><BR></DIV>
+<id id=x47>Jeśli chcesz wysłać do zespołu Windows Update swoje uwagi, kliknij łącze <B>Napisz do nas</B>, a następnie przycisk <B>Windows Update</B> znajdujący się na czarnym pasku narzędzi na górze każdej strony.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Czy nowy numer biuletynu Microsoft Security Bulletin, ukazujący się w witrynie sieci Web <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>
+(witryna w języku angielskim),
+jest także dostępny w witrynie Windows Update?</id><BR></DIV>
+<id id=x201>Często występuje opóźnienie między czasem opublikowania biuletynu Microsoft Security Bulletin w witrynie TechNet Security, a ukazaniem się odpowiedniej aktualizacji zabezpieczeń w witrynie Windows Update. Dzieje się tak, ponieważ zawartość witryny Windows Update dodawana jest według ustalonego harmonogramu. Ważne aktualizacje zabezpieczeń publikowane są w miarę możności tak szybko jak to jest możliwe, nowa zawartość jest testowana i weryfikowana, aby zapewnić odpowiednie aktualizacje dostępne w witrynie Windows Update dla danego komputera. Zwykle aktualizacje dotyczące produktów objętych pomocą techniczną pojawiają się w witrynie Windows Update z opóźnieniem od kilku dni do kilku tygodni w stosunku do czasu ich ogłoszenia w witrynie TechNet. Jeśli znasz konkretną wersję aktualizacji, która dotyczy danego komputera i nie chcesz czekać, aby móc ją pobrać z witryny Windows Update, możesz pobrać tę aktualizację bezpośrednio ze strony biuletynu Microsoft Security Bulletin. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Jakie systemy operacyjne i programy są obsługiwane przez rozszerzenie Windows Update?</id><BR></DIV>
+<id id=x203>Rozszerzenie Windows Update oferuje aktualizacje zabezpieczeń, które dotyczą następujących systemów i programów: Windows 98, Windows 98 Wydanie drugie, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0) i Internet Explorer. Jakkolwiek dla użytkownika są dostępne tylko aktualizacje dotyczące danego komputera. Niektóre serwerowe systemy operacyjne i programy dla serwerów nie są obsługiwane przez rozszerzenie Windows Update. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Powyżej wspomniano, że niektóre programy dla serwerów nie są obsługiwane przez rozszerzenie Windows Update. Interesuje mnie, jakie to są programy?</id><BR></DIV>
+<id id=x205>Początkowo rozszerzenie Windows Update, jako witryna sieci Web, oferowało aktualizacje dla klienckich komputerów domowych z zainstalowanym systemem Windows. Z czasem oferta została rozszerzona na aktualizacje dotyczące produktów do serwerów (np. program IIS), które najczęściej używane są w domu. Jednakże aktualizacje zabezpieczeń, które dotyczą takich produktów do serwerów, jak kontrolery domen systemu Windows, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server itp. nie są obsługiwane przez rozszerzenie Windows Update. Klienci korzystający z tych produktów powinni przeglądać biuletyny Microsoft Security Bulletin dostępne w witrynie sieci Web <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>, aby uzyskać informacje, gdzie można pobrać aktualizacje dla tych produktów.
+(Witryna w języku angielskim.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Czy rozszerzenie Windows Update zawsze dostarcza poprawki w zabezpieczeniach i inne aktualizacje dotyczące programów Internet Information Server 4.0 (IIS 4.0) i Internet Information Services 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>Nie. W dniu 23 maja 2001 rozszerzenie Windows Update zaoferowało pierwszy raz zbiorczy pakiet ważnych aktualizacji dotyczących programu IIS 5.0. Ponieważ ten zestaw nie zawierał wszystkich aktualizacji dotyczących programu IIS udostępnionych przed tą datą, zdecydowano się na wydanie zestawu najnowszych poprawek opublikowanych między marcem 2000 a dniem dzisiejszym. Aktualizacje wydane przed marcem 2000 są dostępne w witrynie TechNet na stronie <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">Windows Web services (IIS)</a>.
+(Witryna w języku angielskim.)
+W momencie tworzenia nowych poprawek zabezpieczeń lub innych ważnych aktualizacji dla programu IIS, ten zestaw zostanie wymieniony na nowy, w którym znajdą się zarówno nowe aktualizacje, jak i wszystkie poprawki umieszczone w poprzednim zestawie. W ten sposób nie ma większego znaczenia częstotliwość odwiedzania witryny Windows Update, ponieważ zawsze znajdują się na niej najnowsze aktualizacje dotyczące produktów IIS.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Gdzie mogę otrzymać informacje dotyczące wszystkich aktualizacji zabezpieczeń?</id><BR></DIV>
+<id id=x209>Informacje są dostępne w biuletynach Microsoft Security Bulletin w witrynie sieci Web <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security</a>. Można również uczestniczyć w usłudze powiadamiania <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> i otrzymywać alerty za pomocą poczty e-mail dotyczące ostatnio wydawanych biuletynów Microsoft Security Bulletin.
+(Witryny w języku angielskim.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.eu.microsoft.com/poland/corp/corp.htm"><id id=x50>(c) 2022 Microsoft Corporation. Wszelkie prawa zastrzeżone. Warunki użytkowania.</id></A><BR></CENTER>
+</BODY>
+</HTML>

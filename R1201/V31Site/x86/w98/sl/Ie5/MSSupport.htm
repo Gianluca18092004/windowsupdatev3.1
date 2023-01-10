@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoftove informacije za podporo</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Informacije za podporo</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Če imate težave s spletnim mestom Windows Update, je na voljo elektronska pomoč. Izberite eno od navedenih možnosti.</id>
+<P>
+<id id=x6>Ob izbiranju možnosti podpore vas bo računalnik morda pozval, da ustvarite Microsoftov »uporabniški profil«. Uporabniški profil vam bo služil kot vstopnica za prejemanje Microsoftove podpore po internetu.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Podpora za posodobitve programske opreme:</id></A></STRONG> <id id=x80>preberite si informacije za podporo za programsko opremo, ki so na voljo na spletnem mestu Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Podpora za gonilnike naprav:</id></A></STRONG> <id id=x800>preberite si informacije za podporo za gonilnike naprav, ki so na voljo na spletnem mestu Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Pogosto zastavljena vprašanja:</id></A></STRONG> <id id=x8>odgovor na vprašanje glede storitve Windows Update, boste morda najhitreje dobili, če pregledate naš seznam vprašanj in odgovorov.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Znane težave:</id></A></STRONG> <id id=x10>morda bi si želeli ogledati tudi stran s seznamom znanih težav na mestu Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/sl/wiz143.asp"><id id=x11>Pišite nam:</id></A></STRONG> <id id=x12>Pripombe in predloge vpišite v obrazec za hitro anketo.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>KAJ JE WINDOWS UPDATE?</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Ta ikona je na vrhu vsake strani tega spletnega mesta. Kliknite jo in preberite, kako lahko najbolje uporabljate spletno mesto Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>PODPORA ZA POSODOBITVE PROGRAMSKE OPREME</id></DIV>
+Brezplačna <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">e-poštna podpora za mesto Windows Update</SPAN></A> vsebuje: pomoč pri krmarjenju po spletnem mestu, sporočila o kakovosti vsebine ali napakah in osnovna pomoč za prenos. Ostalo podporo, vključno za težave pri nameščanju in nastavitvi, dobite na mestu Podpora za izdelke <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. Podpora za izdelke MSN je na voljo na mestu <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. V nekaterih primerih boste za podporo morali plačati. Podrobnosti o tem preberite na spletnih mestih.
+<P>
+Če potrebujete podporo za ta izdelek, se obrnite na krajevno podružnico. Najnovejši seznami izdelkov so na voljo na <a href="http://support.microsoft.com/directory/" target=_blank>spletnem mestu Support Online</a>, kjer lahko izberete možnost za mednarodno podporo. Če v vaši državi ni Microsoft podružnice, se obrnite na ustanovo pri kateri ste kupili Microsoft izdelek.
+<P>
+Microsoftove storitve podpore so odvisne od trenutnih cen in pogojev, ki se lahko spremenijo brez predhodne najave.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Kako odstranim posodobitve za programsko opremo?<BR></DIV>
+Nekatere posodobitve lahko odstranite s pomočjo strani »Posodobitve izdelkov«, na spletnem mestu Windows Update:
+<ol>
+<li>Pojdite na stran »Posodobitve izdelkov«.
+<li>Če se prikaže sporočilo z vprašanjem, odgovorite z <B>Da</B>.
+<li>Ko se prikaže stran »Posodobitve izdelkov«, kliknite <B>Prikaži nameščene posodobitve</B> na vrhu strani.
+<li>Če komponento lahko odstranite, kliknite gumb <B>Odstrani</B>, ki je na desni strani opisa posodobitve.
+<li>Kliknite <b>Odstrani</b>, ki je poleg opisa posodobitve, ki jo želite odstraniti.
+</ol>
+Posodobitev, ki se jih ne da odstraniti s pomočjo strani »Posodobitve izdelkov«, se jih morda tudi z drugimi metodami ne bo dalo odstraniti. Dodatne informacije za odstranjevanje posodobitev preberite na strani <b>Preberite najprej to</b> in to za vsako posodobitev posebej.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>PODPORA ZA GONILNIKE NAPRAV</id></DIV>
+Brezplačna e-poštna <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">podpora za spletno mesto Windows Update</SPAN></A> za nameščanje/odstranjevanje. Popoln seznam možnosti podpore za težave poleg nameščanja/odstranjevanja gonilnikov je na voljo na strani <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a>. V nekaterih primerih boste morali za podporo plačati - podrobnosti preberite na spletnem mestu.
+<P>
+Če potrebujete podporo za ta izdelek, se obrnite na krajevno podružnico. Najnovejši seznam si lahko ogledate na <a href="http://support.microsoft.com/directory/" target=_blank>spletnem mestu Support Online</a> in tam izberete eno od možnosti podpore po svetu. Če v vaši državi ni Microsoft podružnice, se obrnite na ustanovo pri kateri ste kupili Microsoft izdelek.
+<P>
+Microsoftove storitve podpore so odvisne od trenutnih cen in pogojev, ki se lahko spremenijo brez predhodne najave.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">Kako odstranim posodobitve za gonilnike naprav?</DIV>
+<b>Pomembno</b> Če želite odstraniti gonilnik, ki ste ga prenesli z mesta Windows Update, morate ponovni namestiti izvirni gonilnik, ki ste ga dobili z napravo. Če odstranite gonilnik ali posodobitev gonilnika, ne da bi ga nadomestili, vaša naprava ne bo več delovala.
+<p>Z Upraviteljem naprav lahko iz svojega računalnika odstranite posodobitve gonilnika:
+<ol>
+<li>Na namizju z desno miškino tipko kliknite ikono <b>Moj računalnik</b>.
+<li>Kliknite jeziček <b>Lastnosti</b> in nato kliknite jeziček <b>Upravitelj naprav</b>.
+<li>kliknite napravo, da jo označite, nato pa kliknite <b>Lastnosti</b>.
+<li>Kliknite jeziček <b>Gonilnik</b> in nato <b>Posodobitev gonilnika</b>.
+<li>Ko se zažene čarovnik za posodobitev gonilnikov naprav, izberite <b>Navedite mesto gonilnika (napredno)</b> in kliknite <b>Naprej</b>.
+<li>Izberite <b>Prikaži seznam vseh znanih gonilnikov za to napravo, tako da bom lahko izbral določen gonilnik</b> in kliknite <b>Naprej</b>.
+<li>Kliknite <b>Imam disketo</b> in nato kliknite <b>Prebrskaj</b>, da bi poiskali datoteko .inf za gonilnik, ki ga želite namestiti (s tem boste odstranili gonilnik Windows Update in ga nadomestili z izvirnim gonilnikom naprave).
+</ol>
+<b>Opomba</b> Ko se vrnete v Windows Update, se lahko zgodi, da vam bo zopet ponujena ista posodobitev gonilnika. Ne nameščajte je. Če imate vprašanja ali težave pri odstranjevanju posodobitev gonilnikov Windows Update, se prek ponujenih povezav obrnite na strokovnjaka za podporo.
+</p>
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>POGOSTO ZASTAVLJENA VPRAŠANJA</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Kaj je Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update je elektronska razširitev operacijskega sistema Windows, s katero lahko redno posodabljate svoj računalnik. Storitev Windows Update vsebuje osrednji katalog, ki se imenuje »Posodobitve izdelkov«, v katerem so izboljšave izdelkov, kot so sistemske datoteke, gonilniki za naprave, paketi popravkov in nove funkcije programa Windows. Te izboljšave vam priporočamo glede na potrebe določenega računalnika.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Kaj je katalog »Posodobitve izdelkov«?</id><BR></DIV>
+<id id=x36>Stran »Posodobitve izdelkov« je katalog popravkov, posodobitev in izboljšav operacijskega sistema Windows in številnih programov, ki delujejo v njegovem okviru. Katalog lahko prebrskate, izberete želene komponente ter jih prenesete in namestite v računalnik neposredno iz spleta.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Zakaj se prikaže sporočilo, ki pravi, da kontrolnik ActiveX na tej strani ni zanesljiv?</id><BR></DIV>
+<id id=x38>To sporočilo se prikaže, če imate varnost v programu Internet Explorer nastavljeno na »Visoka«. Če naj mesto Windows Update deluje pravilno, morate spremeniti brskalnikove nastavitve varnosti za internetno področje na vrednost »Srednja« ali nižjo. Če želite to storiti, kliknite meni <b>Orodja</b> in nato kliknite <b>Internetne možnosti</b>. Izberite jeziček <b>Varnost</b> in nato kliknite <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Kaj je kontrolnik ActiveX?</id><BR></DIV>
+<id id=x41>Kontrolniki ActiveX so programske komponente s tehnologijo ActiveX, ki jih lahko ponovno uporabite. S temi komponentami lahko dodate specializirane funkcije - npr. pojavne menije ali animacijo - spletnim stranem, programom za namizje in programom za razvijanje programske opreme. Windows Update s kontrolniki ActiveX ugotavlja, kakšna programska oprema je nameščena v računalniku. To potrebuje za izdelavo pravilnega seznama posodobitev in druge programske opreme, ki bi si jo morda želeli prenesti.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Kakšna je najboljša ločljivost za spletno mesto Windows Update?</id><BR></DIV>
+<id id=x43>Spletne strani mesta Windows Update so prilagojene ločljivosti 800 x 600 zaslonskih pik ali višji ločljivosti. Če želite nastaviti takšno ločljivost, kliknite gumb <B>Start</b>, pokažite na <B>Nastavitve</b> in nato kliknite <B>Nadzorna plošča</b>. Nato dvokliknite ikono <B>Zaslon</b> in kliknite jeziček <B>Nastavitve</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Ali se informacije o mojem računalniku lahko prenesejo Microsoftu?
+</id><BR></DIV>
+<id id=x45>Ne. Vsakič ko obiščete katalog »Posodobitve izdelkov«, Windows Update uporabi kontrolnik za preverjanje posodobitev, ki so v računalniku. To naredi lokalno v računalniku, tako zagotovi zasebnost in varnost podatkov, nobenih podatkov pa ne pošilja Microsoftu.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Kako lahko pišem ekipi storitve Windows Update?</id><BR></DIV>
+<id id=x47>Pripombe na to mesto lahko pošljete ekipi Windows Update tako, da kliknete <B>Pišite nam</B>, nato pa <B>Windows Update</B> v črni orodni vrstici na začetku vsake strani.</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/slovenija/misc/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. Vse pravice pridržane. Pogoji za uporabo.</id></A><BR></CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,202 @@
+<html>
+<head>
+<META CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" L GEN TRUE COMMENT "RSACi North America Server" BY "inet@microsoft.com" ON "1997.06.30T14:48-0500" R (N 0 S 0 V 0 L 0))' HTTP-EQUIV="PICS-Label">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<title>Instrukcje dotyczące drukowania</title>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 10px;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.hiddenDiv {
+	display:none;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+</STYLE>
+</head>
+<body BACKGROUND="../images/wm.jpg">
+<div style="TEXT-ALIGN: right" language="VBScript" OnClick="call Return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x2>Powrót do strony Aktualizacje produktów</ID></a></div>
+<script language="VBScript">
+OPTION EXPLICIT
+Dim iReadThisPage, FullDoc, strReadThisList, strReadThisPath, arrReadThisList, strPath
+Dim bDrivers
+iReadThisPage = 0
+strReadThisList = "%READTHISLIST%"
+strPath = "%READTHISPATH%"
+arrReadThisList = Split(strReadThisList, ";")
+Sub window_onLoad
+	Dim dc
+	Dim nCount
+	dc = LCase(window.location)
+	nCount = instr(dc, "?")
+	dc = Right(dc, len(dc) - nCount)
+	if dc = "drivers" then
+ bDrivers = TRUE
+	end if
+	Dim TheDoc
+	TheDoc = GetNextPage()
+	if TheDoc <> "" then MyFrame.location.replace(TheDoc)
+	if bDrivers = TRUE then
+ document.all.item("DivDrivers").style.display = ""
+ dim docPath
+ dim strPath
+ dim nTemp
+ docPath = document.url
+ nTemp = InStr(lCase(document.url), "program")
+ if (nTemp = 0) then
+ strPath = Left(document.url, InStr(document.url, "printall.htm") -1)
+ document.all.item("PUImage").src = strPath & "images/product-icon.png"
+ end if
+	else
+ document.all.item("DivDrivers").style.display = "none"
+	end if
+End Sub
+Sub MyCallBack
+On Error Resume Next
+Dim TheNextPage
+ FixupImageURLs
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions1").innerHtml
+ FullDoc = FullDoc & MyFrame.document.all.item("instructions2").innerHtml
+ TheNextPage = GetNextPage()
+ If TheNextPage <> "" Then
+ document.body.style.cursor = "wait"
+ MyFrame.location.replace(TheNextPage)
+ Else
+ if bDrivers = FALSE then
+ MyFrame.location.replace("about:blank")
+	end if
+ TheDocument.innerHtml = FullDoc
+ If navigator.userLanguage <> "en-us" Then
+ Dim collToHide, collIter, nLen
+ Set collToHide = document.all("UsOnly")
+ Err.Clear
+ nLen = collToHide.length
+ If Err.Number = 0 Then
+ For collIter = 0 to collToHide.length
+ collToHide(collIter).style.display="none"
+ Next
+ Else
+ collToHide.style.display="none"
+ End If
+ End If
+ document.body.style.cursor = "default"
+ End If
+End Sub
+Function GetNextPage
+ If iReadThisPage <= Ubound(arrReadThisList) Then
+ GetNextPage = strPath & arrReadThisList(iReadThisPage)
+ End if
+	iReadThisPage = iReadThisPage + 1
+End Function
+sub Return
+	window.close
+end sub
+Sub FixupImageURLs()
+On Error Resume Next
+ Dim AllImgTags
+ Set AllImgTags = MyFrame.document.all.tags("IMG")
+ Dim docPath
+ docPath = MyFrame.document.location.pathname
+ Dim i
+ For i = 0 to AllImgTags.length - 1
+ AllImgTags(i).src = strPath & left(arrReadThisList(iReadThisPage - 1),InstrRev(arrReadThisList(iReadThisPage - 1),"\")) & right(AllImgTags(i).src,Len(AllImgTags(i).src) - InStrRev(AllImgTags(i).src,"/"))
+ Next
+End Sub
+</script>
+<IMG id=PUImage align=left alt="Product Updates" border=0 height=40 hspace =0 id=ix1 src="../product-icon.png" style ="MARGIN-RIGHT: 12px" width=64 >
+<DIV CLASS="SmallTitle" STYLE="PADDING-TOP: 4px"><ID ID=x3>Aktualizacje produktów</ID><BR></DIV>
+<DIV CLASS="PageTitle"><ID ID=x4>Instrukcje dotyczące
+oprogramowania</ID><BR></DIV>
+<ID ID=x5>Ta strona zawiera instrukcje dla wybranego oprogramowania. Aby wydrukować tę stronę, należy wybrać polecenie <B>Drukuj</B> z menu <B>Plik</B>.</ID>
+<BR>
+<BR>
+<BR>
+<BR>
+<span id="TheDocument"></span>
+<iframe id="MyFrame" src="" width=0 height=0></iframe>
+<DIV ID="DivDrivers">
+<SPAN CLASS="PageTitle" STYLE="PADDING-TOP: 4px"><ID ID=x7>Aktualizacje sterowników urządzeń</ID><BR></SPAN>
+<SPAN CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x8>Sposób pobrania i zainstalowania aktualizacji sterowników urządzeń</id><BR></SPAN><br>
+<id id=x44><b>Ważne</b> Aby przeprowadzić dezinstalację aktualizacji sterownika pobranego z witryny Windows Update, trzeba mieć możliwość ponownej instalacji oryginalnego sterownika dostarczonego z danym urządzeniem. Usunięcie sterownika lub aktualizacji sterownika bez zastąpienia go oryginalnym spowoduje zatrzymanie pracy tego urządzenia.</id><br>
+<id id=x45><p>Use Device Manager to remove driver updates from your computer:</id>
+ <ol>
+ <li id=x46>Kliknij prawym przyciskiem myszy ikonę <b>Mój komputer</b> na pulpicie komputera.
+ <li id=x47>Kliknij polecenie <b>Właściwości</b>, a następnie kliknij kartę <b>Menedżer urządzeń</b>.
+ <li id=x48>Kliknij raz, aby wyróżnić urządzenie sprzętowe, a następnie kliknij przycisk <b>Właściwości</b>.
+ <li id=x49>Kliknij kartę <b>Sterownik</b>, a następnie kliknij przycisk <b>Aktualizuj sterownik</b>.
+ <li id=x50>Po uruchomieniu Kreatora uaktualnienia sterownika urządzenia, wybierz polecenie <B>Podaj lokalizację sterownika (Zawansowane)</B>, a następnie kliknij przycisk <B>Dalej</B>.
+ <li id=x51>Zaznacz opcję <B>Wyświetl listę znanych sterowników tego urządzenia, tak aby użytkownik mógł wybrać odpowiedni sterownik</B>, a następnie kliknij przycisk <B>Dalej</B>.
+ <li id=x52>Kliknij polecenie <B>Z dysku</B>, a następnie kliknij przycisk <B>Przeglądaj</B>, aby zlokalizować plik o rozszerzeniu inf dla sterownika, który został wybrany do zainstalowania (ta czynność spowoduje usunięcie sterownika pobranego z witryny Windows Update i zastąpienie go oryginalnym sterownikiem danego urządzenia).
+ </ol>
+ <id id=x53><b>Uwaga</b> Po powrocie do rozszerzenia Windows Update jest możliwe, że zostanie zaoferowana ponownie ta sama aktualizacja sterownika. Nie instaluj jej. Jeśli masz pytania lub problemy związane z procedurą odinstalowywania aktualizacji sterownika pobranej z witryny Windows Update, skorzystaj z dostarczonych łączy pomocy technicznej w celu skontaktowania się z nią.</id>
+</p>
+</DIV>
+<BR>
+<BR>
+<BR>
+<BR>
+<br>
+<div language="VBScript" style="TEXT-ALIGN: right" OnClick="call return"><A class=SmallTitle href="javascript:void(0)"><ID ID=x6>Powrót do strony Aktualizacje produktów</ID></a></div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>페이지를 표시할 수 없습니다.</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: 굴림;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: 굴림;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Windows Update에서 사용자의 운영 체제 시스템 언어를 지원하지 않으므로 제품 카탈로그를 로드할 수 없습니다."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>제품 카탈로그를 로드하는 중 오류가 발생했습니다. 네트워크 오류 또는 손상된 파일이 원인일 수 있습니다. 해당 문제에 대한 자세한 내용 및 문제 해결은 Microsoft Knowledge Base (KB) <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a> 문서를 참조해 주십시오.</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>페이지를 표시할 수 없습니다.</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>다시 시도</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>다음 중 하나의 이유로 이 페이지로 이동되었습니다.</ID>
+<OL>
+	<LI><ID ID=x6>Windows Update 사이트 컨트롤 및/또는 아키텍처의 업데이트가 이 오류 메시지의 원인일 수 있습니다. 자세한 내용은 Microsoft Knowledge Base (KB) <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A> 문서를 참조해 주십시오.</ID>
+	<LI><ID ID=x7>소프트웨어 컨트롤을 다운로드하지 않기로 선택했거나 컨트롤을 다운로드하는 데 문제가 있어 Windows Update 사이트를 사용할 수 없습니다. 지금 컨트롤을 다운로드하려면 위에 있는 <B>다시 시도</B>를 클릭하십시오.</ID>
+	<LI><ID ID=x8>이 컴퓨터에 대한 관리 권한이 없습니다. Windows Update를 사용하려면 시스템 관리자에게 문의하여 소프트웨어를 업데이트하십시오.</ID>
+	<LI><ID ID=x9>브라우저의 캐시를 삭제해야 할 수도 있습니다. 자세한 내용은 Microsoft KB <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a> 문서를 참조해 주십시오.</ID>
+	<LI><ID ID=x10>Windows Update 디렉터리를 삭제해야 할 수도 있습니다. 자세한 내용은 Microsoft KB <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a> 문서를 참조해 주십시오.</ID>
+	<LI><ID ID=x11>Windows NT(R) 4.0 Terminal Server Edition용 업데이트는 Windows Update 사이트에서 제공되지 않습니다. 자세한 내용은 Microsoft 기술 자료(KB) 문서 <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q323564&" target="_new">Q323564</a>를 참조하십시오. 이 사이트는 영문 사이트입니다.</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/korea/misc/cpyright.htm"><ID ID="cpyright">(c) 2022 Microsoft Corporation. All rights reserved. 사용 약관.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

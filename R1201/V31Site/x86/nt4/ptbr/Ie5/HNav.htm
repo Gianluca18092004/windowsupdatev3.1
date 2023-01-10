@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Windows Update</TITLE>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Option Explicit
+set NavFrm = parent.frames("FrmNavigator")
+If (NavFrm.document.readyState = "complete") Then
+	Dim cd, sx, ux, gotoURL, Targ, NavFrm, i, bSync
+ bSync = TRUE
+	cd = location.search
+ If len(cd) > 9 Then
+ bSync = FALSE
+ Dim a
+ a = Split(cd, "&")
+ gotoURL = Right(a(0), len(a(0)) -1)
+ Targ = a(1)
+ If a(2) <> "" AND a(3) <> "" Then
+ If LCase(a(2)) = "gblproductsync" Then
+ parent.gblproductsync = a(3)
+ ElseIf LCase(a(2)) = "gblconfirmsync" Then
+ parent.GblConfirmSync = a(3)
+ ElseIf LCase(a(2)) = "gblsuccesssync" Then
+ parent.GblSuccessSync = a(3)
+ ElseIf LCase(a(2)) = "gblpsuccesssync" Then
+ parent.GblPSuccessSync = a(3)
+ ElseIf LCase(a(2)) = "gblfailuresync" Then
+ parent.GblFailureSync = a(3)
+ End If
+ End If
+	Elseif len(cd) > 5 Then
+ sx = Mid(cd, 7, 3)
+ gotoURL = "catalog.htm#Section" & Right(sx,1)
+ Targ = "FrmContent.FrmCatalogMain"
+ parent.GblProductSync = "ProductUpdates"
+	Else
+ sx = Mid(cd, 3, 3)
+ gotoURL = NavFrm.ArrNav_Sections(2,sx)
+ Targ = NavFrm.ArrNav_Sections(1,sx)
+ If LCase(NavFrm.ArrNav_Sections(0,sx)) = "productupdates" Then
+ Parent.GblProductSync = "ProductUpdates"
+ End If
+	End If
+	Dim TargList, TargetFrame
+	TargList = split(Targ, ".")
+	set TargetFrame = parent.window
+	If (Instr(LCase(GoToUrl),"catalog.htm") <> 0) AND (Instr(LCase(parent.Frames("FrmContent").location.href),"pumain.htm") = 0)	Then
+ If Instr(LCase(parent.Frames("FrmContent").location.href),"psuccess.htm") Then
+ Dim szTemp, szAnchor
+ szTemp=split(GotoURL,"#")
+ szAnchor=szTemp(1)
+ parent.Frames("FrmContent").location.replace("pumain.htm?" & szAnchor)
+ Else
+ parent.Frames("FrmContent").location.replace("pumain.htm#Section0")
+ End If
+	Else
+ For i = 0 to UBound(TargList)
+ set TargetFrame = TargetFrame.Frames(TargList(i))
+ Next
+ TargetFrame.location.replace(GotoUrl)
+	End if
+ If bSync = TRUE Then
+ cd=Right(cd,len(cd)-1)
+ NavFrm.SynchTopic(cd)
+ End If
+End If
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=white>
+</BODY>
+</HTML>

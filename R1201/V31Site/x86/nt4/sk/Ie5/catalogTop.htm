@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<TITLE></TITLE>
+</HEAD>
+<STYLE>
+<!--
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 8pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+Vertical-align: top;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 8pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+Vertical-align: top;
+}
+A {
+color:#00319C;
+}
+.blueFont75Normal {
+ Color: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ }
+.blueFont80Bold	{
+ Color: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Bold;
+ }
+.ButtonP {
+ BACKGROUND-COLOR: #2f60ff;
+ BORDER: #002f9f Solid 2px;
+ BORDER-LEFT: #9fcfff Solid 2px;
+ BORDER-TOP: #9fcfff Solid 2px;
+ COLOR: #ffffff;
+ CURSOR: Hand;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ WIDTH: 150px;
+ HEIGHT: 17px;
+ MARGIN-TOP: 0px;
+ font-size: 7.5pt;
+ FONT-WEIGHT: bold;
+ TEXT-ALIGN: center;
+ }
+.ButtonP A {
+ text-decoration: none;
+ color: #ffffff;
+ }
+.downloadSelectionSummary {
+ COLOR: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Normal;
+}
+-->
+</STYLE>
+<BODY RIGHTMARGIN=0 BACKGROUND="images/wm.jpg" BGCOLOR="White" Style="cursor: wait">
+<SCRIPT LANGUAGE="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+OPTION EXPLICIT
+Dim ObjFrame_Reference, objFrame_Catalog
+Dim ObjTimeout
+Dim bPersonalizationMode
+Dim L_NewAlt_Text, L_NotSupportedAlt_Text, L_RegRequiredAlt_Text, L_HideInstalledDesc_Text
+Dim L_Check4Updates_Text, L_Check4UpdatesDesc_Text
+bPersonalizationMode=FALSE
+	Set ObjFrame_Reference = Parent.Parent.Frames("FrmToolbar").Document.Frames(0)
+	document.cookie = "page=nothing; path=/"
+	FuncDisplay()
+Sub Window_OnLoad()
+	Set objFrame_Catalog=Parent.Frames("FrmCatalogMain")
+End Sub
+Sub Window_OnUnLoad()
+	On Error Resume Next
+	bPersonalizationMode=FALSE
+	parent.parent.GblProductSync = ""
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	On Error Goto 0
+ If Instr(LCase(top.location.search), "&sec=criticalupdates")<>0 Then
+ document.cookie = "page=CUN; path=/"
+	Else
+ document.cookie = "page=ProductUpdates; path=/"
+ End If
+	Call Window.ScrollTo(0, 0)
+End Sub
+Function FuncDisplay()
+ Document.Write("<DIV ID=divButtonHider Style='visibility:hidden;margin-top:5px;'><TABLE BORDER='0' CELLPADDING='0' CELLSPACING='0' WIDTH='100%'><TR><TD ALIGN='LEFT' COLSPAN='2' HEIGHT='1' STYLE='BACKGROUND-COLOR: #00319C' WIDTH='100%'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='100%'><TABLE BORDER='0' CELLPADDING='0' CELLSPACING='0' WIDTH='95%'><TR><TD ALIGN='LEFT' HEIGHT='20' CLASS='blueFont80Bold' WIDTH='100%'>Zvolený softvér</TD><TD ALIGN='LEFT' ROWSPAN='3' VALIGN='MIDDLE'><NOBR><SPAN ID='SpanNext_Button1' LANGUAGE='VBScript' OnClick='GoToNextPage()' CLASS='ButtonG' STYLE='WIDTH: 93px; HEIGHT: 30px; BORDER-RIGHT: none; PADDING-TOP: 7px;'><A ID='ANext_Button1' STYLE='text-decoration: none; color: white; cursor: default;' HREF='javascript:void(0)'>Prevziať</A><BR></SPAN><IMG ID='ImgNext_Button1' OnClick='GoToNextPage()' STYLE='cursor: default' SRC='images/button-arrow-gray.gif' ALT=''></NOBR></TD></TR><TR><TD ALIGN='LEFT' HEIGHT='1' STYLE='BACKGROUND-COLOR: #00319C' WIDTH='100%'></TD></TR><TR><TD ALIGN='LEFT' HEIGHT='20' ID='TdTotals1' CLASS='downloadSelectionSummary' WIDTH='100%'>Neboli vybraté nijaké súčasti</TD></TR></TABLE></TD></TR><TR><TD ALIGN='LEFT' COLSPAN='2' HEIGHT='1' STYLE='BACKGROUND-COLOR: #00319C' WIDTH='100%'></TD></TR></TABLE></DIV>")
+	Document.Write("<TABLE ID=tblPersonalizeUI cellpadding=0 cellspacing=0 border=0 width=100% style='margin-top:4px;visibility:hidden;padding-right:5px;'><TR><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150'><SPAN LANGUAGE='VBScript' OnClick='CommitPersonalizationChanges()' CLASS='ButtonP'><A HREF='javascript:void(0)'>Aktualizovať</A></SPAN></TD><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150'><SPAN LANGUAGE='VBScript' OnClick='Call objFrame_Catalog.ResetPersonalization()' CLASS='ButtonP'><A HREF='javascript:void(0)'>Vynulovať</A></SPAN></TD><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150'><SPAN LANGUAGE='VBScript' OnClick='UndoPersonalization()' CLASS='ButtonP'><A HREF='javascript:void(0)'>Zrušiť</A></SPAN></TD><TD width=700 ROWSPAN=2></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150' CLASS='blueFont75Normal'>Vykonať a zobraziť zmeny.</TD><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150' CLASS='blueFont75Normal'>Návrat k základným nastaveniam.</TD><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='150' CLASS='blueFont75Normal'>Ukončiť bez uloženia zmien.</TD></TR></TABLE>")
+	Parent.g_bTopFrameReady = True
+End Function
+Sub DisplayPersonalizeUI()
+	tblPersonalizeUI.style.visibility="inherit"
+	divButtonHider.style.display="none"
+	bPersonalizationMode=TRUE
+End Sub
+Sub UndoPersonalizeUI()
+	TdTotals1.innerText="Neboli vybraté nijaké súčasti"
+	ANext_Button1.innerText="Prevziať"
+	tblPersonalizeUI.style.visibility="hidden"
+	divButtonHider.style.display="block"
+End Sub
+Function GoToNextPage()
+	If Instr(Parent.Parent.Frames("FrmContent").Document.Frames("FrmCatalogTop").document.All("ImgNext_Button1").Src, "button-arrow.gif") <> 0 Then
+ objFrame_Catalog.StoreCURollupState()
+ Parent.Parent.Frames("HFrame").location.href = "HNav.htm?basket.htm&FrmContent&GblConfirmSync&PuConfirm" ' navigate to confirm in the content frame
+	End if
+End Function
+Sub CommitPersonalizationChanges()
+	objFrame_Catalog.CommitPersonalizationChanges()
+	UndoPersonalization()
+End Sub
+Sub UndoPersonalization()
+	ObjFrame_Reference.DeselectAllSelectedComponents()
+	UndoPersonalizeUI()
+	objFrame_Catalog.UndoPersonalization()
+	bPersonalizationMode=FALSE
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

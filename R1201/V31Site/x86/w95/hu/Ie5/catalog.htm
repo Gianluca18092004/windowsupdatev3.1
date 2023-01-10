@@ -1,0 +1,1753 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<TITLE></TITLE>
+</HEAD>
+<STYLE>
+<!--
+.blackFont75 {
+ COLOR: Black;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ }
+.blueFont75 { Color: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ }
+.font80Bold {
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Bold;
+ }
+.font80Normal {
+ COLOR: Black;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Normal;
+ }
+.itemAlreadyInstalled {
+ margin-left: 12px;
+ COLOR: #2F60ff;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Bold;
+ }
+.itemAlreadyInstalledRTL {
+ margin-right: 12px;
+ COLOR: #2F60ff;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 8pt;
+ FONT-WEIGHT: Bold;
+ }
+.uninstallLinkSpanTag {
+ MARGIN-LEFT: 12px;
+ border-right: 0px;
+ text-Align: center;
+ WIDTH: 60px;
+ HEIGHT: 13px;
+ BACKGROUND-COLOR: #FFFFFF;
+ PADDING-TOP: 0px;
+ PADDING-BOTTOM: 0px;
+ border: Solid 1px;
+ border-color: #003399;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7pt;
+ FONT-WEIGHT: Normal;
+ }
+.uninstallLinkSpanTagRTL {
+ MARGIN-RIGHT: 12px;
+ border-left: 0px;
+ text-Align: center;
+ WIDTH: 60px;
+ HEIGHT: 13px;
+ BACKGROUND-COLOR: #FFFFFF;
+ PADDING-TOP: 0px;
+ PADDING-BOTTOM: 0px;
+ border: Solid 1px;
+ border-color: #003399;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7pt;
+ FONT-WEIGHT: Normal;
+ }
+.font75BoldWhiteBackground {
+ COLOR: Black;
+ BACKGROUND-COLOR: #ffffff;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: Bold;
+ }
+.tableSubSectionTDTag {
+ COLOR: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: Bold;
+ }
+.tableSubSubSectionTDTag {
+ COLOR: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: Bold;
+ HEIGHT: 20px;
+ }
+.itemTableTag {
+ BACKGROUND-COLOR: #fffFFF;
+ BORDER: 0px;
+ PADDING: 0px;
+ DISPLAY: block;
+ width:100%;
+ margin-top:10;
+ margin-bottom:6;
+ }
+.SectionDiv {
+ font-size: 7.5pt;
+ color: white;
+ font-weight: bold;
+ background: #00319C;
+ width:100%;
+ FONT-FAMILY: Verdana, Arial, Helvetica;
+ padding:2px;
+ }
+.ButtonB {
+ BACKGROUND-COLOR: #2f60ff;
+ BORDER: #002f9f Solid 2px;
+ BORDER-LEFT: #9fcfff Solid 2px;
+ BORDER-TOP: #9fcfff Solid 2px;
+ COLOR: #ffffff;
+ CURSOR: Hand;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ WIDTH: 170px;
+ HEIGHT: 17px;
+ MARGIN-TOP: 0px;
+ font-size: 7.5pt;
+ FONT-WEIGHT: bold;
+ TEXT-ALIGN: center;
+ }
+A {
+ color:#00319C;
+ }
+.ButtonB A {
+ text-decoration: none;
+ color: #ffffff;
+ }
+.personalizeSection {
+ visibility:hidden;
+ }
+.personalizeSubSection {
+ COLOR: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: Bold;
+ visibility:hidden;
+ }
+.personalizeSubSubSection {
+ COLOR: #00319C;
+ FONT-FAMILY: Verdana,Arial,Helvetica;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: Bold;
+ visibility:hidden;
+ }
+.subsectionName	{
+ BACKGROUND-COLOR: #9fcfff;
+ width: 1px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ padding-right: 36px;
+ background-image: url('Images/blue-fade.jpg');
+ background-position:top right;
+ background-repeat: repeat-y;
+ }
+.legendTable {
+ FONT-FAMILY:Verdana,Arial,Helvetica;
+ FONT-SIZE: 11pt;
+ FONT-WEIGHT: Normal;
+ }
+.legendSymbolText {
+ FONT-FAMILY:Verdana,Arial,Helvetica;
+ FONT-SIZE:7.5pt;
+ }
+.selectSoftwareTitle {
+	COLOR:#00319C;
+	FONT-FAMILY:Verdana,Arial,Helvetica;
+	FONT-SIZE:20pt;
+	FONT-WEIGHT:Bold;
+	PADDING-BOTTOM: 30px;
+}
+IMG.clsImgButton {
+	margin-bottom: 3px;
+	cursor: hand;
+}
+-->
+</STYLE>
+<BODY RIGHTMARGIN=0 TOPMARGIN=0 BACKGROUND="images/wm.jpg" BGCOLOR="White" Style="cursor: wait">
+<SCRIPT LANGUAGE="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim ObjFrame_Reference
+Dim ObjTimeout
+Dim ObjFrame_Catalog_Top 'formerly ObjFrame_Reference1
+Set ObjFrame_Catalog_Top = Parent.Parent.Frames("FrmContent").document.Frames("FrmCatalogTop")
+Dim szDisplay_Status
+Dim bPersonalizationFlag, bFormerlyAllComponentsShown, bCUComponentsToInstall, bCURollupComponent, bCUExclusiveNotInstalledComponent, bResetPersonalizedCUSettings
+Dim szDriverBlurbStatus
+Dim m_arrCatalog, m_arrPersonalization
+Dim m_arrCatalogHiddenItems
+Dim m_nCurIndex
+Dim m_szCatalogHTML
+Dim m_CriticalUpdateSectionIndex, m_indexJustAfterAllCriticalUpdates, m_szExclusiveCUHTML, m_NumCURollupItems
+Dim m_DeviceDriversSection
+m_DeviceDriversSection = 90618
+Dim g_Exit
+g_Exit = false
+m_szExclusiveCUHTML = ""
+m_szCatalogHTML = ""
+Dim m_nSecCount
+m_nSecCount = 0
+	Set ObjFrame_Reference = Parent.Parent.Frames("FrmToolbar").Document.Frames(0)
+	document.cookie = "page=nothing; path=/"
+	FuncDisplay()
+Sub Window_Onload
+	bPersonalizationFlag=FALSE
+	Dim puid
+	puid = ExclusivePUID ()
+	if g_Exit then exit Sub
+	if NOT IsNull(puid) then
+ DisableAllCheckboxes( true )
+ document.all("ObjCheckBox_" & puid).disabled=false
+	end if
+ Call FuncInitiate()
+	UnselectExclusiveComps
+	ScrollToItem
+ parent.parent.Frames("frmToolbar").HideWaitDialog()
+	Call UpdateNavigationMenu()
+	If bResetPersonalizedCUSettings Then
+ MsgBox "A fontos frissítésekhez korábban alkalmazott személyes beállításokat a rendszer alapértelmezés szerintire állította. A fontos frissítések mindig megjelennek. Ha inkább külön szeretné telepíteni az egyes frissítéseket, kattintson a Frissítések részletes megjelenítése gombra.", vbOKOnly ,"Windows Update"
+	End If
+End Sub
+Function ExclusivePUID ()
+	Dim i, lStatus
+	For i=0 to UBound(m_arrCatalog)
+ lStatus=m_arrCatalog(i,3)
+ If (IsStatusExclusive(lStatus) AND IsSelected(lStatus)) Then
+ ExclusivePUID = m_arrCatalog(i, 0)
+ Exit Function
+ End If
+	Next
+	ExclusivePUID = null
+End Function
+Sub DisableAllCheckboxes ( bDisabled )
+	dim elem
+	for each elem in document.all.tags("INPUT")
+ if elem.type = "checkbox" then elem.disabled = bDisabled
+	next
+End Sub
+Function GetItem()
+	Dim i1, szURL
+	GetItem=""
+	szURL = parent.parent.location.search
+	i1=InStr(szURL,"#")
+	If i1>0 Then
+ GetItem=Mid(szURL,i1)
+ Exit Function
+	End If
+	i1=InStr(szURL,"&")
+	If i1>0 Then
+ GetItem=Mid(szURL,i1)
+ Exit Function
+	End If
+End Function
+Sub ScrollToItem()
+	Dim szItem
+	szItem=GetItem()
+	If LCase(szItem)=parent.parent.GblPUCritUpdts Then
+ parent.parent.window.frames("HFrame").location.href="HNav.htm?S001U001"
+	End If
+End Sub
+Sub UpdateNavigationMenu()
+	Dim i, szSectionHTML, szID, nSubsectionIndex, frNavigator
+	szID="S001U000"
+	szSectionHTML="<TABLE class=submenu CELLPADDING=0 CELLSPACING=0 BORDER=0><TR ID=" & szID & " onClick='javascript:ShowPage(null,0)' onMouseover='javascript:SubOn(1)' onMouseout='javascript:SubOn(0)'><TD ID=txt" & szID & " ALIGN=RIGHT CLASS='subsectionText'><IMG ALT='' ID=gif" & szID & " SRC='images/arrow.gif' WIDTH=6 HEIGHT=7 STYLE='visibility:hidden'>Vissza a lap elejére</TD></TR>"
+	nSubsectionIndex=1
+	For i=0 to UBound(m_arrCatalog)
+ If (m_arrCatalog(i,3) AND 128) Then 'If it's a section
+ szID="S001U00" & CStr(nSubsectionIndex)
+ nSubsectionIndex = nSubsectionIndex + 1
+ szSectionHTML=szSectionHTML & "<TR ID=" & szID & " onClick='javascript:ShowPage(null,0)' onMouseover='javascript:SubOn(1)' onMouseout='javascript:SubOn(0)'><TD ID=txt" & szID & " ALIGN=RIGHT CLASS='subsectionText'><IMG ALT='' ID=gif" & szID & " SRC='images/arrow.gif' WIDTH=6 HEIGHT=7 STYLE='visibility:hidden'>" & m_arrCatalog(i,2) & "</TD></TR>"
+ End If
+	Next
+	Set frNavigator=parent.parent.Frames("FrmNavigator")
+	frNavigator.divS001.innerHTML=szSectionHTML
+	frNavigator.delayedSubsectionSelected="S001U000"
+	frNavigator.SynchIfNeeded()
+End Sub
+Function FuncInitiate
+	Dim i
+	Dim j
+	Dim bShowAll
+	Parent.Frames("FrmCatalogTop").divButtonHider.Style.visibility = ""
+ bShowAll=ObjFrame_Reference.g_bShowAll
+ If bShowAll = True Then
+ ToggleShowingInstalledItems(TRUE)
+ End if
+ UpdateShowAllUI(bShowAll)
+ UpdateCatalogTop()
+ UpdateCURollUp()
+ Call FuncCalculate_Totals()
+ document.body.style.cursor = "default"
+ Parent.Frames("FrmCatalogTop").document.body.style.cursor = "default"
+ Parent.Parent.Frames("FrmNavigator").FuncToggle_Lock(FALSE)
+ Call Window.ScrollTo(0, 0)
+End Function
+Sub UpdateShowAllUI(bShowAll)
+	Dim colShowAllDesc, colHideInstalledDesc, i
+	Set colShowAllDesc=document.all("ShowAllDesc")
+	Set colHideInstalledDesc=document.all("HideInstalledDesc")
+	If bShowAll Then
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display="none"
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display=""
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="none"
+	Else
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display=""
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display="none"
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="block"
+	End If
+End Sub
+Sub UpdateCURollUp()
+	If bCURollupComponent Then
+ document.all("CURollUpSizeTime").innerHTML = DisplayCURollUpSizeTime()
+ If AllCUNonExclusiveComponentsSelected() Then
+ document.all("Item_CURollup").checked = TRUE
+ Else
+ document.all("Item_CURollup").checked = FALSE
+ DisplayCUList
+ End If
+	End If
+End Sub
+Sub Window_OnUnLoad()
+	On Error Resume Next
+	parent.parent.GblProductSync = ""
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	On Error Goto 0
+ If Instr(LCase(top.location.search), "&sec=criticalupdates")<>0 Then
+ document.cookie = "page=CUN; path=/"
+	Else
+ document.cookie = "page=ProductUpdates; path=/"
+ End If
+ Call Window.ScrollTo(0, 0)
+End Sub
+Function DisplayReadThis(index, puid)
+	Dim strDoc
+	strDoc = m_arrCatalog(index,7)
+ On Error Resume Next
+	Dim ObjWindow
+	ObjFrame_Reference.Wuv3is.GetReadThisPage puid
+	Set ObjWindow = Window.Open(strDoc,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+	ObjWindow.focus()
+End Function
+Function FuncToggle_View(ObjElement)
+	Dim colShowAllDesc, colHideInstalledDesc, i
+	Set colShowAllDesc=document.all("ShowAllDesc")
+	Set colHideInstalledDesc=document.all("HideInstalledDesc")
+	If ObjElement.InnerText = "A telepített frissítések megjelenítése" Then
+ ObjFrame_Reference.g_bShowAll = True
+ ObjElement.InnerText = "A telepített frissítések elrejtése"
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display="none"
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display=""
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="none"
+ ToggleShowingInstalledItems(TRUE)
+	ElseIf ObjElement.InnerText = "A telepített frissítések elrejtése" Then
+ ObjFrame_Reference.g_bShowAll = False
+ ObjElement.InnerText = "A telepített frissítések megjelenítése"
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display=""
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display="none"
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="block"
+ ToggleShowingInstalledItems(FALSE)
+	End If
+End Function
+Function FuncToggle_Color(ObjElement)
+	If ObjElement.Style.Color = "#ffffff" Then
+ ObjElement.Style.Color = "#000000"
+	ElseIf ObjElement.Style.Color = "#000000" Then
+ ObjElement.Style.Color = "#ffffff"
+	End If
+End Function
+Sub ReGrock()
+	Parent.Parent.GblSync = "ProductUpdates"
+	parent.parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Function FuncDisplay()
+	Dim i
+	WriteHTML("<A NAME='Section0' STYLE='DISPLAY: none'></A><TABLE ID='HIDE_FOR_PERSONALIZATION' BORDER='0' CELLSPACING='0' CELLPADDING='0'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='10' VALIGN='TOP'></TD></TR><TR><TD ALIGN='LEFT' VALIGN='TOP'><IMG ID=ix1 ALT='Termékfrissítések' HEIGHT='40' SRC='Images/big-hand.png' WIDTH='64'></TD><TD>&nbsp;</TD><TD ALIGN='LEFT' VALIGN='BOTTOM' CLASS='blueFont75'>Termékfrissítések<BR><SPAN CLASS='selectSoftwareTitle'>Szoftver kijelölése</SPAN></TD></TR></TABLE><P STYLE='margin-right:30px'>")
+	WriteHTML("<SPAN ID='ShowAllDesc' CLASS='blackFont75'>A számítógépen lévő Windows rendszerhez az alábbi frissítések érhetők el. A frissítések telepítéséhez kattintson a kívánt frissítések melletti jelölőnégyzetekre, majd a <STRONG>Letöltés</STRONG> gombra. Frissítések eltávolításához vagy újratelepítéséhez kattintson <B>A telepített frissítések megjelenítése</B> gombra. A lista kibővül a telepített frissítésekkel.<br></SPAN><SPAN ID='HideInstalledDesc' CLASS='blackFont75' STYLE='DISPLAY: none'>Itt találhatja a &quot;Már telepítve&quot; jelzésű frissítéseket. Frissítések újratelepítéséhez kattintson a megfelelő program mellett található jelölőnégyzetre, majd a <STRONG>Letöltés</STRONG> gombra. Ha valamelyik frissítés mellett Eltávolítás gomb található, erre kattintva eltávolíthatja a frissítést. A telepített frissítések listájának elrejtéséhez kattintson <b>A telepített frissítések elrejtése</b> gombra.</SPAN><SPAN ID='PersonalizeDesc' STYLE='DISPLAY: none' CLASS='blackFont75'>Alapértelmezés szerint megjelenik az összes frissítés, ami az Ön által használt Windows rendszerhez készült. Ha csak bizonyos frissítések érdeklik, kijelölheti ezen a lapon, hogy milyen frissítések jelenjenek meg. A listán csak a kijelölt tételek fognak megjelenni. Ha szeretne egy tételt levenni a listáról, törölje az elem jelölését. Ha esetleg később újból fel kívánja venni az elemet a listájára, térjen vissza a listájához és jelölje ki újra az elemet. A módosítások mentéséhez kattintson a <B>Frissítés</B> gombra.</SPAN></P><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='522'>")
+	If ObjFrame_Reference.g_bShowAll = False Then
+ WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>A telepített frissítések megjelenítése</A><BR></SPAN></TD>")
+	Elseif ObjFrame_Reference.g_bShowAll = True Then
+ WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' LANGUAGE='VBScript' OnClick='FuncToggle_View(Window.Event.SrcElement)' CLASS='ButtonB'><A HREF='javascript:void(0)'>A telepített frissítések elrejtése</A><BR></SPAN></TD>")
+	End if
+	WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='BUTTON' OnClick=" & Chr(34) & "javascript:parent.parent.frames('HFrame').location.href = 'Hnav.htm?PUHistory.htm&FrmContent&&'" & Chr(34) & " CLASS='ButtonB'><A HREF='javascript:void(0)'>Korábbi telepítések</A><BR></SPAN></TD><TD ALIGN='LEFT' VALIGN='TOP' WIDTH='175'><SPAN ID='PERSONALIZE_BUTTON' LANGUAGE='VBScript' OnClick='DoPersonalization()' CLASS='ButtonB'><A HREF='javascript:void(0)'>Személyre szabott beállítások</A><BR></SPAN></TD></TR></TABLE><BR>")
+	If ObjFrame_Reference.RetrieveCatalog(m_arrCatalog, (0 OR 2048))=TRUE Then
+ If ObjFrame_Reference.bCUNCheckCalled=FALSE Then
+ CUNCheck()
+ ObjFrame_Reference.bCUNCheckCalled=TRUE
+ End If
+ CreateCatalogHTML(m_arrCatalog)
+ DisplayPage()
+	Else
+	End if
+End Function
+Sub CUNCheck()
+Exit Sub
+	Dim iComponent, iCUIndex, lStatus, arrItem
+	If Instr(LCase(top.location.search),"criticalupdate") <> 0 Then
+ iCUIndex=CUSectionIndex()
+ If iCUIndex=-1 Then
+ Else
+ iComponent=iCUIndex + 1
+ If (iComponent>UBound(m_arrCatalog)) Then
+ Exit Sub
+ End If
+ Do While ((m_arrCatalog(iComponent,3) AND 128) = 0)
+ lStatus=m_arrCatalog(iComponent,3)
+ If ((lStatus AND 70528) = 0) Then
+ Call SelectItemForInstall(m_arrCatalog(iComponent,0), TRUE)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(iComponent,0))
+ m_arrCatalog(iComponent,3)=arrItem(3)
+ End If
+ iComponent=iComponent+1
+ If (iComponent>UBound(m_arrCatalog)) Then
+ Exit Do
+ End If
+ Loop
+ End If
+	End If
+End Sub
+Function CUSectionIndex()
+	Dim i
+	i=0
+	CUSectionIndex=-1
+	Do While ((CUSectionIndex=-1) AND (i<=UBound(m_arrCatalog)))
+ If ((m_arrCatalog(i,3) AND 128) <> 0) Then
+ If m_arrCatalog(i,6)="CriticalUpdates" Then
+ CUSectionIndex=i
+ Exit Do
+ End If
+ End If
+ i=i+1
+	Loop
+End Function
+Sub DisplayPage()
+	If m_szCatalogHTML <> "" Then
+ Document.write(m_szCatalogHTML)
+ DisplayCUList
+	End If
+End Sub
+Sub WriteHTML(szHTML)
+ m_szCatalogHTML = m_szCatalogHTML & szHTML
+End Sub
+Sub CreateCatalogHTML(arrCatalog)
+	Dim nCurIndex
+	nCurIndex = 0
+	Do While IsEndOfCatalog(arrCatalog, nCurIndex) = FALSE
+ nCurIndex = CreateSectionHTML(arrCatalog,nCurIndex,GetLevel(arrCatalog(nCurIndex,3)))
+ nCurIndex = nCurIndex + 1
+	Loop
+End Sub
+Function CreateSectionHTML(arrCatalog, nCurIndex, nCurLevel)
+	If IsCriticalUpdateSection(nCurIndex) Then
+ m_CriticalUpdateSectionIndex = nCurIndex
+ CreateSectionHTML = CreateCriticalUpdateSectionHTML(nCurIndex)
+	Else
+ Call CreateSection(arrCatalog, nCurIndex)
+ nCurIndex = nCurIndex + 1
+ Do While IsEndOfCatalog(arrCatalog, nCurIndex) = FALSE
+ If IsItem(arrCatalog(nCurIndex,3)) Then
+ Call CreateItemHTML(arrCatalog, nCurIndex)
+ ElseIf IsNestedSection(arrCatalog(nCurIndex,3), nCurLevel) Then
+ nCurIndex = CreateSectionHTML(arrCatalog, nCurIndex, GetLevel(arrCatalog(nCurIndex,3)))
+ Else
+ Exit Do
+ End If
+ nCurIndex = nCurIndex + 1
+ Loop
+ nCurIndex = nCurIndex - 1
+ CreateSectionHTML = nCurIndex
+	End If
+End Function
+Function IsCriticalUpdateSection(nCurIndex)
+	IsCriticalUpdateSection = False
+	If ((m_arrCatalog(nCurIndex,3) AND 128) <> 0) Then
+ If m_arrCatalog(nCurIndex,6)="CriticalUpdates" Then
+ IsCriticalUpdateSection = True
+ End If
+	End If
+End Function
+Function CreateCriticalUpdateSectionHTML(nCurIndex)
+	Dim nextSectionIndex
+	m_nSecCount = m_nSecCount + 1
+	CheckForPersonalizedCUComponents
+	If HasComponents(m_arrCatalog, nCurIndex, 3) Then
+ bCUComponentsToInstall = TRUE
+	Else
+ bCUComponentsToInstall = FALSE
+	End If
+	bCURollupComponent = HasCURollUpComponent()
+	Call CreateCUTitle(nCurIndex)
+	nextSectionIndex = CreateCURollUpItem(nCurIndex)
+	If m_szExclusiveCUHTML <> "" Then
+ If bCURollupComponent And bCUExclusiveNotInstalledComponent Then
+ WriteHTML("<Div ID='ShowAllDesc' class=font80normal>Az alábbiakban látható fontos frissítéseket a többitől különállóan kell telepíteni, ezért azokat a Fontos frissítések csomag sem tartalmazza.</Div>")
+ End If
+ WriteHTML(m_szExclusiveCUHTML)
+ WriteHTML("<P ID='HIDE_FOR_PERSONALIZATION' class=font80normal></P>")
+	End If
+	CreateCriticalUpdateSectionHTML = nextSectionIndex
+End Function
+Function HasCURollUpComponent()
+	Dim componentIndex, lStatus
+	HasCURollUpComponent = FALSE
+	componentIndex = m_CriticalUpdateSectionIndex + 1
+	Do While IsEndOfCatalog(m_arrCatalog, componentIndex) = FALSE
+ lStatus = m_arrCatalog(componentIndex,3)
+ If IsItem(lStatus) Then
+ If DefaultListShouldShowComponent(lStatus) Then	'If component not yet installed
+ If (Not IsStatusExclusive(lStatus)) Then
+ HasCURollUpComponent = TRUE
+ Exit Do
+ End If
+ End If
+ ElseIf IsNestedSection(lStatus, 3) Then
+ Else
+ Exit Do
+ End If
+ componentIndex = componentIndex + 1
+	Loop
+End Function
+Sub CreateCUTitle(nCurIndex)
+ WriteHTML("<DIV><SPAN ALIGN=LEFT STYLE='DISPLAY: none' VALIGN=MIDDLE><A NAME='Section" & m_nSecCount & "' STYLE='DISPLAY: none'></A></SPAN></DIV><DIV CLASS='SectionDiv' ID='TblSection_" & m_arrCatalog(nCurIndex,0) & "' >" & m_arrCatalog(nCurIndex,1) & "</DIV>")
+	If bCUComponentsToInstall Then
+ szDisplay_Status = "DISPLAY: none;"
+	Else
+ szDisplay_Status = "DISPLAY: block;"
+	End If
+	WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & m_arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Ilyen típusú frissítés jelenleg nem érhető el.</SPAN>")
+	WriteHTML("<SPAN ALIGN='LEFT' ID='PersonalizeDesc' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='DISPLAY: none'><IMG SRC='images/ts.gif' ALT='' HEIGHT=6px><br><SPAN ID='PersonalizeCUMessage'>A katalógusnak ez a része nem alakítható át. A fontos frissítések mindig megjelennek.</SPAN></SPAN>")
+End Sub
+Function CreateCURollUpItem(nCurIndex)
+	WriteHTML("<TABLE CLASS='itemTableTag' BORDER='0' CELLPADDING='0' CELLSPACING='0' STYLE='DISPLAY: block;' WIDTH='100%'>")
+	If bCURollupComponent Then
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD rowspan=5 valign=top width='10'>")
+ WriteHTML(" <INPUT type='checkbox' ID='Item_CURollup' STYLE='margin-left:-4px;' LANGUAGE='VBScript' onClick='Call CriticalUpdateRollUpItem_Click(Window.Event.SrcElement)'>")
+ WriteHTML(" </TD>")
+ WriteHTML(" <TD colspan=4>")
+ WriteHTML(" <Div><NOBR>")
+ WriteHTML(" <SPAN class=font80Bold><LABEL FOR=Item_CURollup>Fontos frissítések csomag</LABEL></SPAN>")
+ WriteHTML(" </NOBR></Div>")
+ WriteHTML(" </TD>")
+ WriteHTML(" <TD rowspan=5 width=10%></TD>")
+ WriteHTML(" </TR>")
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD colspan=4>")
+ WriteHTML(" <Div class=font80normal><NOBR ID='CURollUpSizeTime'>")
+ WriteHTML(" </NOBR></Div>")
+ WriteHTML(" </TD>")
+ WriteHTML(" </TR>")
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD colspan=4>")
+ WriteHTML(" <Div class=font80Normal style='padding-top:6;padding-bottom:6;'>A Fontos frissítések csomag letöltésével biztosíthatja a számítógép hibátlan működését és a biztonsági hiányosságok megszüntetését. A csomag mindig megjelenik, ha elérhetővé válik egy fontos frissítés. Ha összetevőket tölt le a Windows Update webhelyről, a csomag tartalma annak megfelelően változik. Töltse le most, így gyorsan és egyszerűen frissítheti számítógépét.</Div>")
+ WriteHTML(" </TD>")
+ WriteHTML(" </TR>")
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD rowspan=2 valign=top>")
+ WriteHTML(" <NOBR>")
+ WriteHTML(" <IMG SRC='images/plus.gif' HEIGHT='9' class='clsImgButton' WIDTH='9' ID='mSubBtn' onclick='javascript:ToggleCUList()' ALT BORDER='0'>")
+ WriteHTML(" &nbsp;</NOBR>")
+ WriteHTML(" </TD>")
+ WriteHTML(" <TD colspan=3 class=font80Normal valign=bottom>")
+ WriteHTML(" <A href='javascript: ToggleCUList()' ID='mSubShow'>Frissítések részletes megjelenítése</A>")
+ WriteHTML(" <A href='javascript: ToggleCUList()' ID='mSubHide' style='display:none'>Frissítések részleteinek elrejtése</A>")
+ WriteHTML(" </TD>")
+ WriteHTML(" </TR>")
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD colspan=3>")
+ WriteHTML(" <Div ID='mSubDescShow' class=font80Normal style='padding-top:6;padding-bottom:6;'>A Fontos frissítések csomagban található összes frissítés megjelenítése. Itt külön is kijelölheti a telepíteni kívánt frissítéseket. Az optimális teljesítmény érdekében a Microsoft javasolja a teljes Fontos frissítések csomag telepítését.</Div>")
+ WriteHTML(" <Div ID='mSubDescHide' class=font80Normal style='padding-top:6;padding-bottom:6;display:none;'>A nézet bezárásához kattintson a hivatkozásra. A Microsoft javasolja a teljes Fontos frissítések csomag telepítését.</Div>")
+ WriteHTML(" </TD>")
+ WriteHTML(" </TR>")
+	Else
+ WriteHTML(" <TR ID='ShowAllDesc' height=0>")
+ WriteHTML(" <TD height=0>")
+ WriteHTML(" </TD>")
+ WriteHTML(" </TR>")
+	End If
+	Dim iReturn
+	iReturn = AddCUItems(nCurIndex)
+	If bCURollupComponent Then
+ Call AddFakeSpacingItem()
+	End If
+	WriteHTML("</TABLE>")
+	WriteHTML("<SPAN ID='HideInstalledDesc'></SPAN>")
+	CreateCURollUpItem = iReturn
+End Function
+Function AddCUItems(nCurIndex)
+	Dim nCurLevel, arrItem
+	m_NumCURollupItems = 0
+	bCUExclusiveNotInstalledComponent = FALSE
+	m_szExclusiveCUHTML = ""
+	nCurLevel = 1 'we are inside a section
+	nCurIndex = nCurIndex + 1
+	Do While IsEndOfCatalog(m_arrCatalog, nCurIndex) = FALSE
+ If IsItem(m_arrCatalog(nCurIndex,3)) Then
+ If DefaultListShouldShowComponent(m_arrCatalog(nCurIndex,3)) Then	'If component not yet installed
+ If IsStatusExclusive(m_arrCatalog(nCurIndex,3)) Then
+ Else
+ If (ObjFrame_Reference.g_bFirstPUVisit = TRUE) Then
+ Call SelectItemForInstall(m_arrCatalog(nCurIndex,0), TRUE)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(nCurIndex,0))
+ m_arrCatalog(nCurIndex,3)=arrItem(3)
+ End If
+ End If
+ End If
+ If IsStatusExclusive(m_arrCatalog(nCurIndex,3)) Then
+ m_szExclusiveCUHTML = m_szExclusiveCUHTML & ExclusiveCUItemHTML(nCurIndex)
+ Else
+ Call AddCUItem(nCurIndex)
+ m_NumCURollupItems = m_NumCURollupItems + 1
+ End If
+ ElseIf IsNestedSection(m_arrCatalog(nCurIndex,3), nCurLevel) Then
+ Else
+ m_indexJustAfterAllCriticalUpdates = nCurIndex
+ Exit Do
+ End If
+ nCurIndex = nCurIndex + 1
+	Loop
+	ObjFrame_Reference.g_bFirstPUVisit = FALSE
+	AddCUItems = (nCurIndex - 1)
+End Function
+Function DefaultListShouldShowComponent(lStatus)
+	If (IsStatusInstall(lStatus) OR IsStatusUnknown(lStatus) OR IsStatusUpdate(lStatus)) AND _
+	NOT IsStatusHidden(lStatus) Then
+ DefaultListShouldShowComponent = TRUE
+	Else
+ DefaultListShouldShowComponent = FALSE
+	End If
+End Function
+Sub ToggleCUList
+	ObjFrame_Reference.g_bShowCUList = Not ObjFrame_Reference.g_bShowCUList
+	DisplayCUList
+End Sub
+Sub DisplayCUList
+	Dim indexComponentArray, lStatus
+	indexComponentArray = m_CriticalUpdateSectionIndex + 1 'first critical update component
+	If ObjFrame_Reference.g_bShowCUList Then 'If the list was expanded
+ If (bCUComponentsToInstall And bCURollupComponent) Then 'If there is any CU Rollup item
+ Document.All("mSubBtn").src = "images/minus.gif"
+ Document.All("mSubHide").style.display = "block"
+ Document.All("mSubShow").style.display = "none"
+ Document.All("mSubDescHide").style.display = "block"
+ Document.All("mSubDescShow").style.display = "none"
+ End If
+ Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ lStatus = m_arrCatalog(indexComponentArray,3)
+ If IsItem(lStatus) Then
+ If DefaultListShouldShowComponent(lStatus) Then
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "block"
+ Else
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "none"
+ End If
+ ElseIf IsNestedSection(lStatus, nCurLevel) Then
+ Else 'it's the next section
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+ Loop
+	Else	'If the list was collapsed
+ If bCUComponentsToInstall Then
+ If bCURollupComponent Then
+ Document.All("mSubBtn").src = "images/plus.gif"
+ Document.All("mSubShow").style.display = "block"
+ Document.All("mSubHide").style.display = "none"
+ Document.All("mSubDescShow").style.display = "block"
+ Document.All("mSubDescHide").style.display = "none"
+ End If
+ Else
+ On Error Resume Next
+ Document.All("TdInstall_Message_" & m_arrCatalog(m_CriticalUpdateSectionIndex,0)).style.display = "block"
+ if err.number <> 0 then
+ g_Exit = true
+ parent.parent.Frames("frmToolbar").HideWaitDialog()
+ parent.parent.frames("FrmContent").Location.href="Control.htm?reason=catalogerror"
+ exit sub
+ end if
+ On Error Goto 0
+ End If
+ Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ lStatus = m_arrCatalog(indexComponentArray,3)
+ If IsItem(lStatus) Then
+ If ObjFrame_Reference.g_bShowAll Then
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "block"
+ Else
+ If (Not IsStatusExclusive(lStatus)) Then
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "none"
+ Else
+ If DefaultListShouldShowComponent(lStatus) Then
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "block"
+ Else
+ Document.All("TblItem_" & m_arrCatalog(indexComponentArray,0)).Style.Display = "none"
+ End If
+ End If
+ End If
+ Else 'it's the next section
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+ Loop
+	End If
+End Sub
+Function ExclusiveCUItemHTML(nCurIndex)
+	Dim sHTML, sDisplay, sChecked
+	If DefaultListShouldShowComponent(m_arrCatalog(nCurIndex,3)) Then
+ sDisplay = "DISPLAY: block;"
+ bCUExclusiveNotInstalledComponent = TRUE
+	Else
+ sDisplay = "DISPLAY: none;"
+	End If
+	sHTML = "<TABLE CLASS='itemTableTag' BORDER='0' CELLPADDING='0' CELLSPACING='0' ID='TblItem_" & m_arrCatalog(nCurIndex,0) & "' STYLE='" & sDisplay & "' WIDTH='100%'><TBody><TR>"
+	If IsSelected(m_arrCatalog(nCurIndex,3)) Then
+ sChecked = " CHECKED='TRUE'"
+	Else
+ sChecked = ""
+	End If
+	sHTML = sHTML & "<TD VALIGN='TOP' WIDTH='10'><INPUT STYLE='margin-left:-4px;' ARRAYELEMENT='" & nCurIndex & "' ID='ObjCheckBox_" & m_arrCatalog(nCurIndex,0) & "' LANGUAGE='VBScript' onClick='Call Checkbox_Click(Window.Event.SrcElement)' TYPE='CHECKBOX'" & sChecked & "></TD><TD VALIGN='TOP' CLASS='font80Normal' width='75%'><Div class=font80Bold><NOBR><LABEL FOR=ObjCheckBox_" & m_arrCatalog(nCurIndex,0) & ">" & m_arrCatalog(nCurIndex,1) & "</LABEL></NOBR></Div><Div class=font80normal ID='HIDE_FOR_PERSONALIZATION'><NOBR><span dir=ltr>" & m_arrCatalog(nCurIndex,4) & " KB</span>/" & FuncMakeDownloadTimeString(CLng(m_arrCatalog(nCurIndex,5))) & "</NOBR></Div><Div class=font80Normal style='padding-top:6;' ID='HIDE_FOR_PERSONALIZATION'>"
+	sHTML = sHTML & m_arrCatalog(nCurIndex,2)
+	sHTML = sHTML & "</Div></TD><TD ID='InstText_" & m_arrCatalog(nCurIndex,0) & "' NOWRAP VALIGN='Top' WIDTH='25%'>"
+	If IsStatusUpToDate(m_arrCatalog(nCurIndex,3)) Then
+ sHTML = sHTML & "<DIV CLASS='itemAlreadyInstalled'><NOBR>Már telepítve.</NOBR></DIV>"
+	End If
+	sHTML = sHTML & "</TD></TR></TBody></TABLE>"
+	ExclusiveCUItemHTML = sHTML
+End Function
+Sub AddCUItem(nCurIndex)
+	Dim sDisplay, sChecked, lPUID
+	If DefaultListShouldShowComponent(m_arrCatalog(indexComponentArray,3)) Then
+ sDisplay = "DISPLAY: block;"
+	Else
+ sDisplay = "DISPLAY: none;"
+	End If
+ lPUID = m_arrCatalog(nCurIndex,0)
+	WriteHTML(" <TR STYLE='" & sDisplay & "' ID='TblItem_" & lPUID & "'>")
+	WriteHTML(" <TD colspan=2 ID='ShowAllDesc'></TD>")
+	WriteHTML(" <TD VALIGN='TOP' WIDTH='10'>")
+	If IsSelected(m_arrCatalog(nCurIndex,3)) Then
+ sChecked = "CHECKED='TRUE'"
+	Else
+ sChecked = ""
+	End If
+	WriteHTML(" <INPUT STYLE='margin-left:-4px;' LANGUAGE='VBScript' ARRAYELEMENT='" & nCurIndex & "' ID='ObjCheckBox_" & lPUID & "' onClick='Call CUCheckbox_Click(Window.Event.SrcElement)' TYPE='CHECKBOX' " & sChecked & ">")
+	WriteHTML(" </TD>")
+	WriteHTML(" <TD VALIGN='TOP' CLASS='font80Normal'>")
+	WriteHTML(" <Div class=font80Bold><NOBR>")
+	WriteHTML(" <LABEL FOR=ObjCheckBox_" & lPUID & ">")
+	WriteHTML(m_arrCatalog(nCurIndex,1))
+	WriteHTML(" </LABEL>")
+	WriteHTML(" </NOBR></Div>")
+	WriteHTML(" <Div class=font80normal><NOBR><span dir=ltr>")
+	WriteHTML(m_arrCatalog(nCurIndex,4)) 'size in KB
+	WriteHTML(" KB/</span>")
+	WriteHTML(FuncMakeDownloadTimeString(CLng(m_arrCatalog(nCurIndex,5))))
+	WriteHTML(" </NOBR></Div>")
+	WriteHTML(" <Div class=font80Normal style='padding-top:5;padding-bottom:8;'>")
+	WriteHTML(m_arrCatalog(nCurIndex,2)) 'item blurb
+	WriteHTML(" </Div>")
+	WriteHTML(" </TD>")
+ WriteHTML(" <TD colspan=2 width=25% valign=top>")
+	If IsStatusUpToDate(m_arrCatalog(nCurIndex,3)) Then
+ WriteHTML("<DIV CLASS='itemAlreadyInstalled' ID='HideInstalledDesc' style='display:none;'><NOBR>Már telepítve.</NOBR></DIV>")
+	End If
+	WriteHTML(" </TD>")
+	WriteHTML(" </TR>")
+End Sub
+Sub AddFakeSpacingItem()
+ WriteHTML(" <TR ID='ShowAllDesc'>")
+ WriteHTML(" <TD colspan=2></TD>")
+ WriteHTML(" <TD></TD>")
+ WriteHTML(" <TD>")
+ WriteHTML(" <Div class=font80Normal style='padding-top:6;'>")
+ WriteHTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;")
+ WriteHTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;")
+ WriteHTML(" </Div>")
+	WriteHTML(" </TD>")
+ WriteHTML(" <TD colspan=2></TD>")
+	WriteHTML(" </TR>")
+End Sub
+Function DisplayCURollupSizeTime()
+	Dim indexComponentArray, nCURollUpSize, nCURollUpTime, strSizeTime, arrItem, lStatus
+	nCURollUpSize = 0
+	nCURollUpTime = 0
+	indexComponentArray = m_CriticalUpdateSectionIndex + 1 'first critical update component
+	Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(indexComponentArray,0))
+ lStatus=arrItem(3)
+ If IsItem(lStatus) Then
+ If (DefaultListShouldShowComponent(lStatus) And (Not IsStatusExclusive(lStatus))) Then
+ If IsSelected(lStatus) Then
+ nCURollUpSize = nCURollUpSize + m_arrCatalog(indexComponentArray,4)
+ nCURollUpTime = nCURollUpTime + m_arrCatalog(indexComponentArray,5)
+ End If
+ End If
+ Else 'it's the next section
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+	Loop
+	ObjFrame_Reference.g_CURollupSize = nCURollUpSize
+	ObjFrame_Reference.g_CURollupTime = CLng(nCURollUpTime)
+	strSizeTime = "<span dir=ltr>" & nCURollUpSize & " KB</span>/" & FuncMakeDownloadTimeString(CLng(nCURollUpTime))
+	DisplayCURollupSizeTime = strSizeTime
+End Function
+Sub CheckForPersonalizedCUComponents
+	Dim indexComponentArray, lStatus, arrItem
+	bResetPersonalizedCUSettings = FALSE
+	indexComponentArray = m_CriticalUpdateSectionIndex + 1
+	Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ lStatus = m_arrCatalog(indexComponentArray,3)
+ If IsItem(lStatus) Then
+ If IsStatusHidden(lStatus) Then
+ Call ObjFrame_Reference.ChangeItemState(m_arrCatalog(indexComponentArray,0), 128)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(indexComponentArray,0))
+ m_arrCatalog(indexComponentArray,3)=arrItem(3)
+ bResetPersonalizedCUSettings = TRUE
+ End If
+ Else 'it's the next section
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+	Loop
+End Sub
+Sub StoreCURollupState()
+	Dim indexComponentArray, lStatus, indexCURollupPUIDArray, arrItem
+	If bCURollupComponent Then
+ If document.all("Item_CURollup").checked Then
+ ObjFrame_Reference.g_bCuRollupSelected = TRUE
+ ObjFrame_Reference.ResizeArrCURollupPUIDs(m_NumCURollupItems)
+ indexCURollupPUIDArray = 0
+ indexComponentArray = m_CriticalUpdateSectionIndex + 1 'first critical update component
+ Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(indexComponentArray,0))
+ lStatus = arrItem(3)
+ If IsItem(lStatus) Then
+ If (IsSelected(lStatus) And DefaultListShouldShowComponent(lStatus)) Then
+ ObjFrame_Reference.g_arrCURollupPUIDs(indexCURollupPUIDArray) = m_arrCatalog(indexComponentArray,0)
+ indexCURollupPUIDArray = indexCURollupPUIDArray + 1
+ End If
+ Else 'it's the next section
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+ Loop
+ Else
+ ObjFrame_Reference.g_bCuRollupSelected = FALSE
+ End If
+	Else
+ ObjFrame_Reference.g_bCuRollupSelected = FALSE
+	End If
+End Sub
+Function IsNestedSection(nStatus, nCurLevel)
+	Dim nNextLevel
+	nNextLevel = GetLevel(nStatus)
+	IsNestedSection = (nCurLevel < nNextLevel)
+End Function
+Function IsEndOfCatalog(arrCatalog, nCurIndex)
+	If nCurIndex < (1+UBound(arrCatalog)) Then
+ IsEndOfCatalog = FALSE
+	Else
+ IsEndOfCatalog = TRUE
+	End If
+End Function
+Function IsSection(nStatus)
+	IsSection = ((nStatus AND 128) <> 0)
+End Function
+Function IsSubSection(nStatus)
+	IsSubSection = ((nStatus AND 256) <> 0)
+End Function
+Function IsSubSubSection(nStatus)
+	IsSubSubSection = ((nStatus AND 512) <> 0)
+End Function
+Function IsItem(nStatus)
+	IsItem = (NOT (IsSection(nStatus) OR IsSubSection(nStatus) OR IsSubSubSection(nStatus)))
+End Function
+Function IsSelected(nStatus)
+	IsSelected = ((nStatus AND 2) <> 0)
+End Function
+Function IsNew(nStatus)
+	IsNew = ((nStatus AND 4) <> 0)
+End Function
+Function IsCool(nStatus)
+	IsCool = ((nStatus AND 32) <> 0)
+End Function
+Function IsSupport(nStatus)
+	IsSupport = TRUE
+End Function
+Function IsForPowerUsers(nStatus)
+	IsForPowerUsers = ((nStatus AND 8) <> 0)
+End Function
+Function IsRegRequired(nStatus)
+	IsRegRequired = ((nStatus AND 16) <> 0)
+End Function
+Function IsStatusInstall(nStatus)
+	IsStatusInstall = ((nStatus AND 1024) <> 0)
+End Function
+Function IsStatusUpdate(nStatus)
+	IsStatusUpdate = ((nStatus AND 2048) <> 0)
+End Function
+Function IsStatusUpToDate(nStatus)
+	IsStatusUpToDate = ((nStatus AND 4096) <> 0)
+End Function
+Function IsStatusExclusive(nStatus)
+	IsStatusExclusive = ((nStatus AND 32768) <> 0)
+End Function
+Function IsStatusUnknown(nStatus)
+	IsStatusUnknown = ((nStatus AND 8192) <> 0)
+End Function
+Function IsStatusHidden(nStatus)
+	IsStatusHidden = ((nStatus AND 65536) <> 0)
+End Function
+Function IsStatusScary(nStatus)
+	IsStatusScary = ((nStatus AND 131072) <> 0)
+End Function
+Function GetLevel(nStatus)
+	If IsSection(nStatus) Then
+ GetLevel = 1
+	ElseIf IsSubSection(nStatus) Then
+ GetLevel = 2
+	ElseIf IsSubSubSection(nStatus) Then
+ GetLevel = 3
+	Else
+ GetLevel = 0
+	End If
+End Function
+Sub GetNextItemIndex()
+	m_nCurIndex = m_nCurIndex + 1
+End Sub
+Sub GetPrevItemIndex()
+	If m_nCurIndex > 0 Then
+ m_nCurIndex = m_nCurIndex - 1
+	End If
+End Sub
+Function HasComponents(arrCatalog, nCurIndex, ComponentType)
+	m_nCurIndex = nCurIndex
+	If ((ComponentType=1) OR (ComponentType=0)) Then
+ HasComponents=HasPersonalizeComponents(arrCatalog, GetLevel(arrCatalog(m_nCurIndex,3)), ComponentType)
+	Else
+ HasComponents = HasVisibleItems(arrCatalog, GetLevel(arrCatalog(m_nCurIndex,3)), ComponentType)
+	End If
+End Function
+Function HasPersonalizeComponents(arrCatalog, nCurLevel, ComponentType)
+	HasPersonalizeComponents = FALSE
+	If ((arrCatalog(m_nCurIndex,3) AND 896)=0) Then
+ Exit Function
+	End If
+	Call GetNextItemIndex()
+	Do While IsEndOfCatalog(arrCatalog, m_nCurIndex) = FALSE
+ If ((arrCatalog(m_nCurIndex,3) AND 896)=0) Then
+ If ComponentType=1 Then
+ If ((arrCatalog(m_nCurIndex,3) AND 4096)=0) Then
+ HasPersonalizeComponents = TRUE
+ Exit Function
+ End If
+ Else 'ComponentType=0
+ HasPersonalizeComponents = TRUE
+ Exit Function
+ End If
+ ElseIf IsNestedSection(arrCatalog(m_nCurIndex,3), nCurLevel) Then
+ If HasPersonalizeComponents(arrCatalog, GetLevel(arrCatalog(m_nCurIndex,3)), ComponentType) Then
+ HasPersonalizeComponents = TRUE
+ Exit Function
+ End If
+ Else
+ Exit Do
+ End If
+ Call GetNextItemIndex()
+	Loop
+	Call GetPrevItemIndex()
+End Function
+Function HasVisibleItems(arrCatalog, nCurLevel, ComponentType)
+	HasVisibleItems = FALSE
+	If IsItem(arrCatalog(m_nCurIndex,3)) Then
+ Exit Function
+	End If
+	Call GetNextItemIndex()
+	Do While IsEndOfCatalog(arrCatalog, m_nCurIndex) = FALSE
+ If IsItem(arrCatalog(m_nCurIndex,3)) Then
+ If NOT IsStatusHidden(arrCatalog(m_nCurIndex,3)) Then
+ If ComponentType = 3 Then
+ If NOT IsStatusUpToDate(arrCatalog(m_nCurIndex,3)) Then
+ HasVisibleItems = TRUE
+ Exit Function
+ End If
+ ElseIf ComponentType = 2 Then
+ HasVisibleItems = TRUE
+ Exit Function
+ End If
+ End If
+ ElseIf IsNestedSection(arrCatalog(m_nCurIndex,3), nCurLevel) Then
+ If HasVisibleItems(arrCatalog, GetLevel(arrCatalog(m_nCurIndex,3)), ComponentType) Then
+ HasVisibleItems = TRUE
+ Exit Function
+ End If
+ Else
+ Exit Do
+ End If
+ Call GetNextItemIndex()
+	Loop
+	Call GetPrevItemIndex()
+End Function
+Sub CreateSection(arrCatalog, nCurIndex)
+	If IsSection(arrCatalog(nCurIndex,3)) Then
+ m_nSecCount = m_nSecCount + 1
+ WriteHTML("<DIV><SPAN ALIGN=LEFT STYLE='DISPLAY: none' VALIGN=MIDDLE><A NAME='Section" & m_nSecCount & "' STYLE='DISPLAY: none'></A></SPAN></DIV><DIV CLASS='SectionDiv' ID='TblSection_" & arrCatalog(nCurIndex,0) & "' >" & arrCatalog(nCurIndex,1) & "</DIV>")
+ If HasComponents(arrCatalog, nCurIndex, 3) Then
+ szDisplay_Status = "DISPLAY: none;"
+ szDriverBlurbStatus = "Display:block;"
+ Else
+ szDisplay_Status = "DISPLAY: block;"
+ szDriverBlurbStatus = "Display:none;"
+ End If
+ If (arrCatalog(nCurIndex,0)) = m_DeviceDriversSection Then
+ WriteHTML("<Div class=font80normal style='margin-top:5;" & szDriverBlurbStatus & "'>A Windows Update az alábbi hardvereszközök jelenlétét észlelte a számítógépben vagy annak csatlakozóin. A hardver(ek) Microsoft Windows rendszeren való használatát lehetővé tévő eszközillesztőnek egy újabb verzióját letöltheti a Windows Update webhelyről.</DIV>")
+ End If
+ WriteHTML("<SPAN ALIGN='LEFT' ID='TdInstall_Message_" & arrCatalog(nCurIndex,0) & "' NOWRAP CLASS='font75BoldWhiteBackground' STYLE='" & szDisplay_Status & "'><IMG ID=ix6 SRC='images/ts.gif' ALT='' HEIGHT=6px><br>Jelenleg nincs ilyen típusú frissítés.<br>&nbsp;</SPAN>")
+	ElseIf IsSubSection(arrCatalog(nCurIndex,3)) Then
+ If HasComponents(arrCatalog, nCurIndex, 3) Then
+ szDisplay_Status = "DISPLAY: block;"
+ Else
+ szDisplay_Status = "DISPLAY: none;"
+ End If
+ WriteHTML("<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0 ID='TblSubSection_" & arrCatalog(nCurIndex,0) & "' STYLE='" & szDisplay_Status & "'><TR><TD ALIGN='LEFT' COLSPAN='3' HEIGHT='1' STYLE='BACKGROUND-COLOR: #00319C'></TD></TR><TR><TD ALIGN='LEFT' CLASS='tableSubSectionTDTag' NOWRAP VALIGN='TOP' WIDTH=50%><SPAN CLASS='subsectionName'>" & arrCatalog(nCurIndex,1) & "</SPAN></TD><TD ID='SHOW_FOR_PERSONALIZATION' CLASS='personalizeSubSection'><INPUT ID='SUBSECTION_" & CStr(nCurIndex) & "' TYPE='CHECKBOX' CHECKED onClick='Call personalizeSection(" & nCurIndex & ")'><SPAN>Megjelenítés a Termékfrissítések katalógusban</SPAN></TD></TR></TABLE>")
+	ElseIf IsSubSubSection(arrCatalog(nCurIndex,3)) Then
+ If HasComponents(arrCatalog, nCurIndex, 3) Then
+ szDisplay_Status = "DISPLAY: block;"
+ Else
+ szDisplay_Status = "DISPLAY: none;"
+ End If
+ WriteHTML("<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 ID='TblSubSubSection_" & arrCatalog(nCurIndex,0) & "' STYLE='" & szDisplay_Status & "' WIDTH='100%'><TR><TD ALIGN='LEFT' COLSPAN=2 HEIGHT=1 STYLE='BACKGROUND-COLOR: #00319C'></TD></TR><TR><TD ALIGN='LEFT' NOWRAP CLASS='tableSubSubSectionTDTag' VALIGN='MIDDLE' WIDTH='50%'>&nbsp;" & arrCatalog(nCurIndex,1) & "&nbsp;</TD><TD ID='SHOW_FOR_PERSONALIZATION' ALIGN='LEFT' CLASS='personalizeSubSubSection' VALIGN='TOP'><INPUT ID='SUBSUBSECTION_" & CStr(nCurIndex) & "' TYPE='CHECKBOX' CHECKED onClick='Call personalizeSection(" & nCurIndex & ")'><SPAN>Megjelenítés a Termékfrissítések katalógusban</SPAN></TD></TR><TR><TD ALIGN='LEFT' COLSPAN='2' VALIGN='MIDDLE' WIDTH='100%'></TD></TR></TABLE>")
+	End If
+End Sub
+Sub CreateItemHTML(arrCatalog, nCurIndex)
+	If (IsStatusInstall(arrCatalog(nCurIndex,3)) OR IsStatusUnknown(arrCatalog(nCurIndex,3)) OR IsStatusUpdate(arrCatalog(nCurIndex,3))) AND _
+ NOT IsStatusHidden(arrCatalog(nCurIndex,3))Then
+ szDisplay_Status = "DISPLAY: block;"
+	Else
+ szDisplay_Status = "DISPLAY: none;"
+	End If
+	WriteHTML("<TABLE CLASS='itemTableTag' BORDER='0' CELLPADDING='0' CELLSPACING='0' ID='TblItem_" & arrCatalog(nCurIndex,0) & "' STYLE='" & szDisplay_Status & "' WIDTH='100%'><TBody><TR>")
+	Dim szChecked
+	If IsSelected(arrCatalog(nCurIndex,3)) Then
+ szChecked = " CHECKED='TRUE'"
+	Else
+ szChecked = ""
+	End If
+	WriteHTML("<TD ALIGN='LEFT' VALIGN='TOP' WIDTH='10'><INPUT STYLE='margin-left:-4px;' ARRAYELEMENT='" & nCurIndex & "' ID='ObjCheckBox_" & arrCatalog(nCurIndex,0) & "' LANGUAGE='VBScript' onClick='Call Checkbox_Click(Window.Event.SrcElement)' TYPE='CHECKBOX'" & szChecked & "></TD><TD ALIGN='LEFT' VALIGN='TOP' CLASS='font80Normal' width='75%'><Div class=font80Bold><NOBR><LABEL FOR=ObjCheckBox_" & arrCatalog(nCurIndex,0) & ">" & arrCatalog(nCurIndex,1) & "</LABEL></NOBR></Div><Div class=font80normal ID='HIDE_FOR_PERSONALIZATION'><NOBR><span dir=ltr>" & arrCatalog(nCurIndex,4) & " KB</span>/" & FuncMakeDownloadTimeString(CLng(arrCatalog(nCurIndex,5))) & "</NOBR></Div><Div class=font80Normal style='padding-top:6;' ID='HIDE_FOR_PERSONALIZATION'>")
+	WriteHTML(arrCatalog(nCurIndex,2))
+ WriteHTML("</Div></TD><TD ID='InstText_" & arrCatalog(nCurIndex,0) & "' ALIGN='LEFT' NOWRAP VALIGN='Top' WIDTH='25%'>")
+ If IsStatusUpToDate(arrCatalog(nCurIndex,3)) Then
+ WriteHTML("<DIV CLASS='itemAlreadyInstalled'><NOBR>Már telepítve.</NOBR></DIV>")
+	End If
+	If IsStatusUpToDate(arrCatalog(nCurIndex,3)) AND arrCatalog(nCurIndex,6) <> "" Then
+ WriteHTML("<SPAN ID='UNINSTALL_LINK' LANGUAGE='VBScript' onClick='Call Uninstall("& nCurIndex &")' CLASS='uninstallLinkSpanTag'><a href='javascript:void(0)'>Eltávolítás</a></span><IMG ID='UNINSTALL_LINK' src='images/uninstall-arrow.GIF'>")
+	End If
+	WriteHTML("</TD></TR></TBody></TABLE>")
+End Sub
+Sub ToggleShowingInstalledItems(bShow)
+	Dim iComponentType
+	If bShow Then
+ iComponentType=2
+	Else
+ iComponentType=3
+	End If
+	Dim nIndex
+	nIndex=0
+	Do Until (nIndex > UBound(m_arrCatalog))
+ If IsSection(m_arrCatalog(nIndex,3)) Then
+ If (nIndex = m_CriticalUpdateSectionIndex) Then
+ If bShow Then
+ Else 'hide them all by default until user clicks the Show Individual Updates link
+ Document.All("TblSection_" & m_arrCatalog(nIndex,0)).Style.Display = ""
+ DisplayCUList()
+ nIndex = m_indexJustAfterAllCriticalUpdates
+ If (nIndex > UBound(m_arrCatalog)) then 'if Critical Updates was the last section
+ Exit Sub
+ End If
+ End If
+ End If
+ Document.All("TblSection_" & m_arrCatalog(nIndex,0)).Style.Display = ""
+ If HasComponents(m_arrCatalog,nIndex,iComponentType) Then
+ Document.All("TdInstall_Message_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ Else
+ Document.All("TdInstall_Message_" & m_arrCatalog(nIndex,0)).Style.Display = ""
+ End If
+ ElseIf IsSubSection(m_arrCatalog(nIndex,3)) Then
+ If bShow Then
+ If HasComponents(m_arrCatalog,nIndex,2) Then
+ Document.All("TblSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ End If
+ Else
+ If HasComponents(m_arrCatalog,nIndex,3) Then
+ Document.All("TblSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ Else
+ Document.All("TblSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ End If
+ End If
+ ElseIf IsSubSubSection(m_arrCatalog(nIndex,3)) Then
+ If bShow Then
+ If HasComponents(m_arrCatalog,nIndex,2) Then
+ Document.All("TblSubSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ End If
+ Else
+ If HasComponents(m_arrCatalog,nIndex,3) Then
+ Document.All("TblSubSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ Else
+ Document.All("TblSubSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ End If
+ End If
+ ElseIf IsItem(m_arrCatalog(nIndex,3)) Then
+ If IsStatusHidden(m_arrCatalog(nIndex,3)) Then
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ Else
+ If bShow Then
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ Else
+ If IsStatusUpToDate(m_arrCatalog(nIndex,3)) Then
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ Else
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ End If
+ End If
+ End If
+ End If
+	nIndex = nIndex + 1
+	Loop
+End Sub
+Function CriticalUpdateRollUpItem_Click(ObjCheckBox)
+	If ObjCheckbox.checked Then
+ SelectAllCUNonExclusiveItems(TRUE)
+	Else
+ SelectAllCUNonExclusiveItems(FALSE)
+	End If
+End Function
+Sub SelectAllCUNonExclusiveItems(bSelect)
+	Dim indexComponentArray, lStatus, ObjCheckbox, arrItem
+	indexComponentArray = m_CriticalUpdateSectionIndex + 1 'first critical update component
+	Do While IsEndOfCatalog(m_arrCatalog, indexComponentArray) = FALSE
+ lStatus = m_arrCatalog(indexComponentArray,3)
+ If IsItem(lStatus) Then
+ If (DefaultListShouldShowComponent(lStatus) And (Not IsStatusExclusive(lStatus))) Then
+ Set ObjCheckbox = document.all("ObjCheckBox_" & m_arrCatalog(indexComponentArray,0))
+ If (ObjCheckbox.checked <> bSelect) Then
+ FuncToggle_Checkbox(ObjCheckBox)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(indexComponentArray,0))
+ m_arrCatalog(indexComponentArray,3)=arrItem(3)
+ End If
+ End If
+ Else
+ Exit Do
+ End If
+ indexComponentArray = indexComponentArray + 1
+	Loop
+	document.all("CURollUpSizeTime").innerHTML = DisplayCURollUpSizeTime()
+End Sub
+Function CUCheckbox_Click(ObjCheckBox)
+	Dim componentArrayIndex
+	FuncToggle_Checkbox(ObjCheckBox)
+	componentArrayIndex = CInt(ObjCheckBox.ARRAYELEMENT)
+	If ObjCheckbox.checked Then
+ If AllCUNonExclusiveComponentsSelected() Then
+ If bCURollupComponent Then
+ document.all.item("Item_CURollup").checked = TRUE
+ End If
+ End If
+	Else
+ If bCURollupComponent Then
+ document.all.item("Item_CURollup").checked = FALSE
+ End if
+	End If
+	If bCURollupComponent Then
+ document.all("CURollUpSizeTime").innerHTML = DisplayCURollUpSizeTime()
+	End If
+End Function
+Function AllCUNonExclusiveComponentsSelected()
+	Dim componentIndex, lStatus, arrItem
+	AllCUNonExclusiveComponentsSelected = TRUE
+	componentIndex = m_CriticalUpdateSectionIndex + 1
+	Do While IsEndOfCatalog(m_arrCatalog, componentIndex) = FALSE
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(componentIndex,0))
+ lStatus=arrItem(3)
+ If IsItem(lStatus) Then
+ If (DefaultListShouldShowComponent(lStatus) And (Not IsSelected(lStatus)) And (Not IsStatusExclusive(lStatus))) Then
+ AllCUNonExclusiveComponentsSelected = FALSE
+ Exit Function
+ End If
+ Else
+ Exit Function
+ End If
+ componentIndex = componentIndex + 1
+	Loop
+End Function
+Function Checkbox_Click(ObjCheckBox)
+	If bPersonalizationFlag Then
+ StorePersonalizationChoices(ObjCheckBox)
+ If (ObjCheckbox.checked=TRUE) Then
+ CheckHeadings(ObjCheckBox)
+ End If
+	Else
+ Call FuncToggle_Checkbox(ObjCheckBox)
+	End If
+End Function
+Function StorePersonalizationChoices(ObjCheckBox)
+	Dim iComponentIndex
+	iComponentIndex=CInt(ObjCheckBox.ARRAYELEMENT) 'Same index in m_arrCatalog in m_arrPersonalization = same component
+	If ObjCheckBox.checked=TRUE Then
+ m_arrPersonalization(iComponentIndex)=1
+	Else
+ m_arrPersonalization(iComponentIndex)=0
+	End If
+End Function
+Function FuncToggle_Checkbox(ObjCheckBox)
+	Dim VarLoop_Counter
+	Dim VarPosition
+	VarPosition = CInt(ObjCheckBox.ARRAYELEMENT)
+	Dim arrItem
+	arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(VarPosition,0))
+	If IsSelected(arrItem(3)) Then
+ Call SelectItemForInstall(m_arrCatalog(VarPosition,0), FALSE)
+ If IsStatusExclusive(m_arrCatalog(VarPosition,3)) then DisableAllCheckboxes(false)
+	Else
+ If IsStatusExclusive(m_arrCatalog(VarPosition,3)) then
+ Call DoExclusive(VarPosition, m_arrCatalog(VarPosition,0))
+ Elseif ((arrItem(3) AND 131072) <> 0) Then
+ Call DoPreview(VarPosition,m_arrCatalog(VarPosition,0))
+ Else
+ Call SelectItemForInstall(m_arrCatalog(VarPosition,0), TRUE)
+ End If
+	End If
+	Call FuncCalculate_Totals()
+	UpdateCatalogTop()
+End Function
+Sub UpdateCatalogTop()
+	Dim arrSelectedItems
+	Call ObjFrame_Reference.RetrieveCatalog(arrSelectedItems, 2)
+	If UBound(arrSelectedItems) > -1 Then
+ Call ActiveButtonUI()
+	Else
+ Call DefaultButtonUI()
+	End if
+End Sub
+Sub ActiveButtonUI()
+	Dim objCatalogTopDocument
+	set objCatalogTopDocument = ObjFrame_Catalog_Top.document
+	objCatalogTopDocument.All("ImgNext_Button1").Src = "images/button-arrow.gif"
+	objCatalogTopDocument.All("SpanNext_Button1").className = "ButtonB"
+	objCatalogTopDocument.All("ImgNext_Button1").Style.Cursor = "hand"
+	objCatalogTopDocument.All("SpanNext_Button1").Style.Cursor = "hand"
+	objCatalogTopDocument.All("ANext_Button1").Style.Cursor = "hand"
+End Sub
+Sub DefaultButtonUI()
+	Dim objCatalogTopDocument
+	set objCatalogTopDocument = ObjFrame_Catalog_Top.document
+	objCatalogTopDocument.All("ImgNext_Button1").Src = "images/button-arrow-gray.gif"
+	objCatalogTopDocument.All("SpanNext_Button1").className = "ButtonG"
+	objCatalogTopDocument.All("ImgNext_Button1").Style.Cursor = "default"
+	objCatalogTopDocument.All("SpanNext_Button1").Style.Cursor = "default"
+	objCatalogTopDocument.All("ANext_Button1").Style.Cursor = "default"
+End Sub
+Function FuncMakeDownloadTimeString(nDownloadTime)
+	Dim VarHours
+	Dim intHours
+	Dim VarMinutes
+	If nDownloadTime <= 60 Then
+ VarMinutes = "< 1 perc"
+	ElseIf nDownloadTime >= 3600 Then
+ intHours = Int(nDownloadTime / 3600)
+ If (nDownloadTime/60) Mod 60 = 0 Then
+ VarMinutes = ""
+ Else
+ VarMinutes = (Int(nDownloadTime/60) - (intHours * 60)) & " perc "
+ End If
+ Select Case intHours
+ Case 0:
+ VarHours = ""
+ Case Else:
+ VarHours = intHours & " óra "
+ End Select
+	Else
+ VarMinutes = Int(nDownloadTime/60) & " perc "
+	End If
+	FuncMakeDownloadTimeString = " Letöltési idő: " & VarHours & VarMinutes
+End Function
+Function FuncCalculate_Totals()
+Dim VarLoop_Counter
+Dim VarDownload_Size
+Dim VarDownload_Time
+	VarDownload_Size = 0
+	VarDownload_Time = 0
+	Dim arrSelectedItems
+	Call ObjFrame_Reference.RetrieveCatalog(arrSelectedItems, 2)
+	For VarLoop_Counter = 0 TO UBound(arrSelectedItems)
+ VarDownload_Size = VarDownload_Size + arrSelectedItems(VarLoop_Counter,4)
+ VarDownload_Time = VarDownload_Time + arrSelectedItems(VarLoop_Counter,5)
+	Next
+	If (VarDownload_Time = 0) AND (VarDownload_Size = 0) Then
+ ObjFrame_Catalog_Top.TdTotals1.InnerText = "Nincs kijelölt összetevő."
+	Else
+ ObjFrame_Catalog_Top.Document.All("TdTotals1").InnerHTML = "Teljes méret: <span dir=ltr>" & CLng(VarDownload_Size) & " kB</span>" & FuncMakeDownloadTimeString(VarDownload_Time)
+	End if
+End Function
+Sub Uninstall(nCurIndex)
+	Dim elem
+	for each elem in document.all.tags("INPUT")
+ if elem.type = "checkbox" and (instr(elem.id,"ObjCheckBox_") <> 0)then
+ Dim lPuid
+ lPuid = CLng(Right(elem.id,Len(elem.id) - Instr(elem.id,"_")))
+ Dim arrayItem
+ arrayItem = ObjFrame_Reference.GetCatalogItem(lPuid)
+ If IsSelected(arrayItem(3)) Then
+ Call SelectItemForInstall(lPuid,FALSE)
+ End if
+ elem.disabled = false
+ elem.checked = false
+ end if
+ If bCURollupComponent then
+ document.all.item("Item_CURollup").checked = False
+ End If
+	next
+	Call DefaultButtonUI()
+	Dim arrItem
+	Call ObjFrame_Reference.SelectItemForRemoval(m_arrCatalog(nCurIndex,0))
+	ObjFrame_Reference.RemoveSelectedItems()
+	arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(nCurIndex,0))
+ On Error Resume Next
+	m_arrCatalog(nCurIndex,3)=arrItem(3)
+ If Err.Number = 0 Then
+ If NOT IsStatusUpToDate(arrItem(3)) Then 'if item is currently installed
+ document.all("InstText_" & CStr(arrItem(0))).style.visibility="hidden"
+ End If
+	End If
+End Sub
+Sub DoExclusive(VarPosition,PUID)
+ If ConfirmSelection(VarPosition) Then
+ Call SelectExclusive(PUID)
+ Else
+ Call SelectItemForInstall(PUID, FALSE)
+ End If
+End Sub
+Sub SelectExclusive(PUID)
+	Dim nArrIndex
+	For nArrIndex = 0 to UBound(m_arrCatalog)
+ If (m_arrCatalog(nArrIndex,0) <> PUID) AND _
+ IsItem(m_arrCatalog(nArrIndex,3)) Then
+ Call SelectItemForInstall(m_arrCatalog(nArrIndex,0), FALSE)
+ End If
+	Next
+	dim elem
+	for each elem in document.all.tags("INPUT")
+ if elem.type="checkbox" AND _
+ elem.id <> "ObjCheckBox_" & PUID then elem.disabled=true
+	next
+	If bCURollupComponent Then
+ document.all("Item_CURollup").checked = FALSE
+ document.all("CURollUpSizeTime").innerHTML = DisplayCURollUpSizeTime()
+	End If
+	Call SelectItemForInstall(PUID, TRUE)
+End Sub
+Function ConfirmSelection(VarPosition)
+	Dim iRet
+	Dim szInstallExclusive_Text
+	If IsStatusScary(m_arrCatalog(VarPosition, 3)) Then
+ szInstallExclusive_Text = patternReplace("Ön egy olyan béta verziójú szoftvert készül letölteni, amely visszajelzési és tesztelési célokat szolgál. A béta verziójú termékekhez a Microsoft nem nyújt technikai tanácsadást. Ez a szoftver olyan tapasztalt felhasználók számára készült, akik rendszeresen tesztelik az előzetes verziókat. Ha Ön nem ilyen felhasználó, javasoljuk, hogy NE töltse le ezt a szoftvert. Ha mégis letölti, lehetőség szerint ne telepítse elsődleges számítógépre vagy operációs rendszerre. %2A(z) %1 telepítésével egyidőben más összetevők letöltése nem lehetséges. A Termékfrissítések katalógusba való visszatéréshez és a(z) %1 telepítéséhez kattintson az OK gombra. A telepítés után visszatérhet a Windows Update webhelyre és letöltheti a többi összetevőt. A Mégse gombra kattintva a(z) %1 letöltése nélkül térhet vissza a Termékfrissítések katalógusba.", "%1", m_arrCatalog(VarPosition,1))
+ szInstallExclusive_Text = patternReplace(szInstallExclusive_Text, "%2", ("<BR><BR>"))
+ ConfirmSelection = TRUE
+ iRet = parent.parent.Frames(0).WuMsgBox(szInstallExclusive_Text, 3 ,"Windows Update","350px","400px")
+ If iRet <> vbOK Then
+ ConfirmSelection = FALSE
+ Exit Function
+ End If
+	Else
+ szInstallExclusive_Text = patternReplace("A(z) %1 telepítésével egyidőben más összetevők letöltése nem lehetséges. A Termékfrissítések katalógusba való visszatéréshez és a(z) %1 telepítéséhez kattintson az OK gombra. A telepítés után visszatérhet a Windows Update webhelyre és letöltheti a többi összetevőt. A Mégse gombra kattintva a(z) %1 letöltése nélkül térhet vissza a Termékfrissítések katalógusba.", "%1", m_arrCatalog(VarPosition,1))
+ szInstallExclusive_Text = patternReplace(szInstallExclusive_Text, "%2", ("<BR><BR>"))
+ ConfirmSelection = TRUE
+ iRet = parent.parent.Frames(0).WuMsgBox(szInstallExclusive_Text, 3 ,"Windows Update","350px","400px")
+ If iRet <> vbOK Then
+ ConfirmSelection = FALSE
+ Exit Function
+ End If
+	End If
+End Function
+Function patternReplace(szPhrase, szOldPattern, szNewPattern)
+	Dim arrPhrase, szNewPhrase, i
+	szNewPhrase=""
+	arrPhrase=split(szPhrase,szOldPattern)
+	For i=0 to (UBound(arrPhrase)-1)
+ szNewPhrase=szNewPhrase & arrPhrase(i) & szNewPattern
+	Next
+	szNewPhrase=szNewPhrase & arrPhrase(i)
+	patternReplace=szNewPhrase
+End Function
+Function IsArrayEmpty(arrObj)
+	IsArrayEmpty = (UBound(arrObj) < 0)
+End Function
+Sub UnselectExclusiveComps()
+End Sub
+Sub DoPreview(VarPosition,PUID)
+	If ConfirmPreviewSelection(VarPosition) Then
+ Call SelectItemForInstall(PUID, TRUE)
+	Else
+ document.all.item("ObjCheckBox_" & PUID).checked = FALSE
+	End If
+End Sub
+Function ConfirmPreviewSelection(VarPosition)
+	Dim szInstallPreview_Text
+	szInstallPreview_Text = patternReplace("A letöltésre kijelölt elem (%1) egy még kiadatlan összetevő előzetes verziója. Az ilyen előzetes összetevők tesztelése még nem fejeződött be, így letöltésük csak hozzáértő felhasználók, illetve azok számára ajánlott, akik rendszeresen részt vesznek kiadatlan szoftverek tesztelésében. Ha nem biztos abban, hogy rendelkezik a megfelelő szakismeretekkel, ne töltse le ezt az összetevőt. A Microsoft nem biztosít szaktanácsadást az előzetes összetevőkkel kapcsolatban.%2Kattintson az OK gombra, ha telepíteni szeretné a(z) %1 összetevőt.%2Kattintson a Mégse gombra, ha nem kívánja telepíteni a(z) %1 összetevőt.", "%1", m_arrCatalog(VarPosition,1))
+	szInstallPreview_Text = patternReplace(szInstallPreview_Text, "%2", ("<BR><BR>"))
+	ConfirmPreviewSelection = TRUE
+	Dim iRet
+	iRet = parent.parent.Frames(0).WuMsgBox(szInstallPreview_Text, 3 ,"Windows Update","300px","400px")
+	If iRet <> vbOK Then
+ ConfirmPreviewSelection = FALSE
+ Exit Function
+	End If
+End Function
+Sub SelectItemForInstall(PUID, bFlag)
+	On Error Resume Next
+	document.all.item("ObjCheckBox_" & PUID).checked = bFlag
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	If bFlag Then
+ Call ObjFrame_Reference.SelectItemForInstall(PUID)
+	Else
+ Call ObjFrame_Reference.UnselectItem(PUID)
+	End If
+End Sub
+Sub DeselectAnyExclusiveComponents()
+	Dim i, lStatus
+	For i=0 to UBound(m_arrCatalog)
+ lStatus=m_arrCatalog(i,3)
+ If (IsStatusExclusive(lStatus) AND IsSelected(lStatus)) Then
+ End If
+	Next
+End Sub
+Sub DoPersonalization()
+	bPersonalizationFlag=TRUE
+	DisableAllCheckBoxes(FALSE)
+	PersonalizeCatalogTop()
+	PersonalizeMiddle()
+	ShowPersonalizeComponents()
+	InitializePersonalizationArray()
+	HideCUNoComponentsMessage()
+	Call Window.ScrollTo(0, 0)
+End Sub
+Sub HideCUNoComponentsMessage()
+	document.all("TdInstall_Message_" & m_arrCatalog(m_CriticalUpdateSectionIndex, 0)).style.display = "none"
+End Sub
+Sub PersonalizeCatalogTop()
+	ObjFrame_Catalog_Top.DisplayPersonalizeUI
+End Sub
+Sub PersonalizeMiddle()
+	On Error Resume Next
+ Dim i, colComponentInfoToHide, colButtons, colPersonalizeSections, colPersonalizeSubSections, colPersonalizeSubSubSections, colPersonalizeDesc
+	Dim colShowAllDesc, colHideInstalledDesc
+	Set colShowAllDesc=document.all("ShowAllDesc")
+	Set colHideInstalledDesc=document.all("HideInstalledDesc")
+	Set colPersonalizeDesc=document.all("PersonalizeDesc")
+	bFormerlyAllComponentsShown=ObjFrame_Reference.g_bShowAll
+	For i=0 to (colPersonalizeDesc.length-1)
+ colPersonalizeDesc(i).style.display="block"
+	Next
+	For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display="none"
+	Next
+	For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display="none"
+	Next
+	Set colButtons=document.all("BUTTON")
+	For i=0 to (colButtons.length-1)
+ colButtons(i).style.display="none"
+	Next
+	document.all("PERSONALIZE_BUTTON").style.display="none"
+	Set colPersonalizeSubSections=document.all("SHOW_FOR_PERSONALIZATION")
+	For i=0 to (colPersonalizeSubSections.length-1)
+ colPersonalizeSubSections(i).style.visibility="visible"
+	Next
+	Set colComponentInfoToHide=document.all("HIDE_FOR_PERSONALIZATION")
+	For i=0 to (colComponentInfoToHide.length-1)
+ colComponentInfoToHide(i).style.display="none"
+	Next
+End Sub
+Sub ShowPersonalizeComponents()
+	Dim nIndex, iComponentType, lStatus
+	iComponentType=1
+	For nIndex = 0 to UBound(m_arrCatalog)
+ lStatus=m_arrCatalog(nIndex,3)
+ If ((lStatus AND 128)<>0) Then
+ Document.All("TblSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ If HasComponents(m_arrCatalog,nIndex,iComponentType) Then
+ Document.All("TdInstall_Message_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ Else
+ Document.All("TdInstall_Message_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ End If
+ ElseIf ((lStatus AND 256)<>0) Then
+ If HasComponents(m_arrCatalog,nIndex,iComponentType) Then
+ Document.All("TblSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ Else
+ Document.All("TblSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ End If
+ ElseIf ((lStatus AND 512)<>0) Then
+ If HasComponents(m_arrCatalog,nIndex,iComponentType) Then
+ Document.All("TblSubSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "block"
+ Else
+ Document.All("TblSubSubSection_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ End If
+ ElseIf ((lStatus AND 896)=0) Then
+ If ((lStatus AND 4096)<>0) Then 'If currently installed
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+ Else
+ Call ShowThisComponent(nIndex,m_arrCatalog(nIndex,0))
+ End If
+ End If
+	Next
+End Sub
+Sub ShowThisComponent(nIndex,slPUID)
+	Document.All("TblItem_" & slPUID).Style.Display = "block"
+	If ((nIndex > m_CriticalUpdateSectionIndex) And (nIndex < m_indexJustAfterAllCriticalUpdates)) Then
+ Document.All("TblItem_" & m_arrCatalog(nIndex,0)).Style.Display = "none"
+	End If
+	If IsStatusHidden(m_arrCatalog(nIndex,3)) Then
+ Document.All("ObjCheckBox_" & slPUID).checked = FALSE
+	Else
+ Document.All("ObjCheckBox_" & slPUID).checked = TRUE
+	End If
+End Sub
+Sub InitializePersonalizationArray()
+	Dim i
+	ReDim m_arrPersonalization(UBound(m_arrCatalog)) 'contains personalization state for each m_arrCatalog item
+	For i = 0 to UBound(m_arrPersonalization)
+ m_arrPersonalization(i)=-1
+	Next
+End Sub
+Sub CommitPersonalizationChanges()
+	Dim i, sCheckboxID, slPUID, arrItem
+	For i = 0 to UBound(m_arrPersonalization)
+ Select Case m_arrPersonalization(i)
+ Case -1
+ Case 0
+ If NOT IsStatusHidden(m_arrCatalog(i,3)) Then
+ Call ObjFrame_Reference.ChangeItemState(m_arrCatalog(i,0), 16)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(i,0))
+ m_arrCatalog(i,3)=arrItem(3)
+ End If
+ Case 1
+ If IsStatusHidden(m_arrCatalog(i,3)) Then
+ Call ObjFrame_Reference.ChangeItemState(m_arrCatalog(i,0), 128)
+ arrItem = ObjFrame_Reference.GetCatalogItem(m_arrCatalog(i,0))
+ m_arrCatalog(i,3)=arrItem(3)
+ End If
+ End Select
+	Next
+End Sub
+Sub UndoPersonalization()
+	RestoreMiddle()
+	ReselectComponentsToShow()
+	DefaultButtonUI()
+	Call Window.ScrollTo(0, 0)
+End Sub
+Sub RestoreMiddle()
+ On Error Resume Next
+	Dim i, colCheckboxes, colComponentInfoToShow, colButtons, colPersonalizeSubSections, colPersonalizeSubSubSections
+	Dim colShowAllDesc, colHideInstalledDesc, colPersonalizeDesc
+	Set colShowAllDesc=document.all("ShowAllDesc")
+	Set colHideInstalledDesc=document.all("HideInstalledDesc")
+	Set colPersonalizeDesc=document.all("PersonalizeDesc")
+	For i=0 to (colPersonalizeDesc.length-1)
+ colPersonalizeDesc(i).style.display="none"
+	Next
+	If bFormerlyAllComponentsShown Then
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display="none"
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display="block"
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="none"
+	Else
+ For i=0 to (colShowAllDesc.length-1)
+ colShowAllDesc(i).style.display="block"
+ Next
+ For i=0 to (colHideInstalledDesc.length-1)
+ colHideInstalledDesc(i).style.display="none"
+ Next
+ document.all("PERSONALIZE_BUTTON").style.display="block"
+	End If
+	Set colButtons=document.all("BUTTON")
+	For i=0 to (colButtons.length-1)
+ colButtons(i).style.display="block"
+	Next
+	Set colPersonalizeSubSections=document.all("SHOW_FOR_PERSONALIZATION")
+	For i=0 to (colPersonalizeSubSections.length-1)
+ colPersonalizeSubSections(i).style.visibility="hidden"
+	Next
+	Set colComponentInfoToShow=document.all("HIDE_FOR_PERSONALIZATION")
+	For i=0 to (colComponentInfoToShow.length-1)
+ colComponentInfoToShow(i).style.display="block"
+	Next
+	Set colCheckboxes=document.all.tags("INPUT")
+	For i=0 to (colCheckboxes.length-1)
+ If InStr(CStr(colCheckboxes(i).ID), "ObjCheckBox_") Then
+ colCheckboxes(i).checked = FALSE
+ End if
+	Next
+End Sub
+Sub ReselectComponentsToShow()
+	bPersonalizationFlag=FALSE
+	If bFormerlyAllComponentsShown Then
+ ToggleShowingInstalledItems(TRUE)
+	Else
+ ToggleShowingInstalledItems(FALSE)
+	End If
+	UpdateCURollUp()
+End Sub
+Sub personalizeSection(iIndex)
+	Dim i, lStatus, objCheckbox, sCheckboxID, bChecked
+	bChecked=window.event.srcElement.CHECKED
+	i=iIndex+1
+	If i>UBound(m_arrCatalog) Then Exit Sub
+	If ((m_arrCatalog(iIndex,3) AND 256) <> 0) Then
+ Do While ((NOT (i>UBound(m_arrCatalog))) AND ((m_arrCatalog(i,3) AND 384)=0))
+ lStatus=m_arrCatalog(i,3)
+ If ((lStatus AND 896) = 0) Then
+ If ((lStatus AND 4096)=0) Then
+ sCheckboxID="ObjCheckBox_" & m_arrCatalog(i,0)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=bChecked
+ StorePersonalizationChoices(objCheckbox)
+ End If
+ Elseif ((lStatus AND 512) <> 0) Then
+ sCheckboxID="SUBSUBSECTION_" & CStr(i)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=bChecked
+ End If
+ i=i+1
+ If i > UBound(m_arrCatalog) Then Exit Do
+ Loop
+	ElseIf ((m_arrCatalog(iIndex,3) AND 512) <> 0) Then
+ Do While ((NOT (i>UBound(m_arrCatalog))) AND ((m_arrCatalog(i,3) AND 896)=0))
+ lStatus=m_arrCatalog(i,3)
+ If ((lStatus AND 896) = 0) Then
+ If ((lStatus AND 4096)=0) Then
+ sCheckboxID="ObjCheckBox_" & m_arrCatalog(i,0)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=bChecked
+ StorePersonalizationChoices(objCheckbox)
+ End If
+ End If
+ i=i+1
+ If i > UBound(m_arrCatalog) Then Exit Do
+ Loop
+ If bChecked Then
+ CheckSubSection(iIndex)
+ End If
+	End If
+End Sub
+Sub CheckSubSection(iSubSubSection)
+	Dim i, sCheckboxID
+	For i=(iSubSubSection-1) to 0 Step -1
+ If ((m_arrCatalog(i,3) AND 256)<>0) Then
+ sCheckboxID="SUBSECTION_" & CStr(i)
+ document.all(sCheckboxID).checked=TRUE
+ Exit For
+ End If
+	Next
+End Sub
+Sub ResetPersonalization()
+	Dim i, lStatus, objCheckbox, sCheckboxID
+	For i=0 to UBound(m_arrCatalog)
+ lStatus=m_arrCatalog(i,3)
+ If ((lStatus AND 256)<>0) Then
+ sCheckboxID="SUBSECTION_" & CStr(i)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=TRUE
+ Elseif ((lStatus AND 512)<>0) Then
+ sCheckboxID="SUBSUBSECTION_" & CStr(i)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=TRUE
+ Elseif ((lStatus AND 896) = 0) Then
+ If ((lStatus AND 4096)=0) Then
+ sCheckboxID="ObjCheckBox_" & m_arrCatalog(i,0)
+ Set objCheckbox=document.all(sCheckboxID)
+ objCheckbox.checked=TRUE
+ StorePersonalizationChoices(objCheckbox)
+ End If
+ End If
+	Next
+	ObjFrame_Catalog_Top.CommitPersonalizationChanges()
+End Sub
+Sub CheckHeadings(objItemCheckbox)
+	Dim i, originalItemIndex, lStatus, headingCheckbox, sCheckboxID, bSubSectionChecked, bSubSubSectionChecked
+	If objItemCheckbox.checked=FALSE Then
+ Exit Sub
+	End If
+	bSubSectionChecked=FALSE
+	bSubSubSectionChecked=FALSE
+	originalItemIndex=CInt(objItemCheckbox.ARRAYELEMENT)
+	For i=(originalItemIndex-1) to 0 Step -1
+ lStatus=m_arrCatalog(i,3)
+ If ((lStatus AND 512)<>0) Then
+ If NOT bSubSubSectionChecked Then
+ sCheckboxID="SUBSUBSECTION_" & CStr(i)
+ Set headingCheckbox=document.all(sCheckboxID)
+ headingCheckbox.checked=TRUE
+ bSubSubSectionChecked=TRUE
+ End If
+ Elseif ((lStatus AND 256)<>0) Then
+ If NOT bSubSectionChecked Then
+ sCheckboxID="SUBSECTION_" & CStr(i)
+ Set headingCheckbox=document.all(sCheckboxID)
+ headingCheckbox.checked=TRUE
+ bSubSectionChecked=TRUE
+ End If
+ Elseif ((lStatus AND 128)<>0) Then
+ Exit For
+ Else
+ End If
+	Next
+End Sub
+</SCRIPT>
+<BR><BR><CENTER>
+<SPAN id=sp1 STYLE="font-size: 8pt;color:#00319C;FONT-FAMILY: Verdana, Arial, Helvetica">
+<A target="CopyRight" HREF="http://www.microsoft.com/hun/cpyright.htm">
+<ID ID=x3>© 2000 Microsoft Corporation. Minden jog fenntartva. Felhasználási feltételek.</ID></A><BR></SPAN>
+</CENTER>
+</BODY>
+</HTML>

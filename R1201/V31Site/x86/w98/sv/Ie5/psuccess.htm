@@ -1,0 +1,289 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Windows Update</title>
+<STYLE type="text/css">
+BODY {
+	font-family:"verdana,arial,helvetica";
+	font-size:8pt;
+}
+.def {
+	font-family:"verdana,arial,helvetica";
+	font-size:8pt;
+}
+.big {
+	font-family:"verdana,arial,helvetica";
+	font-size:20pt;
+	font-weight:bold;
+	color:#00319C;
+	line-height:35px;
+}
+.ButtonB {
+	BACKGROUND-COLOR: #2f60ff;
+	BORDER-BOTTOM: #002f9f Solid 2px;
+	BORDER-LEFT: #9fcfff Solid 2px;
+	BORDER-RIGHT: #002f9f Solid 2px;
+	BORDER-TOP: #9fcfff Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	Vertical-align: top;
+}
+.ButtonG {
+	BACKGROUND-COLOR: #909090;
+	BORDER-BOTTOM: #5f5f5f Solid 2px;
+	BORDER-LEFT: #c0c0c0 Solid 2px;
+	BORDER-RIGHT: #5f5f5f Solid 2px;
+	BORDER-TOP: #c0c0c0 Solid 2px;
+	COLOR: #ffffff;
+	CURSOR: Hand;
+	FONT-FAMILY: Verdana, Arial, Helvetica;
+	FONT-SIZE: 7.5pt;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	Vertical-align: top;
+}
+.headline {
+	background-color:#330099;
+	line-height:16px;
+	font-family:verdana,arial,helvetica;
+	font-size:8pt;
+	color:white;
+	font-weight:bold;
+	padding:2px;
+}
+A {
+color: #00319C;
+}
+P {
+margin-top:12px;
+margin-bottom:4px;
+}
+</STYLE>
+<SCRIPT language="VBScript">
+OPTION EXPLICIT
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim arrSucceededComps()
+Dim arrFailedComps()
+Dim arrCompErrors()
+Dim m_nStatus
+Dim bCuRollupSelected
+Dim bCUSucceeded, bSomeCUItemsSucceeded
+Dim bSomeNonCURollupFailed, bSomeNonCURollUpSucceeded
+Dim arrErrorLookup
+arrErrorLookup = Array( _
+ Array( "-2147467260" , "Installationen slutfördes inte på grund av att uppdateringen avbröts."), _
+ Array( "-2147023673" , "Installationen slutfördes inte på grund av att uppdateringen avbröts."), _
+ Array( "-2147467259" , "Installationen avbröts på grund av ett okänt fel."), _
+ Array( "-2147024637" , "Drivrutinen som du försöker hämta passar din enhet sämre än den installerade drivrutinen."), _
+ Array( "-2147024894" , "Installationen avbröts på grund av att filen saknas."), _
+ Array( "-2146762485" , "Installationen avbröts på grund av att filen inte var signerad eller att signaturen inte ansågs tillförlitlig."), _
+ Array( "-2146762748" , "Installationen avbröts på grund av att filen inte var signerad eller att signaturen inte ansågs tillförlitlig."), _
+ Array( "-2147024784" , "Installationen avbröts på grund av att en eller flera av datorns diskar är fulla.") _
+ )
+If LCase(parent.GblPSuccessSync) = "psuccess" Then
+	document.cookie = "page=nothing; path=/"
+	Dim objFrameEngine
+	Set objFrameEngine = parent.frames("FrmToolbar").document.frames(0)
+	bCuRollupSelected = objFrameEngine.g_bCuRollupSelected
+	Call RetrieveInstallResults()
+End If
+Sub RetrieveInstallResults()
+	m_nStatus = DetermineStatus(objFrameEngine.g_arrInstallStatus)
+End Sub
+Function GetFriendlyText(errno)
+On Error Resume Next
+Dim i
+	If CLng(errno) = 0 Then
+ GetFriendlyText = "Installationen slutfördes inte på grund av att hämtningen avbröts."
+ Exit Function
+	ElseIf(CLng(errno) < 0) Then
+ For i = 0 to UBound(arrErrorLookup)
+ If CLng(arrErrorLookup(i)(0)) = CLng(errno) Then
+ GetFriendlyText = arrErrorLookup(i)(1)
+ Exit Function
+ End If
+ Next
+ End If
+	GetFriendlyText = "Installationen avbröts på grund av ett okänt fel." + " (" + CStr(CLng(errno)) + ")"
+End Function
+Function DetermineStatus(arrItemStatus)
+	Dim nIndex, nIndexSucceeded, nIndexFailed
+	nIndexSucceeded = 0
+	nIndexFailed = 0
+	Dim bSomeFailed, bSomeSucceeded
+	bSomeFailed = FALSE
+	bSomeSucceeded = FALSE
+	bSomeNonCURollupFailed = FALSE
+	bSomeNonCURollUpSucceeded = FALSE
+	If bCuRollupSelected Then
+ bCUSucceeded = TRUE
+ bSomeCUItemsSucceeded = FALSE
+ For nIndex = 0 to UBound(arrItemStatus)
+ If arrItemStatus(nIndex,1) = 2 Then
+ If objFrameEngine.MatchingCURollupPUID(arrItemStatus(nIndex,0)) Then
+ bCUSucceeded = FALSE
+ Else
+ ReDim Preserve arrFailedComps(nIndexFailed)
+ ReDim Preserve arrCompErrors(nIndexFailed)
+ arrCompErrors(nIndexFailed) = arrItemStatus(nIndex,2)
+ arrFailedComps(nIndexFailed) = arrItemStatus(nIndex,0)
+ bSomeNonCURollupFailed = TRUE
+ nIndexFailed = nIndexFailed + 1
+ End If
+ Else
+ If arrItemStatus(nIndex,1) = 3 Then
+ parent.g_bRebootRequired = TRUE
+ End If
+ If objFrameEngine.MatchingCURollupPUID(arrItemStatus(nIndex,0)) Then
+ bSomeCUItemsSucceeded = TRUE
+ Else
+ ReDim Preserve arrSucceededComps(nIndexSucceeded)
+ arrSucceededComps(nIndexSucceeded) = arrItemStatus(nIndex,0)
+ bSomeNonCURollUpSucceeded = TRUE
+ nIndexSucceeded = nIndexSucceeded + 1
+ End If
+ End If
+ Next
+ If ((bCUSucceeded = FALSE) Or (bSomeNonCURollupFailed = TRUE)) Then
+ bSomeFailed = TRUE
+ End If
+ If bCUSucceeded Or bSomeNonCURollUpSucceeded Then
+ bSomeSucceeded = TRUE
+ End If
+	Else
+ For nIndex = 0 to UBound(arrItemStatus)
+ If arrItemStatus(nIndex,1) = 2 Then
+ bSomeFailed = TRUE
+ ReDim Preserve arrFailedComps(nIndexFailed)
+ ReDim Preserve arrCompErrors(nIndexFailed)
+ arrCompErrors(nIndexFailed) = arrItemStatus(nIndex,2)
+ arrFailedComps(nIndexFailed) = arrItemStatus(nIndex,0)
+ bSomeNonCURollupFailed = TRUE
+ nIndexFailed = nIndexFailed + 1
+ Else
+ If arrItemStatus(nIndex,1) = 3 Then
+ parent.g_bRebootRequired = TRUE
+ End If
+ bSomeSucceeded = TRUE
+ ReDim Preserve arrSucceededComps(nIndexSucceeded)
+ arrSucceededComps(nIndexSucceeded) = arrItemStatus(nIndex,0)
+ bSomeNonCURollUpSucceeded = TRUE
+ nIndexSucceeded = nIndexSucceeded + 1
+ End If
+ Next
+	End If
+	If bSomeFailed and bSomeSucceeded Then
+ DetermineStatus = 0
+	ElseIf bSomeFailed Then
+ DetermineStatus = 1
+	ElseIf bSomeSucceeded Then
+ DetermineStatus = 2
+	End If
+End Function
+Sub DisplayInstalledComponents()
+	Dim i
+	Dim arrItemAttribs
+	If (bCuRollupSelected And bCUSucceeded) Then
+ document.write("<B>Paket med viktiga uppdateringar</B><br>")
+	End If
+	If bSomeNonCURollUpSucceeded Then
+ For i = 0 To UBound(arrSucceededComps)
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrSucceededComps(i))
+ document.write("<B>" & arrItemAttribs(1) & "</B><br>")
+ Next
+ End If
+End Sub
+Sub DisplayFailedComponents()
+	Dim i
+	Dim arrItemAttribs
+	If (bCuRollupSelected And (Not bCUSucceeded)) Then
+ document.write("<B>Paket med viktiga uppdateringar</B><br>")
+ If bSomeCUItemsSucceeded Then
+ document.write("Vissa komponenter har installerats och behöver inte hämtas igen. Paketet med viktiga uppdateringar innehåller därför färre komponenter nästa gång du går till katalogen.<br><br>")
+ End If
+	End If
+	If bSomeNonCURollupFailed Then
+ For i = 0 To UBound(arrFailedComps)
+ arrItemAttribs = objFrameEngine.GetCatalogItem(arrFailedComps(i))
+ document.write("<B>" & arrItemAttribs(1) & "</B>")
+ document.write("<div style=position:relative;padding-left:20px;padding-right:20px;>" & GetFriendlyText(arrCompErrors(i)) & "</div>")
+ Next
+	End If
+End Sub
+Sub Window_Onload
+	If LCase(parent.GblPSuccessSync) = "psuccess" Then
+ If Parent.GblLock = TRUE Then
+ parent.frames("FrmNavigator").FuncToggle_Lock(FALSE)
+ Parent.GblLock = FALSE
+ End If
+	End If
+	objFrameEngine.WUV3IS.FinalizeInstall(1)
+End Sub
+Sub Window_OnUnLoad
+	On Error Resume Next
+	parent.GblPSuccessSync = ""
+	If Err.Number <> 0 Then
+ Err.Clear
+	End If
+	On Error Goto 0
+ If Instr(LCase(top.location.search), "&sec=criticalupdates")<>0 Then
+ document.cookie = "page=CUN; path=/"
+	Else
+ document.cookie = "page=ProductUpdates; path=/"
+ End If
+End Sub
+Sub GoBack(strURL)
+	window.parent.frames("HFrame").Location.href=strURL
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white LEFTMARGIN=20 TOPMARGIN=10>
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+ <TR>
+	<TD VALIGN=top><IMG class=flippable ID=ix1 SRC="images/big-hand.png" WIDTH=64 HEIGHT=40 ALT="Välj programvara"></TD>
+	<TD>&nbsp;</TD>
+	<TD VALIGN=bottom ROWSPAN=2>
+ <SPAN CLASS=def STYLE="font-weight:bold;color:#00319C"><ID ID=x2>Produktuppdateringar</ID></SPAN><br>
+ <SPAN CLASS=big>
+<SCRIPT language="VBScript">
+	document.write("Hämtningsresultat")
+</SCRIPT>
+ </SPAN>
+	</TD>
+ </TR>
+</TABLE>
+<SCRIPT language="VBScript">
+If (0 = m_nStatus) OR (1 = m_nStatus) Then
+	If (bSomeNonCURollupFailed) OR (Not bCUSucceeded) Then
+ document.write("<P class=headline>Uppdateringar som inte installerades</P>")
+ document.write("<P ID=""InstalledFailedComp"" CLASS=""def"">Följande uppdateringar installerades inte. Om du vill försöka igen klickar du på <B>Tillbaka</B>.</P>")
+ DisplayFailedComponents()
+	End If
+End If
+If (0 = m_nStatus) OR (2 = m_nStatus) Then
+	document.write("<P class=headline>Uppdateringar som installerades</P>")
+	document.write("<P ID=""InstalledComp"" CLASS=""def"">Följande uppdateringar installerades på datorn.</P>")
+	DisplayInstalledComponents()
+End If
+</SCRIPT>
+<BR>
+<IMG ID=ix2 OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" STYLE="cursor: hand" class=flippable SRC="images/button-arrow-back.jpg" ALT=""><SPAN id=button1 LANGUAGE="VBScript" OnClick="JavaScript:GoBack('HNav.htm?PUMain.htm&FrmContent&GblProductSync&ProductUpdates')" CLASS="ButtonB" STYLE="WIDTH: 126px; HEIGHT: 17px; BORDER-LEFT: none; padding-bottom: 1px;">
+<A STYLE="text-decoration: none; color: white;" HREF="javascript:void(0)"><ID ID=x9>Tillbaka</ID></A><BR></SPAN>
+<BR>
+ <P>
+<BR><BR><CENTER>
+<A target="CopyRight" HREF="http://www.microsoft.com/sverige/misc/cpyright.htm"><ID ID=x10>(c) 2022 Microsoft Corporation. Med ensamrätt. Villkor för användning.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>

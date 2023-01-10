@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE></TITLE>
+</HEAD>
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../../default.htm")
+End if
+On Error Goto 0
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+Dim FrmNav
+document.cookie = "page=nothing; path=/"
+Set FrmNav = parent.frames("FrmNavigator")
+If FrmNav.Document.ReadyState = "complete" Then
+ FrmNav.FuncToggle_Lock(FALSE)
+End If
+Sub NavCatalog
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S001"), 0
+End Sub
+Sub NavMemSvc
+ If Parent.GblLock=True Then
+ Exit Sub
+ End if
+ FrmNav.ChooseSec FrmNav.document.All("S002"), 0
+End Sub
+Sub AcceptLang
+ Window.Open("lang.htm")
+End Sub
+Sub IESupport
+ Window.Open("iever.htm")
+End Sub
+</SCRIPT>
+<style>
+<!--
+.smallblack {
+ font-family: verdana, arial, sans-serif;
+ font-size: 8pt;
+}
+.darkblue {
+ color: #00319C;
+}
+A:link {
+ color: #00319C;
+}
+.BodyText {
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+-->
+</style>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR="WHITE" CLASS="BodyText">
+<script Language="VBScript">
+Function DisplayAbout(strUrl)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strUrl,"readthis","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+</script>
+ <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%" CLASS="BodyText">
+ <TR>
+ <TD WIDTH="164">
+ <IMG ID=ix2 SRC="images/welcome.gif" WIDTH="164" ALT="" HEIGHT="96">
+ </TD>
+ <TD VALIGN="bottom">
+ <DIV ID=d1 STYLE="COLOR: #2f60ff; FONT-FAMILY: Verdana, Arial; FONT-SIZE: 20pt; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px;">
+ <ID ID=x101><I>Velkommen til</ID><BR> <ID ID=x1a> Windows Update</I></ID>
+ </DIV>
+ </TD>
+ </TR>
+ <TR>
+ <TD COLSPAN="2" HEIGHT="1" BGCOLOR="#00319C"><IMG ID=ix4 SRC="Images/ts.gif" ALT="" HEIGHT="1" WIDTH="100%"></TD>
+ </TR>
+ <TR>
+ <TD id=td1 VALIGN="TOP" WIDTH="164">
+ <br>
+ </TD>
+ <TD id=td3 VALIGN="TOP">
+ <DIV STYLE="padding-top: 5px;">
+ </DIV>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavCatalog()"><ID ID=x13>PRODUKTOPPDATERINGER</ID></a></STRONG><BR>
+ </SPAN>
+ <ID ID=x14>Gå hit hvis du vil laste ned og installere de siste oppdateringene 
+	for datamaskinen.</ID><BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG><A HREF="javascript:NavMemSvc()"><ID ID=x15>KUNDESTØTTEINFORMASJON</ID></A></STRONG><BR>
+ </SPAN>
+ <ID ID=x16>Få hjelp med Windows Update ved å lese vår side med vanlige spørsmål 
+	og kjente problemer eller ved å benytte deg av andre kundestøttealternativer.</ID><BR><BR>
+ <P>
+ <P>
+ <P>
+ <P>
+ <SPAN CLASS="darkblue">
+ <STRONG>Why does the Windows Update site appear in a different language?</STRONG><BR>
+ </SPAN>
+ Find out <a href="javascript:AcceptLang()">how to use</a> Internet Explorer's 
+	Accept Language feature to view Windows Update in your preferred language.
+ <BR><BR>
+ <P>
+ <SPAN CLASS="darkblue">
+ <ID ID=x500><STRONG>Hvorfor vises Windows Update-webområdet på et annet språk?</STRONG><BR></ID>
+ </SPAN>
+ <ID ID=x501>Finn ut <a href="javascript:AcceptLang()">hvordan du bruker</a> 
+	funksjonen for språkinnstilling i Internet Explorer til å vise Windows 
+	Update på det språket du ønsker.</ID>
+ <BR><BR>
+ <P>
+ </TD>
+ </TR>
+ </table>
+<BR><BR>
+<CENTER><A target="CopyRight" HREF="http://www.microsoft.com/norge/misc/cpyright.htm"><ID ID=x29>
+© 2022 Microsoft Corporation. Med enerett. Vilkår for bruk.</ID></A></CENTER><BR>
+</body>
+</html>

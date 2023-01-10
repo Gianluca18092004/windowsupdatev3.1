@@ -1,0 +1,317 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<TITLE>Microsoft Windows Update</TITLE>
+<XML:namespace ns=http://www.microsoft.com/ie prefix=MSIE>
+<STYLE>
+<!--
+@media all {
+ MSIE\:CLIENTCAPS {behavior:url(#default#clientcaps);}
+}
+-->
+</STYLE>
+<MSIE:CLIENTCAPS ID="idClCap" />
+<OBJECT CLASSID="clsid:A3863C2E-86EB-11D1-A9DB-00C04FB16F9E" HEIGHT="0" ID="wupdinfo" TYPE="application/x-oleobject" WIDTH="0"></OBJECT>
+<Script LANGUAGE="javascript">
+function IsWUDisabled()
+{
+ return wupdinfo.IsDisabled();
+}
+</Script>
+<script LANGUAGE='VBscript' SRC='getLanguage.asp'>
+</script>
+<SCRIPT LANGUAGE="VBScript">
+Dim GblPUCritUpdts, VarBrowser, GblUpgradeNeeded
+GblUpgradeNeeded = False
+GblPUCritUpdts=LCase("&sec=criticalupdates")
+If Instr(LCase(navigator.userAgent), "msie 3") <> 0 Then
+ location.href = "x86/w98/en/thanksstart.htm"
+Else
+ If (LCase(top.location.hostname) <> "windowsupdate.microsoft.com") Then
+   top.location.replace("http://windowsupdate.microsoft.com/default.htm" & top.location.search)
+ End If
+ Dim GblProductSync, GblConfirmSync, GblSuccessSync, GblPSuccessSync, GblProgressSync, GblFailureSync, GblSync
+ Dim bIsEngineReady, GblLock, g_bIsWinUpdate, g_bRebootRequired, g_strLocaleID, sAcceptLang
+ GblSync = ""
+ GblLock = FALSE
+ bIsEngineReady = FALSE
+ g_bIsWinUpdate = TRUE
+ g_bRebootRequired = False
+ dc = LCase(document.cookie)
+ If ((Instr(dc, "page=productupdates") <> 0) AND (InStr(LCase(location.search),"&sec=criticalupdates")=0)) Then
+ document.cookie = "page=nothing; path=/"
+ top.location.replace("../../default.htm?Page=productupdates")
+ ElseIf (InStr(dc, "page=cun") AND (InStr(LCase(location.search),"&sec=criticalupdates")<>0))Then
+ document.cookie = "page=nothing; path=/"
+ top.location.replace("../../default.htm?Page=productupdates")
+ ElseIf document.cookie="" Then
+ document.cookie = "page=nothing; path=/"
+ End If
+ On Error Resume Next
+End If
+Sub Window_OnLoad()
+ On Error Resume Next
+ Dim VarQuery, VarUsrAgt, VarOS, VarCPU, VarLang, fIE_oldbeta
+ fIE_oldbeta = FALSE
+ VarUsrAgt = LCase(Navigator.userAgent)
+ If Instr(VarUsrAgt, "windows 95") > 0 Then
+ VarOS = "w95"
+ ElseIf Instr(VarUsrAgt, "nt 5.1") Then
+ VarOS = "whi"
+ ElseIf Instr(VarUsrAgt, "nt 5.0") > 0 OR Instr(VarUsrAgt, "windows 2000" ) > 0 Then
+ VarOS = "nt5"
+ ElseIf Instr(VarUsrAgt, "windows nt") > 0 Then
+ VarOS = "nt4"
+ ElseIf Instr(VarUsrAgt, "nt") > 0 Then
+ VarOS = "nt5"
+ ElseIf Instr(VarUsrAgt, "millennium") > 0 Then
+ VarOS = "mil"
+ ElseIf Instr(VarUsrAgt, "win 9x 4.90") > 0 Then
+ VarOS = "mil"
+ ElseIf Instr(VarUsrAgt, "windows 98") > 0 Then
+ VarOS = "w98"
+ End If
+ Dim clCap
+ set clCap = document.all("idClCap")
+ If Instr(VarUsrAgt, "msie 4.0") > 0 Then
+ If (InstrRev(VarUsrAgt, "compat") > 0) AND (InstrRev(VarUsrAgt, "compat") <> Instr(VarUsrAgt, "compat")) Then
+ VarBrowser = "Ie5"
+ Else
+ VarBrowser = "Ie4"
+ End If
+ ElseIf Instr(VarUsrAgt, "msie 5.0b1") > 0 OR Instr(VarUsrAgt, "msie 5.0b2") > 0 OR (Not clCap.isComponentInstalled("{89820200-ECBD-11CF-8B85-00AA005B4383}","componentid","5,0,2014,0216")) Then
+ VarBrowser = "Ie5"
+ If Instr(VarUsrAgt, "nt 5") = 0 AND Instr(VarUsrAgt, "windows 2000") = 0 Then
+ If Instr(VarUsrAgt, "msie 5.5") = 0 Then
+ fIE_oldbeta = TRUE
+ End If
+ End If
+ ElseIf Instr(VarUsrAgt, "msie 5.") > 0 OR Instr(VarUsrAgt, "msie 6.") > 0 Then
+ VarBrowser = "Ie5"
+ End If
+ If LCase(Navigator.cpuClass) = "x86" Then
+ VarCPU = "x86"
+ ElseIf LCase(Navigator.cpuClass) = "alpha" Then
+ VarCPU = "Alpha"
+ ElseIf LCase(Navigator.cpuClass) = "ia64" Or LCase(Navigator.cpuClass) = "other" Then
+ VarCPU = "IA64"
+ End If
+ VarLang = Replace( getLang(), "-", "" )
+ If VarCPU = "Alpha" Then
+ location.href = "x86/w98/" & VarLang & "/noalpha.htm"
+ End If
+ If Instr(VarUsrAgt, "data center") > 0 Then
+ location.href = "x86/w98/" & VarLang & "/thanksdc.htm"
+ End If
+ If Instr(VarUsrAgt, "windows ce") > 0 Then
+ location.href = "x86/w98/" & VarLang & "/thanksce.htm"
+ End If
+ If Instr(VarUsrAgt, "msie 4.0") > 0 Then
+ location.href = "x86/w98/" & VarLang & "/thanksunsupported.htm"
+ End If
+ If Instr(VarUsrAgt, "nt 5.") > 0 OR Instr(VarUsrAgt, "msie 7.") > 0 Then
+ location.href = "x86/w98/" & VarLang & "/thankswin2k.htm"
+ End If
+ If fIE_oldbeta Then
+ location.href = VarCPU & "/" & VarOS & "/" & VarLang & "/ieupdate.htm"
+ Exit Sub
+ End If
+ Err.clear
+ If VarOS <> "w95" And VarOS <> "nt4" Then
+ If IsWUDisabled() Then
+ location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/thankscorp.htm"
+ Exit Sub
+ End if
+ End If
+ Window.Frames("FrmContent").Location.replace "blank.htm"
+ Window.Frames("FrmToolbar").Location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/" & VarBrowser & "/Toolbar.htm"
+ Dim s
+ s = LCase(location.href)
+ If InStr(s, "page=productupdates" & GblPUCritUpdts) Then
+ Window.Frames("FrmNavigator").Location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/" & VarBrowser & "/Navigator.htm?productupdates"
+ ElseIf InStr(s, "page=productupdates") Then
+ Window.Frames("FrmNavigator").Location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/" & VarBrowser & "/Navigator.htm?Page=ProductUpdates"
+ ElseIf InStr(s, "page=memberservices") Then
+ Window.Frames("FrmNavigator").Location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/" & VarBrowser & "/Navigator.htm?Page=MemberServices"
+ Else
+ Window.Frames("FrmNavigator").Location.replace VarCPU & "/" & VarOS & "/" & VarLang & "/" & VarBrowser & "/Navigator.htm"
+ End If
+End Sub
+Function getLang
+ dim index, arrLang, i, j
+ index = InStr( sAcceptLang, "," )
+ If ( index <> 0 ) Then sAcceptLang = Left ( sAcceptLang, index - 1 )
+ arrLang = Array ( _
+ Array( "en", "en", "0409" ), _
+ Array( "en-us", "en", "0409" ), _
+ Array( "en-au", "en", "0C09" ), _
+ Array( "en-nz", "en", "1409" ), _
+ Array( "en-za", "en", "1C09" ), _
+ Array( "en-tt", "en", null ), _
+ Array( "en-gb", "en", "0809" ), _
+ Array( "en-ca", "en", "1009" ), _
+ Array( "en-ie", "en", "1809" ), _
+ Array( "en-jm", "en", "2009" ), _
+ Array( "en-bz", "en", null ), _
+ _
+ Array( "ja", "ja", "0411" ), _
+ _
+ Array( "de", "de", "0407" ), _
+ Array( "de-ch", "de", "0807" ), _
+ Array( "de-at", "de", "0C07" ), _
+ Array( "de-lu", "de", "1007" ), _
+ Array( "de-li", "de", "1407" ), _
+ _
+ Array( "zh", "zhcn", null ), _
+ Array( "zh-tw", "zhtw", "0404" ), _
+ Array( "zh-cn", "zhcn", "0804" ), _
+ Array( "zh-hk", "zhtw", "0C04" ), _
+ Array( "zh-sg", "zhcn", "1004" ), _
+ Array( "zhtw", "zhtw", "0404" ), _
+ Array( "zhcn", "zhcn", "0804" ), _
+ _
+ Array( "es", "es", "040A" ), _
+ Array( "es-mx", "es", "080A" ), _
+ Array( "es", "es", "0C0A" ), _
+ Array( "es-gt", "es", "100A" ), _
+ Array( "es-cr", "es", "140A" ), _
+ Array( "es-pa", "es", "180A" ), _
+ Array( "es-do", "es", "1C0A" ), _
+ Array( "es-ve", "es", "200A" ), _
+ Array( "es-co", "es", "240A" ), _
+ Array( "es-pe", "es", "280A" ), _
+ Array( "es-ar", "es", "2C0A"), _
+ Array( "es-ec", "es", "300A" ), _
+ Array( "es-cl", "es", "340A" ), _
+ Array( "es-uy", "es", "380A" ), _
+ Array( "es-py", "es", "3C0A" ), _
+ Array( "es-bo", "es", "400A" ), _
+ Array( "es-sv", "es", null ), _
+ Array( "es-hn", "es", null ), _
+ Array( "es-ni", "es", null ), _
+ Array( "es-pr", "es", null ), _
+ Array( "ca", "en", "0403"), _
+ Array( "eu", "en", "042D"), _
+ _
+ Array( "fr", "fr", "040C" ), _
+ Array( "fr-be", "fr", "080C" ), _
+ Array( "fr-ca", "fr", "0C0C" ), _
+ Array( "fr-ch", "fr", "100C" ), _
+ Array( "fr-lu", "fr", "140C" ), _
+ _
+ Array( "it", "it", "0410" ), _
+ Array( "it-ch", "it", "0810" ), _
+ _
+ Array( "ko", "ko", "0412" ), _
+ _
+ Array( "ar", "ar", "0401" ), _
+ Array( "ar-sa", "ar", "0401" ), _
+ Array( "ar-eg", "ar", "0C01" ), _
+ Array( "ar-dz", "ar", "1401" ), _
+ Array( "ar-tn", "ar", "1C01" ), _
+ Array( "ar-ye", "ar", "2401" ), _
+ Array( "ar-jo", "ar", "2C01" ), _
+ Array( "ar-kw", "ar", "3401" ), _
+ Array( "ar-bh", "ar", "3C01" ), _
+ Array( "ar-iq", "ar", "0801" ), _
+ Array( "ar-ma", "ar", "1801" ), _
+ Array( "ar-om", "ar", "2001" ), _
+ Array( "ar-sy", "ar", "2801" ), _
+ Array( "ar-lb", "ar", "3001" ), _
+ Array( "ar-ae", "ar", "3801" ), _
+ Array( "ar-qa", "ar", "4001" ), _
+ Array( "ar-ly", "ar", "1001" ), _
+ _
+ Array( "no", "no", "0414" ), _
+ Array( "pl", "pl", "0415" ), _
+ Array( "pt", "pt", "0816" ), _
+ Array( "pt-br", "pt-br", "0416" ), _
+ Array( "ru", "ru", "0419" ), _
+ Array( "ru-mo", "ru", "0819" ), _
+ Array( "nl", "nl", "0413"), _
+ Array( "nl-be", "nl", "0813" ), _
+ Array( "el", "el", "0408" ), _
+ Array( "he", "he", "040D" ), _
+ Array( "hu", "hu", "040E" ), _
+ Array( "sk", "sk", "041B" ), _
+ Array( "sl", "sl", "0424" ), _
+ Array( "sv", "sv", "041D" ), _
+ Array( "fi", "fi", "040B" ), _
+ Array( "cs", "cs", "0405" ), _
+ Array( "da", "da", "0406" ), _
+ Array( "th", "en", "041E" ), _
+ Array( "tr", "tr", "041F" ), _
+ _
+ Array( "ts", "en", "0431" ), _
+ Array( "sb", "en", "042E" ), _
+ Array( "sx", "en", "0430" ), _
+ Array( "et", "en", "0425" ), _
+ Array( "fo", "en", "0438" ), _
+ Array( "fa", "en", "0429" ), _
+ Array( "hr", "en", "041A" ), _
+ Array( "tn", "en", "0432" ), _
+ Array( "bg", "en", "0402" ), _
+ Array( "be", "en", "0423" ), _
+ Array( "hi", "en", "0439" ), _
+ Array( "rm", "en", "0417" ), _
+ Array( "ro", "en", "0418" ), _
+ Array( "ro-mo", "en", "0818" ), _
+ Array( "gd", "en", null ), _
+ Array( "gd-ie", "en", null ), _
+ Array( "is", "en", "040F" ), _
+ Array( "in", "en", "0421" ), _
+ Array( "lv", "en", "0426" ), _
+ Array( "lt", "en", "0427" ), _
+ Array( "mk", "en", "042F" ), _
+ Array( "ms", "en", null ), _
+ Array( "mt", "en", "043A" ), _
+ Array( "sz", "en", "043B" ), _
+ Array( "sr", "en", "081A" ), _
+ Array( "uk", "en", "0422" ), _
+ Array( "ur", "en", "0420" ), _
+ Array( "ve", "en", "0433" ), _
+ Array( "vi", "en", null ), _
+ Array( "xh", "en", null ), _
+ Array( "ji", "en", null ), _
+ Array( "is", "en", "040F" ), _
+ Array( "zu", "en", "0435" ) _
+ )
+ Dim vlang
+ vlang = left(sAcceptLang, 2)
+ If Left(LCase(navigator.browserLanguage), 2) = "en" And (Left(LCase(navigator.systemLanguage), 2) = "ar" Or Left(LCase(navigator.systemLanguage),2) = "he") And VarBrowser = "Ie4" Then
+ If vlang = "ar" Or vlang = "he" Then
+ sAcceptLang = "en"
+ End If
+ End If
+ for i = 0 to UBound( arrLang )
+ if arrLang(i)(0) = sAcceptLang then
+ getLang = arrLang(i)(1)
+ if ( getLang = sAcceptLang ) then
+ g_strLocaleID = "0x0000" & arrLang(i)(2)
+ exit function
+ else
+ for j = 0 to UBound( arrLang )
+ if arrLang(j)(0) = getLang then
+ g_strLocaleID = "0x0000" & arrLang(j)(2)
+ exit function
+ end if
+ next
+ end if
+ exit for
+ end if
+ next
+ getLang = "en"
+ g_strLocaleID = "0x00000409"
+End Function
+</SCRIPT>
+</HEAD>
+<FRAMESET BORDER="0" FRAMEBORDER="NO" ROWS="82, *">
+<NOFRAMES>You have tried to visit Windows Update with a browser that does not support Frames or ActiveX&#174; technology. To learn more about browsers that do support these technologies, please visit the <A HREF="http://microsoft.com/windows/ie"><B>Microsoft</b></a> Web site.</NOFRAMES>
+<FRAME FRAMEBORDER="NO" NAME="FrmToolbar" NORESIZE="NORESIZE" SCROLLING="NO" SRC="" TITLE="Links to useful Microsoft sites">
+<FRAMESET BORDER="0" FRAMEBORDER="NO" COLS="180,1,*">
+<FRAME FRAMEBORDER="NO" NAME="FrmNavigator" NORESIZE="NORESIZE" SCROLLING="AUTO" SRC="" TITLE="Microsoft Windows Update navigation links">
+<FRAME FRAMEBORDER="NO" NAME="HFrame" NORESIZE="NORESIZE" SCROLLING="NO" SRC="" TITLE="Microsoft Windows Update HNavFrame">
+<FRAME FRAMEBORDER="NO" NAME="FrmContent" NORESIZE="NORESIZE" SCROLLING="AUTO" SRC="blank.htm" TITLE="Microsoft Windows Update Content">
+</FRAMESET>
+</FRAMESET>
+</HTML>

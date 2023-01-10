@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft-ondersteuning</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Ondersteuning</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Als u problemen hebt met de Windows Update-site, kunt u on line ondersteuning krijgen. Kies een van de onderstaande opties.</id>
+<P>
+<id id=x6>Voor sommige van deze opties wordt u gevraagd een on line Microsoft-profiel te maken. Dit profiel is uw toegangsbewijs voor Microsoft-ondersteuning via het Internet.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Ondersteuning voor software-updates:</id></A></STRONG> <id id=x80>klik hier om informatie weer te geven over de ondersteuning van software-updates die beschikbaar worden gesteld via Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Ondersteuning voor apparaatstuurprogramma's:</id></A></STRONG> <id id=x800>klik hier om informatie weer te geven over de ondersteuning van apparaatstuurprogramma's die beschikbaar worden gesteld via Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Veelgestelde vragen:</id></A></STRONG> <id id=x8>als u een vraag over Windows Update hebt, kunt u het best eerst de lijst met veelgestelde vragen bekijken.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Bekende problemen:</id></A></STRONG> <id id=x10>u kunt ook de lijst met bekende problemen op de Windows Update-site raadplegen.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/nl/wiz143.asp?FU=http://windowsupdate.microsoft.com/&CU=http://windowsupdate.microsoft.com/"><id id=x11>Schrijf ons:</id></A></STRONG> <id id=x12>gebruik het enquêteformulier voor uw opmerkingen en suggesties.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>INFORMATIE OVER WINDOWS UPDATE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Dit pictogram wordt weergegeven op alle pagina's van deze site. Klik op het pictogram als u naar de pagina wilt gaan waarop wordt beschreven hoe u de Windows Update-site het beste kunt gebruiken.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>ONDERSTEUNING VOOR SOFTWARE-UPDATES</id></DIV>
+De gratis <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">ondersteuning voor de Windows Update-site (per e-mail) </SPAN></A> bestaat uit: hulp bij het navigeren op de website, informatie over de kwaliteit van de site of foutberichten, en basisinformatie over het downloaden van updates. Alle andere vormen van hulp, zoals ondersteuning bij problemen met installeren en instellen, is beschikbaar via de website <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. Als u op zoek bent naar MSN-producten, brengt u een bezoek aan <a href="http://www.msn.nl/help/help0.asp" target=_blank>http://help.msn.com/</a>. Deze ondersteuning is niet altijd gratis. Meer informatie hierover vindt u op de site.
+<P>
+Gebruikers buiten de VS en Canada kunnen de dichtstbijzijnde Microsoft-vestiging informatie vragen over ondersteuning. Ga naar de website voor <a href="http://support.microsoft.com/directory/" target=_blank>on line ondersteuning</a> en selecteer de optie onder Worldwide Support voor meer informatie. Als er geen Microsoft-vestiging is in uw land, kunt u contact opnemen met het bedrijf waar u het Microsoft-product hebt aangeschaft.
+<P>
+De prijzen en voorwaarden van de ondersteuningsservices van Microsoft kunnen zonder voorafgaande waarschuwing worden gewijzigd.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">De installatie van software-updates ongedaan maken<BR></DIV>
+Sommige updates kunnen worden verwijderd via de pagina Updates op producten van de Windows Update-site:
+<ol>
+<li>Ga naar de pagina Updates op producten.
+<li>Antwoord met <B>Ja</B> als een berichtvenster wordt weergegeven.
+<li>Als de pagina Updates op producten wordt weergegeven, klikt u bovenaan de pagina op <B>Geïnstalleerde updates weergeven</B>
+<li>Als een update kan worden verwijderd, verschijnt de knop <B>Verwijderen</B> rechts van de beschrijving van de update.
+<li>Klik op de knop <b>Verwijderen</b> naast de beschrijving van de update die u wilt verwijderen.
+</ol>
+Updates die niet via Updates op producten kunnen worden verwijderd, kunnen soms wel op een andere manier worden verwijderd. Zie de pagina <b>Lees dit eerst</b> voor de betreffende update voor meer informatie hierover.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>ONDERSTEUNING VOOR APPARAATSTUURPROGRAMMA'S</id></DIV>
+Gratis ondersteuning bij het installeren en verwijderen is beschikbaar via de webpagina <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update Site Support</SPAN></A>. (Dit is ondersteuning via e-mail.) Als u andere problemen hebt dan installatie- en deïnstallatieproblemen, vindt u op <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a> een volledige lijst met ondersteuningsopties. Deze ondersteuning is niet altijd gratis. Meer informatie hierover vindt u op de site.
+<P>
+Gebruikers buiten de VS en Canada kunnen de dichtstbijzijnde Microsoft-vestiging informatie vragen over ondersteuning. Ga naar de website voor <a href="http://support.microsoft.com/directory/" target=_blank>on line ondersteuning</a> en selecteer de optie onder Worldwide Support voor meer informatie. Als er geen Microsoft-vestiging is in uw land, kunt u contact opnemen met het bedrijf waar u het Microsoft-product hebt aangeschaft.
+<P>
+De prijzen en voorwaarden van de ondersteuningsservices van Microsoft kunnen zonder voorafgaande waarschuwing worden gewijzigd.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">De installatie van apparaatstuurprogramma's ongedaan maken?</DIV>
+Op de website van Windows Update zijn geen nieuwe stuurprogramma's beschikbaar voor Windows 95 of Windows NT&reg; 4.0. Neem contact op met de fabrikant van het apparaat.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>VEELGESTELDE VRAGEN</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Wat is Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update is een on line uitbreiding van Windows waarmee u uw computer actueel kunt houden. Windows Update heeft een centrale catalogus: Updates op producten. Deze catalogus bevat nieuwe productverbeteringen zoals systeembestanden, stuurprogramma's, Service Packs en nieuwe Windows-functies. De verbeteringen die nodig zijn voor uw computer, worden u automatisch aangeraden.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>Wat is Updates op producten?</id><BR></DIV>
+<id id=x36>De pagina Updates op producten is een catalogus met oplossingen, updates en verbeteringen voor Windows en veel programma's die met Windows werken. U kunt door de catalogus bladeren, zoveel componenten selecteren als u wilt en ze vervolgens rechtstreeks van het web op uw computer downloaden en installeren.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Waarom krijg ik het bericht dat een ActiveX-besturingselement op deze pagina niet veilig is?</id><BR></DIV>
+<id id=x38>Dit bericht wordt weergegeven als de beveiligingsinstelling van Internet Explorer is ingesteld op Hoog. Voor de Windows Update-site moet u het beveiligingsniveau voor de Internet-zone instellen op Gemiddeld of lager. U kunt de instellingen wijzigen door <b>Internet-opties</b> te kiezen in het menu <b>Extra</b>. Selecteer vervolgens het tabblad <b>Beveiliging</b> en klik op <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>Wat is een ActiveX-besturingselement?</id><BR></DIV>
+<id id=x41>ActiveX-besturingselementen zijn herbruikbare softwareonderdelen waarin ActiveX-technologie wordt gebruikt. Deze onderdelen kunnen worden gebruikt om gespecialiseerde functionaliteit, zoals animaties of pop-up menu's, toe te voegen aan webpagina's, bureaubladtoepassingen en softwareontwikkelprogramma's. Windows Update maakt gebruik van ActiveX-besturingselementen om te controleren welke software op uw computer is geïnstalleerd, zodat u een kloppende lijst krijgt met updates en andere software die u kunt downloaden.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Wat is de beste resolutie voor het bekijken van de Windows Update-site?</id><BR></DIV>
+<id id=x43>De webpagina's op de Windows Update-site zijn ontworpen voor een schermresolutie van 800 x 600 of hoger. U kunt deze resolutie instellen door op de knop <B>Start</b> te klikken, <B>Instellingen</b> aan te wijzen en vervolgens op <B>Configuratiescherm</b> te klikken. Dubbelklik vervolgens op het pictogram <B>Beeldscherm</b> en klik op het tabblad <B>Instellingen</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Wordt informatie over mijn computer naar Microsoft verzonden?
+</id><BR></DIV>
+<id id=x45>Nee. Iedere keer als u Updates op producten bezoekt, wordt gekeken of er updates beschikbaar zijn voor uw computer. Deze controle wordt lokaal op uw computer uitgevoerd om de privacy en veiligheid van uw gegevens te garanderen en er wordt geen informatie naar Microsoft gestuurd.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Hoe stuur ik mijn feedback naar het Windows Update-team?</id><BR></DIV>
+<id id=x47>U kunt feedback over deze site naar het Windows Update-team sturen door in de zwarte werkbalk bovenaan een pagina op <B>Schrijf ons</B> te klikken en vervolgens op <B>Windows Update</B>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Als er een nieuw beveiligingsbulletin wordt gepubliceerd op de <a href="http://www.microsoft.com/technet/security/" target="_new">Security-website van Microsoft TechNet</a>
+(deze site is in het Engels)
+is het dan ook beschikbaar via Windows Update?</id><BR></DIV>
+<id id=x201>Er ligt vaak enige tijd tussen het moment waarop een beveiligingsbulletin wordt gepubliceerd op de TechNet Security-site en het moment waarop de beveiligingsupdate beschikbaar is via Windows Update. Dit komt omdat de Windows Update-site volgens een bepaald tijdschema wordt bijgewerkt. Hoewel het streven is om belangrijke beveiligingsupdates zo snel mogelijk beschikbaar te stellen, moeten nieuwe updates worden getest en gecontroleerd om ervoor te zorgen dat u alleen de updates te zien krijgt die voor uw systeem nodig zijn. Updates voor ondersteunde producten zijn over het algemeen een paar dagen tot een paar weken na de aankondiging op de TechNet-site verkrijgbaar via Windows Update. Als u weet welke versie van een update van toepassing is op uw computer en u niet wilt wachten totdat de update op de site van Windows Update staat, kunt u de update rechtstreeks downloaden vanaf de webpagina met het beveiligingsbulletin. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Welke besturingssystemen en programma's worden door Windows Update ondersteund?</id><BR></DIV>
+<id id=x203>Windows Update biedt beveiligingsupdates voor Windows 98, Windows 98 Tweede Editie, Windows Millennium Edition (Windows ME), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0) en Internet Explorer. U krijgt echter alleen de updates te zien die van toepassing zijn op uw computer. Bepaalde serverbesturingssystemen en op servers gebaseerde toepassingen worden niet door Windows Update ondersteund. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Ik lees dat bepaalde serverproducten niet worden ondersteund. Welke serverproducten zijn dat precies?</id><BR></DIV>
+<id id=x205>Windows Update was oorspronkelijk een website waarop updates beschikbaar werden gesteld voor thuisgebruikers van een Windows-computer. Na verloop van tijd is het aanbod van Windows Update uitgebreid met updates voor een aantal serverproducten (zoals IIS) die steeds vaker door mensen thuis worden gebruikt. Beveiligingsupdates die specifiek bedoeld zijn voor serverproducten zoals Windows-domeincontrollers, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server, enzovoort worden echter niet door Windows Update ondersteund. Gebruikers van dergelijke producten kunnen de beveiligingsbulletins op de <a href="http://www.microsoft.com/technet/security/" target="_new">Security-website van Microsoft TechNet</a> raadplegen voor informatie over updates op deze producten.
+(Deze site is in het Engels.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Zijn alle beveiligingsupdates en andere updates voor Internet Information Server 4.0 (IIS 4.0) en Internet Information Services 5.0 (IIS 5.0) beschikbaar via Windows Update?</id><BR></DIV>
+<id id=x207>Nee. Op 23 mei 2001 was er voor het eerst een cumulatief pakket belangrijke updates voor IIS 5.0 beschikbaar via Windows Update. Dit pakket bevat niet alle IIS-updates die tot nu toe zijn uitgebracht, maar biedt een combinatie van de updates die tussen maart 2000 en nu zijn verschenen. Updates die voor maart 2000 zijn uitgebracht, kunt u downloaden vanaf de <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet-pagina voor Windows Web services (IIS)</a>.
+(Deze site is in het Engels.)
+Als er nieuwe beveiligingsupdates of andere belangrijke updates voor IIS zijn, wordt dit pakket vervangen door een nieuw pakket dat zowel de nieuwe updates bevat als alle updates die in het vorige pakket waren opgenomen. Dus hoe vaak u Windows Update ook bezoekt, u kunt er zeker van zijn dat u altijd de meest recente updates voor uw IIS-producten krijgt.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Waar kan ik informatie vinden over alle beveiligingsupdates?</id><BR></DIV>
+<id id=x209>Alle updates worden beschreven in de beveiligingsbulletins op de <a href="http://www.microsoft.com/technet/security/" target="_new">Security-website van Microsoft TechNet</a>. U kunt ook een abonnement nemen op de <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a>. U wordt dan per e-mail op de hoogte gesteld zodra er een beveiligingsbulletin is gepubliceerd.
+(Deze sites zijn in het Engels.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/netherlands/info/copyrights/"><id id=x50>(c) 2022 Microsoft Corporation. Alle rechten voorbehouden. Juridische kennisgevingen.</id></A><BR></CENTER>
+</BODY>
+</HTML>

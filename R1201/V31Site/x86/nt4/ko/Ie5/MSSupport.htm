@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft 지원 정보</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: 굴림;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 9pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: 굴림;
+FONT-SIZE: 9pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+ <IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>지원 정보</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Windows Update 웹 사이트에 문제가 있으면 온라인 지원을 통해 도움을 받으실 수 있습니다. 아래의 옵션 중 하나를 선택하십시오.</id>
+<P>
+<id id=x6>이 지원 옵션 중 일부를 선택하면 Microsoft "온라인 프로필"을 작성해야 합니다. 온라인 프로필은 Microsoft에서 인터넷 기반 지원을 받을 수 있는 표 역할을 합니다.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>소프트웨어 업데이트 지원:</id></A></STRONG> <id id=x80>Windows Update에서 제공하는 소프트웨어 업데이트에 대한 지원 정보를 볼 수 있습니다.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>장치 드라이버 지원:</id></A></STRONG> <id id=x800>Windows Update에서 제공하는 장치 드라이버에 대한 지원 정보를 볼 수 있습니다.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>질문과 대답:</id></A></STRONG> <id id=x8>Windows Update에 대해 질문이 있으면 질문 목록을 확인하여 빠른 대답을 볼 수 있습니다.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>알려진 문제:</id></A></STRONG> <id id=x10>Windows Update 사이트의 현재 알려진 문제 목록을 볼 수 있습니다.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/ko/wiz143.asp"><id id=x11>사용자 의견:</id></A></STRONG> <id id=x12>빠른 조사 양식으로 제공하는 사용자의 의견과 제안을 위한 공간입니다.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+<TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>WINDOWS UPDATE 정보</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+</TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>이 아이콘은 이 사이트의 모든 페이지 위쪽에 표시됩니다. Windows Update 사이트를 최대한 활용할 수 있는 방법을 보려면 이 아이콘을 클릭하십시오.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>소프트웨어 업데이트 지원</id></DIV>
+무료로 제공되는 <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update 사이트에 대한 전자 메일 지원</SPAN></A>에는 웹 사이트 탐색, 사이트 컨텐트 품질 또는 오류 메시지에 대한 도움말 및 다운로드 기본 지원이 포함되어 있습니다. 설치 및 설정 문제를 포함한 다른 모든 지원은 <a href="http://www.microsoft.com/korea/support/" target=_blank>http://support.microsoft.com/directory/</a>에서 개인 및 전문가를 위한 기술 지원을 통해 제공됩니다. MSN 제품은 <a href="http://www.msn.co.kr/help/help0.asp" target=_blank>http://www.msn.co.kr/help/help0.asp</a>를 방문하십시오. 일부의 경우에는 지원 요금이 적용될 수 있으므로 자세한 내용은 사이트를 확인하십시오.<P>
+대한민국 이외의 국가에서 제공되는 지원 정보는 해당 지사에 문의하십시오. 최신 목록은 <a href="http://www.microsoft.com/korea/support/" target=_blank>지원 온라인 웹 사이트</a>를 방문하여 국가별 기술 지원 옵션을 선택하십시오. 해당 국가에 Microsoft 지사가 없으면 Microsoft 제품을 구입한 곳에 문의하십시오.<P>
+Microsoft 지원 서비스는 Microsoft의 최신 가격 정보, 사용권 계약 및 조건의 적용을 받으며 예고 없이 변경될 수 있습니다.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">소프트웨어 업데이트를 제거하는 방법<BR></DIV>
+일부 업데이트는 Windows Update 사이트의 제품 업데이트 페이지를 사용하여 제거할 수 있습니다.<ol>
+<li>제품 업데이트 페이지로 이동합니다.<li>메시지 프롬프트가 나타나면 <B>예</B>를 클릭합니다.<li>제품 업데이트 페이지가 나타나면 페이지 위쪽에 있는 <B>설치된 업데이트 보기</B> 단추를 클릭합니다.<li>업데이트를 제거할 수 있는 경우에는 해당 업데이트의 설명 오른쪽에 <B>제거</B> 단추가 표시됩니다.<li>제거할 업데이트의 설명 옆에 있는 <b>제거</b> 단추를 클릭합니다.</ol>
+제품 업데이트에서 제거할 수 없는 업데이트는 다른 방법을 사용하여 제거할 수도 있습니다. 제거 방법에 대한 추가 정보는 각 업데이트의 <b>업데이트 정보</b> 페이지를 참조하십시오.<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>장치 드라이버 지원</id></DIV>
+<A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update 사이트 지원</SPAN></A>에서 전자 메일로 무료 설치/제거를 지원 받을 수 있습니다. 드라이버 설치/제거 이외의 문제에 대한 지원 옵션 전체 목록은 <a href="http://www.microsoft.com/korea/support/" target=_blank>http://support.microsoft.com/directory</a>를 참조하십시오. 일부의 경우에는 지원 요금이 적용될 수 있으므로 자세한 내용은 사이트를 확인하십시오.<P>
+대한민국 이외의 국가에서 제공되는 지원 정보는 해당 지사에 문의하십시오. 최신 목록은 <a href="http://www.microsoft.com/korea/support/" target=_blank>지원 온라인 웹 사이트</a>를 방문하여 국가별 기술 지원 옵션을 선택하십시오. 해당 국가에 Microsoft 지사가 없으면 Microsoft 제품을 구입한 곳에 문의하십시오.<P>
+Microsoft 지원 서비스는 Microsoft의 최신 가격 정보, 사용권 계약 및 조건의 적용을 받으며 예고 없이 변경될 수 있습니다.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">장치 드라이버 업데이트를 제거하는 방법</DIV>
+Windows Update는 Windows 95 또는 Windows NT&reg; 4.0에 대한 드라이버 업데이트를 제공하지 않습니다. 장치 제조업체에 문의하십시오.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>질문과 대답</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>Windows Update란?</id><BR></DIV>
+<id id=x32>Windows Update는 사용자의 컴퓨터 성능을 지속적으로 향상시키는 데 도움을 주기 위한 Windows의 온라인 확장 기능입니다. Windows Update에는 시스템 파일, 장치 드라이버, 서비스 팩, Windows의 새 기능 등과 같은 제품의 향상된 기능이 들어 있는 제품 업데이트라고 하는 카탈로그가 있습니다. 이 향상된 기능은 사용자 개개인 컴퓨터의 필요에 맞게 권장됩니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>제품 업데이트란?</id><BR></DIV>
+<id id=x36>제품 업데이트 페이지는 Windows 프로그램 및 Windows에서 실행되는 많은 프로그램에 대한 수정 프로그램, 업데이트, 향상된 기능 등을 모아 놓은 카탈로그입니다. 이 카탈로그를 살펴 보고 원하는 구성 요소를 모두 선택한 다음, 웹에서 직접 다운로드하여 컴퓨터에 설치할 수 있습니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>페이지의 ActiveX 컨트롤이 불안전하다는 메시지가 나타나는 이유</id><BR></DIV>
+<id id=x38>Internet Explorer의 보안 설정이 높음으로 설정되어 있으면 이 메시지가 나타납니다. Windows Update 사이트를 제대로 사용하려면 브라우저의 보안 옵션을 보통이나 낮음으로 설정해야 합니다. 보안 설정을 바꾸려면 <b>도구</b> 메뉴를 선택한 다음 <b>인터넷 옵션</b>을 클릭합니다. <b>보안</b> 탭을 선택한 다음 <b>인터넷</b>을 클릭합니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>ActiveX 컨트롤이란?</id><BR></DIV>
+<id id=x41>ActiveX 컨트롤은 ActiveX 기술을 통합하며 재사용이 가능한 소프트웨어 구성 요소입니다. 이 구성 요소를 사용하면 애니메이션이나 팝업 메뉴와 같은 특수 기능을 웹 페이지, 데스크톱 응용 프로그램, 소프트웨어 개발 도구 등에 추가할 수 있습니다. Windows Update에서는 ActiveX 컨트롤을 사용하여 사용자의 컴퓨터에 어떤 소프트웨어가 설치되어 있는지 확인하여 다운로드해야 할 업데이트와 기타 소프트웨어 목록을 제공합니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>Windows Update 사이트에 가장 적합한 화면 해상도</id><BR></DIV>
+<id id=x43>Windows Update 사이트의 웹 페이지는 800 x 600 이상의 화면 해상도로 보아야 합니다. 해상도를 설정하려면 <B>시작</b> 단추를 클릭하고 <B>설정</b>을 가리킨 다음 <B>제어판</b>을 클릭합니다. 그럼 다음 <B>디스플레이</b> 아이콘을 두 번 클릭하고 <B>설정</b> 탭을 클릭합니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>내 컴퓨터에 대한 정보가 Microsoft로 전송됩니까?</id><BR></DIV>
+<id id=x45>아닙니다. 제품 업데이트 카탈로그를 방문할 때마다 Windows Update는 컨트롤을 사용하여 해당 컴퓨터에 관련된 업데이트를 확인합니다. 이 확인 작업은 사용자의 컴퓨터에서 로컬로 수행되므로 데이터의 기밀과 보안을 보장하며 Microsoft로는 아무런 정보를 보내지 않습니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>Windows Update 팀으로 사용자 의견을 보내는 방법</id><BR></DIV>
+<id id=x47>Windows Update 팀에게 이 사이트에 대한 사용자 의견을 보내려면 이 페이지 위쪽에 있는 검정색 도구 모음에서 <b>사용자 의견</b>을 클릭한 다음 <b>Windows Update</b>를 클릭합니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200><A href="http://www.microsoft.com/korea/technet/Security/" target="_new">Microsoft TechNet 보안 웹 사이트</A>에서 새 보안 게시판을 사용할 수 있으면
+&nbsp;
+Windows Update에서도 사용할 수 있습니까?</id><BR></DIV>
+<id id=x201>보안 게시판이 TechNet 보안 사이트에 게시된 후 보안 업데이트를 Windows Update에서 사용할 수 있게 되는 데에는 종종 시간이 오래 걸립니다. 이것은 새 컨텐트가 예정된 시간표에 따라 Windows Update에 추가되기 때문입니다. Windows Update는 가능한 한 중요 보안 업데이트를 빨리 릴리스하려고 하지만 새 컨텐트에 대해 Windows Update가 특정 컴퓨터에 필요한 업데이트만 제공하는지 테스트하고 확인해야 합니다. 보통 지원되는 제품의 업데이트는 TechNet 사이트에 게시된 다음 며칠에서 몇 주 후까지 Windows Update에 나타납니다. 업데이트의 어느 버전이 컴퓨터에 적용되는지는 알지만 Windows Update에서 해당 버전을 얻지 않으려면 보안 게시판 웹 페이지에서 직접 업데이트를 다운로드할 수 있습니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>Windows Update에서 지원되는 운영 체제 및 프로그램</id><BR></DIV>
+<id id=x203>Windows Update는 Windows 98, Windows 98 Second Edition, Windows Millennium Edition(Windows ME), Windows NT 4.0, Windows 2000, Internet Information Server 4.0(IIS 4.0), Internet Information Services 5.0(IIS 5.0) 및 Internet Explorer에 적용되는 보안 업데이트를 제공합니다. 그러나 특정 컴퓨터에 적용되는 업데이트만 볼 수 있습니다. Windows Update는 특정 서버 운영 체제 및 서버 기반 프로그램은 지원하지 않습니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>지원되지 않는 서버 제품</id><BR></DIV>
+<id id=x205>Windows Update는 Windows 고객의 가정용 컴퓨터용 업데이트를 제공하는 웹 사이트로 시작되었습니다. 시간이 지나면서 Windows Update는 가정에서 자주 사용되는 몇몇 서버 제품(IIS 등)으로 업데이트 제공 범위를 확대했습니다. 그러나 Windows 도메인 컨트롤러, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server 등과 같은 서버 제품에 대한 보안 업데이트는 Windows Update에서 지원되지 않습니다. 이 제품을 사용하는 고객이 제품 업데이트에 대한 다운로드 정보를 얻으려면 <a href="http://www.microsoft.com/korea/technet/security/" target="_new">Microsoft TechNet 보안 웹 사이트</a>의 보안 게시판을 보십시오.
+&nbsp;
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Windows Update는 항상 Internet Information Server 4.0(IIS 4.0)과 Internet Information Services 5.0(IIS 5.0)용 보안 수정 프로그램 및 기타 업데이트를 제공합니까?</id><BR></DIV>
+<id id=x207>아니오. 2001년 5월 23일에 Windows Update는 IIS 5.0용 중요 업데이트의 축적된 패키지를 처음으로 제공했습니다. 이 패키지에는 지금까지 릴리스된 IIS 업데이트가 모두 들어 있지는 않으나 2000년 3월부터 지금까지 릴리스된 최신 수정 프로그램을 제공합니다. 2000년 3월 이전에 릴리스된 업데이트에 대한 자세한 내용은 <a href="http://www.microsoft.com/korea/technet/iis/default.asp" target="_new">Windows Web Services (IIS)용 TechNet 페이지</a>를 참조하십시오.
+&nbsp;
+IIS용 새 보안 수정 프로그램 또는 기타 중요 업데이트가 만들어질 때 이 패키지는 새 패키지로 대체됩니다. 새 패키지에는 새 업데이트 및 이전 패키지의 수정 프로그램이 모두 들어 있습니다. 이런 방식으로 Windows Update 방문 횟수에 관계없이 IIS 제품에 대한 최신 업데이트를 언제든지 얻을 수 있습니다.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>보안 관련 업데이트에 대한 정보를 얻을 수 있는 곳</id><BR></DIV>
+<id id=x209><A href="http://www.microsoft.com/korea/technet/Security/" target="_new">Microsoft TechNet 보안 웹 사이트</A>에서 보안 게시판을 모두 볼 수 있습니다. <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new">Microsoft Security Notification Service</a>(영문 사이트)를 구독할 수도 있으며 최근 릴리스된 보안 게시판에 대한 전자 메일 경고를 받을 수도 있습니다.
+&nbsp;
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/korea/misc/cpyright.htm"><id id=x50>(c) 2022 Microsoft Corporation. All rights reserved. 사용권에 대한 고지 사항</id></A><BR></CENTER>
+</BODY>
+</HTML>

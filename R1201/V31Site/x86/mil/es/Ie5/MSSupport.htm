@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<TITLE>Informaci�n de soporte t�cnico de Microsoft</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+ <STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Informaci�n de soporte t�cnico</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>Si experimenta problemas con el sitio Web de Windows Update el soporte t�cnico en l�nea puede ayudarle. S�lo tiene que seleccionar una de las opciones que aparecen a continuaci�n.</id>
+<P>
+<id id=x6>Al seleccionar alguna de las opciones de soporte t�cnico, se le solicitar� que cree un "perfil en l�nea" de Microsoft. Su perfil en l�nea le servir� para recibir soporte t�cnico de Microsoft por Internet.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Soporte t�cnico de actualizaciones de software:</id></A></STRONG> <id id=x80>vea informaci�n acerca del soporte t�cnico de actualizaciones de software que se ofrece en Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Soporte t�cnico de controladores de dispositivos:</id></A></STRONG> <id id=x800>vea informaci�n acerca del soporte t�cnico de actualizaciones de software que se ofrece en Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Preguntas m�s frecuentes:</id></A></STRONG> <id id=x8>si tiene alguna pregunta acerca de Windows Update, puede consultar primero nuestra lista de respuestas.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Problemas conocidos:</id></A></STRONG> <id id=x10>tambi�n puede consultar la lista de problemas conocidos que se producen frecuentemente en el sitio de Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://www.microsoft.com/spanish/?contactus/"><id id=x11>Escr�banos:</id></A></STRONG> <id id=x12>Nuestro formulario de consulta r�pida le proporciona un lugar para sus comentarios y sugerencias.</id><BR><BR>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+<TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>acerca de Windows Update</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+</TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>Este icono aparece en la parte superior de todas las p�ginas de este sitio. Haga clic en �l para aprender a utilizar de la mejor forma posible el sitio de Windows Update.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>SOPORTE T�CNICO DE ACTUALIZACIONES DE SOFTWARE</id></DIV>
+Sin costo alguno, el <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">soporte t�cnico mediante correo electr�nico para el sitio Windows Update</SPAN></A> incluye: ayuda para la exploraci�n del sitio Web, mensajes de error o acerca de la calidad del contenido del sitio y ayuda b�sica para descarga. Encontrar� informaci�n acerca del resto de temas de ayuda, incluidos los problemas de instalaci�n y configuraci�n, en nuestro servicio de soporte t�cnico personal y profesional en <a href="http://www.microsoft.com/spanish/soporte" target=_blank>http://support.microsoft.com/directory/</a>. Para productos MSN, visite <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. En algunos casos es posible que se aplique una tarifa de soporte t�cnico; consulte los sitios para obtener m�s detalles<P>
+Para obtener informaci�n de soporte t�cnico fuera de EE.UU y Canad�, p�ngase en contacto con su subsidiaria local. La lista m�s reciente est� disponible en el <a href="http://www.microsoft.com/spanish/soporte" target=_blank>sitio Web de Soporte t�cnico en l�nea</a> donde puede seleccionar la opci�n de soporte en todo el mundo (Worldwide Support). Si no existe ninguna oficina subsidiaria de Microsoft en su pa�s, p�ngase en contacto con el distribuidor que le suministr� el producto Microsoft.<P>
+Los servicios de soporte t�cnico de Microsoft est�n sujetos a los precios y condiciones vigentes de Microsoft, que pueden cambiar sin previo aviso.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">�C�mo desinstalo las actualizaciones de software?<BR></DIV>
+Algunas actualizaciones pueden desinstalarse mediante la p�gina Actualizaciones de productos del sitio de Windows Update:<ol>
+<li>Vaya a la p�gina Actualizaciones de productos.<li>Si aparece una pregunta, aseg�rese de hacer clic en el bot�n <B>S�</B>.<li>Cuando aparezca la p�gina Actualizaciones de productos, haga clic en <B>Mostrar actualizaciones instaladas</B> en la parte superior de la p�gina.<li>Si se puede desinstalar una actualizaci�n, el bot�n <B>Desinstalar</B> aparecer� a la derecha de la descripci�n de la actualizaci�n.<li>Haga clic en el bot�n <b>Desinstalar</b> que se muestra junto a la descripci�n de la actualizaci�n que desea desinstalar.</ol>
+Las actualizaciones que no se pueden desinstalar desde la p�gina Actualizaciones de productos, pueden desinstalarse mediante otros m�todos. Consulte la p�gina <b>Lea esto primero</b> para obtener informaci�n de desinstalaci�n.<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>SOPORTE T�CNICO DE CONTROLADORES DE DISPOSITIVOS</id></DIV>
+El soporte para la instalaci�n y desinstalaci�n se encuentra disponible de manera gratuita por correo electr�nico en la secci�n de <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">soporte del sitio de Windows Update</SPAN></A>. Para obtener informaci�n no relacionada con la instalaci�n y desinstalaci�n de controladores, puede encontrar una lista completa de opciones de soporte en <a href="http://www.microsoft.com/spanish/soporte" target=_blank>http://support.microsoft.com/directory</a>. En algunos casos es posible que se aplique una tarifa de soporte t�cnico, consulte el sitio para obtener m�s detalles.<P>
+Para obtener informaci�n de soporte t�cnico fuera de EE.UU y Canad�, p�ngase en contacto con su subsidiaria local. La lista m�s reciente est� disponible en el <a href="http://www.microsoft.com/spanish/soporte" target=_blank>sitio Web de Soporte t�cnico en l�nea</a> donde puede seleccionar la opci�n de soporte en todo el mundo (Worldwide Support). Si no existe ninguna oficina subsidiaria de Microsoft en su pa�s, p�ngase en contacto con el distribuidor que le suministr� el producto Microsoft.<P>
+Los servicios de soporte t�cnico de Microsoft est�n sujetos a los precios y condiciones vigentes de Microsoft, que pueden cambiar sin previo aviso.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">�C�mo desinstalo las actualizaciones de controladores de dispositivos?</DIV>
+Windows Update no ofrece actualizaciones de controladores para Windows 95 o Windows NT&reg; 4.0. P�ngase en contacto con el fabricante del dispositivo.
+<p>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>PREGUNTAS M�S FRECUENTES</id></DIV>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>�Qu� es Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update es la extensi�n en l�nea de Windows, dise�ada para ayudarle a mantener actualizado su equipo. Windows Update dispone de un cat�logo central denominado Actualizaciones de productos que incluye las nuevas mejoras de productos como archivos de sistema, controladores de dispositivo, Service Pack y caracter�sticas nuevas de Windows. Estas mejoras se recomiendan en funci�n de las necesidades espec�ficas de su equipo.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>�Qu� son las Actualizaciones de productos?</id><BR></DIV>
+<id id=x36>La p�gina Actualizaciones de productos es un cat�logo de soluciones, actualizaciones y mejoras para Windows y otros programas que funcionan con Windows. Puede examinar el cat�logo, seleccionar los componentes que desee y descargarlos e instalarlos en su equipo desde el Web.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>�Por qu� obtengo un mensaje comunicando que el control ActiveX de esta p�gina no es seguro?</id><BR></DIV>
+<id id=x38>Este mensaje se muestra cuando la configuraci�n de seguridad de Internet Explorer tiene el valor Alta. Para que el sitio de Windows Update funcione adecuadamente, debe establecer como Media o Baja la configuraci�n de seguridad de su explorador correspondiente a Zona de Internet. Para hacerlo, haga clic en el men� <b>Herramientas</b>, despu�s haga clic en <b>Opciones de Internet</b>. Seleccione la ficha <b>Seguridad</b> y haga clic en <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>�Qu� es un control ActiveX?</id><BR></DIV>
+<id id=x41>Los controles ActiveX son componentes de software reutilizables que incorporan la tecnolog�a ActiveX. Estos componentes pueden utilizarse para agregar funciones especiales, como animaciones o men�s emergentes, a p�ginas Web, aplicaciones de escritorio y herramientas de desarrollo de software. Windows Update utiliza controles ActiveX para comprobar el software instalado en su equipo y ofrecerle la lista correcta de actualizaciones y software que le puede interesar descargar.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>�Cu�l es la mejor resoluci�n para ver el sitio de Windows Update?</id><BR></DIV>
+<id id=x43>Las p�ginas Web del sitio de Windows Update se dise�aron para pantallas con una resoluci�n de 800 por 600 o superior. Para establecer esta resoluci�n, haga clic en el bot�n <B>Inicio</b>, seleccione <B>Configuraci�n</b> y haga clic en <B>Panel de control</b>. Despu�s haga doble clic en el icono <B>Pantalla</b> y haga clic en la ficha <B>Configuraci�n</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>�Se transmite informaci�n de mi equipo a Microsoft?</id><BR></DIV>
+<id id=x45>No. Cada vez que visita el cat�logo de Actualizaciones de productos, Windows Update utiliza un control para comprobar las actualizaciones espec�ficas de su equipo. Esta comprobaci�n se realiza localmente en su equipo para asegurar la privacidad y seguridad de sus datos y no se env�a ninguna informaci�n a Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>�C�mo enviar mis comentarios al equipo de Windows Update?</id><BR></DIV>
+<id id=x47>Puede enviar sus comentarios acerca de este sitio al equipo de Windows Update haciendo clic en <B>Escr�banos</B>, y despu�s en <B>Windows Update</B> en la barra de herramientas negra de la parte superior de cada p�gina.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x200>Cuando haya un nuevo bolet�n de seguridad disponible en el <a href="http://www.microsoft.com/technet/security/" target="_new">sitio Web de seguridad de Microsoft TechNet</a>,
+(este sitio est� en ingl�s)
+tambi�n est� disponible en Windows Update?</id><BR></DIV>
+<id id=x201>A menudo se produce un retraso entre el momento en que se expone un bolet�n de seguridad en el sitio de seguridad de TechNet, y el momento en que la actualizaci�n de seguridad est� disponible en Windows Update. Esto se debe a que el contenido nuevo se agrega a Windows Update siguiendo unos tiempos programados. A pesar de que Windows Update se esfuerza al m�ximo para presentar actualizaciones de seguridad importantes lo antes posible, el contenido nuevo debe probarse y comprobarse para asegurar que Windows Update le ofrece s�lo las actualizaciones que usted pueda necesitar para su equipo concreto. Normalmente, las actualizaciones para productos admitidos aparecen en Windows Update en un plazo de unos d�as a unas semanas a partir de la fecha en que se anuncian en el sitio de TechNet. Si sabe qu� versi�n concreta de una actualizaci�n es aplicable a su equipo y no desea esperar a obtenerla desde Windows Update, puede descargar la actualizaci�n directamente desde la p�gina Web del bolet�n de seguridad. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>�Qu� sistemas operativos y programas admite Windows Update?</id><BR></DIV>
+<id id=x203>Windows Update ofrece actualizaciones de seguridad que se aplican a Windows 98, Windows 98 Segunda edici�n, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Servicios de Internet Information Server 5.0 (IIS 5.0) e Internet Explorer. Sin embargo, usted �nicamente ver� las actualizaciones que sean aplicables a su equipo en concreto. No se admiten en Windows Update algunos sistemas operativos de servidor y programas basados en servidor. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>Se ha mencionado que no se admiten algunos productos de servidor. �Cu�les son �stos?</id><BR></DIV>
+<id id=x205>Windows Update comenz� su andadura como un sitio Web que ofrec�a actualizaciones para los equipos dom�sticos de los clientes de Windows. Con el tiempo, Windows Update ha ampliado su oferta de actualizaciones para dar soporte a algunos de los productos de servidor (como IIS) que m�s a menudo se utilizan en el hogar. Sin embargo, las actualizaciones de seguridad espec�ficas para estos productos de servidor como por ejemplo los controladores de dominio de Windows, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server y otros no se admiten en Windows Update. Los clientes que utilicen estos productos deben revisar los boletines de seguridad presentes en el <a href="http://www.microsoft.com/technet/security/" target="_new">sitio Web de seguridad de Microsoft TechNet</a> para obtener informaci�n de los lugares desde los que se pueden descargar actualizaciones para dichos productos.
+(Este sitio est� en ingl�s.)
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>�Windows Update ha ofrecido siempre correcciones de seguridad y otras actualizaciones para Internet Information Server 4.0 (IIS 4.0) y los Servicios de Internet Information Server 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>No. El 23 de mayo de 2001, Windows Update ofreci� un paquete acumulativo de actualizaciones cruciales para IIS 5.0 por primera vez. Aunque este paquete no incluye todas las actualizaciones para IIS aparecidas hasta la fecha, s� ofrece una combinaci�n de las correcciones m�s recientes que aparecieron entre marzo de 2000 y la fecha actual. En lo que respecta a actualizaciones que aparecieron con anterioridad a marzo de 2000, visite la <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">p�gina de TechNet relacionada con los servicios Web de Windows (IIS)</a>.
+(Este sitio est� en ingl�s.)
+Cuando aparezcan nuevas correcciones de seguridad u otras actualizaciones cruciales para IIS, este paquete ser� sustituido por uno nuevo, que incluir� tanto las actualizaciones nuevas como todas las correcciones del paquete anterior. De esta forma, independientemente de la frecuencia con que visite Windows Update, sabr� en todo momento que obtiene las actualizaciones m�s recientes para sus productos de IIS.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>�D�nde puedo acudir para obtener informaci�n relacionada con todas las actualizaciones de seguridad?</id><BR></DIV>
+<id id=x209>Puede consultar todos los boletines de seguridad en el <a href="http://www.microsoft.com/technet/security/" target="_new">sitio Web de seguridad de Microsoft TechNet</a>. Asimismo, puede suscribirse a <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service (Servicio de notificaciones de seguridad de Microsoft)</a> para recibir avisos por correo electr�nico con relaci�n a boletines de seguridad que hayan aparecido recientemente.
+(Estos sitios est�n en ingl�s.)
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/spanish/misc/cpyright.htm"><id id=x50>&copy; 2022 Microsoft Corporation. Reservados todos los derechos. Condiciones de uso.</id></A><BR></CENTER>
+</BODY>
+</HTML>

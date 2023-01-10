@@ -1,0 +1,206 @@
+<HTML>
+<HEAD>
+<TITLE>Microsoft Support Information</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+ top.location.replace("../../../../default.htm")
+End if
+On Error Goto 0
+Function DisplayFAQs(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"FAQs","status=no,width=640,height=480,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Function DisplayKnownIssues(strURL)
+ Dim ObjWindow
+ On Error Resume Next
+ Set ObjWindow = Window.Open(strURL,"KnownIssues","status=no,width=460,height=325,top=5px,left=144px, scrollbars=1,resizable=1,toolbar=yes,menubar=yes")
+ ObjWindow.focus()
+End Function
+Sub Window_Onload
+	If navigator.userLanguage <> "en-us" Then
+ document.all("usonly").style.display="none"
+	End If
+End Sub
+</SCRIPT>
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+.BigNum
+{
+ COLOR: #002f9f;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold
+}
+.SectionDiv {
+ font-size: 7pt;
+ color: white;
+	font-weight: bold;
+	background: #00319C;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	margin-right: -15px;
+	padding-left: 1px;
+}
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.PaddedHeader {
+	padding-bottom: 3px;
+}
+.BlueFade {
+BACKGROUND-COLOR: #9fcfff;
+COLOR: #00319C;
+FONT-FAMILY: Verdana,Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: Bold;
+HEIGHT:15px;
+}
+A.TextLink:link {
+	color: #00319C;
+}
+A.TextLink:visited {
+}
+</STYLE>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=WHITE TOPMARGIN=20 CLASS="BodyText">
+<IMG class=flippable ID=ix1 SRC="images/member-icon.png" WIDTH=64 HEIGHT=40 ALT="" BORDER="0" ALIGN=LEFT STYLE="margin: 5px;" VSPACE=0 HSPACE=0>
+<STRONG CLASS="LightBlue"><DIV CLASS="PageTitle"><id id=x2>Support Information</id><BR CLEAR=ALL></DIV></STRONG>
+<id id=x4>If you are having problems with the Windows Update Web site, online support is available to help you. Just select one of the options listed below.</id>
+<P>
+<id id=x6>When you select some of these support options, you may be asked to create a Microsoft "Online Profile." Your Online Profile will serve as your ticket to receive Internet-based support from Microsoft.</id><BR><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#SOFTWARE"><id id=x70>Support for Software Updates:</id></A></STRONG> <id id=x80>View support information for the software updates offered on Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#DRIVERS"><id id=x700>Support for Device Drivers:</id></A></STRONG> <id id=x800>View support information for device drivers offered on Windows Update.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#W98"><id id=x700>Support for Windows 98:</id></A></STRONG> <id id=x800>Find out about support options for the Windows 98 operating system.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" HREF="#FAQ"><id id=x7>Frequently Asked Questions:</id></A></STRONG> <id id=x8>If you have a question about Windows Update, you may want to first check our list of answers.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" onClick="javascript:DisplayKnownIssues('known.htm')" href="javascript:void(0)"><id id=x9>Known Issues:</id></A></STRONG> <id id=x10>You may also want to review the list of known issues that currently exist on the Windows Update site.</id><BR><BR>
+<STRONG CLASS="LightBlue"><A CLASS="textlink" target=_blank HREF="http://register.microsoft.com/regwiz/wiz143.asp"><id id=x11>Write Us:</id></A></STRONG> <id id=x12>Our quick survey form provides a place for your comments and suggestions.</id><BR><BR>
+<p>
+<A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"><id id=x24><b>Submit Windows Update Support Request:</b></id></SPAN></A><BR>
+<id id=x25>Submit your questions or issues concerning the Windows Update site. Online Profile required.</id> </p>
+<BR><P><DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix6 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td5 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x28>ABOUT WINDOWS UPDATE</id></TD>
+ <TD id=td6 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix7 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+<IMG ID=ix8 SRC="images/ts.gif" ALT="" HEIGHT=5><br>
+<IMG ID=ix9 SRC="images/help-icon.gif" WIDTH=15 HEIGHT=15 ALT="?" BORDER="0"> <id id=x29>This icon appears at the top of all pages on this site. Click the icon to learn how to best use the Windows Update site.</id><BR><BR>
+<DIV CLASS="SectionDiv"><A NAME="SOFTWARE"><id id=x30>SUPPORT FOR SOFTWARE UPDATES</id></DIV>
+No-charge <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">e-mail support for the Windows Update site</SPAN></A> includes: help with Web site navigation, site content quality or error messages, and basic download assistance. All other assistance, including installation and setup issues, is available via our Personal and Professional support offerings at <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory/</a>. For MSN products, visit <a href="http://help.msn.com/" target=_blank>http://help.msn.com/</a>. In some cases a support fee may apply, please check the sites for details.
+<P>
+For support information outside the U.S. and Canada, contact your local subsidiary. For the most recent listing, please see the <a href="http://support.microsoft.com/directory/" target=_blank>Support Online Web site</a> and select the option for Worldwide Support. If there is no Microsoft subsidiary office in your country, please contact the establishment from which you obtained your Microsoft product.
+<P>
+Microsoft's support services are subject to Microsoft's then-current prices, terms, and conditions, which are subject to change without notice.
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">How do I uninstall software updates?<BR></DIV>
+Some updates can be uninstalled using the Product Updates page on the Windows Update site:
+<ol>
+<li>Go to the Product Updates page.
+<li>Be sure to click <B>Yes</B> if a message prompt appears.
+<li>When the Product Updates page appears, click <B>Show Installed Updates</B> at the top of the page.
+<li>If an update can be uninstalled, an <B>Uninstall</B> button appears to the right of the update's description.
+<li>Click <b>Uninstall</b> next to the description of the update you want to uninstall.
+</ol>
+Updates that cannot be uninstalled from Product Updates may be uninstallable through other methods. See the <b>Read this first</b> page for each update for additional uninstall information.
+<p>
+<DIV CLASS="SectionDiv"><A NAME="DRIVERS"><id id=x300>DEVICE DRIVER SUPPORT</id></DIV>
+No-charge install/uninstall support is available via email on <A HREF="http://support.microsoft.com/support/email/windowsupdate/wassist.asp" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader">Windows Update Site Support</SPAN></A>. For issues beyond the installation/un-installation of drivers, a full listing of support options may be found at <a href="http://support.microsoft.com/directory/" target=_blank>http://support.microsoft.com/directory</a>. In some cases a support fee may apply, please check the site for details.
+<P>
+For support information outside the U.S. and Canada, contact your local subsidiary. For the most recent listing, please see the <a href="http://support.microsoft.com/directory/" target=_blank>Support Online Web site</a> and select the option for Worldwide Support. If there is no Microsoft subsidiary office in your country, please contact the establishment from which you obtained your Microsoft product.
+<P>
+Microsoft's support services are subject to Microsoft's then-current prices, terms, and conditions, which are subject to change without notice.
+<p>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;">How do I uninstall device driver updates?</DIV>
+Use Update Wizard Uninstall to remove driver updates from your computer:
+<ol>
+<li>Click <b>Start</b>, point to <b>Programs</b>, point to <b>Accessories</b>, point to <b>System Tools</b>, and then click <b>System Information</b>.
+<li>In System Information, click the <b>Tools</b> menu, and then click <b>Update Wizard Uninstall</b>.
+</ol>
+<b>Important</b> If your computer did not have a driver for your hardware device before you installed the new driver from Windows Update, Update Wizard Uninstall will not uninstall the Windows Update driver (uninstalling a driver or driver update without replacing it will cause your hardware device to stop working).
+<p>
+<DIV CLASS="SectionDiv"><A NAME="W98"><id id=x13>SUPPORT FOR WINDOWS 98</id></DIV>
+<DIV STYLE="BACKGROUND-COLOR: #00319C;margin-right: -15px;"><IMG ID=ix2 SRC="images/ts.gif" ALT="" HEIGHT=1 WIDTH=100%></DIV>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+ <TR>
+ <TD id=td1 ALIGN='LEFT' NOWRAP CLASS="BlueFade" VALIGN="MIDDLE" WIDTH=10%><id id=x14>WINDOWS 98 SUPPORT</id></TD>
+ <TD id=td2 ALIGN='LEFT' VALIGN='MIDDLE' WIDTH='*'><IMG class=flippable ID=ix3 SRC='Images/blue-fade.jpg' WIDTH='36' HEIGHT='15'></TD>
+ </TR>
+</TABLE>
+ <p>
+<A HREF="http://support.microsoft.com/directory/" target=_blank CLASS="TextLink"><SPAN CLASS="PaddedHeader"><id id=x16>Windows 98 Online Support</id></SPAN></A><BR>
+<id id=x17>Click here for online technical support for Windows 98. Online Profile required.</id><BR><BR><BR>
+<id id=x18>If you would rather not use our online support, choose the option below that best applies to you:</id>
+<UL>
+ <LI><I><id id=x19>If you live in the U.S. or Canada</i> and purchased your copy of Windows 98 separately from your computer, call (425) 635-7222 for support.</id><BR><BR>
+ <LI><I><id id=x20>If you live outside the U.S. and Canada</i> and purchased your copy of Windows 98 separately from your computer,</id> <A CLASS="textlink" HREF="http://support.microsoft.com/directory/WW.asp" target=_blank><id id=x21>click here</id></A> <id id=x22>to contact your local Microsoft subsidiary.</id><BR><BR>
+ <LI><I><id id=x23>If Windows 98 was preinstalled or distributed with your personal computer,</i> the personal computer manufacturer is responsible for providing your product support. Please contact the manufacturer or source of your Microsoft product for support information.</id>
+</UL>
+<Div ID=USOnly>
+</Div>
+<DIV CLASS="SectionDiv"><A NAME="FAQ"><id id=x30>FREQUENTLY ASKED QUESTIONS</id></DIV>
+<DIV CLASS="BoldHeader"><id id=x200>When a new security bulletin is available on the <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a>,
+is it also available on Windows Update?</id><BR></DIV>
+<id id=x201>There is often a delay between the time that a security bulletin is posted to the TechNet Security site, and when the security update becomes available on Windows Update. This is because new content is added to Windows Update on a scheduled timetable. While Windows Update makes every effort to release important security updates as quickly as possible, new content must be tested and verified to ensure that Windows Update offers you only the updates you need for your particular computer. Typically, updates for supported products appear on Windows Update anywhere from a few days to a few weeks from the time they are announced on the TechNet site. If you know which particular version of an update applies to your computer and you don�t want to wait to get it from Windows Update, you can download the update directly from the security bulletin Web page. </id><BR><BR>
+<DIV CLASS="BoldHeader" STYLE="padding-top: 5px;"><id id=x31>What is Windows Update?</id><BR></DIV>
+<id id=x32>Windows Update is the online extension of Windows, designed to help you keep your computer up-to-date. Windows Update has a central catalog called Product Updates that includes new product enhancements such as system files, device drivers, service packs, and new Windows features. These enhancements are recommended to you based on what is needed for your specific computer.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x35>What is Product Updates?</id><BR></DIV>
+<id id=x36>The Product Updates page is a catalog of fixes, updates, and enhancements to Windows and many programs that work with Windows. You can browse through the catalog, select as many components as you would like, and download and install them straight from the Web to your computer.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x37>Why do I get a message saying an ActiveX control on this page is not safe?</id><BR></DIV>
+<id id=x38>This message is displayed when your security setting in Internet Explorer is set to High. For the Windows Update site to work properly, you must change the browser's security settings for the Internet zone to Medium or lower. To do so, click the <b>Tools</b> menu, then click <b>Internet Options</b>. Select the <b>Security</b> tab and then click on <b>Internet</b>.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x40>What is an ActiveX control?</id><BR></DIV>
+<id id=x41>ActiveX Controls are reusable software components that incorporate ActiveX technology. These components can be used to add specialized functionality, such as animation or pop-up menus, to Web pages, desktop applications, and software development tools. Windows Update uses ActiveX controls to check what software is installed on your computer in order to provide you with a correct list of updates and other software you may want to download.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x42>What is the best resolution for viewing the Windows Update site?</id><BR></DIV>
+<id id=x43>The Web pages on the Windows Update site were designed to be viewed at 800 by 600 or higher screen resolution. To set this resolution, click the <B>Start</b> button, point to <B>Settings</b>, and then click <B>Control Panel</b>. Then double-click the <B>Display</b> icon, and click the <B>Settings</b> tab.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x44>Does information about my computer get transmitted to Microsoft?
+</id><BR></DIV>
+<id id=x45>No. Each time you go the Product Updates catalog, Windows Update uses a control to check for updates specific to your computer. This check is done locally on your computer to ensure the privacy and security of your data, and does not send any information to Microsoft.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x46>How do I send my feedback to the Windows Update team?</id><BR></DIV>
+<id id=x47>You can send feedback about this site to the Windows Update team by clicking <B>Write Us</B>, then <B>Windows Update</B> on the black toolbar at the top of each page.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x202>What operating systems and programs are supported by Windows Update?</id><BR></DIV>
+<id id=x203>Windows Update offers security updates that apply to Windows 98, Windows 98 Second Edition, Windows Millennium Edition (Windows Me), Windows NT 4.0, Windows 2000, Internet Information Server 4.0 (IIS 4.0), Internet Information Services 5.0 (IIS 5.0), and Internet Explorer. However, you are only shown the updates that apply to your specific computer. Certain server operating systems and server-based programs are not supported by Windows Update. </id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x204>You mention that certain server products are not supported. What server products are not supported?</id><BR></DIV>
+<id id=x205>Windows Update began as a Web site that offered updates for Windows customers� home computers. Over time, Windows Update has expanded its offering of updates to cover some server products (like IIS) that are being used more frequently in the home. However, security updates that are specific to such server products as Windows domain controllers, Microsoft Exchange Server, Microsoft SQL Server, Microsoft ISA Server, etc. are not supported on Windows Update. Customers using these products should review the security bulletins at the <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a> for information on where to download updates for these products.
+</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x206>Has Windows Update always provided security fixes and other updates for Internet Information Server 4.0 (IIS 4.0) and Internet Information Services 5.0 (IIS 5.0)?</id><BR></DIV>
+<id id=x207>No. On May 23, 2001, Windows Update offered a cumulative package of critical updates for IIS 5.0 for the first time. While this package does not include all IIS updates released to date, it does provide a combination of the most recent fixes that were released between March 2000 and now. For updates that were released prior to March 2000, go to the <a href="http://www.microsoft.com/technet/iis/default.asp" target="_new">TechNet page for Windows Web services (IIS)</a>.
+When new security fixes or other critical updates for IIS are created, this package will be replaced with a new package, which will include both the new updates, and all of the fixes in the previous package. This way, no matter how often you visit Windows Update, you'll know you're always getting the most recent updates for your IIS products.</id><BR><BR>
+<DIV CLASS="BoldHeader"><id id=x208>Where can I go to get information about all the security-related updates?</id><BR></DIV>
+<id id=x209>You can view all security bulletins at the <a href="http://www.microsoft.com/technet/security/" target="_new">Microsoft TechNet Security Web site</a>. You can also subscribe to the <a href="http://www.microsoft.com/technet/security/notify.asp" target="_new"> Microsoft Security Notification Service</a> and receive e-mail alerts about recently released security bulletins.
+</id><BR><BR>
+<CENTER><A target="CopyRight" CLASS="TextLink" HREF="http://www.microsoft.com/info/cpyright.htm"><id id=x50>&copy; 2022 Microsoft Corporation. All rights reserved. Terms of Use.</id></A><BR></CENTER>
+</BODY>
+</HTML>

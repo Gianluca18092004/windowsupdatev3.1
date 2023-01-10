@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<TITLE>Strani ni mogoče prikazati</TITLE>
+<META HTTP-EQUIV="PICS-Label" CONTENT='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l comment "RSACi North America Server" by "inet@microsoft.com" r (n 0 s 0 v 0 l 0))'>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<STYLE>
+BODY
+{
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+	MARGIN-RIGHT: 15px;
+}
+.PageTitle
+{
+ COLOR: red;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 20pt;
+ FONT-WEIGHT: bold;
+}
+.BodyText
+{
+ COLOR: black;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 8pt;
+}
+.SmallTitle
+{
+ COLOR: #00319c;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 7.5pt;
+ FONT-WEIGHT: bold;
+}
+/* ---- Styles used in member services ------ */
+.LightBlue {
+	color: #00319C;
+}
+.BoldHeader {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.TextLink:link {
+	color: #00319C;
+}
+.TextLink:visited {
+}
+.darkblue {
+	color: #00319C;
+}
+.ButtonB {
+BACKGROUND-COLOR: #2f60ff;
+BORDER-BOTTOM: #002f9f Solid 2px;
+BORDER-LEFT: #9fcfff Solid 2px;
+BORDER-RIGHT: #002f9f Solid 2px;
+BORDER-TOP: #9fcfff Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+.ButtonG {
+BACKGROUND-COLOR: #909090;
+BORDER-BOTTOM: #5f5f5f Solid 2px;
+BORDER-LEFT: #c0c0c0 Solid 2px;
+BORDER-RIGHT: #5f5f5f Solid 2px;
+BORDER-TOP: #c0c0c0 Solid 2px;
+COLOR: #ffffff;
+CURSOR: Hand;
+FONT-FAMILY: Verdana, Arial, Helvetica;
+FONT-SIZE: 7.5pt;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: center;
+}
+</STYLE>
+<SCRIPT Language="VBScript">
+On Error Resume Next
+If top.g_bIsWinUpdate <> TRUE Then
+	top.location.replace("../../../../default.htm")
+End if
+ Top.Frames("frmToolbar").HideWaitDialog()
+On Error Goto 0
+</SCRIPT>
+<SCRIPT Language="VBScript">
+Dim g_strReason
+If location.search <> "" Then
+ Dim strStart, strEnd
+ strStart = Instr(LCase(location.search),"reason=") + 7
+ strEnd = Instr(strStart, location.search, "&")
+ if strEnd = 0 Then strEnd = Len(location.search) + 1
+	g_strReason = Mid(location.search, strStart, strEnd - strStart)
+End If
+Sub TryAgain
+	Parent.GblSync = "ProductUpdates"
+	parent.frames("FrmToolbar").document.frames(0).location.replace "engine.htm"
+End Sub
+Sub Window_Onload
+ Select Case LCase(g_strReason)
+ Case "unsupportedlang"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Kataloga izdelkov ni mogoče naložiti, ker Windows Update ne podpira jezika vašega operacijskega sistema."
+	Case "catalogerror"
+ dvExplanation.innerHTML = dvExplanation.innerHTML & "<P>Pri na laganju seznama izdelkov je prišlo do napake. Do tega je morda prišlo zaradi napake v omrežju ali pokvarjene datoteke. Podrobnejše informacije o tej težavi in rešitve zanjo so na voljo v zbirki znanja Microsoft Knowledge Base (KB) v članku <a href=http://support.microsoft.com/support/kb/articles/q243/7/87.asp target=_top>Q243787</a>.</ID><BR><BR>"
+ End Select
+End Sub
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="images/wm.jpg" BGCOLOR=white TOPMARGIN=20 LEFTMARGIN=0 CLASS="BodyText">
+<DIV STYLE="PADDING-BOTTOM: 8px">
+<IMG ID=ix1 alt=- border=0 height=54 hspace=0 src="images/control-icon.png"
+ style="MARGIN-RIGHT: 12px" width=54 >
+<STRONG CLASS="LightBlue">
+<SPAN CLASS="PageTitle"><ID ID=x2>Strani ni mogoče prikazati</ID><BR CLEAR=all></SPAN></DIV></STRONG>
+<b><A href="javascript:void(0)" language=VBScript onclick ="Call TryAgain" ><ID ID=x3>Poskusite nova</ID></A><BR></b>
+<P>
+<Div id=dvExplanation>
+<ID ID=x5>Na to stran ste bili usmerjeni iz enega od teh razlogov:</ID>
+<OL>
+	<LI><ID ID=x6>Do sporočila o napaki je prišlo morda zaradi posodobitev kontrolnika in/ali arhitekture spletnega mesta Windows Update. Podrobnejše informacije so na voljo na spletnem mestu Microsoft Knowledge Base (KB) v članku <A HREF="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</A>.</ID>
+	<LI><ID ID=x7>Morda ste se odločili, da ne želite prenesti programskih kontrolnikov ali pa je prišlo do težave pri prenašanju kontrolnikov, zaradi česar večina spletnega mesta Windows Update ni na voljo. Če želite prenesti kontrolnike zdaj, kliknite <B>Poskusite znova</B> zgoraj.</ID>
+	<LI><ID ID=x8>Za ta računalnik nimate skrbniških pravic. Če želite uporabljati Windows Update, se obrnite na skrbnika sistema, ki naj vam posodobi programsko opremo.</ID>
+	<LI><ID ID=x9>Morda morate počistiti brskalnikov predpomnilnik. Podrobnejše informacije so na voljo v zbirki znanja Microsoft KB v članku <a href="http://support.microsoft.com/support/kb/articles/q193/3/85.asp" target="_new">Q193385</a>.</ID>
+	<LI><ID ID=x10>Morda boste morali odstraniti imenik Windows Update. Podrobnejše informacije preberite v zbirki znanja Microsoft KB v članku <a href="http://support.microsoft.com/support/kb/articles/q243/7/87.asp" target="_new">Q243787</a>.</ID>
+</OL>
+</DIV>
+<CENTER>
+<A target=_blank CLASS="TextLink" HREF="http://www.microsoft.com/slovenija/misc/cpyright.htm"><ID ID="cpyright">(c) 2022 Microsoft Corporation. Vse pravice pridržane. Pogoji uporabe.</ID></A><BR>
+</CENTER>
+</BODY>
+</HTML>
